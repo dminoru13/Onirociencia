@@ -17,7 +17,7 @@ func get_altura_hexagono() -> float:
 
 
 func _ready() -> void:
-	p
+	pass
 
 
 func _process(delta):
