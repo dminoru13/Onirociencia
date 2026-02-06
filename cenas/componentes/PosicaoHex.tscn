@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bv1phvxccetpq"]
+
+[ext_resource type="Script" uid="uid://ptcbpfc66v3k" path="res://scripts/componentes/PosicaoHex.gd" id="1_rxgcd"]
+
+[node name="PosicaoHex" type="Node2D" unique_id=66041640]
+script = ExtResource("1_rxgcd")
