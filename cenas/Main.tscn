@@ -9,11 +9,11 @@
 
 [node name="Main" type="Node2D" unique_id=44142531]
 script = ExtResource("1_yihtt")
-achatamento = 0.78
 
 [node name="Tabuleiro" parent="." unique_id=1035979696 instance=ExtResource("1_1u0wg")]
 position = Vector2(432, 237.77594)
 tamanho_tabuleiro = Vector2i(5, 5)
+cor_tabuleiro = Color(0.22253194, 0.22369304, 0.28718582, 1)
 
 [node name="PosicaoHex" parent="Tabuleiro" unique_id=66041640 instance=ExtResource("4_if0kj")]
 posicao_hexagonal = Vector2i(9, 6)
@@ -26,8 +26,10 @@ texture = ExtResource("3_8tf0g")
 posicao_hexagonal = Vector2i(12, 7)
 
 [node name="Label" type="Label" parent="." unique_id=59206651]
-offset_right = 93.0
-offset_bottom = 30.0
+offset_left = 467.0
+offset_top = 120.0
+offset_right = 560.0
+offset_bottom = 150.0
 script = ExtResource("5_if0kj")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=505377364]

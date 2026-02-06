@@ -5,23 +5,28 @@
 
 [node name="Tile" type="Area2D" unique_id=649217449]
 script = ExtResource("1_86upo")
-cor_tile = Color(0.109786, 0.23789543, 0.34294894, 1)
-cor_borda = Color(1, 0, 0, 0.28235295)
+cor_tile = Color(0.061002567, 0.0939995, 0.07617455, 1)
+cor_borda = Color(0.54901963, 0.654902, 0.5058824, 1)
+cor_parede = Color(0.14464962, 0.13455525, 0.13050348, 1)
 
 [node name="PosicaoHex" parent="." unique_id=66041640 instance=ExtResource("2_kf0ti")]
+
+[node name="PoligonoParede" type="Polygon2D" parent="." unique_id=762585642]
+color = Color(0.14464962, 0.13455525, 0.13050348, 1)
+polygon = PackedVector2Array(32, 0, 16, 21.615993, -16, 21.615993, -32, 3.0566175e-15, -32, 43.231987, -16, 64.847984, 16, 64.847984, 32, 43.231987)
+
+[node name="PoligonoFrenteParede" type="Polygon2D" parent="." unique_id=1261554365]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1868016482]
 polygon = PackedVector2Array(32, 0, 16, 21.615993, -16, 21.615993, -32, 3.0566175e-15, -16, -21.615993, 16, -21.615993)
 
 [node name="PoligonoHexagono" type="Polygon2D" parent="." unique_id=1068093286]
-color = Color(0.109786, 0.23789543, 0.34294894, 1)
+color = Color(0.061002567, 0.0939995, 0.07617455, 1)
 polygon = PackedVector2Array(32, 0, 16, 21.615993, -16, 21.615993, -32, 3.0566175e-15, -16, -21.615993, 16, -21.615993)
-
-[node name="PoligonoParede" type="Polygon2D" parent="." unique_id=762585642]
 
 [node name="LinhaHexagono" type="Line2D" parent="." unique_id=1107292502]
 points = PackedVector2Array(32, 0, 16, 21.615993, -16, 21.615993, -32, 3.0566175e-15, -16, -21.615993, 16, -21.615993, 32, 0)
 width = 1.0
-default_color = Color(1, 1, 1, 0.4627451)
+default_color = Color(0.54901963, 0.654902, 0.5058824, 1)
 
 [node name="LinhaParede" type="Line2D" parent="." unique_id=1974647129]

@@ -6,20 +6,27 @@ extends Area2D
 		espessura_linha = value
 		atualizar_vizual()
 		
-@export var cor_tile:= Color(0.247, 0.0, 0.867, 1.0):
+@export var cor_tile:= Color(0.9, 0.761, 0.906, 1.0):
 	set(value):
 		cor_tile = value
 		atualizar_vizual()
 	
-@export var cor_borda:= Color(1.0, 1.0, 1.0, 0.1)
+@export var cor_borda:= Color(1.0, 0.506, 0.0, 1.0):
+	set(value):
+		cor_borda = value
+		atualizar_vizual()
 
-@export var cor_parede := Color.DARK_SLATE_GRAY
+@export var cor_parede := Color(0.149, 0.137, 0.133):
+	set(value):
+		cor_parede = value
+		atualizar_vizual()
 
 @onready var poly := $PoligonoHexagono
 @onready var colisao := $CollisionPolygon2D
 @onready var borda := $LinhaHexagono
 @onready var parede := $PoligonoParede
 @onready var borda_parede := $LinhaParede
+@onready var parede_frente := $PoligonoFrenteParede
 
 var posicao_hex := Vector2i(0,0)
 var altura := 0
@@ -33,11 +40,14 @@ func passar_dados():
 
 func _ready() -> void:
 	atualizar_vizual()
+	add_to_group("tiles")
+	
+	
+	
 
 
 func _process(delta: float) -> void:
 	pass
-		
 	
 
 
@@ -48,6 +58,7 @@ func atualizar_vizual():
 		return
 
 	var pontos = criar_hecxagono()
+	var pontos_parede = criar_parede()
 	if pontos.size() < 6:
 		return
 
@@ -58,12 +69,19 @@ func atualizar_vizual():
 	borda.points = fechar_poligonos_ponto(pontos)
 	borda.width = espessura_linha
 	borda.default_color = cor_borda
+	
+	parede.polygon = pontos_parede
+	parede.color = cor_parede
+	
+	parede_frente.polygon = criar_parede_ferente()
+	parede_frente.color = cor_parede.lightened(0.1)
 
 	
 
 
 func posicionar(pos_hex: Vector2i):
 	posicao_hex = pos_hex
+
 
 func fechar_poligonos_ponto(pontos: PackedVector2Array):
 	var p = pontos.duplicate()
@@ -87,7 +105,7 @@ func criar_parede():
 	var topo := criar_hecxagono()
 	var pontos := PackedVector2Array()
 	
-	var altura_muro = Global.altura_hexagono/2
+	var altura_muro = Global.get_altura_hexagono()
 	
 	pontos.append(topo[0])
 	pontos.append(topo[1])
@@ -99,5 +117,20 @@ func criar_parede():
 	pontos.append(Vector2(topo[2].x, topo[2].y + altura_muro))
 	pontos.append(Vector2(topo[1].x, topo[1].y + altura_muro))
 	pontos.append(Vector2(topo[0].x, topo[0].y + altura_muro))
+
+	return pontos
+
+func criar_parede_ferente():
+	var topo := criar_hecxagono()
+	var pontos := PackedVector2Array()
+	
+	var altura_muro = Global.get_altura_hexagono()
+	
+	pontos.append(topo[1])
+	pontos.append(topo[2])
+
+	# projeção vertical (paredes)
+	pontos.append(Vector2(topo[2].x, topo[2].y + altura_muro))
+	pontos.append(Vector2(topo[1].x, topo[1].y + altura_muro))
 
 	return pontos
