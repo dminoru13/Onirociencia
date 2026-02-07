@@ -1,6 +1,6 @@
 @tool
 extends Node2D
-var CenaTile: PackedScene
+@export var CenaTile: PackedScene
 
 
 @export var tamanho_tabuleiro := Vector2i(0,0)
@@ -24,7 +24,10 @@ func _ready() -> void:
 			add_child(tile)
 			tile.posicionar(Vector2i(x,y))
 			tile.cor_tile = cores.pick_random()
-			
+
+
+	
+
 
 
 

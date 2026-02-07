@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://v28x5510pa65" path="res://scripts/Tabuleiro.gd" id="1_rgf3a"]
 
 [node name="Tabuleiro" type="Node2D" unique_id=1035979696]
-y_sort_enabled = true
 script = ExtResource("1_rgf3a")
-tamanho_tabuleiro = Vector2i(1, 1)
 CenaTile = ExtResource("1_p3p16")
+tamanho_tabuleiro = Vector2i(4, 5)
+cor_tabuleiro = Color(0.015090294, 0.09140127, 0.09170102, 1)

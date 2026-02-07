@@ -6,7 +6,7 @@ extends Area2D
 		espessura_linha = value
 		atualizar_vizual()
 		
-@export var cor_tile:= Color(0.9, 0.761, 0.906, 1.0):
+var cor_tile:= Color(0.9, 0.761, 0.906, 1.0):
 	set(value):
 		cor_tile = value
 		atualizar_vizual()
@@ -41,6 +41,9 @@ func passar_dados():
 func _ready() -> void:
 	atualizar_vizual()
 	add_to_group("tiles")
+	
+	await get_tree().create_timer(0.01).timeout
+	reajustar_posicao_hexagono()
 	
 	
 	
@@ -77,11 +80,21 @@ func atualizar_vizual():
 	parede_frente.color = cor_parede.lightened(0.1)
 
 	
-
+func reajustar_posicao_hexagono():
+	#é pra não ter que usar o ajustar posicao todo frame, sem isso os hexagonos ficam todos no mesmo lugar
+	$PosicaoHex.ajustar_posicao()
 
 func posicionar(pos_hex: Vector2i):
 	posicao_hex = pos_hex
 
+func alturar(altura_recebida: int):
+	altura = altura_recebida
+	
+
+
+
+
+#   \/ DESENHAR TILE \/
 
 func fechar_poligonos_ponto(pontos: PackedVector2Array):
 	var p = pontos.duplicate()
@@ -101,11 +114,13 @@ func criar_hecxagono() -> PackedVector2Array:
 	
 	return pontos
 
+var altura_muro = Global.get_altura_hexagono()
+
 func criar_parede():
 	var topo := criar_hecxagono()
 	var pontos := PackedVector2Array()
 	
-	var altura_muro = Global.get_altura_hexagono()
+	
 	
 	pontos.append(topo[0])
 	pontos.append(topo[1])
@@ -123,8 +138,6 @@ func criar_parede():
 func criar_parede_ferente():
 	var topo := criar_hecxagono()
 	var pontos := PackedVector2Array()
-	
-	var altura_muro = Global.get_altura_hexagono()
 	
 	pontos.append(topo[1])
 	pontos.append(topo[2])

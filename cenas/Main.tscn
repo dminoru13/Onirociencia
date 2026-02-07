@@ -9,21 +9,24 @@
 
 [node name="Main" type="Node2D" unique_id=44142531]
 script = ExtResource("1_yihtt")
+achatamento = 0.78
 
 [node name="Tabuleiro" parent="." unique_id=1035979696 instance=ExtResource("1_1u0wg")]
-position = Vector2(432, 237.77594)
+z_index = 259
+position = Vector2(480, 259)
 tamanho_tabuleiro = Vector2i(5, 5)
-cor_tabuleiro = Color(0.22253194, 0.22369304, 0.28718582, 1)
+cor_tabuleiro = Color(0.17442039, 0.17439902, 0.22668165, 1)
 
 [node name="PosicaoHex" parent="Tabuleiro" unique_id=66041640 instance=ExtResource("4_if0kj")]
-posicao_hexagonal = Vector2i(9, 6)
+posicao_hexagonal = Vector2i(10, 6)
 
 [node name="NewPiskel(1)" type="Sprite2D" parent="." unique_id=554473916]
-position = Vector2(576, 302.62393)
+z_index = 237
+position = Vector2(528, 237)
 texture = ExtResource("3_8tf0g")
 
 [node name="PosicaoHex" parent="NewPiskel(1)" unique_id=1363013821 instance=ExtResource("4_if0kj")]
-posicao_hexagonal = Vector2i(12, 7)
+posicao_hexagonal = Vector2i(11, 6)
 
 [node name="Label" type="Label" parent="." unique_id=59206651]
 offset_left = 467.0

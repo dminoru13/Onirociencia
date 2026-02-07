@@ -2,7 +2,7 @@
 extends Node
 
 @export var tamanho_tiles := 64
-@export var achatamento := 0.78
+@export var achatamento := 0.9
 
 func get_raio_hexagono() -> float:
 	return tamanho_tiles / 2.0
