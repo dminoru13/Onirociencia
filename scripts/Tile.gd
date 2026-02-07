@@ -27,9 +27,11 @@ var cor_tile:= Color(0.9, 0.761, 0.906, 1.0):
 @onready var parede := $PoligonoParede
 @onready var borda_parede := $LinhaParede
 @onready var parede_frente := $PoligonoFrenteParede
+@onready var pos_hex := $PosicaoHex
 
 var posicao_hex := Vector2i(0,0)
 var altura := 0
+var altura_muro := 0.0
 
 func passar_dados():
 	return {
@@ -57,9 +59,11 @@ func _process(delta: float) -> void:
 func atualizar_vizual():
 	if not is_inside_tree():
 		return
-	if not poly or not borda or not colisao:
+	if not poly or not borda or not colisao or not pos_hex:
 		return
-
+		
+	altura_muro = Global.get_altura_hexagono()/2 * (pos_hex.ALTURA)
+	print(pos_hex.ALTURA)
 	var pontos = criar_hecxagono()
 	var pontos_parede = criar_parede()
 	if pontos.size() < 6:
@@ -83,6 +87,7 @@ func atualizar_vizual():
 func reajustar_posicao_hexagono():
 	#é pra não ter que usar o ajustar posicao todo frame, sem isso os hexagonos ficam todos no mesmo lugar
 	$PosicaoHex.ajustar_posicao()
+	atualizar_vizual()
 
 func posicionar(pos_hex: Vector2i):
 	posicao_hex = pos_hex
@@ -114,9 +119,10 @@ func criar_hecxagono() -> PackedVector2Array:
 	
 	return pontos
 
-var altura_muro = Global.get_altura_hexagono()
+
 
 func criar_parede():
+	
 	var topo := criar_hecxagono()
 	var pontos := PackedVector2Array()
 	

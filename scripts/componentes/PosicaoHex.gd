@@ -3,6 +3,7 @@ extends Node2D
 
 @export var posicao_hexagonal := Vector2i(0,0)
 @export var altura := 0
+var ALTURA = altura
 var pai
 var y_base := 0
 
@@ -17,17 +18,16 @@ func hexagono_para_quadrado(pos_hex: Vector2i):
 	y_base = pos_hex.y * altura_hex - (pos_hex.x % 2) * (altura_hex / 2.0)
 	var y = y_base - altura * (altura_hex / 2.0)
 	return Vector2(x, y)
-	
-	pode_ajustar_a_posicao = 1
 
 
 
 func _ready() -> void:
-	ajustar_posicao()
+	pass
 
 
 func _process(delta: float) -> void:
 	ajustar_posicao()
+	ALTURA = altura
 		
 func ajustar_posicao():
 	pai = get_parent()
