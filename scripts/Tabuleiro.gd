@@ -12,9 +12,9 @@ extends Node2D
 func _ready() -> void:
 	
 	var cores = [
-		cor_tabuleiro.lightened(0.1),
 		cor_tabuleiro,
-		cor_tabuleiro.darkened(0.1)
+		cor_tabuleiro.lightened(0.03),
+		cor_tabuleiro.darkened(0.05)
 	]
 	
 	
@@ -24,7 +24,6 @@ func _ready() -> void:
 			add_child(tile)
 			tile.posicionar(Vector2i(x,y))
 			tile.cor_tile = cores.pick_random()
-			tile.altura = randi_range(1,2)
 
 
 	

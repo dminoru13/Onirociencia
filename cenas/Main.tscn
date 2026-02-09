@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://oye5ubjpuudo" path="res://cenas/Tabuleiro.tscn" id="1_1u0wg"]
 [ext_resource type="Script" uid="uid://bcl4b7lrrrc3c" path="res://scripts/Global.gd" id="1_yihtt"]
-[ext_resource type="Texture2D" uid="uid://bufkomhe021q8" path="res://New Piskel (1).png" id="3_8tf0g"]
 [ext_resource type="PackedScene" uid="uid://bv1phvxccetpq" path="res://cenas/componentes/PosicaoHex.tscn" id="4_if0kj"]
 [ext_resource type="Script" uid="uid://cduck5d34q3fy" path="res://scripts/label.gd" id="5_if0kj"]
 [ext_resource type="Script" uid="uid://xntaqqjmbdet" path="res://cenas/camera_2d.gd" id="6_yihtt"]
@@ -12,21 +11,13 @@ script = ExtResource("1_yihtt")
 achatamento = 0.78
 
 [node name="Tabuleiro" parent="." unique_id=1035979696 instance=ExtResource("1_1u0wg")]
-z_index = 259
-position = Vector2(480, 259)
+z_index = 299
+position = Vector2(480, 299)
 tamanho_tabuleiro = Vector2i(5, 5)
 cor_tabuleiro = Color(0.17442039, 0.17439902, 0.22668165, 1)
 
 [node name="PosicaoHex" parent="Tabuleiro" unique_id=66041640 instance=ExtResource("4_if0kj")]
 posicao_hexagonal = Vector2i(10, 6)
-
-[node name="NewPiskel(1)" type="Sprite2D" parent="." unique_id=554473916]
-z_index = 237
-position = Vector2(528, 237)
-texture = ExtResource("3_8tf0g")
-
-[node name="PosicaoHex" parent="NewPiskel(1)" unique_id=1363013821 instance=ExtResource("4_if0kj")]
-posicao_hexagonal = Vector2i(11, 6)
 
 [node name="Label" type="Label" parent="." unique_id=59206651]
 offset_left = 467.0

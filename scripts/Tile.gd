@@ -62,8 +62,7 @@ func atualizar_vizual():
 	if not poly or not borda or not colisao or not pos_hex:
 		return
 		
-	altura_muro = Global.get_altura_hexagono()/2 * (pos_hex.ALTURA)
-	print(pos_hex.ALTURA)
+	altura_muro = Global.get_altura_hexagono()/2 * (max(1,pos_hex.ALTURA+1))
 	var pontos = criar_hecxagono()
 	var pontos_parede = criar_parede()
 	if pontos.size() < 6:
@@ -71,7 +70,7 @@ func atualizar_vizual():
 
 	colisao.polygon = pontos
 	poly.polygon = pontos
-	poly.color = cor_tile
+	poly.color = cor_tile.darkened(0.4).lightened(float(altura)/25)
 
 	borda.points = fechar_poligonos_ponto(pontos)
 	borda.width = espessura_linha
@@ -81,7 +80,7 @@ func atualizar_vizual():
 	parede.color = cor_parede
 	
 	parede_frente.polygon = criar_parede_ferente()
-	parede_frente.color = cor_parede.lightened(0.1)
+	parede_frente.color = cor_parede.lightened(0.02)
 
 	
 func reajustar_posicao_hexagono():
