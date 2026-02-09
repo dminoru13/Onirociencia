@@ -12,6 +12,9 @@ func _unhandled_input(event: InputEvent) -> void:
 		
 		#ZOOM
 		if event.button_index == MOUSE_BUTTON_WHEEL_UP:
-			zoom * 1.1
+			zoom *= 1.1
+		
+		if event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
+			zoom *= 0.9
 	
 	
