@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://c5kcw1mx43m6y"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_v4gg2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2sshh"]
+albedo_color = Color(1, 0.8117647, 0.7764706, 1)
+
+[node name="Braco" type="Node3D" unique_id=152241927]
+
+[node name="Node3D" type="Node3D" parent="." unique_id=1337262]
+transform = Transform3D(0.05214419, 0, 0.9986396, -0.2762005, 0.96099174, 0.014421871, -0.9596845, -0.27657673, 0.050110143, 0, 0.3230251, 0)
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Node3D" unique_id=1012180847]
+transform = Transform3D(0.105602935, 1.0199454, 0, -0.28141424, 0.38274258, 9.313226e-10, -6.9849193e-10, 7.450581e-09, 0.38633516, -0.8609066, -0.9482218, -0.015177241)
+mesh = SubResource("BoxMesh_v4gg2")
+surface_material_override/0 = SubResource("StandardMaterial3D_2sshh")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Node3D" unique_id=1293308742]
+transform = Transform3D(0.24818023, 0.750778, -7.450581e-09, -0.26365736, 0.7067059, 9.313226e-10, -1.8626451e-09, -1.4901161e-08, 0.45466223, -0.23046184, -0.5644285, -0.018613739)
+mesh = SubResource("BoxMesh_v4gg2")
+surface_material_override/0 = SubResource("StandardMaterial3D_2sshh")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="Node3D" unique_id=1930163192]
+transform = Transform3D(0.028636351, 0.4165573, 0.00089646317, -0.36689094, 0.032493807, 0.0063356464, 0.0052565373, -0.0013246313, 0.43732533, -1.4017824, -1.0909296, -0.020193191)
+mesh = SubResource("BoxMesh_v4gg2")
+surface_material_override/0 = SubResource("StandardMaterial3D_2sshh")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="Node3D" unique_id=917733045]
+transform = Transform3D(0.16622919, 0.5649023, -0.0045979186, -0.17484121, 0.53457564, 0.016990446, 0.01587337, -0.027562428, 0.23529537, -0.28620797, -0.45344162, -0.007726403)
+mesh = SubResource("BoxMesh_v4gg2")
+surface_material_override/0 = SubResource("StandardMaterial3D_2sshh")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="Node3D" unique_id=869361634]
+transform = Transform3D(0.1016731, 0.37231508, 0.0019047982, -0.22130997, 0.1694549, 0.027358811, 0.019657033, -0.017927041, 0.29816818, -0.8800629, -0.8460586, -0.03451146)
+mesh = SubResource("BoxMesh_v4gg2")
+surface_material_override/0 = SubResource("StandardMaterial3D_2sshh")

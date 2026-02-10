@@ -1,31 +1,12 @@
 [gd_scene format=3 uid="uid://b6nj5nap0o8m5"]
 
 [ext_resource type="PackedScene" uid="uid://bdkph1hp388gk" path="res://cenas/Cena_de_batalha.tscn" id="1_r54cn"]
-[ext_resource type="Script" uid="uid://cduck5d34q3fy" path="res://scripts/FPS.gd" id="2_en8ld"]
+[ext_resource type="PackedScene" uid="uid://d0q5i4xn8qg4g" path="res://cenas/HUD.tscn" id="2_en8ld"]
 
 [node name="Main" type="Node2D" unique_id=44142531]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=323235187]
+[node name="CenaDeBatalha" parent="." unique_id=1007488634 instance=ExtResource("1_r54cn")]
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="CanvasLayer" unique_id=883446092]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-stretch = true
-stretch_shrink = 2
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=174506677]
 
-[node name="SubViewport" type="SubViewport" parent="CanvasLayer/SubViewportContainer" unique_id=498462249]
-handle_input_locally = false
-snap_2d_transforms_to_pixel = true
-canvas_item_default_texture_filter = 0
-size = Vector2i(576, 324)
-render_target_update_mode = 4
-
-[node name="CenaDeBatalha" parent="CanvasLayer/SubViewportContainer/SubViewport" unique_id=1007488634 instance=ExtResource("1_r54cn")]
-
-[node name="Label" type="Label" parent="CanvasLayer" unique_id=545052364]
-size_flags_vertical = 0
-text = "TEXTO MANEIRO"
-script = ExtResource("2_en8ld")
+[node name="Hud" parent="CanvasLayer" unique_id=1771205510 instance=ExtResource("2_en8ld")]

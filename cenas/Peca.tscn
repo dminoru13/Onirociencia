@@ -7,10 +7,10 @@
 [node name="Peca" type="Node2D" unique_id=183705824]
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=1815242875]
-offset_left = -34.0
-offset_top = -49.0
-offset_right = 30.0
-offset_bottom = 15.0
+offset_left = -33.0
+offset_top = -37.0
+offset_right = 31.0
+offset_bottom = 27.0
 
 [node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=471101760]
 transparent_bg = true

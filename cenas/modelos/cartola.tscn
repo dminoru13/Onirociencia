@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://yy0dj152xx0"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_v4gg2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sq258"]
+albedo_color = Color(0.18717614, 0.18717614, 0.18717614, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r51gu"]
+albedo_color = Color(1, 0.06666667, 0.12941177, 1)
+
+[node name="cartola" type="Node3D" unique_id=152241927]
+transform = Transform3D(0.345, 0, 0, 0, 0.345, 0, 0, 0, 0.345, 0, 0.4573437, 0)
+
+[node name="Node3D" type="Node3D" parent="." unique_id=2058988009]
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Node3D" unique_id=256908519]
+transform = Transform3D(0.60953146, 0, 0, 0, 0.86114776, 0, 0, 0, 0.68151087, 0.034509793, 2.1707706, 0)
+mesh = SubResource("BoxMesh_v4gg2")
+surface_material_override/0 = SubResource("StandardMaterial3D_sq258")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Node3D" unique_id=102247440]
+transform = Transform3D(0.94379777, 0, 0, 0, 0.21924467, 0, 0, 0, 1.1130455, 0.034509793, 1.7581536, 0)
+mesh = SubResource("BoxMesh_v4gg2")
+surface_material_override/0 = SubResource("StandardMaterial3D_sq258")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Node3D" unique_id=1442460134]
+transform = Transform3D(0.68283504, 0, 0, 0, 0.21924467, 0, 0, 0, 0.7066135, 0.034509793, 1.8943743, 0)
+mesh = SubResource("BoxMesh_v4gg2")
+surface_material_override/0 = SubResource("StandardMaterial3D_r51gu")
