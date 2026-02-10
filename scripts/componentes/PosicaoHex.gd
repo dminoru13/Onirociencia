@@ -1,5 +1,5 @@
 @tool
-extends Node2D
+class_name PosicaoHex extends Node2D
 
 @export var posicao_hexagonal := Vector2i(0,0)
 @export var altura := 0

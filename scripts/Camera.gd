@@ -2,7 +2,10 @@ extends Camera2D
 
 var arrastando := false
 
-func _unhandled_input(event: InputEvent) -> void:
+signal zoom_alterado(novo_zoom: Vector2)
+
+
+func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion and arrastando:
 		global_position -= event.relative / zoom
 	
@@ -13,8 +16,10 @@ func _unhandled_input(event: InputEvent) -> void:
 		#ZOOM
 		if event.button_index == MOUSE_BUTTON_WHEEL_UP:
 			zoom *= 1.1
+			emit_signal("zoom_alterado", zoom)
 		
 		if event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
 			zoom *= 0.9
+			emit_signal("zoom_alterado", zoom)
 	
 	

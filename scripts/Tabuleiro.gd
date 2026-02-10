@@ -24,7 +24,6 @@ func _ready() -> void:
 			add_child(tile)
 			tile.posicionar(Vector2i(x,y))
 			tile.cor_tile = cores.pick_random()
-			tile.altura = randi_range(0,2)
 
 
 	

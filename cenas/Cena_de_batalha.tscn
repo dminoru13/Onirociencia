@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://bdkph1hp388gk"]
+
+[ext_resource type="PackedScene" uid="uid://oye5ubjpuudo" path="res://cenas/Tabuleiro.tscn" id="1_d1mvn"]
+[ext_resource type="Script" uid="uid://dsn6lo748otea" path="res://scripts/Camera.gd" id="2_adp0p"]
+[ext_resource type="Script" uid="uid://ptcbpfc66v3k" path="res://scripts/componentes/PosicaoHex.gd" id="3_1oiw0"]
+[ext_resource type="Script" uid="uid://ci03uli0sjrjb" path="res://scripts/Paralax.gd" id="4_adp0p"]
+[ext_resource type="Script" uid="uid://dgl0t5wsa1siy" path="res://scripts/Fundo.gd" id="5_1oiw0"]
+
+[node name="CenaDeBatalha" type="Node2D" unique_id=1007488634]
+
+[node name="Tabuleiro" parent="." unique_id=1035979696 instance=ExtResource("1_d1mvn")]
+z_index = 299
+position = Vector2(480, 299)
+tamanho_tabuleiro = Vector2i(10, 10)
+cor_tabuleiro = Color(0.17442039, 0.17439902, 0.22668165, 1)
+
+[node name="PosicaoHex" type="Node2D" parent="." unique_id=1447211006]
+script = ExtResource("3_1oiw0")
+metadata/_custom_type_script = "uid://ptcbpfc66v3k"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1710723927]
+position = Vector2(579, 323)
+script = ExtResource("2_adp0p")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=487789566]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=315027407]
+script = ExtResource("4_adp0p")
+
+[node name="Fundo" type="Node2D" parent="ParallaxBackground/ParallaxLayer" unique_id=315242379]
+script = ExtResource("5_1oiw0")
+
+[connection signal="zoom_alterado" from="Camera2D" to="ParallaxBackground/ParallaxLayer/Fundo" method="_on_camera_2d_zoom_alterado"]
