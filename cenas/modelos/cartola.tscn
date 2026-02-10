@@ -6,7 +6,9 @@
 albedo_color = Color(0.18717614, 0.18717614, 0.18717614, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r51gu"]
+diffuse_mode = 3
 albedo_color = Color(1, 0.06666667, 0.12941177, 1)
+roughness = 0.0
 
 [node name="cartola" type="Node3D" unique_id=152241927]
 transform = Transform3D(0.345, 0, 0, 0, 0.345, 0, 0, 0, 0.345, 0, 0.4573437, 0)

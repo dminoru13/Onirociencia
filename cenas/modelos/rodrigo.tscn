@@ -4,9 +4,16 @@
 
 [sub_resource type="TorusMesh" id="TorusMesh_gq7ud"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aljas"]
+albedo_color = Color(1, 1, 0, 1)
+
 [sub_resource type="PrismMesh" id="PrismMesh_e340u"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_v4gg2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e340u"]
+diffuse_mode = 3
+roughness = 0.0
 
 [node name="Rodrigo" type="Node3D" unique_id=152241927]
 transform = Transform3D(0.345, 0, 0, 0, 0.345, 0, 0, 0, 0.345, 0, 0.4573437, 0)
@@ -16,18 +23,22 @@ transform = Transform3D(0.345, 0, 0, 0, 0.345, 0, 0, 0, 0.345, 0, 0.4573437, 0)
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Node3D" unique_id=193095597]
 transform = Transform3D(0.645, 0, 0, 0, 0.645, 0, 0, 0, 0.645, 0, 1.2505566, 0)
 mesh = SubResource("TorusMesh_gq7ud")
+surface_material_override/0 = SubResource("StandardMaterial3D_aljas")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="Node3D" unique_id=1039865476]
 transform = Transform3D(0.35756314, 0, 0, 0, 1.0173864, 0, 0, 0, 0.42953154, -0.0053714216, 2.763945, 0)
 mesh = SubResource("PrismMesh_e340u")
+surface_material_override/0 = SubResource("StandardMaterial3D_aljas")
 
 [node name="MeshInstance3D4" type="MeshInstance3D" parent="Node3D" unique_id=256908519]
 transform = Transform3D(0.5734793, 0, 0, 0, 0.48061645, 0, 0, 0, 0.59808314, 0, 1.9523348, 0)
 mesh = SubResource("BoxMesh_v4gg2")
+surface_material_override/0 = SubResource("StandardMaterial3D_aljas")
 
 [node name="MeshInstance3D5" type="MeshInstance3D" parent="Node3D" unique_id=1587087534]
 transform = Transform3D(3.145, 0, 0, 0, 0.061089255, -3.144407, 0, 3.144407, 0.061089255, 0, 1.983992, 0)
 mesh = SubResource("TorusMesh_gq7ud")
+surface_material_override/0 = SubResource("StandardMaterial3D_e340u")
 
 [node name="Gira_gira" type="Node3D" parent="Node3D/MeshInstance3D5" unique_id=164313871]
 script = ExtResource("1_e340u")

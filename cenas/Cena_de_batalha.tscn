@@ -6,6 +6,10 @@
 [ext_resource type="Script" uid="uid://ci03uli0sjrjb" path="res://scripts/Paralax.gd" id="4_adp0p"]
 [ext_resource type="Script" uid="uid://dgl0t5wsa1siy" path="res://scripts/Fundo.gd" id="5_1oiw0"]
 [ext_resource type="PackedScene" uid="uid://mkq6v2ceps5w" path="res://cenas/Peca.tscn" id="6_07wpb"]
+[ext_resource type="PackedScene" uid="uid://ddfj6ouwc4no2" path="res://cenas/modelos/rodrigo.tscn" id="7_0etjb"]
+[ext_resource type="PackedScene" uid="uid://c1iled3bsck2t" path="res://cenas/modelos/patonssio.tscn" id="7_282lo"]
+[ext_resource type="PackedScene" uid="uid://bv1phvxccetpq" path="res://cenas/componentes/PosicaoHex.tscn" id="7_ordf8"]
+[ext_resource type="PackedScene" uid="uid://3a42irvv3qjx" path="res://cenas/componentes/Modelo3d.tscn" id="9_282lo"]
 
 [node name="CenaDeBatalha" type="Node2D" unique_id=1007488634]
 
@@ -31,70 +35,26 @@ script = ExtResource("4_adp0p")
 [node name="Fundo" type="Node2D" parent="ParallaxBackground/ParallaxLayer" unique_id=315242379]
 script = ExtResource("5_1oiw0")
 
-[node name="os manos" type="Node2D" parent="." unique_id=1639975473]
+[node name="Node2D" type="Node2D" parent="." unique_id=602158256]
 
-[node name="Peca" parent="os manos" unique_id=502439171 instance=ExtResource("6_07wpb")]
+[node name="Peca" parent="Node2D" unique_id=183705824 instance=ExtResource("6_07wpb")]
 z_index = 349
 position = Vector2(576, 349)
+Modelo3D = ExtResource("7_282lo")
 
-[node name="Peca2" parent="os manos" unique_id=183705824 instance=ExtResource("6_07wpb")]
-z_index = 349
-position = Vector2(626, 382)
+[node name="PosicaoHex" parent="Node2D/Peca" unique_id=66041640 instance=ExtResource("7_ordf8")]
+posicao_hexagonal = Vector2i(12, 7)
 
-[node name="Peca3" parent="os manos" unique_id=1687774460 instance=ExtResource("6_07wpb")]
-z_index = 349
-position = Vector2(573, 400)
+[node name="Modelo3d" parent="Node2D/Peca" unique_id=220562427 instance=ExtResource("9_282lo")]
 
-[node name="Peca4" parent="os manos" unique_id=660038278 instance=ExtResource("6_07wpb")]
-z_index = 349
-position = Vector2(623, 433)
+[node name="Peca2" parent="Node2D" unique_id=1587875029 instance=ExtResource("6_07wpb")]
+z_index = 324
+position = Vector2(720, 324)
+Modelo3D = ExtResource("7_0etjb")
 
-[node name="Peca5" parent="os manos" unique_id=1402570300 instance=ExtResource("6_07wpb")]
-z_index = 349
-position = Vector2(681, 357)
+[node name="PosicaoHex" parent="Node2D/Peca2" unique_id=372436970 instance=ExtResource("7_ordf8")]
+posicao_hexagonal = Vector2i(15, 7)
 
-[node name="Peca6" parent="os manos" unique_id=1696811651 instance=ExtResource("6_07wpb")]
-z_index = 349
-position = Vector2(731, 390)
-
-[node name="Peca7" parent="os manos" unique_id=1279098463 instance=ExtResource("6_07wpb")]
-z_index = 349
-position = Vector2(678, 408)
-
-[node name="Peca8" parent="os manos" unique_id=2137314000 instance=ExtResource("6_07wpb")]
-z_index = 349
-position = Vector2(728, 441)
-
-[node name="Peca9" parent="os manos" unique_id=1627666945 instance=ExtResource("6_07wpb")]
-z_index = 349
-position = Vector2(571, 456)
-
-[node name="Peca10" parent="os manos" unique_id=726467631 instance=ExtResource("6_07wpb")]
-z_index = 349
-position = Vector2(621, 489)
-
-[node name="Peca11" parent="os manos" unique_id=765359052 instance=ExtResource("6_07wpb")]
-z_index = 349
-position = Vector2(568, 507)
-
-[node name="Peca12" parent="os manos" unique_id=647791224 instance=ExtResource("6_07wpb")]
-z_index = 349
-position = Vector2(618, 540)
-
-[node name="Peca13" parent="os manos" unique_id=751080603 instance=ExtResource("6_07wpb")]
-z_index = 349
-position = Vector2(676, 464)
-
-[node name="Peca14" parent="os manos" unique_id=1668421402 instance=ExtResource("6_07wpb")]
-z_index = 349
-position = Vector2(726, 497)
-
-[node name="Peca15" parent="os manos" unique_id=40569188 instance=ExtResource("6_07wpb")]
-z_index = 349
-position = Vector2(673, 515)
-
-[node name="Peca16" parent="os manos" unique_id=594914326 instance=ExtResource("6_07wpb")]
-z_index = 349
-position = Vector2(723, 548)
+[node name="Modelo3d" parent="Node2D/Peca2" unique_id=1403895285 instance=ExtResource("9_282lo")]
 
 [connection signal="zoom_alterado" from="Camera2D" to="ParallaxBackground/ParallaxLayer/Fundo" method="_on_camera_2d_zoom_alterado"]
