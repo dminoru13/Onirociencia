@@ -17,7 +17,9 @@ func get_altura_hexagono() -> float:
 
 
 func _ready() -> void:
-	pass
+	DisplayServer.window_set_vsync_mode(
+	DisplayServer.VSYNC_DISABLED
+)
 
 
 func _process(delta):

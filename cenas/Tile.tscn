@@ -6,28 +6,30 @@
 [node name="Tile" type="Area2D" unique_id=649217449]
 z_as_relative = false
 script = ExtResource("1_86upo")
-cor_borda = Color(0.22745098, 0.22745098, 0.23529412, 0.30588236)
+espessura_linha = 2
+cor_borda = Color(1, 1, 1, 0)
 cor_parede = Color(0.11119685, 0.11119684, 0.11119684, 1)
 
 [node name="PosicaoHex" parent="." unique_id=66041640 instance=ExtResource("2_kf0ti")]
 
 [node name="PoligonoParede" type="Polygon2D" parent="." unique_id=762585642]
-color = Color(0, 0, 0, 1)
+color = Color(0.11119685, 0.11119684, 0.11119684, 1)
+polygon = PackedVector2Array(32, 0, 16, 24.941532, -16, 24.941532, -32, 3.5268663e-15, -32, 24.941532, -16, 49.883064, 16, 49.883064, 32, 24.941532)
 
 [node name="PoligonoFrenteParede" type="Polygon2D" parent="." unique_id=1261554365]
-color = Color(0.1, 0.1, 0.1, 1)
-polygon = PackedVector2Array(16, 21.615993, -16, 21.615993, -16, 64.847984, 16, 64.847984)
+color = Color(0.12897292, 0.1289729, 0.1289729, 1)
+polygon = PackedVector2Array(16, 24.941532, -16, 24.941532, -16, 49.883064, 16, 49.883064)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1868016482]
-polygon = PackedVector2Array(32, 0, 16, 21.615993, -16, 21.615993, -32, 3.0566175e-15, -16, -21.615993, 16, -21.615993)
+polygon = PackedVector2Array(32, 0, 16, 24.941532, -16, 24.941532, -32, 3.5268663e-15, -16, -24.941532, 16, -24.941532)
 
 [node name="PoligonoHexagono" type="Polygon2D" parent="." unique_id=1068093286]
-color = Color(0.9, 0.761, 0.906, 1)
-polygon = PackedVector2Array(32, 0, 16, 21.615993, -16, 21.615993, -32, 3.0566175e-15, -16, -21.615993, 16, -21.615993)
+color = Color(0.54, 0.4566, 0.5436, 1)
+polygon = PackedVector2Array(32, 0, 16, 24.941532, -16, 24.941532, -32, 3.5268663e-15, -16, -24.941532, 16, -24.941532)
 
 [node name="LinhaHexagono" type="Line2D" parent="." unique_id=1107292502]
-points = PackedVector2Array(32, 0, 16, 21.615993, -16, 21.615993, -32, 3.0566175e-15, -16, -21.615993, 16, -21.615993, 32, 0)
-width = 1.0
-default_color = Color(0.22745098, 0.22745098, 0.23529412, 0.30588236)
+points = PackedVector2Array(32, 0, 16, 24.941532, -16, 24.941532, -32, 3.5268663e-15, -16, -24.941532, 16, -24.941532, 32, 0)
+width = 2.0
+default_color = Color(1, 1, 1, 0)
 
 [node name="LinhaParede" type="Line2D" parent="." unique_id=1974647129]
