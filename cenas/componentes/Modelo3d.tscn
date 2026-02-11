@@ -1,12 +1,11 @@
 [gd_scene format=3 uid="uid://3a42irvv3qjx"]
 
-[ext_resource type="Script" uid="uid://bwf1q8j2dvwil" path="res://scripts/Modelo_3d.gd" id="1_kyisn"]
+[ext_resource type="Script" uid="uid://bwf1q8j2dvwil" path="res://scripts/Modelo3D.gd" id="1_kyisn"]
 [ext_resource type="Script" uid="uid://dv3ig538107tk" path="res://scripts/camera_3d.gd" id="2_yqtyb"]
 [ext_resource type="Script" uid="uid://cl7b3qcq126fy" path="res://scripts/Gira_gira.gd" id="3_45j7k"]
 
-[node name="Modelo3d" type="Node2D" unique_id=1403895285 node_paths=PackedStringArray("conteiner_modelo")]
+[node name="Modelo3D" type="Node2D" unique_id=1403895285]
 script = ExtResource("1_kyisn")
-conteiner_modelo = NodePath("SubViewportContainer/SubViewport/Node3D/Modelo")
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=1197692247]
 offset_left = -33.0
@@ -15,6 +14,7 @@ offset_right = 31.0
 offset_bottom = 27.0
 
 [node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=740401893]
+own_world_3d = true
 transparent_bg = true
 handle_input_locally = false
 size = Vector2i(64, 64)
