@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://ci03uli0sjrjb" path="res://cenas/Fundo/Paralax.gd" id="4_adp0p"]
 [ext_resource type="Script" uid="uid://dgl0t5wsa1siy" path="res://cenas/Fundo/Fundo.gd" id="5_1oiw0"]
 [ext_resource type="PackedScene" uid="uid://mkq6v2ceps5w" path="res://Peca/Peca.tscn" id="6_07wpb"]
-[ext_resource type="PackedScene" uid="uid://ytfoux7rajpd" path="res://modelos/ricardo.tscn" id="7_dpfka"]
+[ext_resource type="PackedScene" uid="uid://c1iled3bsck2t" path="res://modelos/patonssio.tscn" id="7_uhww7"]
 
 [node name="CenaDeBatalha" type="Node2D" unique_id=1007488634]
 
@@ -35,7 +35,7 @@ script = ExtResource("5_1oiw0")
 [node name="Peca" parent="Pecas" unique_id=183705824 instance=ExtResource("6_07wpb")]
 z_index = 424
 position = Vector2(624, 424)
-Modelo = ExtResource("7_dpfka")
+Modelo = ExtResource("7_uhww7")
 Posicao = Vector2i(13, 9)
 
 [connection signal="zoom_alterado" from="Camera2D" to="ParallaxBackground/ParallaxLayer/Fundo" method="_on_camera_2d_zoom_alterado"]

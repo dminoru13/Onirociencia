@@ -1,0 +1,116 @@
+[gd_scene format=3 uid="uid://6g2japukb6h5"]
+
+[ext_resource type="Script" uid="uid://bwt245n5ptroh" path="res://Hud/Cartas/carta.gd" id="1_kgk3x"]
+[ext_resource type="Texture2D" uid="uid://etfjn1hpcr0j" path="res://restos/pato.png" id="1_o0nxq"]
+
+[node name="Carta" type="Control" unique_id=807686854]
+custom_minimum_size = Vector2(96, 128)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -64.0
+offset_right = 48.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 8
+script = ExtResource("1_kgk3x")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1247507348]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=312539957]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer" unique_id=1477877662]
+layout_mode = 2
+color = Color(0.14334205, 1.6671289e-05, 0.1458765, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer" unique_id=734985822]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MarginContainer" unique_id=1880437275]
+layout_mode = 2
+
+[node name="Cima" type="Control" parent="MarginContainer/MarginContainer/VBoxContainer" unique_id=1821951105]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/MarginContainer/VBoxContainer/Cima" unique_id=2023042192]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+color = Color(0.029215252, 0.061075494, 0.18081707, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/MarginContainer/VBoxContainer/Cima" unique_id=1470683536]
+position = Vector2(38, 28)
+texture = ExtResource("1_o0nxq")
+
+[node name="Baixo" type="Control" parent="MarginContainer/MarginContainer/VBoxContainer" unique_id=889698437]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/MarginContainer/VBoxContainer/Baixo" unique_id=632273872]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+color = Color(0.077223934, 0.13657457, 0.32745495, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/MarginContainer/VBoxContainer/Baixo" unique_id=360234324]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 1
+theme_override_constants/margin_top = 1
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 1
+
+[node name="Label" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/Baixo/MarginContainer" unique_id=755228153]
+layout_mode = 2
+size_flags_vertical = 1
+text = "1 M"
+
+[node name="Label2" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/Baixo/MarginContainer" unique_id=1882749803]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 1
+text = "3 A"
+
+[node name="Label3" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer/Baixo/MarginContainer" unique_id=102646550]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+text = "3P"

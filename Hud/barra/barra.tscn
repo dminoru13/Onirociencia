@@ -3,13 +3,17 @@
 [ext_resource type="Script" uid="uid://ex1mau5ehih5" path="res://Hud/barra/barra.gd" id="1_ok81t"]
 
 [node name="Barra" type="Control" unique_id=1041181830]
-custom_minimum_size = Vector2(300, 40)
+custom_minimum_size = Vector2(0, 25)
 layout_mode = 3
 anchors_preset = 0
+offset_right = 155.0
+offset_bottom = 56.0
 size_flags_vertical = 6
 script = ExtResource("1_ok81t")
-valor_maximo = 5
-valor_atual = 4
+valor_atual = 49
+valor_maximo = 49
+tamanho_padrao = Vector2i(155, 56)
+cor = Color(0.33131197, 0.18760225, 0.56208366, 1)
 
 [node name="Borda" type="ColorRect" parent="." unique_id=1160976548]
 layout_mode = 1
@@ -19,7 +23,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Margem" type="MarginContainer" parent="Borda" unique_id=238048883]
+[node name="MarginContainer" type="MarginContainer" parent="Borda" unique_id=992183106]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -28,24 +32,36 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 4
 theme_override_constants/margin_top = 4
-theme_override_constants/margin_right = 1
+theme_override_constants/margin_right = 4
 theme_override_constants/margin_bottom = 4
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Borda/Margem" unique_id=1410103560]
+[node name="Fundo_barra" type="ColorRect" parent="Borda/MarginContainer" unique_id=266165522]
 layout_mode = 2
+color = Color(0.26293245, 0.26293245, 0.26293245, 1)
 
-[node name="Barra_interna" type="ColorRect" parent="Borda/Margem/HBoxContainer" unique_id=982109554]
-layout_mode = 2
-size_flags_horizontal = 3
-color = Color(1, 0.3019608, 0.13333334, 1)
+[node name="Barra_interna" type="ColorRect" parent="Borda" unique_id=982109554]
+custom_minimum_size = Vector2(0, 49)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = -4.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+color = Color(0.33131197, 0.18760225, 0.56208366, 1)
 
-[node name="separador" type="Control" parent="Borda/Margem/HBoxContainer" unique_id=1097101512]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 0.0
-
-[node name="Texto" type="Label" parent="Borda/Margem" unique_id=57905537]
-layout_mode = 2
-text = "5 / 4"
+[node name="Texto" type="Label" parent="Borda" unique_id=57905537]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "49 / 49"
 horizontal_alignment = 1
 vertical_alignment = 1

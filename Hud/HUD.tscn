@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://d0q5i4xn8qg4g"]
 
+[ext_resource type="PackedScene" uid="uid://bsitlwhla86pi" path="res://Hud/retrato/Retrato.tscn" id="1_2wsdo"]
 [ext_resource type="Script" uid="uid://cduck5d34q3fy" path="res://Hud/FPS.gd" id="1_kqorm"]
 [ext_resource type="PackedScene" uid="uid://6f1bb46qhd" path="res://Hud/barra/barra.tscn" id="2_lb25n"]
+[ext_resource type="PackedScene" uid="uid://6g2japukb6h5" path="res://Hud/Cartas/carta.tscn" id="3_sbvkh"]
 
 [node name="Hud" type="Control" unique_id=1771205510]
 layout_mode = 3
@@ -10,34 +12,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="Debug" type="Control" parent="." unique_id=78108762]
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="Debug" unique_id=888247066]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="Debug/MarginContainer" unique_id=533216535]
-layout_mode = 2
-theme_override_constants/margin_left = 8
-theme_override_constants/margin_top = 8
-
-[node name="Label" type="Label" parent="Debug/MarginContainer/MarginContainer" unique_id=776299311]
-layout_mode = 2
-size_flags_vertical = 0
-text = "TEXTO MANEIRO"
-script = ExtResource("1_kqorm")
 
 [node name="Batalha" type="Control" parent="." unique_id=1149695263]
 layout_mode = 1
@@ -66,6 +40,7 @@ layout_mode = 2
 [node name="Cima" type="MarginContainer" parent="Batalha/MarginContainer/VBoxContainer" unique_id=194073535]
 layout_mode = 2
 size_flags_vertical = 3
+size_flags_stretch_ratio = 0.55
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Batalha/MarginContainer/VBoxContainer/Cima" unique_id=495008635]
 layout_mode = 2
@@ -74,7 +49,7 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-size_flags_stretch_ratio = 2.26
+size_flags_stretch_ratio = 0.2
 theme_override_constants/margin_left = 4
 theme_override_constants/margin_top = 4
 theme_override_constants/margin_right = 4
@@ -83,42 +58,212 @@ theme_override_constants/margin_bottom = 4
 [node name="VBoxContainer" type="VBoxContainer" parent="Batalha/MarginContainer/VBoxContainer/Cima/HBoxContainer/MarginContainer" unique_id=1240405402]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_constants/separation = 16
+theme_override_constants/separation = 6
 
-[node name="Retrato" type="ColorRect" parent="Batalha/MarginContainer/VBoxContainer/Cima/HBoxContainer/MarginContainer/VBoxContainer" unique_id=590778628]
+[node name="Retrato" parent="Batalha/MarginContainer/VBoxContainer/Cima/HBoxContainer/MarginContainer/VBoxContainer" unique_id=1021578243 instance=ExtResource("1_2wsdo")]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="Batalha/MarginContainer/VBoxContainer/Cima/HBoxContainer/MarginContainer/VBoxContainer" unique_id=767820923]
 layout_mode = 2
 size_flags_vertical = 3
-size_flags_stretch_ratio = 2.0
+size_flags_stretch_ratio = 0.15
 
-[node name="MarginContainer" type="MarginContainer" parent="Batalha/MarginContainer/VBoxContainer/Cima/HBoxContainer/MarginContainer/VBoxContainer/Retrato" unique_id=990836512]
+[node name="VBoxContainer" type="VBoxContainer" parent="Batalha/MarginContainer/VBoxContainer/Cima/HBoxContainer/MarginContainer/VBoxContainer/Control" unique_id=792246547]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 4
-theme_override_constants/margin_top = 4
-theme_override_constants/margin_right = 4
-theme_override_constants/margin_bottom = 4
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.45
+theme_override_constants/separation = 0
 
-[node name="ColorRect" type="ColorRect" parent="Batalha/MarginContainer/VBoxContainer/Cima/HBoxContainer/MarginContainer/VBoxContainer/Retrato/MarginContainer" unique_id=561507084]
-layout_mode = 2
-color = Color(0.24840015, 0.24840018, 0.24840015, 1)
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Batalha/MarginContainer/VBoxContainer/Cima/HBoxContainer/MarginContainer/VBoxContainer" unique_id=792246547]
+[node name="Vida" parent="Batalha/MarginContainer/VBoxContainer/Cima/HBoxContainer/MarginContainer/VBoxContainer/Control/VBoxContainer" unique_id=1041181830 instance=ExtResource("2_lb25n")]
+custom_minimum_size = Vector2(0, 25.97)
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_constants/separation = 12
-
-[node name="Barra" parent="Batalha/MarginContainer/VBoxContainer/Cima/HBoxContainer/MarginContainer/VBoxContainer/VBoxContainer" unique_id=1041181830 instance=ExtResource("2_lb25n")]
-layout_mode = 2
+valor_atual = 45
+valor_maximo = 45
+tamanho_padrao = Vector2i(57, 56)
+cor = Color(0.69479173, 0.16731778, 0.18985128, 1)
 
 [node name="Control" type="Control" parent="Batalha/MarginContainer/VBoxContainer/Cima/HBoxContainer" unique_id=785060519]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_stretch_ratio = 9.43
 
 [node name="Baixo" type="MarginContainer" parent="Batalha/MarginContainer/VBoxContainer" unique_id=448635702]
 layout_mode = 2
 size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Batalha/MarginContainer/VBoxContainer/Baixo" unique_id=763136817]
+layout_mode = 2
+
+[node name="esquerda" type="VBoxContainer" parent="Batalha/MarginContainer/VBoxContainer/Baixo/HBoxContainer" unique_id=302682062]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="espaco" type="Control" parent="Batalha/MarginContainer/VBoxContainer/Baixo/HBoxContainer/esquerda" unique_id=687534236]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.75
+
+[node name="Control" type="VBoxContainer" parent="Batalha/MarginContainer/VBoxContainer/Baixo/HBoxContainer/esquerda" unique_id=1446193002]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Cima" type="HBoxContainer" parent="Batalha/MarginContainer/VBoxContainer/Baixo/HBoxContainer/esquerda/Control" unique_id=119470732]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+alignment = 1
+
+[node name="espaco2" type="Control" parent="Batalha/MarginContainer/VBoxContainer/Baixo/HBoxContainer/esquerda/Control/Cima" unique_id=2014731180]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Batalha/MarginContainer/VBoxContainer/Baixo/HBoxContainer/esquerda/Control/Cima" unique_id=1915791716]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 32
+
+[node name="ATACAR" type="ColorRect" parent="Batalha/MarginContainer/VBoxContainer/Baixo/HBoxContainer/esquerda/Control/Cima/HBoxContainer" unique_id=894113323]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(1, 0.24705882, 0.18039216, 1)
+
+[node name="Label" type="Label" parent="Batalha/MarginContainer/VBoxContainer/Baixo/HBoxContainer/esquerda/Control/Cima/HBoxContainer/ATACAR" unique_id=1400640396]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "ATACAR"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MOVER" type="ColorRect" parent="Batalha/MarginContainer/VBoxContainer/Baixo/HBoxContainer/esquerda/Control/Cima/HBoxContainer" unique_id=733523217]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(1, 0.24705882, 0.18039216, 1)
+
+[node name="Label" type="Label" parent="Batalha/MarginContainer/VBoxContainer/Baixo/HBoxContainer/esquerda/Control/Cima/HBoxContainer/MOVER" unique_id=453123419]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "MOVER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="espaco" type="Control" parent="Batalha/MarginContainer/VBoxContainer/Baixo/HBoxContainer/esquerda/Control/Cima" unique_id=1457808893]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.9
+
+[node name="Baixo" type="Control" parent="Batalha/MarginContainer/VBoxContainer/Baixo/HBoxContainer/esquerda/Control" unique_id=594582630]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ColorRect" type="ColorRect" parent="Batalha/MarginContainer/VBoxContainer/Baixo/HBoxContainer/esquerda/Control/Baixo" unique_id=1130135642]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+color = Color(0.31764707, 0.34509805, 1, 0.28235295)
+
+[node name="MarginContainer" type="MarginContainer" parent="Batalha/MarginContainer/VBoxContainer/Baixo/HBoxContainer/esquerda/Control/Baixo" unique_id=2076964023]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Batalha/MarginContainer/VBoxContainer/Baixo/HBoxContainer/esquerda/Control/Baixo/MarginContainer" unique_id=2142970431]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 21
+alignment = 1
+
+[node name="Carta" parent="Batalha/MarginContainer/VBoxContainer/Baixo/HBoxContainer/esquerda/Control/Baixo/MarginContainer/HBoxContainer" unique_id=807686854 instance=ExtResource("3_sbvkh")]
+layout_mode = 2
+size_flags_horizontal = 1
+
+[node name="Carta2" parent="Batalha/MarginContainer/VBoxContainer/Baixo/HBoxContainer/esquerda/Control/Baixo/MarginContainer/HBoxContainer" unique_id=1984044992 instance=ExtResource("3_sbvkh")]
+layout_mode = 2
+
+[node name="Carta3" parent="Batalha/MarginContainer/VBoxContainer/Baixo/HBoxContainer/esquerda/Control/Baixo/MarginContainer/HBoxContainer" unique_id=2114142303 instance=ExtResource("3_sbvkh")]
+layout_mode = 2
+
+[node name="Carta4" parent="Batalha/MarginContainer/VBoxContainer/Baixo/HBoxContainer/esquerda/Control/Baixo/MarginContainer/HBoxContainer" unique_id=315872607 instance=ExtResource("3_sbvkh")]
+layout_mode = 2
+
+[node name="Carta5" parent="Batalha/MarginContainer/VBoxContainer/Baixo/HBoxContainer/esquerda/Control/Baixo/MarginContainer/HBoxContainer" unique_id=105110720 instance=ExtResource("3_sbvkh")]
+layout_mode = 2
+
+[node name="direita" type="VBoxContainer" parent="Batalha/MarginContainer/VBoxContainer/Baixo/HBoxContainer" unique_id=2036301021]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="espaco" type="Control" parent="Batalha/MarginContainer/VBoxContainer/Baixo/HBoxContainer/direita" unique_id=1497844807]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Control" type="Control" parent="Batalha/MarginContainer/VBoxContainer/Baixo/HBoxContainer/direita" unique_id=797481627]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="Batalha/MarginContainer/VBoxContainer/Baixo/HBoxContainer/direita/Control" unique_id=1150524904]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -8.0
+offset_top = -8.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "TERMINAR
+TURNO"
+
+[node name="Debug" type="Control" parent="." unique_id=78108762]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Debug" unique_id=888247066]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Debug/MarginContainer" unique_id=533216535]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+
+[node name="Label" type="Label" parent="Debug/MarginContainer/MarginContainer" unique_id=776299311]
+layout_mode = 2
+size_flags_vertical = 0
+text = "TEXTO MANEIRO"
+script = ExtResource("1_kqorm")
