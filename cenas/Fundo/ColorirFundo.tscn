@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://b3ag4mj51103m"]
+
+[ext_resource type="Script" uid="uid://ci03uli0sjrjb" path="res://cenas/Fundo/Paralax.gd" id="1_j64c8"]
+[ext_resource type="Script" uid="uid://dgl0t5wsa1siy" path="res://cenas/Fundo/Fundo.gd" id="2_gac2n"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" unique_id=2067625446]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="." unique_id=539329142]
+script = ExtResource("1_j64c8")
+
+[node name="Fundo" type="Node2D" parent="ParallaxLayer" unique_id=1799671415]
+script = ExtResource("2_gac2n")

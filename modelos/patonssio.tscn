@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c1iled3bsck2t"]
 
-[ext_resource type="PackedScene" uid="uid://yy0dj152xx0" path="res://cenas/modelos/cartola.tscn" id="1_dx1tt"]
+[ext_resource type="PackedScene" uid="uid://yy0dj152xx0" path="res://modelos/cartola.tscn" id="1_dx1tt"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_hrada"]
 

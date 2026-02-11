@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d0q5i4xn8qg4g"]
 
-[ext_resource type="Script" uid="uid://cduck5d34q3fy" path="res://scripts/FPS.gd" id="1_kqorm"]
+[ext_resource type="Script" uid="uid://cduck5d34q3fy" path="res://Hud/FPS.gd" id="1_kqorm"]
 
 [node name="Hud" type="Control" unique_id=1771205510]
 layout_mode = 3

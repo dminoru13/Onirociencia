@@ -1,7 +1,7 @@
 @tool
 extends Node2D
 
-const NodeModelo3D := preload("res://cenas/componentes/Modelo3D.tscn")
+const NodeModelo3D := preload("res://componentes/Modelo3D/Modelo3D.tscn")
 
 @export var Modelo : PackedScene
 @export var Posicao := Vector2i.ZERO:

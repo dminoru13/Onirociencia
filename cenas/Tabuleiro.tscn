@@ -1,8 +1,0 @@
-[gd_scene format=3 uid="uid://oye5ubjpuudo"]
-
-[ext_resource type="PackedScene" uid="uid://copsujei0n8sm" path="res://cenas/Tile.tscn" id="1_p3p16"]
-[ext_resource type="Script" uid="uid://v28x5510pa65" path="res://scripts/Tabuleiro.gd" id="1_rgf3a"]
-
-[node name="Tabuleiro" type="Node2D" unique_id=1035979696]
-script = ExtResource("1_rgf3a")
-CenaTile = ExtResource("1_p3p16")

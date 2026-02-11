@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ddfj6ouwc4no2"]
 
-[ext_resource type="Script" uid="uid://cl7b3qcq126fy" path="res://scripts/Gira_gira.gd" id="1_e340u"]
+[ext_resource type="Script" uid="uid://cl7b3qcq126fy" path="res://componentes/GiraGira/Gira_gira.gd" id="1_e340u"]
 
 [sub_resource type="TorusMesh" id="TorusMesh_gq7ud"]
 

@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://3a42irvv3qjx"]
 
-[ext_resource type="Script" uid="uid://bwf1q8j2dvwil" path="res://scripts/Modelo3D.gd" id="1_kyisn"]
-[ext_resource type="Script" uid="uid://dv3ig538107tk" path="res://scripts/camera_3d.gd" id="2_yqtyb"]
-[ext_resource type="Script" uid="uid://cl7b3qcq126fy" path="res://scripts/Gira_gira.gd" id="3_45j7k"]
+[ext_resource type="Script" uid="uid://bwf1q8j2dvwil" path="res://componentes/Modelo3D/Modelo3D.gd" id="1_r4uyh"]
+[ext_resource type="Script" uid="uid://dv3ig538107tk" path="res://componentes/Modelo3D/camera_3d.gd" id="2_a2qpb"]
+[ext_resource type="Script" uid="uid://cl7b3qcq126fy" path="res://componentes/GiraGira/Gira_gira.gd" id="3_6w85k"]
 
 [node name="Modelo3D" type="Node2D" unique_id=1403895285]
-script = ExtResource("1_kyisn")
+script = ExtResource("1_r4uyh")
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=1197692247]
 offset_left = -33.0
@@ -32,7 +32,7 @@ current = true
 size = 2.7597418
 near = 0.001
 far = 36.16
-script = ExtResource("2_yqtyb")
+script = ExtResource("2_a2qpb")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewportContainer/SubViewport/Node3D/GiraGira" unique_id=196199477]
 transform = Transform3D(0.9925207, -0.09529662, 0.07629797, 0, 0.62499744, 0.78062683, -0.1220772, -0.77478826, 0.6203228, 4.3036203, 3.0721614, 1.5137986)
@@ -40,5 +40,5 @@ transform = Transform3D(0.9925207, -0.09529662, 0.07629797, 0, 0.62499744, 0.780
 [node name="Modelo" type="Node3D" parent="SubViewportContainer/SubViewport/Node3D" unique_id=864661139]
 
 [node name="Gira_gira" type="Node3D" parent="SubViewportContainer/SubViewport/Node3D/Modelo" unique_id=1844290144]
-script = ExtResource("3_45j7k")
+script = ExtResource("3_6w85k")
 metadata/_custom_type_script = "uid://cl7b3qcq126fy"

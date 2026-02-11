@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://copsujei0n8sm"]
 
-[ext_resource type="Script" uid="uid://bvaxux4ki4fl3" path="res://scripts/Tile.gd" id="1_86upo"]
-[ext_resource type="PackedScene" uid="uid://bv1phvxccetpq" path="res://cenas/componentes/PosicaoHex.tscn" id="2_kf0ti"]
+[ext_resource type="Script" uid="uid://bvaxux4ki4fl3" path="res://tabuleiro/tile/Tile.gd" id="1_86upo"]
+[ext_resource type="PackedScene" uid="uid://bv1phvxccetpq" path="res://componentes/PosicaoHex/PosicaoHex.tscn" id="2_kf0ti"]
 
 [node name="Tile" type="Area2D" unique_id=649217449]
 z_as_relative = false

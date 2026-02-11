@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://bdkph1hp388gk"]
+
+[ext_resource type="PackedScene" uid="uid://oye5ubjpuudo" path="res://tabuleiro/Tabuleiro.tscn" id="1_d1mvn"]
+[ext_resource type="Script" uid="uid://ptcbpfc66v3k" path="res://componentes/PosicaoHex/PosicaoHex.gd" id="3_1oiw0"]
+[ext_resource type="PackedScene" uid="uid://dm4trr4sffpl5" path="res://cenas/camera/camera_RTS.tscn" id="3_282lo"]
+[ext_resource type="Script" uid="uid://ci03uli0sjrjb" path="res://cenas/Fundo/Paralax.gd" id="4_adp0p"]
+[ext_resource type="Script" uid="uid://dgl0t5wsa1siy" path="res://cenas/Fundo/Fundo.gd" id="5_1oiw0"]
+[ext_resource type="PackedScene" uid="uid://mkq6v2ceps5w" path="res://cenas/Btalha/Peca/Peca.tscn" id="6_07wpb"]
+[ext_resource type="PackedScene" uid="uid://ytfoux7rajpd" path="res://modelos/ricardo.tscn" id="7_dpfka"]
+
+[node name="CenaDeBatalha" type="Node2D" unique_id=1007488634]
+
+[node name="Tabuleiro" parent="." unique_id=1035979696 instance=ExtResource("1_d1mvn")]
+z_index = 299
+position = Vector2(480, 299)
+tamanho_tabuleiro = Vector2i(8, 8)
+cor_tabuleiro = Color(0.17442039, 0.17439902, 0.22668165, 1)
+
+[node name="PosicaoHex" type="Node2D" parent="." unique_id=1447211006]
+script = ExtResource("3_1oiw0")
+
+[node name="Camera2D" parent="." unique_id=1900091794 instance=ExtResource("3_282lo")]
+position = Vector2(724, 481)
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=487789566]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=315027407]
+script = ExtResource("4_adp0p")
+
+[node name="Fundo" type="Node2D" parent="ParallaxBackground/ParallaxLayer" unique_id=315242379]
+script = ExtResource("5_1oiw0")
+
+[node name="Pecas" type="Node2D" parent="." unique_id=449013502]
+
+[node name="Peca" parent="Pecas" unique_id=183705824 instance=ExtResource("6_07wpb")]
+z_index = 424
+position = Vector2(624, 424)
+Modelo = ExtResource("7_dpfka")
+Posicao = Vector2i(13, 9)
+
+[connection signal="zoom_alterado" from="Camera2D" to="ParallaxBackground/ParallaxLayer/Fundo" method="_on_camera_2d_zoom_alterado"]

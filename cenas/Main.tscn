@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b6nj5nap0o8m5"]
 
-[ext_resource type="PackedScene" uid="uid://bdkph1hp388gk" path="res://cenas/Cena_de_batalha.tscn" id="1_r54cn"]
-[ext_resource type="PackedScene" uid="uid://d0q5i4xn8qg4g" path="res://cenas/HUD.tscn" id="2_en8ld"]
+[ext_resource type="PackedScene" uid="uid://bdkph1hp388gk" path="res://cenas/Btalha/Cena_de_batalha.tscn" id="1_r54cn"]
+[ext_resource type="PackedScene" uid="uid://d0q5i4xn8qg4g" path="res://Hud/HUD.tscn" id="2_en8ld"]
 
 [node name="Main" type="Node2D" unique_id=44142531]
 
