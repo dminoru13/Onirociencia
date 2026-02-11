@@ -1,7 +1,13 @@
+@tool
 extends Node2D
 
-@export var Modelo : PackedScene
 const NodeModelo3D := preload("res://cenas/componentes/Modelo3D.tscn")
+
+@export var Modelo : PackedScene
+@export var Posicao := Vector2i.ZERO:
+	set(value):
+		Posicao = value
+		_atualizar_posicao_hex()
 
 
 var modelo_foi_colocado := false
@@ -11,8 +17,13 @@ func _ready() -> void:
 		var filho = NodeModelo3D.instantiate()
 		filho.Modelo = Modelo
 		add_child(filho)
+	_atualizar_posicao_hex()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
+func _atualizar_posicao_hex():
+	if Posicao != $PosicaoHex.posicao_hexagonal:
+		$PosicaoHex.posicao_hexagonal = Posicao
