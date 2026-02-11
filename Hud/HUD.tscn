@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://d0q5i4xn8qg4g"]
 
 [ext_resource type="Script" uid="uid://cduck5d34q3fy" path="res://Hud/FPS.gd" id="1_kqorm"]
+[ext_resource type="PackedScene" uid="uid://6f1bb46qhd" path="res://Hud/barra/barra.tscn" id="2_lb25n"]
 
 [node name="Hud" type="Control" unique_id=1771205510]
 layout_mode = 3
@@ -10,7 +11,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="." unique_id=888247066]
+[node name="Debug" type="Control" parent="." unique_id=78108762]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -18,13 +20,105 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer" unique_id=533216535]
+[node name="MarginContainer" type="MarginContainer" parent="Debug" unique_id=888247066]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Debug/MarginContainer" unique_id=533216535]
 layout_mode = 2
 theme_override_constants/margin_left = 8
 theme_override_constants/margin_top = 8
 
-[node name="Label" type="Label" parent="MarginContainer/MarginContainer" unique_id=776299311]
+[node name="Label" type="Label" parent="Debug/MarginContainer/MarginContainer" unique_id=776299311]
 layout_mode = 2
 size_flags_vertical = 0
 text = "TEXTO MANEIRO"
 script = ExtResource("1_kqorm")
+
+[node name="Batalha" type="Control" parent="." unique_id=1149695263]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="Batalha" unique_id=478832456]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 7
+theme_override_constants/margin_top = 7
+theme_override_constants/margin_right = 7
+theme_override_constants/margin_bottom = 7
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Batalha/MarginContainer" unique_id=1269009256]
+layout_mode = 2
+
+[node name="Cima" type="MarginContainer" parent="Batalha/MarginContainer/VBoxContainer" unique_id=194073535]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Batalha/MarginContainer/VBoxContainer/Cima" unique_id=495008635]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Batalha/MarginContainer/VBoxContainer/Cima/HBoxContainer" unique_id=1829108537]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.26
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Batalha/MarginContainer/VBoxContainer/Cima/HBoxContainer/MarginContainer" unique_id=1240405402]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 16
+
+[node name="Retrato" type="ColorRect" parent="Batalha/MarginContainer/VBoxContainer/Cima/HBoxContainer/MarginContainer/VBoxContainer" unique_id=590778628]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Batalha/MarginContainer/VBoxContainer/Cima/HBoxContainer/MarginContainer/VBoxContainer/Retrato" unique_id=990836512]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="ColorRect" type="ColorRect" parent="Batalha/MarginContainer/VBoxContainer/Cima/HBoxContainer/MarginContainer/VBoxContainer/Retrato/MarginContainer" unique_id=561507084]
+layout_mode = 2
+color = Color(0.24840015, 0.24840018, 0.24840015, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Batalha/MarginContainer/VBoxContainer/Cima/HBoxContainer/MarginContainer/VBoxContainer" unique_id=792246547]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 12
+
+[node name="Barra" parent="Batalha/MarginContainer/VBoxContainer/Cima/HBoxContainer/MarginContainer/VBoxContainer/VBoxContainer" unique_id=1041181830 instance=ExtResource("2_lb25n")]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="Batalha/MarginContainer/VBoxContainer/Cima/HBoxContainer" unique_id=785060519]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 9.43
+
+[node name="Baixo" type="MarginContainer" parent="Batalha/MarginContainer/VBoxContainer" unique_id=448635702]
+layout_mode = 2
+size_flags_vertical = 3
