@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dm4trr4sffpl5" path="res://cenas/camera/camera_RTS.tscn" id="3_282lo"]
 [ext_resource type="Script" uid="uid://ci03uli0sjrjb" path="res://cenas/Fundo/Paralax.gd" id="4_adp0p"]
 [ext_resource type="Script" uid="uid://dgl0t5wsa1siy" path="res://cenas/Fundo/Fundo.gd" id="5_1oiw0"]
-[ext_resource type="PackedScene" uid="uid://mkq6v2ceps5w" path="res://cenas/Btalha/Peca/Peca.tscn" id="6_07wpb"]
+[ext_resource type="PackedScene" uid="uid://mkq6v2ceps5w" path="res://Peca/Peca.tscn" id="6_07wpb"]
 [ext_resource type="PackedScene" uid="uid://ytfoux7rajpd" path="res://modelos/ricardo.tscn" id="7_dpfka"]
 
 [node name="CenaDeBatalha" type="Node2D" unique_id=1007488634]

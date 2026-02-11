@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://mkq6v2ceps5w"]
 
-[ext_resource type="Script" uid="uid://cd2gyqoox5q7q" path="res://cenas/Btalha/Peca/Peca.gd" id="1_dg2oc"]
+[ext_resource type="Script" uid="uid://cd2gyqoox5q7q" path="res://Peca/Peca.gd" id="1_dg2oc"]
 [ext_resource type="PackedScene" uid="uid://bv1phvxccetpq" path="res://componentes/PosicaoHex/PosicaoHex.tscn" id="2_dg2oc"]
 
 [node name="Peca" type="Node2D" unique_id=183705824]
