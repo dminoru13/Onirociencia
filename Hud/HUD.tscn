@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://cduck5d34q3fy" path="res://Hud/FPS.gd" id="1_kqorm"]
 [ext_resource type="PackedScene" uid="uid://6f1bb46qhd" path="res://Hud/barra/barra.tscn" id="2_lb25n"]
 [ext_resource type="PackedScene" uid="uid://6g2japukb6h5" path="res://Hud/Cartas/carta.tscn" id="3_sbvkh"]
+[ext_resource type="PackedScene" uid="uid://bmrq0mqdnb1ab" path="res://Hud/Botao/Mover.tscn" id="3_vswe3"]
 
 [node name="Hud" type="Control" unique_id=1771205510]
 layout_mode = 3
@@ -61,6 +62,7 @@ size_flags_horizontal = 3
 theme_override_constants/separation = 6
 
 [node name="Retrato" parent="Batalha/MarginContainer/VBoxContainer/Cima/HBoxContainer/MarginContainer/VBoxContainer" unique_id=1021578243 instance=ExtResource("1_2wsdo")]
+custom_minimum_size = Vector2(181, 181)
 layout_mode = 2
 
 [node name="Control" type="Control" parent="Batalha/MarginContainer/VBoxContainer/Cima/HBoxContainer/MarginContainer/VBoxContainer" unique_id=767820923]
@@ -108,109 +110,68 @@ layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.75
 
-[node name="Control" type="VBoxContainer" parent="Batalha/MarginContainer/VBoxContainer/Baixo/HBoxContainer/esquerda" unique_id=1446193002]
+[node name="Control2" type="Control" parent="Batalha/MarginContainer/VBoxContainer/Baixo/HBoxContainer/esquerda" unique_id=2034676604]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Cima" type="HBoxContainer" parent="Batalha/MarginContainer/VBoxContainer/Baixo/HBoxContainer/esquerda/Control" unique_id=119470732]
-layout_mode = 2
+[node name="MarginContainer" type="MarginContainer" parent="Batalha/MarginContainer/VBoxContainer/Baixo/HBoxContainer/esquerda/Control2" unique_id=2076964023]
+layout_mode = 0
+offset_top = 4.0
+offset_right = 567.0
+offset_bottom = 232.0
 size_flags_vertical = 3
-size_flags_stretch_ratio = 0.5
-alignment = 1
-
-[node name="espaco2" type="Control" parent="Batalha/MarginContainer/VBoxContainer/Baixo/HBoxContainer/esquerda/Control/Cima" unique_id=2014731180]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 0.1
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Batalha/MarginContainer/VBoxContainer/Baixo/HBoxContainer/esquerda/Control/Cima" unique_id=1915791716]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_constants/separation = 32
-
-[node name="ATACAR" type="ColorRect" parent="Batalha/MarginContainer/VBoxContainer/Baixo/HBoxContainer/esquerda/Control/Cima/HBoxContainer" unique_id=894113323]
-layout_mode = 2
-size_flags_horizontal = 3
-color = Color(1, 0.24705882, 0.18039216, 1)
-
-[node name="Label" type="Label" parent="Batalha/MarginContainer/VBoxContainer/Baixo/HBoxContainer/esquerda/Control/Cima/HBoxContainer/ATACAR" unique_id=1400640396]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "ATACAR"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="MOVER" type="ColorRect" parent="Batalha/MarginContainer/VBoxContainer/Baixo/HBoxContainer/esquerda/Control/Cima/HBoxContainer" unique_id=733523217]
-layout_mode = 2
-size_flags_horizontal = 3
-color = Color(1, 0.24705882, 0.18039216, 1)
-
-[node name="Label" type="Label" parent="Batalha/MarginContainer/VBoxContainer/Baixo/HBoxContainer/esquerda/Control/Cima/HBoxContainer/MOVER" unique_id=453123419]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "MOVER"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="espaco" type="Control" parent="Batalha/MarginContainer/VBoxContainer/Baixo/HBoxContainer/esquerda/Control/Cima" unique_id=1457808893]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 0.9
-
-[node name="Baixo" type="Control" parent="Batalha/MarginContainer/VBoxContainer/Baixo/HBoxContainer/esquerda/Control" unique_id=594582630]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="ColorRect" type="ColorRect" parent="Batalha/MarginContainer/VBoxContainer/Baixo/HBoxContainer/esquerda/Control/Baixo" unique_id=1130135642]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 3
-color = Color(0.31764707, 0.34509805, 1, 0.28235295)
-
-[node name="MarginContainer" type="MarginContainer" parent="Batalha/MarginContainer/VBoxContainer/Baixo/HBoxContainer/esquerda/Control/Baixo" unique_id=2076964023]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Batalha/MarginContainer/VBoxContainer/Baixo/HBoxContainer/esquerda/Control/Baixo/MarginContainer" unique_id=2142970431]
+[node name="separadoe" type="VBoxContainer" parent="Batalha/MarginContainer/VBoxContainer/Baixo/HBoxContainer/esquerda/Control2/MarginContainer" unique_id=1446193002]
 layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 8
+
+[node name="MOVER" parent="Batalha/MarginContainer/VBoxContainer/Baixo/HBoxContainer/esquerda/Control2/MarginContainer/separadoe" unique_id=1245975817 instance=ExtResource("3_vswe3")]
+custom_minimum_size = Vector2(105, 40)
+layout_mode = 2
+
+[node name="Baixo" type="Control" parent="Batalha/MarginContainer/VBoxContainer/Baixo/HBoxContainer/esquerda/Control2/MarginContainer/separadoe" unique_id=594582630]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ColorRect" type="ColorRect" parent="Batalha/MarginContainer/VBoxContainer/Baixo/HBoxContainer/esquerda/Control2/MarginContainer/separadoe/Baixo" unique_id=1130135642]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+color = Color(0.003921569, 0, 0.07058824, 0.13333334)
+
+[node name="Cartas" type="HBoxContainer" parent="Batalha/MarginContainer/VBoxContainer/Baixo/HBoxContainer/esquerda/Control2/MarginContainer/separadoe/Baixo" unique_id=2142970431]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 21
-alignment = 1
 
-[node name="Carta" parent="Batalha/MarginContainer/VBoxContainer/Baixo/HBoxContainer/esquerda/Control/Baixo/MarginContainer/HBoxContainer" unique_id=807686854 instance=ExtResource("3_sbvkh")]
+[node name="Carta" parent="Batalha/MarginContainer/VBoxContainer/Baixo/HBoxContainer/esquerda/Control2/MarginContainer/separadoe/Baixo/Cartas" unique_id=807686854 instance=ExtResource("3_sbvkh")]
 layout_mode = 2
 size_flags_horizontal = 1
 
-[node name="Carta2" parent="Batalha/MarginContainer/VBoxContainer/Baixo/HBoxContainer/esquerda/Control/Baixo/MarginContainer/HBoxContainer" unique_id=1984044992 instance=ExtResource("3_sbvkh")]
+[node name="Carta2" parent="Batalha/MarginContainer/VBoxContainer/Baixo/HBoxContainer/esquerda/Control2/MarginContainer/separadoe/Baixo/Cartas" unique_id=1984044992 instance=ExtResource("3_sbvkh")]
 layout_mode = 2
 
-[node name="Carta3" parent="Batalha/MarginContainer/VBoxContainer/Baixo/HBoxContainer/esquerda/Control/Baixo/MarginContainer/HBoxContainer" unique_id=2114142303 instance=ExtResource("3_sbvkh")]
+[node name="Carta3" parent="Batalha/MarginContainer/VBoxContainer/Baixo/HBoxContainer/esquerda/Control2/MarginContainer/separadoe/Baixo/Cartas" unique_id=2114142303 instance=ExtResource("3_sbvkh")]
 layout_mode = 2
 
-[node name="Carta4" parent="Batalha/MarginContainer/VBoxContainer/Baixo/HBoxContainer/esquerda/Control/Baixo/MarginContainer/HBoxContainer" unique_id=315872607 instance=ExtResource("3_sbvkh")]
+[node name="Carta4" parent="Batalha/MarginContainer/VBoxContainer/Baixo/HBoxContainer/esquerda/Control2/MarginContainer/separadoe/Baixo/Cartas" unique_id=315872607 instance=ExtResource("3_sbvkh")]
 layout_mode = 2
 
-[node name="Carta5" parent="Batalha/MarginContainer/VBoxContainer/Baixo/HBoxContainer/esquerda/Control/Baixo/MarginContainer/HBoxContainer" unique_id=105110720 instance=ExtResource("3_sbvkh")]
+[node name="Carta5" parent="Batalha/MarginContainer/VBoxContainer/Baixo/HBoxContainer/esquerda/Control2/MarginContainer/separadoe/Baixo/Cartas" unique_id=105110720 instance=ExtResource("3_sbvkh")]
 layout_mode = 2
 
 [node name="direita" type="VBoxContainer" parent="Batalha/MarginContainer/VBoxContainer/Baixo/HBoxContainer" unique_id=2036301021]

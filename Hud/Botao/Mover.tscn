@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://bmrq0mqdnb1ab"]
+
+[ext_resource type="Script" uid="uid://bjvu47ydx5oy" path="res://Hud/mover.gd" id="1_0feck"]
+[ext_resource type="Script" uid="uid://ca040c4opkd6l" path="res://Hud/Botao/label.gd" id="2_oqg3e"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_oqg3e"]
+outline_size = 4
+outline_color = Color(0.1882353, 1, 1, 1)
+
+[node name="MOVER" type="ColorRect" unique_id=1245975817]
+custom_minimum_size = Vector2(3.89, 40)
+size_flags_horizontal = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+color = Color(1, 0.24705882, 0.18039216, 1)
+script = ExtResource("1_0feck")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=23287860]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer" unique_id=1180717628]
+layout_mode = 2
+text = "MOVER"
+label_settings = SubResource("LabelSettings_oqg3e")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("2_oqg3e")

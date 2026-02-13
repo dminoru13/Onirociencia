@@ -1,16 +1,20 @@
 [gd_scene format=3 uid="uid://6f1bb46qhd"]
 
 [ext_resource type="Script" uid="uid://ex1mau5ehih5" path="res://Hud/barra/barra.gd" id="1_ok81t"]
+[ext_resource type="Script" uid="uid://6pkcls5cisnk" path="res://Hud/barra/texto.gd" id="2_bn4c3"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_a3gl8"]
+outline_size = 3
+outline_color = Color(0.76862746, 0, 0, 1)
 
 [node name="Barra" type="Control" unique_id=1041181830]
-custom_minimum_size = Vector2(0, 25)
+custom_minimum_size = Vector2(0, 56)
 layout_mode = 3
 anchors_preset = 0
 offset_right = 155.0
 offset_bottom = 56.0
 size_flags_vertical = 6
 script = ExtResource("1_ok81t")
-valor_atual = 49
 valor_maximo = 49
 tamanho_padrao = Vector2i(155, 56)
 cor = Color(0.33131197, 0.18760225, 0.56208366, 1)
@@ -47,7 +51,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 4.0
 offset_top = 4.0
-offset_right = -4.0
+offset_right = -148.0
 offset_bottom = -3.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -62,6 +66,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "49 / 49"
+text = "1 / 49"
+label_settings = SubResource("LabelSettings_a3gl8")
 horizontal_alignment = 1
 vertical_alignment = 1
+script = ExtResource("2_bn4c3")

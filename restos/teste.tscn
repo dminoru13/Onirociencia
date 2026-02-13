@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://b4aavvbmcwr8a"]
+
+[node name="Teste" type="Node2D" unique_id=896100686]
+
+[node name="Control" type="Control" parent="." unique_id=2008483254]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 288.0
+offset_top = 238.0
+offset_right = 328.0
+offset_bottom = 278.0

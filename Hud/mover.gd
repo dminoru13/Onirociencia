@@ -10,4 +10,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _notification(what: int) -> void:
 	if what == NOTIFICATION_RESIZED:
-		custom_minimum_size.x = size.y
+		custom_minimum_size.x = size.y*1.5
+
+func _process(delta: float) -> void:
+	custom_minimum_size.x = size.y*1.5
