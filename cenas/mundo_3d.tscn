@@ -1,0 +1,278 @@
+[gd_scene format=3 uid="uid://bcmv27jv8yywo"]
+
+[ext_resource type="Material" uid="uid://4hkbm1k3hrhn" path="res://3d/materiais/rua.tres" id="1_7rxdy"]
+[ext_resource type="Shader" uid="uid://qsn8nrtq4rkx" path="res://shaders/outlineRoubado.gdshader" id="2_fgma6"]
+[ext_resource type="PackedScene" uid="uid://csjpmge1cnuh3" path="res://3d/Modelos/Poste.tscn" id="3_doa3p"]
+[ext_resource type="Material" uid="uid://bb43ngplsfis2" path="res://3d/materiais/modulares/FlexibleToonMaterial.tres" id="4_j5l54"]
+[ext_resource type="PackedScene" uid="uid://bfwla88hmbodl" path="res://3d/Modelos/Objetos aleatorios/gato_achatado.tscn" id="5_l0xn7"]
+[ext_resource type="Environment" uid="uid://cge6m6v8oisa6" path="res://cenas/abientes/nevoa.tres" id="6_f2ht4"]
+[ext_resource type="PackedScene" uid="uid://c33jubpnw68n4" path="res://Pecas/Peca.tscn" id="7_fgma6"]
+[ext_resource type="PackedScene" uid="uid://kwrca4eofyhd" path="res://3d/Modelos/Objetos aleatorios/d20.tscn" id="8_doa3p"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_1yycb"]
+size = Vector3(5.415, 1, 74.895)
+
+[sub_resource type="BoxMesh" id="BoxMesh_b30p5"]
+size = Vector3(0.77, 1, 74.895)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5wwvk"]
+albedo_color = Color(0.18359044, 0.18359044, 0.18359044, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_4fhxt"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5wwvk"]
+render_priority = 0
+shader = ExtResource("2_fgma6")
+shader_parameter/shadows_enabled = true
+shader_parameter/highlights_enabled = true
+shader_parameter/shadow_strength = 0.0999999977648
+shader_parameter/highlight_strength = 0.0999999977648
+shader_parameter/highlight_color = Color(1, 1, 1, 1)
+shader_parameter/shadow_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Shader" id="Shader_bhvw8"]
+code = "shader_type spatial;
+
+//render_mode ambient_light_disabled;
+
+
+uniform vec4 albedo : source_color = vec4(1.0f);
+uniform sampler2D albedo_texture : source_color;
+uniform bool clamp_diffuse_to_max = false;
+
+uniform int cuts : hint_range(1, 8) = 3;
+uniform float wrap : hint_range(-2.0f, 2.0f) = 0.0f;
+uniform float steepness : hint_range(1.0f, 8.0f) = 1.0f;
+
+uniform bool use_attenuation = true;
+
+uniform bool use_specular = true;
+uniform float specular_strength : hint_range(0.0f, 1.0f) = 1.0f;
+uniform float specular_shininess : hint_range(0.0f, 32.0f) = 16.0f;
+uniform sampler2D specular_map : source_color;
+
+uniform bool use_rim = true;
+uniform float rim_width : hint_range(0.0f, 16.0f) = 8.0f;
+uniform vec4 rim_color : source_color = vec4(1.0f);
+
+uniform bool use_ramp = false;
+uniform sampler2D ramp : source_color;
+
+uniform bool use_borders = false;
+uniform float border_width = 0.01f;
+
+varying vec3 vertex_pos;
+varying vec3 normal;
+
+float split_specular(float specular) {
+	return step(0.5f, specular);
+}
+
+void vertex() {
+	vertex_pos = VERTEX;
+	normal = NORMAL;
+}
+
+void fragment() {
+	ALBEDO = albedo.rgb * texture(albedo_texture, UV).rgb;
+}
+
+void light() {
+	// Attenuation.
+	float attenuation = 1.0f;
+	if (use_attenuation) {
+		attenuation = ATTENUATION;
+	}
+	
+	// Diffuse lighting.
+	float NdotL = dot(NORMAL, LIGHT);
+	float diffuse_amount = NdotL + (attenuation - 1.0) + wrap;
+	//float diffuse_amount = NdotL * attenuation + wrap;
+	diffuse_amount *= steepness;
+	float cuts_inv = 1.0f / float(cuts);
+	float diffuse_stepped = clamp(diffuse_amount + mod(1.0f - diffuse_amount, cuts_inv), 0.0f, 1.0f);
+
+	// Calculate borders.
+	float border = 0.0f;
+	if (use_borders) {
+		float corr_border_width = length(cross(NORMAL, LIGHT)) * border_width * steepness;
+		border = step(diffuse_stepped - corr_border_width, diffuse_amount)
+				 - step(1.0 - corr_border_width, diffuse_amount);
+	}
+	
+	// Apply diffuse result to different styles.
+	vec3 diffuse = ALBEDO.rgb * LIGHT_COLOR / PI;
+	if (use_ramp) {
+		diffuse *= texture(ramp, vec2(diffuse_stepped * (1.0f - border), 0.0f)).rgb;
+	} else {
+		diffuse *= diffuse_stepped * (1.0f - border);
+	}
+	
+	if (clamp_diffuse_to_max) {
+		// Clamp diffuse to max for multiple light sources.
+		DIFFUSE_LIGHT = max(DIFFUSE_LIGHT, diffuse);
+	} else {
+		DIFFUSE_LIGHT += diffuse;
+	}
+	
+	// Specular lighting.
+	if (use_specular) {
+		vec3 H = normalize(LIGHT + VIEW);
+		float NdotH = dot(NORMAL, H);
+		float specular_amount = max(pow(NdotH, specular_shininess*specular_shininess), 0.0f)
+							    * texture(specular_map, UV).r
+								* attenuation;
+		specular_amount = split_specular(specular_amount);
+		SPECULAR_LIGHT += specular_strength * specular_amount * LIGHT_COLOR;
+	}
+	
+	// Simple rim lighting.
+	if (use_rim) {
+		float NdotV = dot(NORMAL, VIEW);
+		float rim_light = pow(1.0 - NdotV, rim_width);
+		SPECULAR_LIGHT += rim_light * rim_color.rgb * rim_color.a * LIGHT_COLOR / PI; //Changed DIFFUSE_LIGHT to SPECULAR_LIGHT while migrating for similar result
+	}
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_l8342"]
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_5wwvk")
+shader = SubResource("Shader_bhvw8")
+shader_parameter/albedo = Color(0.16540313, 0.4063917, 0.43409953, 1)
+shader_parameter/clamp_diffuse_to_max = false
+shader_parameter/cuts = 2
+shader_parameter/wrap = 0.0
+shader_parameter/steepness = 1.0
+shader_parameter/use_attenuation = true
+shader_parameter/use_specular = true
+shader_parameter/specular_strength = 1.0
+shader_parameter/specular_shininess = 16.0
+shader_parameter/use_rim = false
+shader_parameter/rim_width = 8.0
+shader_parameter/rim_color = Color(1, 1, 1, 1)
+shader_parameter/use_ramp = false
+shader_parameter/use_borders = false
+shader_parameter/border_width = 0.01
+
+[sub_resource type="SphereMesh" id="SphereMesh_5wwvk"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_5wwvk"]
+
+[sub_resource type="TubeTrailMesh" id="TubeTrailMesh_5wwvk"]
+radius = 0.74
+section_length = 0.49
+
+[node name="Mundo 3d" type="Node3D" unique_id=1851015460]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1163567578]
+transform = Transform3D(1, 0, 0, 0, 0.49999997, 0.86602545, 0, -0.86602545, 0.49999997, 6.732894, 12.25, 2.3154435)
+projection = 1
+size = 10.0
+near = 0.1
+
+[node name="Cena1" type="Node3D" parent="." unique_id=594433807]
+
+[node name="Cenrio" type="Node3D" parent="Cena1" unique_id=1221531470]
+
+[node name="Ruas" type="Node3D" parent="Cena1/Cenrio" unique_id=261602867]
+
+[node name="rua" type="MeshInstance3D" parent="Cena1/Cenrio/Ruas" unique_id=1182795299]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.82568884, 0.32151222, 0)
+mesh = SubResource("BoxMesh_1yycb")
+surface_material_override/0 = ExtResource("1_7rxdy")
+
+[node name="rua2" type="MeshInstance3D" parent="Cena1/Cenrio/Ruas" unique_id=1939790605]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.2842336, 0.32151222, 0)
+mesh = SubResource("BoxMesh_1yycb")
+surface_material_override/0 = ExtResource("1_7rxdy")
+
+[node name="meio da rua" type="MeshInstance3D" parent="Cena1/Cenrio/Ruas" unique_id=443712002]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1804512, -2.0285163, 0)
+mesh = SubResource("BoxMesh_b30p5")
+surface_material_override/0 = SubResource("StandardMaterial3D_5wwvk")
+
+[node name="Chao" type="MeshInstance3D" parent="Cena1/Cenrio/Ruas" unique_id=1935918083]
+transform = Transform3D(86.60387, 0, 0, 0, 0.56709695, 0, 0, 0, 74.75856, 3, 0, 0)
+mesh = SubResource("BoxMesh_4fhxt")
+surface_material_override/0 = SubResource("ShaderMaterial_l8342")
+
+[node name="Postes" type="Node3D" parent="Cena1/Cenrio" unique_id=2133378012]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.34329522, 0)
+
+[node name="Poste" parent="Cena1/Cenrio/Postes" unique_id=1339095601 instance=ExtResource("3_doa3p")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, -4.1684284, 0.5850382, -2.5749674)
+
+[node name="Poste2" parent="Cena1/Cenrio/Postes" unique_id=478572673 instance=ExtResource("3_doa3p")]
+transform = Transform3D(-4.3711385e-08, 0, 1, 0, 1, 0, -0.99999994, 0, -4.371139e-08, -4.1684284, 0.5850382, 4.282645)
+
+[node name="Poste3" parent="Cena1/Cenrio/Postes" unique_id=1495211436 instance=ExtResource("3_doa3p")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.1684284, 0.5850382, 12.072094)
+
+[node name="Poste4" parent="Cena1/Cenrio/Postes" unique_id=1967020753 instance=ExtResource("3_doa3p")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.1684284, 0.5850382, 20.004978)
+
+[node name="Poste5" parent="Cena1/Cenrio/Postes" unique_id=1833292787 instance=ExtResource("3_doa3p")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.1684284, 0.5850382, -9.963561)
+
+[node name="Poste6" parent="Cena1/Cenrio/Postes" unique_id=1714045236 instance=ExtResource("3_doa3p")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.1684284, 0.5850382, -17.84716)
+
+[node name="Postes2" type="Node3D" parent="Cena1/Cenrio" unique_id=1898778697]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 4.107974, -0.44662714, 0)
+
+[node name="Poste" parent="Cena1/Cenrio/Postes2" unique_id=133712475 instance=ExtResource("3_doa3p")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, -4.1684284, 0.5850382, -2.5749671)
+
+[node name="Poste2" parent="Cena1/Cenrio/Postes2" unique_id=1913073095 instance=ExtResource("3_doa3p")]
+transform = Transform3D(-4.371139e-08, 0, 0.99999994, 0, 1, 0, -1, 0, -4.3711385e-08, -4.1684275, 0.5850382, 4.282645)
+
+[node name="Poste3" parent="Cena1/Cenrio/Postes2" unique_id=1887726414 instance=ExtResource("3_doa3p")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.1684284, 0.5850382, 12.072094)
+
+[node name="Poste4" parent="Cena1/Cenrio/Postes2" unique_id=296954406 instance=ExtResource("3_doa3p")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.1684284, 0.5850382, 20.004978)
+
+[node name="Poste5" parent="Cena1/Cenrio/Postes2" unique_id=1157063139 instance=ExtResource("3_doa3p")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.1684284, 0.5850382, -9.963561)
+
+[node name="Poste6" parent="Cena1/Cenrio/Postes2" unique_id=665555459 instance=ExtResource("3_doa3p")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.1684284, 0.5850382, -17.84716)
+
+[node name="Objetos" type="Node3D" parent="Cena1" unique_id=1093653202]
+
+[node name="Bola" type="MeshInstance3D" parent="Cena1/Objetos" unique_id=614643492]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6094959, 1.2723987, -2.779591)
+mesh = SubResource("SphereMesh_5wwvk")
+surface_material_override/0 = ExtResource("4_j5l54")
+
+[node name="Cubo" type="MeshInstance3D" parent="Cena1/Objetos" unique_id=1484708938]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5290804, 1.3278894, -2.0792103)
+mesh = SubResource("BoxMesh_5wwvk")
+surface_material_override/0 = ExtResource("4_j5l54")
+
+[node name="Gato" type="Node3D" parent="Cena1" unique_id=1523000929]
+transform = Transform3D(1, 0, 0, 0, 0.8660254, 0.5, 0, -0.5, 0.8660254, 0, 1.3312356, 0)
+
+[node name="CorpoGato" type="MeshInstance3D" parent="Cena1/Gato" unique_id=252626223]
+transform = Transform3D(0.37614954, 0, 0, 0, 0.4, 0, 0, 0, 0.44121, 0, 0, 0)
+mesh = SubResource("TubeTrailMesh_5wwvk")
+surface_material_override/0 = ExtResource("4_j5l54")
+
+[node name="CabecaGato" parent="Cena1/Gato" unique_id=1898868743 instance=ExtResource("5_l0xn7")]
+transform = Transform3D(0.475, 0, 0, 0, 0.475, 0, 0, 0, 0.92, 0, 0.85668516, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Cena1" unique_id=1756743879]
+environment = ExtResource("6_f2ht4")
+
+[node name="Lais2" parent="." unique_id=1343742815 instance=ExtResource("7_fgma6")]
+transform = Transform3D(8.08, 0, 0, 0, 4.0399995, 6.9974856, 0, -6.9974856, 4.0399995, 12.681908, 2.0022483, -1.6819787)
+
+[node name="Lais" parent="." unique_id=233347251 instance=ExtResource("7_fgma6")]
+transform = Transform3D(0.67, 0, 0, 0, 0.67, 0, 0, 0, 0.67, 1.1043365, 1.9207705, -0.14899325)
+
+[node name="Lais3" parent="." unique_id=1783493590 instance=ExtResource("7_fgma6")]
+transform = Transform3D(2.56, 0, 0, 0, 2.2783744, 1.1673087, 0, -1.1673087, 2.2783744, 5.2575293, 2.4950237, -0.97732663)
+
+[node name="D20" parent="." unique_id=1093173731 instance=ExtResource("8_doa3p")]
+transform = Transform3D(1.7, 0, 0, 0, 1.4722432, 0.85, 0, -0.85, 1.4722432, 7.511238, 4.8782516, -4.2100554)

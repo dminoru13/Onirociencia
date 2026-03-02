@@ -1,0 +1,17 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://bnpl36m17k8h7"]
+
+[ext_resource type="Shader" uid="uid://by840mdij26ix" path="res://addons/flexible_toon_shader/hatch_toon.gdshader" id="1_ntmyf"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_ntmyf")
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/cuts = 2
+shader_parameter/wrap = 0.0
+shader_parameter/steepness = 0.0
+shader_parameter/use_attenuation = true
+shader_parameter/use_rim = false
+shader_parameter/rim_width = 8.0
+shader_parameter/rim_color = Color(1, 1, 1, 1)
+shader_parameter/hatch_scale = 2.0
+shader_parameter/use_triplanar = true

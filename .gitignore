@@ -1,0 +1,27 @@
+# Godot 4+ specific ignores
+.import/
+.export/
+.export_presets.cfg
+
+# Mono / C#
+.mono/
+data_*/
+mono_crash.*.json
+
+# System / editor
+.DS_Store
+Thumbs.db
+
+# Build outputs
+bin/
+obj/
+
+# Temporary files
+*.tmp
+*.log
+
+# Visual Studio Code
+.vscode/
+
+# JetBrains
+.idea/

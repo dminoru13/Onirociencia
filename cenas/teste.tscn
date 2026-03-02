@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://b5byvd2acnlu8"]
+
+[ext_resource type="Material" uid="uid://dslkamr5btkq4" path="res://3d/materiais/modulares/OutLine.tres" id="1_t87xa"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_cljiu"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cljiu"]
+next_pass = ExtResource("1_t87xa")
+
+[sub_resource type="Environment" id="Environment_t87xa"]
+
+[node name="Teste" type="Node3D" unique_id=1165937995]
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=1767696361]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+stretch_shrink = 4
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=360986808]
+handle_input_locally = false
+size = Vector2i(288, 162)
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport" unique_id=365180485]
+transform = Transform3D(1, 0, 0, 0, 0.8021093, 0.59717727, 0, -0.59717727, 0.8021093, 0, 2.375583, 0.46057534)
+projection = 1
+size = 2.5
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="SubViewportContainer/SubViewport" unique_id=334171799]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.6499758)
+mesh = SubResource("BoxMesh_cljiu")
+surface_material_override/0 = SubResource("StandardMaterial3D_cljiu")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewportContainer/SubViewport" unique_id=2040036691]
+transform = Transform3D(1, 0, 0, 0, 0.7186241, 0.69539875, 0, -0.69539875, 0.7186241, 0, 2.018546, 4.1320696)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="SubViewportContainer/SubViewport" unique_id=15795204]
+environment = SubResource("Environment_t87xa")

@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bvv44qosd6nil"]
+
+[ext_resource type="PackedScene" uid="uid://c5ivjtl80yrcd" path="res://3d/Modelos/Partes Corpo/Mao.glb" id="1_i357n"]
+[ext_resource type="Material" uid="uid://d2oqb3djvwll2" path="res://Pecas/ShaderLais.tres" id="2_yui87"]
+
+[node name="Mao" unique_id=78853887 instance=ExtResource("1_i357n")]
+
+[node name="Mao" parent="." index="0" unique_id=510980807]
+surface_material_override/0 = ExtResource("2_yui87")

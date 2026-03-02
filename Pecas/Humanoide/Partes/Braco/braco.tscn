@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://5hr5wfi1pr5i"]
+
+[ext_resource type="PackedScene" uid="uid://bld6b81t6ojgn" path="res://3d/Modelos/Partes Corpo/Braco.glb" id="1_l27mx"]
+[ext_resource type="Material" uid="uid://d2oqb3djvwll2" path="res://Pecas/ShaderLais.tres" id="2_3n8i1"]
+[ext_resource type="Script" uid="uid://15ak8k0siffu" path="res://Pecas/Humanoide/Partes/Braco/ScriptBraco.gd" id="2_mvri0"]
+
+[sub_resource type="JointLimitationCone3D" id="JointLimitationCone3D_22buv"]
+angle = 4.5202284
+
+[sub_resource type="JointLimitationCone3D" id="JointLimitationCone3D_mvri0"]
+angle = 5.2054443
+
+[node name="Braco" unique_id=1169045692 node_paths=PackedStringArray("Alvo") instance=ExtResource("1_l27mx")]
+script = ExtResource("2_mvri0")
+Alvo = NodePath("")
+
+[node name="AnteAnteBraco" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(1216777388) index="0" unique_id=1123019804]
+surface_material_override/0 = ExtResource("2_3n8i1")
+
+[node name="AnteAnteBraco_002" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(1216777388) index="1" unique_id=282058800]
+transform = Transform3D(0.99996424, 0.00045314527, 0.008445075, -0.0003700845, 0.9999516, -0.009831867, -0.008449122, 0.00982839, 0.99991596, 0, 0, 0)
+surface_material_override/0 = ExtResource("2_3n8i1")
+
+[node name="Mao" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(1216777388) index="2" unique_id=1312602185]
+surface_material_override/0 = ExtResource("2_3n8i1")
+
+[node name="Sphere" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(1216777388) index="3" unique_id=662081539]
+surface_material_override/0 = ExtResource("2_3n8i1")
+
+[node name="Sphere_001" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(1216777388) index="4" unique_id=1354254305]
+surface_material_override/0 = ExtResource("2_3n8i1")
+
+[node name="ikBase" type="CCDIK3D" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(1216777388) index="5" unique_id=1191147669]
+angular_delta_limit = 3.141592653589793
+deterministic = true
+setting_count = 1
+settings/0/target_node = NodePath("")
+settings/0/root_bone_name = "AnteAnteBraco_2"
+settings/0/root_bone = 0
+settings/0/end_bone_name = "Mao_2"
+settings/0/end_bone = 2
+settings/0/extend_end_bone = true
+settings/0/end_bone/direction = 6
+settings/0/end_bone/length = 0.2
+settings/0/joint_count = 3
+settings/0/joints/0/rotation_axis = 3
+settings/0/joints/0/limitation = SubResource("JointLimitationCone3D_22buv")
+settings/0/joints/0/limitation/right_axis = 0
+settings/0/joints/0/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/1/rotation_axis = 3
+settings/0/joints/1/limitation = SubResource("JointLimitationCone3D_mvri0")
+settings/0/joints/1/limitation/right_axis = 0
+settings/0/joints/1/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/0/joints/2/rotation_axis = 3
+settings/0/joints/2/limitation = null

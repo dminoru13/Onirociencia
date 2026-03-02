@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://c33jubpnw68n4"]
+
+[ext_resource type="PackedScene" uid="uid://cdg0312jrlq0h" path="res://Pecas/Humanoide/Partes/cabeca.tscn" id="1_50otq"]
+[ext_resource type="PackedScene" uid="uid://byowoebi4m7id" path="res://Pecas/Humanoide/Partes/torso_base.tscn" id="2_3axbd"]
+[ext_resource type="PackedScene" uid="uid://co3ijgj3gmslo" path="res://Pecas/Humanoide/Roupas/vestido.tscn" id="3_dfbk0"]
+[ext_resource type="PackedScene" uid="uid://cxtcfxle0xp0t" path="res://Pecas/Humanoide/Partes/perna.tscn" id="4_vul6k"]
+[ext_resource type="PackedScene" uid="uid://5hr5wfi1pr5i" path="res://Pecas/Humanoide/Partes/Braco/braco.tscn" id="5_c3mto"]
+
+[node name="Peca" type="Node3D" unique_id=1343742815]
+
+[node name="Cabeca" parent="." unique_id=864976379 instance=ExtResource("1_50otq")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0.68845725, 0)
+
+[node name="TorsoBase" parent="." unique_id=1032290471 instance=ExtResource("2_3axbd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.04502684, -0.08524656, -0.049316645)
+
+[node name="Vestido2" parent="TorsoBase" unique_id=2056782448 instance=ExtResource("3_dfbk0")]
+
+[node name="Perna" parent="." unique_id=546877827 instance=ExtResource("4_vul6k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1531665, -0.64312553, -0.03290707)
+
+[node name="Perna2" parent="." unique_id=662918942 instance=ExtResource("4_vul6k")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24090688, -0.64312553, -0.03290707)
+
+[node name="BracoD" parent="." unique_id=1169045692 node_paths=PackedStringArray("Alvo") instance=ExtResource("5_c3mto")]
+transform = Transform3D(-4.371139e-08, 8.742278e-08, 1, 0, -1, 8.742278e-08, 1, 3.821371e-15, 4.371139e-08, -0.46780658, 0.22345, -0.11424771)
+Alvo = NodePath("AlvoD")
+
+[node name="AlvoD" type="Marker3D" parent="BracoD" unique_id=618747581]
+transform = Transform3D(-0.054283082, 0.42856264, 0.05111214, -0.428214, -0.047038335, -0.060374953, -0.05395445, -0.0578489, 0.4277472, 1.5428798, -0.055584, -0.0841752)
+
+[node name="BracoE" parent="." unique_id=1815335479 node_paths=PackedStringArray("Alvo") instance=ExtResource("5_c3mto")]
+transform = Transform3D(-4.3711385e-08, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, -4.3711385e-08, 0.34006333, 0.22345, -0.11424771)
+Alvo = NodePath("AlvoE")
+
+[node name="AlvoE" type="Marker3D" parent="BracoE" unique_id=37328697]
+transform = Transform3D(0.05111205, 0.42856264, 0.054283015, 0.060374875, 0.04703834, -0.4282137, -0.4277465, 0.0578489, -0.05395444, 0.766612, -0.17949754, 0.17872708)

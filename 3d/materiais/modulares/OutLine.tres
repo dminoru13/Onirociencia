@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://dslkamr5btkq4"]
+
+[ext_resource type="Shader" uid="uid://qsn8nrtq4rkx" path="res://shaders/outlineRoubado.gdshader" id="1_g1ryv"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_g1ryv")
+shader_parameter/shadows_enabled = true
+shader_parameter/highlights_enabled = true
+shader_parameter/shadow_strength = 0.00999999977648
+shader_parameter/highlight_strength = 0.00999999977648
+shader_parameter/highlight_color = Color(1, 1, 1, 1)
+shader_parameter/shadow_color = Color(1, 1, 1, 1)
