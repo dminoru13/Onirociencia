@@ -1,9 +1,0 @@
-[gd_scene format=3 uid="uid://cxtcfxle0xp0t"]
-
-[ext_resource type="PackedScene" uid="uid://cgorawif48ncm" path="res://3d/Modelos/Partes Corpo/Perna.glb" id="1_8xxdn"]
-[ext_resource type="Material" uid="uid://d2oqb3djvwll2" path="res://Pecas/ShaderLais.tres" id="2_ffh5w"]
-
-[node name="Perna" unique_id=546877827 instance=ExtResource("1_8xxdn")]
-
-[node name="Perna" parent="." index="0" unique_id=1841621075]
-surface_material_override/0 = ExtResource("2_ffh5w")

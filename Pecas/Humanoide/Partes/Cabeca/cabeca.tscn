@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://cdg0312jrlq0h"]
 
-[ext_resource type="PackedScene" uid="uid://b2hjvpl37fbmx" path="res://Pecas/Humanoide/Partes/Complementos Cabeca/base_cabeca.tscn" id="1_y1rkn"]
+[ext_resource type="PackedScene" uid="uid://b2hjvpl37fbmx" path="res://Pecas/Humanoide/Partes/Cabeca/Complementos Cabeca/base_cabeca.tscn" id="1_y1rkn"]
 [ext_resource type="Texture2D" uid="uid://b31c4dxgy6m6i" path="res://3d/texturas/Olho1.png" id="2_nu3ca"]
 [ext_resource type="Texture2D" uid="uid://d0ig2h4e0da5o" path="res://3d/texturas/Boca1.png" id="3_4d074"]
-[ext_resource type="PackedScene" uid="uid://cplv8kumoq4ok" path="res://Pecas/Humanoide/Partes/Complementos Cabeca/nariz.tscn" id="4_pjslx"]
-[ext_resource type="PackedScene" uid="uid://cl0cgo50483wv" path="res://Pecas/Humanoide/Partes/Complementos Cabeca/cabelo_1.tscn" id="5_v8dbg"]
+[ext_resource type="PackedScene" uid="uid://cplv8kumoq4ok" path="res://Pecas/Humanoide/Partes/Cabeca/Complementos Cabeca/nariz.tscn" id="4_pjslx"]
+[ext_resource type="PackedScene" uid="uid://cl0cgo50483wv" path="res://Pecas/Humanoide/Partes/Cabeca/Complementos Cabeca/cabelo_1.tscn" id="5_v8dbg"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_pfs6p"]
 size = Vector2(0.2, 0.2)

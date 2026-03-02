@@ -1,9 +1,0 @@
-[gd_scene format=3 uid="uid://c3ypuuryl1bng"]
-
-[ext_resource type="PackedScene" uid="uid://bmqpf4pm3vn1q" path="res://3d/Modelos/Partes Corpo/Pe.glb" id="1_nf30b"]
-[ext_resource type="Material" uid="uid://d2oqb3djvwll2" path="res://Pecas/ShaderLais.tres" id="2_vdmvu"]
-
-[node name="Pe" unique_id=2056800060 instance=ExtResource("1_nf30b")]
-
-[node name="Pe" parent="." index="0" unique_id=701584951]
-surface_material_override/0 = ExtResource("2_vdmvu")

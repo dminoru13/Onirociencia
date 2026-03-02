@@ -1,0 +1,10 @@
+res://Pecas/Peca.tscn
+res://shaders/outlineRoubado.gdshader
+res://3d/materiais/modulares/FlexibleToonMaterial.tres
+res://Pecas/ShaderLais.tres
+res://3d/shader materials/flexible_toon.gdshader
+res://Pecas/peca.gd
+res://Scripts Gerais/classeArrayBracos.gd
+res://Pecas/Humanoide/Partes/Braco/ScriptBraco.gd
+res://Pecas/Humanoide/Partes/Braco/braco.tscn
+res://Pecas/Humanoide/Partes/Perna/perna.tscn
