@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1772458359
+::res://::1772459494
 ::res://3d/::1772120944
 ::res://3d/blender cru/::1772109866
 CuboManeiro.glb::PackedScene::7670177286516542340::1771962476::1772109866::1::::<><><>0<>0<>9444e7f0eb1559e16cb48680b6285299<>res://.godot/imported/CuboManeiro.glb-b33ef9d8e2d01bbae80fa382a7c98807.scn::
@@ -47,8 +47,8 @@ nevoa.tres::Environment::5204137258716414823::1772110815::0::1::::<><><>0<>0<><>
 Peca.tscn::PackedScene::6796513811494512019::1772458359::0::1::::<><><>0<>0<><>::uid://cdg0312jrlq0h::::res://Pecas/Humanoide/Partes/cabeca.tscn<>uid://byowoebi4m7id::::res://Pecas/Humanoide/Partes/torso_base.tscn<>uid://co3ijgj3gmslo::::res://Pecas/Humanoide/Roupas/vestido.tscn<>uid://cxtcfxle0xp0t::::res://Pecas/Humanoide/Partes/perna.tscn<>uid://5hr5wfi1pr5i::::res://Pecas/Humanoide/Partes/Braco/braco.tscn
 ShaderLais.tres::ShaderMaterial::9084236851267259677::1772451570::0::1::::<><><>0<>0<><>::
 ::res://Pecas/Humanoide/::1772458286
-::res://Pecas/Humanoide/Partes/::1772458359
-cabeca.tscn::PackedScene::4997363499622067809::1772458359::0::1::::<><><>0<>0<><>::uid://b2hjvpl37fbmx::::res://Pecas/Humanoide/Partes/base_cabeca.tscn<>uid://b31c4dxgy6m6i::::res://3d/texturas/Olho1.png<>uid://d0ig2h4e0da5o::::res://3d/texturas/Boca1.png<>uid://cplv8kumoq4ok::::res://Pecas/Humanoide/Partes/Complementos Cabeca/nariz.tscn<>uid://cl0cgo50483wv::::res://Pecas/Humanoide/Partes/Complementos Cabeca/cabelo_1.tscn
+::res://Pecas/Humanoide/Partes/::1772458362
+cabeca.tscn::PackedScene::4997363499622067809::1772458362::0::1::::<><><>0<>0<><>::uid://b2hjvpl37fbmx::::res://Pecas/Humanoide/Partes/Complementos Cabeca/base_cabeca.tscn<>uid://b31c4dxgy6m6i::::res://3d/texturas/Olho1.png<>uid://d0ig2h4e0da5o::::res://3d/texturas/Boca1.png<>uid://cplv8kumoq4ok::::res://Pecas/Humanoide/Partes/Complementos Cabeca/nariz.tscn<>uid://cl0cgo50483wv::::res://Pecas/Humanoide/Partes/Complementos Cabeca/cabelo_1.tscn
 mao.tscn::PackedScene::3905551776564450359::1772458286::0::1::::<><><>0<>0<><>::uid://c5ivjtl80yrcd::::res://3d/Modelos/Partes Corpo/Mao.glb<>uid://d2oqb3djvwll2::::res://Pecas/ShaderLais.tres
 pe.tscn::PackedScene::6788621603952989700::1772458286::0::1::::<><><>0<>0<><>::uid://bmqpf4pm3vn1q::::res://3d/Modelos/Partes Corpo/Pe.glb<>uid://d2oqb3djvwll2::::res://Pecas/ShaderLais.tres
 perna.tscn::PackedScene::6426539536589114281::1772458286::0::1::::<><><>0<>0<><>::uid://cgorawif48ncm::::res://3d/Modelos/Partes Corpo/Perna.glb<>uid://d2oqb3djvwll2::::res://Pecas/ShaderLais.tres
@@ -56,10 +56,10 @@ torso_base.tscn::PackedScene::4101215206559196931::1772210586::0::1::::<><><>0<>
 ::res://Pecas/Humanoide/Partes/Braco/::1772458286
 braco.tscn::PackedScene::2121202879750130336::1772458286::0::1::::<><><>0<>0<><>::uid://bld6b81t6ojgn::::res://3d/Modelos/Partes Corpo/Braco.glb<>uid://d2oqb3djvwll2::::res://Pecas/ShaderLais.tres<>uid://15ak8k0siffu::::res://Pecas/Humanoide/Partes/Braco/ScriptBraco.gd
 ScriptBraco.gd::GDScript::1886860875028543186::1772451892::0::1::::<>Node3D<><>0<>1<><>::
-::res://Pecas/Humanoide/Partes/Complementos Cabeca/::1772458286
+::res://Pecas/Humanoide/Partes/Complementos Cabeca/::1772458362
+base_cabeca.tscn::PackedScene::4296554866963548315::1772458286::0::1::::<><><>0<>0<><>::uid://c61iituh25yac::::res://3d/Modelos/Partes Corpo/CabecaBase.glb<>uid://d2oqb3djvwll2::::res://Pecas/ShaderLais.tres
 cabelo_1.tscn::PackedScene::5596661022852019049::1772452119::0::1::::<><><>0<>0<><>::uid://crb12jxsoalfl::::res://3d/Modelos/Partes Corpo/Complementos Cabeca/Cabelo1.glb<>uid://4hkbm1k3hrhn::::res://3d/materiais/rua.tres
 nariz.tscn::PackedScene::5849716721992489146::1772458286::0::1::::<><><>0<>0<><>::uid://b451nfg5iof5e::::res://3d/Modelos/Partes Corpo/Complementos Cabeca/Nariz.glb<>uid://d2oqb3djvwll2::::res://Pecas/ShaderLais.tres
-base_cabeca.tscn::PackedScene::4296554866963548315::1772458286::0::1::::<><><>0<>0<><>::uid://c61iituh25yac::::res://3d/Modelos/Partes Corpo/CabecaBase.glb<>uid://d2oqb3djvwll2::::res://Pecas/ShaderLais.tres
 ::res://Pecas/Humanoide/Roupas/::1772135071
 camiseta.tscn::PackedScene::3643943486256284171::1772133915::0::1::::<><><>0<>0<><>::uid://cs7g1yom3gnm1::::res://3d/Modelos/Roupas/Camiseta.glb<>uid://bb43ngplsfis2::::res://3d/materiais/modulares/FlexibleToonMaterial.tres
 vestido.tscn::PackedScene::5813789893843648332::1772135071::0::1::::<><><>0<>0<><>::uid://dijdreg5wjid2::::res://3d/Modelos/Roupas/Vestido.glb<>uid://qsn8nrtq4rkx::::res://shaders/outlineRoubado.gdshader
