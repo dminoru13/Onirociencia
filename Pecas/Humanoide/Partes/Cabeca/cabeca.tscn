@@ -25,6 +25,7 @@ texture_filter = 0
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
 
 [node name="BaseCabeca" parent="." unique_id=1706979679 instance=ExtResource("1_y1rkn")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0.3694409, 0)
 
 [node name="OlhoDireito" type="MeshInstance3D" parent="BaseCabeca" unique_id=275944531]
 transform = Transform3D(0.25703156, 0, 0.96640307, 0, 1, 0, -0.96640307, 0, 0.25703156, 0.295, 0, 0.125)
@@ -41,7 +42,7 @@ transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, 
 mesh = SubResource("QuadMesh_pfs6p")
 surface_material_override/0 = SubResource("StandardMaterial3D_ms5r5")
 
-[node name="Nariz" parent="." unique_id=943123407 instance=ExtResource("4_pjslx")]
+[node name="Nariz" parent="BaseCabeca" unique_id=943123407 instance=ExtResource("4_pjslx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.06664109, 0)
 
-[node name="Cabelo1" parent="." unique_id=1749337638 instance=ExtResource("5_v8dbg")]
+[node name="Cabelo1" parent="BaseCabeca" unique_id=1749337638 instance=ExtResource("5_v8dbg")]

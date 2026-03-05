@@ -2,57 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://b7m10jgf184ea" path="res://3d/Modelos/Partes Corpo/Perna.glb" id="1_8xxdn"]
 
-[sub_resource type="JointLimitationCone3D" id="JointLimitationCone3D_uk8q5"]
-angle = 2.724459
-
-[sub_resource type="JointLimitationCone3D" id="JointLimitationCone3D_kgw01"]
-angle = 4.4806094
-
-[sub_resource type="JointLimitationCone3D" id="JointLimitationCone3D_juw2v"]
-angle = 2.3158774
-
 [node name="Perna" unique_id=163234493 instance=ExtResource("1_8xxdn")]
-transform = Transform3D(0.6907058, -0.72313595, 0, 0.72313595, 0.6907058, 0, 0, 0, 1, 0, 0, 0)
 
-[node name="CCDIK3D" type="CCDIK3D" parent="Armature_002/Skeleton3D" parent_id_path=PackedInt32Array(1267676794) index="5" unique_id=1022991695]
-transform = Transform3D(0.8429974, -0.5379177, 0, 0.5379177, 0.8429974, 0, 0, 0, 1, 0, 0, 0)
-angular_delta_limit = 3.141592653589793
-deterministic = true
-setting_count = 1
-settings/0/target_node = NodePath("../../../Marker3D/Marker3D")
-settings/0/root_bone_name = "ante ante perna"
-settings/0/root_bone = 0
-settings/0/end_bone_name = "pe"
-settings/0/end_bone = 2
-settings/0/extend_end_bone = false
-settings/0/joint_count = 3
-settings/0/joints/0/rotation_axis = 3
-settings/0/joints/0/limitation = SubResource("JointLimitationCone3D_uk8q5")
-settings/0/joints/0/limitation/right_axis = 0
-settings/0/joints/0/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
-settings/0/joints/1/rotation_axis = 3
-settings/0/joints/1/limitation = SubResource("JointLimitationCone3D_kgw01")
-settings/0/joints/1/limitation/right_axis = 0
-settings/0/joints/1/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
-settings/0/joints/2/rotation_axis = 3
-settings/0/joints/2/limitation = SubResource("JointLimitationCone3D_juw2v")
-settings/0/joints/2/limitation/right_axis = 0
-settings/0/joints/2/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
-
-[node name="CopyTransformModifier3D" type="CopyTransformModifier3D" parent="Armature_002/Skeleton3D" parent_id_path=PackedInt32Array(1267676794) index="6" unique_id=1008700773]
-setting_count = 1
-settings/0/amount = 0.058
-settings/0/apply_bone_name = "pe"
-settings/0/apply_bone = 2
-settings/0/reference_type = 1
-settings/0/reference_node = NodePath("../../../Marker3D/Marker3D")
-settings/0/copy = 2
-settings/0/axes = 7
-settings/0/invert = 0
-settings/0/additive = false
-
-[node name="Marker3D" type="Marker3D" parent="." index="1" unique_id=1580766406]
-transform = Transform3D(-0.6696621, -0.74266607, 0, 0.74266607, -0.6696621, 0, 0, 0, 1, -1.8513745, -1.7494264, 0)
-
-[node name="Marker3D" type="Marker3D" parent="Marker3D" index="0" unique_id=632704224]
-transform = Transform3D(-0.551937, 0.83388567, -8.742277e-08, 0.8338858, 0.5519369, 2.220446e-16, 4.8251863e-08, -7.290061e-08, -1, 0.015360612, 1.4822732, 0)
+[node name="Armature_002" parent="." index="0" unique_id=1614521422]
+transform = Transform3D(-4.371139e-08, 0, 1.0000002, 0, 1.0000001, 0, -1, 0, -4.37114e-08, 0, 0, 0)

@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://dtppku5fs70la"]
+
+[ext_resource type="Script" uid="uid://1t41sv4sh8eq" path="res://addons/EditorDeCriaturas/exploradorDeArquivos/modulo_arquivo_geral.gd" id="1_6w231"]
+
+[node name="ModuloArquivoGeral" type="Button" unique_id=527259662 node_paths=PackedStringArray("texture_rect")]
+custom_minimum_size = Vector2(134.62, 200)
+offset_right = 134.62
+offset_bottom = 200.0
+script = ExtResource("1_6w231")
+texture_rect = NodePath("MarginContainer/VBoxContainer/MarginContainer/TextureRect")
+caminho_arquivo = null
+texto_arquivo = null
+e_uma_pasta = null
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2063643075]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.19215687, 0.31764707, 0.6745098)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=751710156]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1892578873]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer" unique_id=193925167]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/VBoxContainer/MarginContainer" unique_id=1778387264]
+layout_mode = 2
+color = Color(1, 1, 1, 0.15686275)
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/MarginContainer" unique_id=1149070014]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer" unique_id=655011872]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.35
+
+[node name="Label_nome" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer" unique_id=686105120]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 14
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

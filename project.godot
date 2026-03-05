@@ -21,6 +21,10 @@ window/size/viewport_width=1908
 window/size/viewport_height=1008
 window/vsync/vsync_mode=0
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/EditorDeCriaturas/plugin.cfg")
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

@@ -254,14 +254,17 @@ script = ExtResource("2_ff4ac")
 [node name="Torso" parent="." index="0" unique_id=402849087]
 surface_material_override/0 = SubResource("ShaderMaterial_x1est")
 
-[node name="Braco" type="Marker3D" parent="." index="1" unique_id=948260306]
+[node name="Cabeca" type="Marker3D" parent="." index="1" unique_id=897128767]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.42966357, 0)
+
+[node name="Braco" type="Marker3D" parent="." index="2" unique_id=948260306]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26012874, 0.29420143, 0)
 
-[node name="Braco2" type="Marker3D" parent="." index="2" unique_id=788038521]
+[node name="Braco2" type="Marker3D" parent="." index="3" unique_id=788038521]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.26961735, 0.29420143, 0)
 
-[node name="Perna" type="Marker3D" parent="." index="3" unique_id=364576047]
+[node name="Perna" type="Marker3D" parent="." index="4" unique_id=364576047]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.18304956, -0.5478928, 0)
 
-[node name="Perna2" type="Marker3D" parent="." index="4" unique_id=124897437]
+[node name="Perna2" type="Marker3D" parent="." index="5" unique_id=124897437]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.18203619, -0.5478928, 0)
