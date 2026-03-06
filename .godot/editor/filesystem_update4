@@ -1,8 +1,3 @@
-res://addons/EditorDeCriaturas/exploradorDeArquivos/ExibirArquivoModelo.tscn
+res://addons/EditorDeCriaturas/Central/CentroDeExibicao.tscn
 res://3d/shader materials/flexible_toon.gdshader
 res://shaders/outlineRoubado.gdshader
-res://addons/EditorDeCriaturas/exploradorDeArquivos/MinorusExplorer.tscn
-res://addons/EditorDeCriaturas/exploradorDeArquivos/exibir_arquivo_modelo.gd
-res://addons/EditorDeCriaturas/exploradorDeArquivos/minorus_explorer.gd
-res://addons/EditorDeCriaturas/EDC.tscn
-res://addons/EditorDeCriaturas/plugin.cfg

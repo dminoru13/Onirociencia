@@ -62,7 +62,7 @@ theme_override_constants/margin_bottom = 8
 layout_mode = 2
 size_flags_vertical = 1
 theme_override_font_sizes/font_size = 28
-text = "MIONRUS EXPLORER"
+text = "MINORUS EXPLORER"
 horizontal_alignment = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=1254584410]
@@ -119,13 +119,13 @@ columns = 12
 [connection signal="pressed" from="VBoxContainer/MarginContainer/HBoxContainer/botao_voltar" to="." method="_on_botao_voltar_pressed"]
 [connection signal="pressed" from="VBoxContainer/MarginContainer/HBoxContainer/pesquisar" to="." method="_on_pesquisar_pressed"]
 [connection signal="pressed" from="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/ModuloArquivoGeral" to="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/ModuloArquivoGeral" method="_on_pressed"]
-[connection signal="pressed" from="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@18538" to="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@18538" method="_on_pressed"]
-[connection signal="pressed" from="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@18541" to="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@18541" method="_on_pressed"]
-[connection signal="pressed" from="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@18544" to="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@18544" method="_on_pressed"]
-[connection signal="pressed" from="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@18547" to="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@18547" method="_on_pressed"]
-[connection signal="pressed" from="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@18550" to="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@18550" method="_on_pressed"]
-[connection signal="pressed" from="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@18553" to="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@18553" method="_on_pressed"]
-[connection signal="pressed" from="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@18556" to="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@18556" method="_on_pressed"]
-[connection signal="pressed" from="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@18559" to="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@18559" method="_on_pressed"]
-[connection signal="pressed" from="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@18562" to="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@18562" method="_on_pressed"]
-[connection signal="pressed" from="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@18565" to="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@18565" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@19591" to="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@19591" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@19594" to="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@19594" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@19597" to="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@19597" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@19600" to="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@19600" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@19603" to="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@19603" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@19606" to="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@19606" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@19609" to="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@19609" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@19612" to="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@19612" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@19615" to="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@19615" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@19618" to="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@19618" method="_on_pressed"]

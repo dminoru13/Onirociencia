@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://jvb53hmkb6yn"]
 
-[ext_resource type="Script" uid="uid://bsnwia827egm8" path="res://addons/EditorDeCriaturas/edc.gd" id="1_1dm2l"]
+[ext_resource type="Script" uid="uid://bsnwia827egm8" path="res://addons/EditorDeCriaturas/lateral/edc.gd" id="1_1dm2l"]
 [ext_resource type="PackedScene" uid="uid://b8niqtf4udnhp" path="res://addons/EditorDeCriaturas/exploradorDeArquivos/ExibirArquivoModelo.tscn" id="2_1dm2l"]
 
 [node name="EDC" type="Control" unique_id=207552942]

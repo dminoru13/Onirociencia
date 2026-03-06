@@ -1,28 +1,33 @@
 @tool
 extends EditorPlugin
 
-
-var toolbar
-
-func _enable_plugin() -> void:
-	# Add autoloads here.
-	pass
+const Centro = preload("res://addons/EditorDeCriaturas/Central/CentroDeExibicao.tscn")
+var instancia_centro
 
 
-func _disable_plugin() -> void:
-	# Remove autoloads here.
-	pass
+func _enter_tree():
+	instancia_centro = Centro.instantiate()
+	EditorInterface.get_editor_main_screen().add_child(instancia_centro)
+	_make_visible(false)
 
 
-func _enter_tree() -> void:
-	toolbar = preload("res://addons/EditorDeCriaturas/EDC.tscn").instantiate()
-	
-	add_control_to_dock(EditorPlugin.DOCK_SLOT_RIGHT_BL, toolbar)
-	pass
+func _exit_tree():
+	if instancia_centro:
+		instancia_centro.queue_free()
 
 
-func _exit_tree() -> void:
-	remove_control_from_docks(toolbar)
-	
-	toolbar.free()
-	pass
+func _has_main_screen():
+	return true
+
+
+func _make_visible(visible):
+	if instancia_centro:
+		instancia_centro.visible = visible
+
+
+func _get_plugin_name():
+	return "EDC"
+
+
+func _get_plugin_icon():
+	return preload("res://UI/icones/dna.png")
