@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bwo0sowtkeair" path="res://3d/Modelos/Partes Corpo/TorsoBase.glb" id="1_xk5hx"]
 [ext_resource type="Script" uid="uid://ckyqc7b47dmkv" path="res://Pecas/Humanoide/Partes/Torso/torso_base.gd" id="2_ff4ac"]
+[ext_resource type="Script" uid="uid://u330yjakkxee" path="res://addons/EditorDeCriaturas/Classes/encaixeParte.gd" id="3_2rorp"]
 
 [sub_resource type="Shader" id="Shader_iv177"]
 code = "shader_type spatial;
@@ -268,3 +269,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.18304956, -0.5478928, 0)
 
 [node name="Perna2" type="Marker3D" parent="." index="5" unique_id=124897437]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.18203619, -0.5478928, 0)
+
+[node name="encaixePeca" type="Marker3D" parent="." index="6" unique_id=1562822157]
+script = ExtResource("3_2rorp")
+metadata/_custom_type_script = "uid://u330yjakkxee"

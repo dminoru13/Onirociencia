@@ -6,8 +6,6 @@
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_rbd1a"]
 color = Color(0.4351923, 0.43519226, 0.43519226, 1)
 
-[sub_resource type="BoxMesh" id="BoxMesh_yg3rc"]
-
 [sub_resource type="BoxMesh" id="BoxMesh_0kln8"]
 size = Vector3(40.11, 1, 38.67)
 
@@ -115,25 +113,22 @@ size_flags_horizontal = 3
 stretch = true
 stretch_shrink = 4
 
-[node name="SubViewport" type="SubViewport" parent="ColorRect/MarginContainer/HBoxContainer/SubViewportContainer" unique_id=547704294]
+[node name="SubViewport" type="SubViewport" parent="ColorRect/MarginContainer/HBoxContainer/SubViewportContainer" unique_id=1482020492]
 handle_input_locally = false
 size = Vector2i(210, 247)
 render_target_update_mode = 4
 
-[node name="Node3D" type="Node3D" parent="ColorRect/MarginContainer/HBoxContainer/SubViewportContainer/SubViewport" unique_id=1438540466]
+[node name="Node3D" type="Node3D" parent="ColorRect/MarginContainer/HBoxContainer/SubViewportContainer/SubViewport" unique_id=848060203]
 
-[node name="centro_camera" type="Node3D" parent="ColorRect/MarginContainer/HBoxContainer/SubViewportContainer/SubViewport/Node3D" unique_id=1747036727]
-transform = Transform3D(-0.5163172, 0.57418185, -0.6385295, 0, 0.7439618, 0.66822225, 0.8584163, 0.34536123, -0.3840653, 0, 0, 0)
+[node name="centro_camera" type="Node3D" parent="ColorRect/MarginContainer/HBoxContainer/SubViewportContainer/SubViewport/Node3D" unique_id=1098092787]
+transform = Transform3D(-0.13057551, -0.67480433, 0.7457424, 0, 0.7439618, 0.66822225, -1.0034033, 0.08780252, -0.09704004, 0, 0, 0)
 
-[node name="Camera3D" type="Camera3D" parent="ColorRect/MarginContainer/HBoxContainer/SubViewportContainer/SubViewport/Node3D/centro_camera" unique_id=348619056]
+[node name="Camera3D" type="Camera3D" parent="ColorRect/MarginContainer/HBoxContainer/SubViewportContainer/SubViewport/Node3D/centro_camera" unique_id=279327237]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.1)
 projection = 1
 size = 10.0
 
-[node name="ExemploIlustrativo" type="MeshInstance3D" parent="ColorRect/MarginContainer/HBoxContainer/SubViewportContainer/SubViewport/Node3D" unique_id=650439563]
-mesh = SubResource("BoxMesh_yg3rc")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="ColorRect/MarginContainer/HBoxContainer/SubViewportContainer/SubViewport/Node3D" unique_id=1689270454]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ColorRect/MarginContainer/HBoxContainer/SubViewportContainer/SubViewport/Node3D" unique_id=47716217]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.941764, 0)
 mesh = SubResource("BoxMesh_0kln8")
 surface_material_override/0 = SubResource("StandardMaterial3D_rbd1a")

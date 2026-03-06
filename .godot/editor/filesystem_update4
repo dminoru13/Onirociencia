@@ -1,3 +1,10 @@
 res://addons/EditorDeCriaturas/Central/CentroDeExibicao.tscn
 res://3d/shader materials/flexible_toon.gdshader
 res://shaders/outlineRoubado.gdshader
+res://Pecas/modelo_3d_peca.gd
+res://Pecas/recursos/Parte.gd
+res://Pecas/Modelo3dPeca.tscn
+res://Pecas/Humanoide/Partes/Braco/braco_AOHOFJAPOJFPOSPFJ12354.tscn
+res://addons/EditorDeCriaturas/lateral/PainelLateral.tscn
+res://Pecas/Humanoide/Partes/Torso/torso_base.tscn
+res://addons/EditorDeCriaturas/Classes/encaixeParte.gd

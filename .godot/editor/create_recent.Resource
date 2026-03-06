@@ -1,2 +1,3 @@
+Resource
 ShaderMaterial
 StandardMaterial3D

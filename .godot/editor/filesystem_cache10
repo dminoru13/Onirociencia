@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1772761190
+::res://::1772801613
 ::res://3d/::1772120944
 ::res://3d/blender cru/::1772109866
 CuboManeiro.glb::PackedScene::7670177286516542340::1771962476::1772109866::1::::<><><>0<>0<>9444e7f0eb1559e16cb48680b6285299<>res://.godot/imported/CuboManeiro.glb-b33ef9d8e2d01bbae80fa382a7c98807.scn::
@@ -32,8 +32,8 @@ Nariz.glb::PackedScene::4485430612210412868::1772131704::1772131705::1::::<><><>
 ::res://3d/Modelos/Roupas/::1772135035
 Camiseta.glb::PackedScene::6102712656369382998::1772133876::1772133877::1::::<><><>0<>0<>65acc574a5e3df150b4ec5f2dda6d2b8<>res://.godot/imported/Camiseta.glb-e3b91389d524943b2f8b7121268fa318.scn::
 Vestido.glb::PackedScene::7739564930199835145::1772135034::1772135035::1::::<><><>0<>0<>96eafd5c0a65f04981e2be97fa32fac3<>res://.godot/imported/Vestido.glb-d9f1541b65607d2ccdb5f383f72d43c0.scn::
-::res://3d/shader materials/::1772756548
-flexible_toon.gdshader::Shader::1953167695291221782::1772756548::0::1::::<><><>0<>0<><>::
+::res://3d/shader materials/::1772797988
+flexible_toon.gdshader::Shader::1953167695291221782::1772797988::0::1::::<><><>0<>0<><>::
 ::res://3d/texturas/::1772153158
 Boca1.png::CompressedTexture2D::8930911095132670066::1772153107::1772153158::1::::<><><>0<>0<>4c684ab87a4bd2827052c0cb4b996cbb<>res://.godot/imported/Boca1.png-51d2c06050f0715e4731d849cc0ffeee.s3tc.ctex::
 Olho1.png::CompressedTexture2D::4405555542578806862::1772152656::1772152669::1::::<><><>0<>0<>58ba06ceb1aa8204c9ec8f8861010b57<>res://.godot/imported/Olho1.png-71c0636c1b30a2ec9c5c97458e1eea7d.s3tc.ctex::
@@ -41,8 +41,8 @@ Olho1.png::CompressedTexture2D::4405555542578806862::1772152656::1772152669::1::
 ::res://addons/EditorDeCriaturas/::1772755912
 editor_de_criaturas_script.gd::GDScript::4976777065224053049::1772755912::0::1::::<>EditorPlugin<><>0<>1<><>::
 plugin.cfg::TextFile::-1::1772740559::0::1::::<><><>0<>0<><>::
-::res://addons/EditorDeCriaturas/Central/::1772761091
-CentroDeExibicao.tscn::PackedScene::2155123976041766192::1772761091::0::1::::<><><>0<>0<><>::uid://02xjn8sxyoht::::res://addons/EditorDeCriaturas/Central/centro_de_exibicao.gd<>uid://jvb53hmkb6yn::::res://addons/EditorDeCriaturas/lateral/PainelLateral.tscn
+::res://addons/EditorDeCriaturas/Central/::1772761304
+CentroDeExibicao.tscn::PackedScene::2155123976041766192::1772761304::0::1::::<><><>0<>0<><>::uid://02xjn8sxyoht::::res://addons/EditorDeCriaturas/Central/centro_de_exibicao.gd<>uid://jvb53hmkb6yn::::res://addons/EditorDeCriaturas/lateral/PainelLateral.tscn
 centro_de_exibicao.gd::GDScript::1811872587920826985::1772760856::0::1::::<>Control<><>0<>1<><>::
 ::res://addons/EditorDeCriaturas/exploradorDeArquivos/::1772753616
 ExibirArquivoModelo.tscn::PackedScene::4730004750207718889::1772739993::0::1::::<><><>0<>0<><>::uid://dcfprss05kpf3::::res://addons/EditorDeCriaturas/exploradorDeArquivos/exibir_arquivo_modelo.gd
@@ -51,9 +51,9 @@ MinorusExplorer.tscn::PackedScene::7595305551152655764::1772753616::0::1::::<><>
 minorus_explorer.gd::GDScript::6073632866221083320::1772739929::0::1::::<>Control<><>0<>1<><>::
 ModuloArquivoGeral.tscn::PackedScene::8524745456407014554::1772728680::0::1::::<><><>0<>0<><>::uid://1t41sv4sh8eq::::res://addons/EditorDeCriaturas/exploradorDeArquivos/modulo_arquivo_geral.gd
 modulo_arquivo_geral.gd::GDScript::1865941314550922580::1772732898::0::1::::ModuloArquivo<>Button<><>0<>1<><>::
-::res://addons/EditorDeCriaturas/lateral/::1772745609
+::res://addons/EditorDeCriaturas/lateral/::1772800697
 edc.gd::GDScript::3678006892420791953::1772644868::0::1::::<>Control<><>0<>1<><>::
-PainelLateral.tscn::PackedScene::675167298413559457::1772745609::0::1::::<><><>0<>0<><>::uid://bsnwia827egm8::::res://addons/EditorDeCriaturas/lateral/edc.gd<>uid://b8niqtf4udnhp::::res://addons/EditorDeCriaturas/exploradorDeArquivos/ExibirArquivoModelo.tscn
+PainelLateral.tscn::PackedScene::675167298413559457::1772800697::0::1::::<><><>0<>0<><>::uid://bsnwia827egm8::::res://addons/EditorDeCriaturas/lateral/edc.gd<>uid://b8niqtf4udnhp::::res://addons/EditorDeCriaturas/exploradorDeArquivos/ExibirArquivoModelo.tscn
 ::res://addons/EditorDeCriaturas/modulos/::1772660130
 ModuloGeral.tscn::PackedScene::2506627588258312364::1772660130::0::1::::<><><>0<>0<><>::uid://cdxppob7tlwhj::::res://addons/EditorDeCriaturas/modulos/modulo_geral.gd<>uid://njjfthig2v6n::::res://UI/icones/trash (1).png
 modulo_geral.gd::GDScript::5031826866795232919::1772636500::0::1::::<>FoldableContainer<><>0<>1<><>::
@@ -64,10 +64,9 @@ mundo_3d.tscn::PackedScene::2552895872951070218::1772548428::0::1::::<><><>0<>0<
 teste.tscn::PackedScene::4495645279369497021::1772109865::0::1::::<><><>0<>0<><>::uid://dslkamr5btkq4::::res://3d/materiais/modulares/OutLine.tres
 ::res://cenas/abientes/::1772110815
 nevoa.tres::Environment::5204137258716414823::1772110815::0::1::::<><><>0<>0<><>::
-::res://Pecas/::1772570977
-peca.gd::GDScript::7629560777823354370::1772556393::0::1::::<>Node3D<><>0<>1<><>::
-Peca.tscn::PackedScene::6796513811494512019::1772570977::0::1::::<><><>0<>0<><>::uid://y5x6iphir1ak::::res://Pecas/pecaArray.gd<>uid://dnsebqht0udeq::::res://Scripts Gerais/recursos das partes/recursoCorpo.gd<>uid://7r5e3bci0uyd::::res://Scripts Gerais/recursos das partes/recursoBraco.gd
-pecaArray.gd::GDScript::1747915874067555226::1772570977::0::1::::<>Node3D<><>0<>1<><>::
+::res://Pecas/::1772801531
+Modelo3dPeca.tscn::PackedScene::315840090821793384::1772801531::0::1::::<><><>0<>0<><>::uid://xrumy66b8gcp::::res://Pecas/modelo_3d_peca.gd<>uid://bv5g5ultu2wm2::::res://Pecas/recursos/GrupoDePartes.gd<>uid://bsdjiwfkimai7::::res://Pecas/recursos/Parte.gd
+modelo_3d_peca.gd::GDScript::1650674904736427939::1772801424::0::1::::<>Node3D<><>0<>1<><>::
 ShaderLais.tres::ShaderMaterial::9084236851267259677::1772549105::0::1::::<><><>0<>0<><>::
 ::res://Pecas/Humanoide/::1772458286
 ::res://Pecas/Humanoide/Partes/::1772460116
@@ -88,13 +87,11 @@ torso_base.tscn::PackedScene::4101215206559196931::1772563107::0::1::::<><><>0<>
 ::res://Pecas/Humanoide/Roupas/::1772135071
 camiseta.tscn::PackedScene::3643943486256284171::1772133915::0::1::::<><><>0<>0<><>::uid://cs7g1yom3gnm1::::res://3d/Modelos/Roupas/Camiseta.glb<>uid://bb43ngplsfis2::::res://3d/materiais/modulares/FlexibleToonMaterial.tres
 vestido.tscn::PackedScene::5813789893843648332::1772135071::0::1::::<><><>0<>0<><>::uid://dijdreg5wjid2::::res://3d/Modelos/Roupas/Vestido.glb<>uid://qsn8nrtq4rkx::::res://shaders/outlineRoubado.gdshader
-::res://Scripts Gerais/::1772549551
-::res://Scripts Gerais/recursos das partes/::1772570107
-ArrayDeMembros.gd::GDScript::3742058032484685627::1772568536::0::1::::ArrayDeMembros<>Resource<><>0<>0<><>::
-recursoBraco.gd::GDScript::2282967543495842507::1772553141::0::1::::RecursoBracos<>RecursoCorpo<><>0<>0<><>::
-recursoCorpo.gd::GDScript::8109121323796475252::1772570107::0::1::::RecursoCorpo<>Resource<><>0<>0<><>::
-::res://shaders/::1772756548
-outlineRoubado.gdshader::Shader::1161029259837460919::1772756548::0::1::::<><><>0<>0<><>::
+::res://Pecas/recursos/::1772801518
+GrupoDePartes.gd::GDScript::3922736676838258371::1772801442::0::1::::GrupoDePartes<>Resource<><>0<>0<><>::
+Parte.gd::GDScript::3656574905429242768::1772801518::0::1::::Parte<>Resource<><>0<>0<><>::
+::res://shaders/::1772797988
+outlineRoubado.gdshader::Shader::1161029259837460919::1772797988::0::1::::<><><>0<>0<><>::
 ::res://UI/::1772660130
 FPS.gd::GDScript::249389533218156864::1772110064::0::1::::<>Label<><>0<>0<><>::
 ::res://UI/icones/::1772742062
