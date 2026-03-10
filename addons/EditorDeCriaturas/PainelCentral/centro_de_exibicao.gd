@@ -10,9 +10,10 @@ var botao_apertado = atualizar
 
 @export var painel_lateral: Control
 @export var sub_viewport: SubViewport
+@export var modelo_peca: ModeloPeca
+@export var label_torso: Label
 
-var torso_atual: Node3D
-
+var novo_recurso: RecursoPeca = RecursoPeca.new()
 
 var zoom := 0.0:
 	set(value):
@@ -20,25 +21,59 @@ var zoom := 0.0:
 		atualizar()
 
 
-func _ready() -> void:
-	painel_lateral.ArquivoTorsoBase.peguei_um_arquivo.connect(recebi_um_torso)
-	painel_lateral.btn_atualizar.pressed.connect(atualizar)
 
 func limpar():
 	print("passanu pano")
 
 
-func atualizar():
-	pass
-	
-
-
-
-func recebi_um_torso(caminho, endereco):
-	print("eu peguei o torso: ", caminho, " endereçado a ", endereco)
-	var torso_cena:PackedScene = load(caminho)
-	torso_atual = torso_cena.instantiate()
-
-
 func _on_criar_nova_peca_pressed() -> void:
-	pass # Replace with function body.
+	criar_nova_peca()
+func _on_atualizar_pressed() -> void:
+	atualizar()
+
+func apagar_peca():
+	print("resetando peca")
+	modelo_peca.recurso = RecursoPeca.new()
+
+
+func criar_nova_peca():
+	apagar_peca()
+	print("criando novo filho")
+	
+	print(modelo_peca.recurso)
+
+func atualizar():
+	print("Caminho-torso: " , novo_recurso.torso_base.caminho_modelo)
+	modelo_peca.recurso = novo_recurso
+
+
+func _on_exibidor_de_arquivos_peguei_um_arquivo(arquivo: String, endereco: String) -> void:
+	arquivo_recebido(arquivo, endereco)
+	
+	
+	
+func arquivo_recebido(arquivo: String, endereco: String):
+	print("arquivo: ", arquivo, "   endereco: ", endereco)
+	
+	if endereco == "torso":
+		novo_recurso.torso_base.caminho_modelo = arquivo
+		
+	
+	atualizar()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#

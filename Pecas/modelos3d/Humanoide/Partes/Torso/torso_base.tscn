@@ -119,10 +119,10 @@ render_priority = 0
 shader = SubResource("Shader_iv177")
 shader_parameter/shadows_enabled = true
 shader_parameter/highlights_enabled = true
-shader_parameter/shadow_strength = 0.00999999977648
-shader_parameter/highlight_strength = 0.00999999977648
-shader_parameter/highlight_color = Color(1, 1, 1, 1)
-shader_parameter/shadow_color = Color(1, 1, 1, 1)
+shader_parameter/shadow_strength = 0.999999977648
+shader_parameter/highlight_strength = 0.999999977648
+shader_parameter/highlight_color = Color(0.51718444, 0.5171845, 0.51718444, 1)
+shader_parameter/shadow_color = Color(0.5489626, 0.5489626, 0.54896253, 1)
 
 [sub_resource type="Shader" id="Shader_ch0oe"]
 code = "shader_type spatial;

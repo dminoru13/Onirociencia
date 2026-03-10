@@ -8,19 +8,14 @@ var apertou_testar = testar
 @export var ArrayDeGrupos: Array[GrupoDePartes]
 
 
-@onready var conteiner_modulos: VBoxContainer = $MarginContainer/VBoxContainer/MarginContainer2/VBoxContainer/ScrollContainer/ConteinerModulos
-@onready var ArquivoTorsoBase := $MarginContainer/VBoxContainer/MarginContainer2/VBoxContainer/MarginContainer/VBoxContainer/ExibidorDeArquivos/ModeloExibidorArquivos
-@onready var btn_atualizar: Button = $MarginContainer/VBoxContainer/MarginContainer2/VBoxContainer/ConteinerButao/MarginContainer/atualizar
-@onready var btn_limpar: Button = $MarginContainer/VBoxContainer/MarginContainer2/VBoxContainer/ConteinerButao/MarginContainer2/limpar
+@export var conteiner_modulos: VBoxContainer
+@export var btn_atualizar: Button
+@export var btn_limpar: Button
 
 
 func testar():
-	print(ArquivoTorsoBase)
-
-
-
-func _on_atualizar_pressed() -> void:
 	pass
+
 
 func atualizar():
 	for grupo in ArrayDeGrupos:

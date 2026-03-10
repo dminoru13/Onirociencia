@@ -1,57 +1,66 @@
 @tool
-class_name ExibidorDeArquivos
 extends Control
 
-@export var endereco: String = "":
-	set(value):
-		endereco = value
-		atualizar_endereco()
+var Modelo
 
-@export_dir var caminho_para_pasta_inicial: String:
-	set(value):
-		caminho_para_pasta_inicial = value
-		atualizar_caminho()
-		
-@export var lista_branca: Array[String]:
-	set(value):
-		lista_branca = value
-		atualizar_branca()
-		
-@export var lista_negra: Array[String]:
-	set(value):
-		lista_negra = value
-		atualizar_preta()
+const MINORUS_EXPLORER = preload("uid://dghhtqc7maa0c")
 
-var filho
+@export var endereco: String = ""
+@onready var label_caminho_arquivo: Label
+@export_dir var caminho_para_pasta_inicial: String
+@export var lista_branca: Array[String]
+@export var lista_negra: Array[String]
+
+var MODELO_EXIBIR_ARQUIVOS: PackedScene
+
+
+@export_tool_button("adicionar modelo")
+var adicionar_apretado = abrir_explorador
 
 
 
-# Called when the node enters the scene tree for the first time.
+
+
+var caminho_arquivo: String
+signal peguei_um_arquivo(arquivo: String, endereco:String)
+
 func _ready() -> void:
+	MODELO_EXIBIR_ARQUIVOS = load("uid://b8niqtf4udnhp")
+	var instancia = MODELO_EXIBIR_ARQUIVOS.instantiate()
+	add_child(instancia)
+	label_caminho_arquivo  = $ModeloExibidorArquivos/MarginContainer2/HBoxContainer/ScrollContainer/label_caminho_arquivo
+	instancia.botao.pressed.connect(abrir_explorador)
+
+	if caminho_arquivo == "" :
+		caminho_arquivo = "res://"
 	custom_minimum_size.y = 31
 	
-	var cena_alvo = load("res://addons/EditorDeCriaturas/modulos/ExibidorDeArquivo/CenaModelo/ModeloExibirArquivos.tscn")
-	filho = cena_alvo.instantiate()
-	add_child(filho)
+
+
+
+func abrir_explorador():
+	var janela = Window.new()
+	EditorInterface.popup_dialog(janela, Rect2(Vector2(500,230), Vector2(900,700)))
+	janela.title = "minorus explorer"
 	
-	atualizar_endereco()
-	atualizar_caminho()
-	atualizar_branca()
-	atualizar_preta()
+	
+	var cena_minoru_explorer = MINORUS_EXPLORER.instantiate()
+	janela.add_child(cena_minoru_explorer)
+	cena_minoru_explorer.arquivo_foi_selecionado.connect(pegar_arquivo)
+	cena_minoru_explorer.lista_branca = lista_branca
+	cena_minoru_explorer.lista_negra = lista_negra
+	cena_minoru_explorer.caminho_para_pasta = caminho_para_pasta_inicial
+		
+	janela.close_requested.connect(func():
+		janela.queue_free()
+		)
 
 
-func atualizar_endereco():
-	if filho:
-		filho.endereco = endereco
+func pegar_arquivo(caminho: String, nome: String):
+	caminho_arquivo = caminho
+	label_caminho_arquivo.text = nome
+	peguei_um_arquivo.emit(caminho, endereco)
+	
 
-func atualizar_caminho():
-	if filho:
-		filho.caminho_para_pasta_inicial = caminho_para_pasta_inicial
-
-func atualizar_branca():
-	if filho:
-		filho.lista_branca = lista_branca
-
-func atualizar_preta():
-	if filho:
-		filho.lista_negra = lista_negra
+func atualizar_variaveis():
+	var pai = get_parent()

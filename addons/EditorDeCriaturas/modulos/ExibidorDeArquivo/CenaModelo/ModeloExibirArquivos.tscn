@@ -2,14 +2,14 @@
 
 [ext_resource type="Script" uid="uid://dcfprss05kpf3" path="res://addons/EditorDeCriaturas/modulos/ExibidorDeArquivo/CenaModelo/exibir_arquivo_modelo.gd" id="1_sr5q5"]
 
-[node name="ModeloExibidorArquivos" type="Control" unique_id=34814498]
+[node name="ModeloExibidorArquivos" type="Control" unique_id=34814498 node_paths=PackedStringArray("botao")]
 custom_minimum_size = Vector2(0, 31)
 layout_mode = 3
 anchors_preset = 10
 anchor_right = 1.0
 grow_horizontal = 2
 script = ExtResource("1_sr5q5")
-caminho_para_pasta_inicial = "res://"
+botao = NodePath("MarginContainer2/HBoxContainer/addModelo")
 
 [node name="MarginContainer2" type="MarginContainer" parent="." unique_id=57579897]
 layout_mode = 1
@@ -40,5 +40,3 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.3
 text = "Escolher"
-
-[connection signal="pressed" from="MarginContainer2/HBoxContainer/addModelo" to="." method="_on_add_modelo_pressed"]

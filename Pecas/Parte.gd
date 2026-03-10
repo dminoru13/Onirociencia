@@ -1,16 +1,14 @@
 @tool
 class_name Parte
-extends Node
+extends Resource
 
 
-@export var encaixe: encaixePeca
+@export var nome: String = ""
+@export var ancora: Vector3 = Vector3(0,0,0)
+@export var caminho_modelo: String = ""
+@export var tipo: String = ""
 
-
-@export var caracteristicas: Dictionary[String, String] = {
-		"nome": "",
-		"tipo": "",
-		"caminho_modelo": "",
-	}
+@export var lista_partes: Array[Parte] = []
 
 
 # Called when the node enters the scene tree for the first time.
@@ -18,25 +16,21 @@ func _ready() -> void:
 	atualizar_caracteristicas()
 	
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func atualizar_caracteristicas():
 	print("atualizando caracteristicas")
-	print("o caminho é: ", caracteristicas.caminho_modelo)
-	if caracteristicas.caminho_modelo != "":
+	print("o caminho é: ", caminho_modelo)
+	if caminho_modelo != "":
 		print("caminho modelo existe")
-		if caracteristicas.nome == "":
+		if nome == "":
 			print("nome está em branco")
-			var caminho = caracteristicas.caminho_modelo
-			var nome = caminho.split("/")[-1]
+			nome = caminho_modelo.split("/")[-1]
 			print("atribuindo nome: ", nome)
-			caracteristicas.nome = nome
 	
-	if caracteristicas.nome != "":
-		var nome_alvo = caracteristicas.nome.trim_suffix(".tscn")
+	if nome != "":
+		var nome_alvo = nome.trim_suffix(".tscn")
 		var regex = RegEx.new()
 		regex.compile("[0-9]")
 		var resultado = regex.sub(nome_alvo, "", true)
 		var separar = resultado.split("_")
 		var nome_final = separar[0]
-		caracteristicas.tipo = nome_final
+		tipo = nome_final
