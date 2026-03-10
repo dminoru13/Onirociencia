@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://5hr5wfi1pr5i"]
+
+[ext_resource type="PackedScene" uid="uid://bld6b81t6ojgn" path="res://restos_inuteis/Modelos/Partes Corpo/Braco.glb" id="1_l27mx"]
+[ext_resource type="Material" uid="uid://d2oqb3djvwll2" path="res://Pecas/modelos3d/ShaderLais.tres" id="2_3n8i1"]
+
+[node name="Braco" unique_id=1169045692 instance=ExtResource("1_l27mx")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+
+[node name="AnteAnteBraco" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(1216777388) index="0" unique_id=1123019804]
+surface_material_override/0 = ExtResource("2_3n8i1")
+
+[node name="AnteAnteBraco_002" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(1216777388) index="1" unique_id=282058800]
+transform = Transform3D(0.99996424, 0.00045314527, 0.008445075, -0.0003700845, 0.9999516, -0.009831867, -0.008449122, 0.00982839, 0.99991596, 0, 0, 0)
+surface_material_override/0 = ExtResource("2_3n8i1")
+
+[node name="Mao" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(1216777388) index="2" unique_id=1312602185]
+surface_material_override/0 = ExtResource("2_3n8i1")
+
+[node name="Sphere" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(1216777388) index="3" unique_id=662081539]
+surface_material_override/0 = ExtResource("2_3n8i1")
+
+[node name="Sphere_001" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(1216777388) index="4" unique_id=1354254305]
+surface_material_override/0 = ExtResource("2_3n8i1")

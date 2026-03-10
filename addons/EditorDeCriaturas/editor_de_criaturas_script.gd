@@ -1,19 +1,16 @@
 @tool
 extends EditorPlugin
 
-const Centro = preload("res://addons/EditorDeCriaturas/Central/CentroDeExibicao.tscn")
+const Centro = preload("res://addons/EditorDeCriaturas/PainelCentral/CentroDeExibicao.tscn")
 var instancia_centro
 
 
 func _enter_tree():
-	instancia_centro = Centro.instantiate()
-	EditorInterface.get_editor_main_screen().add_child(instancia_centro)
 	_make_visible(false)
 
 
 func _exit_tree():
-	if instancia_centro:
-		instancia_centro.queue_free()
+	pass
 
 
 func _has_main_screen():
@@ -23,6 +20,14 @@ func _has_main_screen():
 func _make_visible(visible):
 	if instancia_centro:
 		instancia_centro.visible = visible
+	
+	if visible:
+		instancia_centro = Centro.instantiate()
+		EditorInterface.get_editor_main_screen().add_child(instancia_centro)
+	
+	else:
+		if instancia_centro:
+			instancia_centro.queue_free()
 
 
 func _get_plugin_name():

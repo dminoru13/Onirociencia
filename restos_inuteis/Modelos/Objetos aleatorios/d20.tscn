@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://kwrca4eofyhd"]
+
+[ext_resource type="PackedScene" uid="uid://b5uu1uvigeow0" path="res://restos_inuteis/Modelos/Objetos aleatorios/D20.glb" id="1_g2k10"]
+[ext_resource type="Shader" uid="uid://qsn8nrtq4rkx" path="res://shaders/outlineRoubado.gdshader" id="2_b6ll8"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jhsr1"]
+render_priority = 0
+shader = ExtResource("2_b6ll8")
+shader_parameter/shadows_enabled = true
+shader_parameter/highlights_enabled = true
+shader_parameter/shadow_strength = 0.4
+shader_parameter/highlight_strength = 0.1
+shader_parameter/highlight_color = Color(1, 1, 1, 1)
+shader_parameter/shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ar68s"]
+next_pass = SubResource("ShaderMaterial_jhsr1")
+albedo_color = Color(1, 0.34657717, 0.2800086, 1)
+
+[node name="D20" unique_id=1093173731 instance=ExtResource("1_g2k10")]
+
+[node name="Icosphere" parent="." index="0" unique_id=1650808016]
+surface_material_override/0 = SubResource("StandardMaterial3D_ar68s")

@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dj0etlend2w5k"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wb65b"]
+albedo_color = Color(0.2009199, 0.19740495, 0.49092942, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_wb65b"]
+material = SubResource("StandardMaterial3D_wb65b")
+size = Vector3(100, 1, 100)
+
+[node name="Palco" type="Node3D" unique_id=265146688]
+
+[node name="centro_camera" type="Node3D" parent="." unique_id=754116963]
+transform = Transform3D(0.020086437, -0.68722844, 0.75621563, 0, 0.7439618, 0.66822225, -1.0180516, -0.0135770645, 0.014927706, 0, 0, 0)
+
+[node name="Camera3D" type="Camera3D" parent="centro_camera" unique_id=801980107]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.1)
+projection = 1
+size = 10.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2035750534]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -30.22529, 0)
+mesh = SubResource("BoxMesh_wb65b")

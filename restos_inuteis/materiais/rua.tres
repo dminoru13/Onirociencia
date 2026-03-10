@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://4hkbm1k3hrhn"]
+
+[ext_resource type="Material" uid="uid://dslkamr5btkq4" path="res://restos_inuteis/materiais/modulares/OutLine.tres" id="1_jg8mh"]
+
+[resource]
+next_pass = ExtResource("1_jg8mh")
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(0.16565639, 0.16565642, 0.16565639, 1)
+roughness = 0.0

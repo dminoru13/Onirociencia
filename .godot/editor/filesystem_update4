@@ -1,10 +1,9 @@
-res://addons/EditorDeCriaturas/Central/CentroDeExibicao.tscn
-res://3d/shader materials/flexible_toon.gdshader
+res://addons/EditorDeCriaturas/PainelCentral/Palco.tscn
+res://restos_inuteis/shader materials/flexible_toon.gdshader
 res://shaders/outlineRoubado.gdshader
-res://Pecas/modelo_3d_peca.gd
-res://Pecas/recursos/Parte.gd
-res://Pecas/Modelo3dPeca.tscn
-res://Pecas/Humanoide/Partes/Braco/braco_AOHOFJAPOJFPOSPFJ12354.tscn
-res://addons/EditorDeCriaturas/lateral/PainelLateral.tscn
-res://Pecas/Humanoide/Partes/Torso/torso_base.tscn
-res://addons/EditorDeCriaturas/Classes/encaixeParte.gd
+res://addons/EditorDeCriaturas/PainelCentral/centro_de_exibicao.gd
+res://addons/EditorDeCriaturas/PainelCentral/CentroDeExibicao.tscn
+res://Pecas/modelos3d/Humanoide/Partes/Torso/torso_base.tscn
+res://addons/EditorDeCriaturas/PainelLateral/PainelLateral.tscn
+res://addons/EditorDeCriaturas/PainelLateral/painelLateral.gd
+res://addons/EditorDeCriaturas/editor_de_criaturas_script.gd

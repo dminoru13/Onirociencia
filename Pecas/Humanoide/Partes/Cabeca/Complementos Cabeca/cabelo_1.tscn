@@ -1,9 +1,0 @@
-[gd_scene format=3 uid="uid://cl0cgo50483wv"]
-
-[ext_resource type="PackedScene" uid="uid://crb12jxsoalfl" path="res://3d/Modelos/Partes Corpo/Complementos Cabeca/Cabelo1.glb" id="1_jlat0"]
-[ext_resource type="Material" uid="uid://4hkbm1k3hrhn" path="res://3d/materiais/rua.tres" id="2_m6vrj"]
-
-[node name="Cabelo1" unique_id=1749337638 instance=ExtResource("1_jlat0")]
-
-[node name="Cabelo1" parent="." index="0" unique_id=986594428]
-surface_material_override/0 = ExtResource("2_m6vrj")

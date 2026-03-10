@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://br6fhmwmgl8nv"]
+
+[ext_resource type="PackedScene" uid="uid://cs7g1yom3gnm1" path="res://restos_inuteis/Modelos/Roupas/Camiseta.glb" id="1_s1hae"]
+[ext_resource type="Material" uid="uid://bb43ngplsfis2" path="res://restos_inuteis/materiais/modulares/FlexibleToonMaterial.tres" id="2_jqvik"]
+
+[node name="Camiseta" unique_id=1510652193 instance=ExtResource("1_s1hae")]
+
+[node name="Camiseta 1" parent="." index="0" unique_id=1757134348]
+surface_material_override/0 = ExtResource("2_jqvik")

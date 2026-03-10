@@ -1,9 +1,0 @@
-[gd_scene format=3 uid="uid://b2hjvpl37fbmx"]
-
-[ext_resource type="PackedScene" uid="uid://c61iituh25yac" path="res://3d/Modelos/Partes Corpo/CabecaBase.glb" id="1_vawpe"]
-[ext_resource type="Material" uid="uid://d2oqb3djvwll2" path="res://Pecas/ShaderLais.tres" id="2_vryg0"]
-
-[node name="CabecaBase" unique_id=1706979679 instance=ExtResource("1_vawpe")]
-
-[node name="Cabeca" parent="." index="0" unique_id=1074131328]
-surface_material_override/0 = ExtResource("2_vryg0")

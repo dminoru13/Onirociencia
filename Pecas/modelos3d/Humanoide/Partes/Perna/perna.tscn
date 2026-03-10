@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://ctkt5iydfcnsr"]
+
+[ext_resource type="PackedScene" uid="uid://b7m10jgf184ea" path="res://restos_inuteis/Modelos/Partes Corpo/Perna.glb" id="1_8xxdn"]
+
+[node name="Perna" unique_id=163234493 instance=ExtResource("1_8xxdn")]
+
+[node name="Armature_002" parent="." index="0" unique_id=1614521422]
+transform = Transform3D(-4.371139e-08, 0, 1.0000002, 0, 1.0000001, 0, -1, 0, -4.37114e-08, 0, 0, 0)

@@ -1,0 +1,110 @@
+[gd_scene format=3 uid="uid://5x7tvbdy4vcq"]
+
+[ext_resource type="Script" uid="uid://02xjn8sxyoht" path="res://addons/EditorDeCriaturas/PainelCentral/centro_de_exibicao.gd" id="1_0kln8"]
+[ext_resource type="PackedScene" uid="uid://jvb53hmkb6yn" path="res://addons/EditorDeCriaturas/PainelLateral/PainelLateral.tscn" id="2_rbd1a"]
+
+[sub_resource type="World3D" id="World3D_jc2v8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wb65b"]
+albedo_color = Color(0.2009199, 0.19740495, 0.49092942, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_jc2v8"]
+material = SubResource("StandardMaterial3D_wb65b")
+size = Vector3(100, 1, 100)
+
+[node name="CentroDeExibicao" type="Control" unique_id=1037981315 node_paths=PackedStringArray("painel_lateral", "sub_viewport")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_0kln8")
+painel_lateral = NodePath("ColorRect/MarginContainer/VBoxContainer/HBoxContainer/Arquivo/PainelLateral")
+sub_viewport = NodePath("ColorRect/MarginContainer/VBoxContainer/HBoxContainer/Cena/SubViewport")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1836101923]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.14945355, 0.0044552484, 0.04391983, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect" unique_id=712875678]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer" unique_id=1284319978]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer" unique_id=1305868217]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="CarregarPeca" type="Button" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1682367519]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Carregar peca"
+
+[node name="CriarNovaPeca" type="Button" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1449372448]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Criar nova peca"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer" unique_id=1813547079]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Configuracao" type="VBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1564446873]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.55
+
+[node name="Cena" type="SubViewportContainer" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer" unique_id=443421803]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+stretch = true
+stretch_shrink = 4
+
+[node name="SubViewport" type="SubViewport" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/Cena" unique_id=1482020492]
+own_world_3d = true
+world_3d = SubResource("World3D_jc2v8")
+handle_input_locally = false
+size = Vector2i(210, 238)
+render_target_update_mode = 4
+
+[node name="Palco" type="Node3D" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/Cena/SubViewport" unique_id=1990883137]
+
+[node name="centro_camera" type="Node3D" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/Cena/SubViewport/Palco" unique_id=1534857078]
+transform = Transform3D(0.020086437, -0.68722844, 0.75621563, 0, 0.7439618, 0.66822225, -1.0180516, -0.0135770645, 0.014927706, 0, 0, 0)
+
+[node name="Camera3D" type="Camera3D" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/Cena/SubViewport/Palco/centro_camera" unique_id=519188275]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.1)
+projection = 1
+size = 10.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/Cena/SubViewport/Palco" unique_id=532075662]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -30.22529, 0)
+mesh = SubResource("BoxMesh_jc2v8")
+
+[node name="Arquivo" type="MarginContainer" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1037751492]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.7
+
+[node name="PainelLateral" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/Arquivo" unique_id=207552942 instance=ExtResource("2_rbd1a")]
+layout_mode = 2
+
+[connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/HBoxContainer2/CriarNovaPeca" to="." method="_on_criar_nova_peca_pressed"]

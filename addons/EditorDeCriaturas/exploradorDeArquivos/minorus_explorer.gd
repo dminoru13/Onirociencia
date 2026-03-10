@@ -142,6 +142,8 @@ func filho_apertado(nome, pasta):
 		
 		else:
 			arquivo_foi_selecionado.emit("res://"+ nome, nome)
+		
+		get_parent().queue_free()
 
 
 

@@ -13,7 +13,9 @@ var texturizar := aplicar_textura
 @export var texto_arquivo: String
 @export var e_uma_pasta:  bool
 
-# Called when the node enters the scene tree for the first time.
+var selecionado: bool = false
+
+
 func _ready() -> void:
 	#print("um modulo de arquivo nasceu")
 	
@@ -56,15 +58,21 @@ func _ready() -> void:
 
 signal apertou(nome, pasta)
 
-func _on_pressed() -> void:
-	##print("")
-	#print("ME APERTARAM AQUI")
-	#print("emitindo sinal APERTOU com o parametro: ", label_nome.text," pasta: ", e_uma_pasta)
-	emit_signal("apertou", label_nome.text, e_uma_pasta)
-
 func aplicar_textura(caminho):
-	#print("twxturizando")
 	texture_rect.texture = null
 	if caminho_arquivo != "":
-		#print(caminho_arquivo)
 		texture_rect.texture = load(caminho)
+
+func _on_pressed() -> void:
+	if selecionado:
+		emit_signal("apertou", label_nome.text, e_uma_pasta)
+	
+	else :
+		selecionado = true
+		
+	await  get_tree().create_timer(0.7).timeout
+	print("o tempo acabou")
+	selecionado = false
+
+
+		

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://wmlqn4rrybsj"]
+
+[ext_resource type="PackedScene" uid="uid://dhjqx1mtyhst5" path="res://restos_inuteis/blender cru/CuboManeiro.glb" id="1_4y23d"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wa3uf"]
+
+[node name="CuboManeiro" unique_id=669615541 instance=ExtResource("1_4y23d")]
+
+[node name="Cube" parent="." index="0" unique_id=357480879]
+surface_material_override/0 = SubResource("StandardMaterial3D_wa3uf")

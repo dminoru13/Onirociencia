@@ -1,9 +1,0 @@
-[gd_scene format=3 uid="uid://cplv8kumoq4ok"]
-
-[ext_resource type="PackedScene" uid="uid://b451nfg5iof5e" path="res://3d/Modelos/Partes Corpo/Complementos Cabeca/Nariz.glb" id="1_ngqex"]
-[ext_resource type="Material" uid="uid://d2oqb3djvwll2" path="res://Pecas/ShaderLais.tres" id="2_3i1mq"]
-
-[node name="Nariz" unique_id=943123407 instance=ExtResource("1_ngqex")]
-
-[node name="Nariz" parent="." index="0" unique_id=1164276216]
-surface_material_override/0 = ExtResource("2_3i1mq")
