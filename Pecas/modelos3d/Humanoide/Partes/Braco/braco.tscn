@@ -2,22 +2,30 @@
 
 [ext_resource type="PackedScene" uid="uid://bld6b81t6ojgn" path="res://restos_inuteis/Modelos/Partes Corpo/Braco.glb" id="1_l27mx"]
 [ext_resource type="Material" uid="uid://d2oqb3djvwll2" path="res://Pecas/modelos3d/ShaderLais.tres" id="2_3n8i1"]
+[ext_resource type="Script" uid="uid://dkcb7hi1kqfp0" path="res://Pecas/recursos/Modificadores.gd" id="2_wr7g1"]
 
 [node name="Braco" unique_id=1169045692 instance=ExtResource("1_l27mx")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
 
-[node name="AnteAnteBraco" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(1216777388) index="0" unique_id=1123019804]
+[node name="Modificadores" type="Node" parent="." index="0" unique_id=739649183]
+script = ExtResource("2_wr7g1")
+modificadores = Dictionary[int, String]({
+0: "False"
+})
+metadata/_custom_type_script = "uid://dkcb7hi1kqfp0"
+
+[node name="AnteAnteBraco" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(620170087) index="0" unique_id=1363725738]
 surface_material_override/0 = ExtResource("2_3n8i1")
 
-[node name="AnteAnteBraco_002" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(1216777388) index="1" unique_id=282058800]
+[node name="AnteAnteBraco_002" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(620170087) index="1" unique_id=1738631208]
 transform = Transform3D(0.99996424, 0.00045314527, 0.008445075, -0.0003700845, 0.9999516, -0.009831867, -0.008449122, 0.00982839, 0.99991596, 0, 0, 0)
 surface_material_override/0 = ExtResource("2_3n8i1")
 
-[node name="Mao" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(1216777388) index="2" unique_id=1312602185]
+[node name="Mao" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(620170087) index="2" unique_id=202864910]
 surface_material_override/0 = ExtResource("2_3n8i1")
 
-[node name="Sphere" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(1216777388) index="3" unique_id=662081539]
+[node name="Sphere" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(620170087) index="3" unique_id=1001199096]
 surface_material_override/0 = ExtResource("2_3n8i1")
 
-[node name="Sphere_001" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(1216777388) index="4" unique_id=1354254305]
+[node name="Sphere_001" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(620170087) index="4" unique_id=1272358185]
 surface_material_override/0 = ExtResource("2_3n8i1")

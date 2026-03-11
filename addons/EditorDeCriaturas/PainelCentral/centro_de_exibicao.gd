@@ -8,7 +8,7 @@ extends Control
 @export var label_torso: Label
 
 var novo_recurso: RecursoPeca = RecursoPeca.new()
-
+var ModificadorExemplo: Modificadores = Modificadores.new()
 
 #FUNÇÕES
 
@@ -56,6 +56,19 @@ func arquivo_recebido(arquivo: String, endereco: String):
 			if parte.nome == endereco:
 				parte.caminho_modelo = arquivo
 				print("Eu ", parte.nome, " recebi pelo correio um ", parte.caminho_modelo)
+				print("c=atribuindo modificadores")
+				
+				var cena_modelo: PackedScene = load(parte.caminho_modelo)
+				var instancia_modelo: Node3D = cena_modelo.instantiate()
+				
+				if instancia_modelo.has_node("Modificadores"):
+					var modificador_modelo: Dictionary = instancia_modelo.get_node("Modificadores").modificadores
+					for key in modificador_modelo:
+						var nome_enum: String = ModificadorExemplo.Opcoes.keys()[key]
+						parte.modificadore_parte[nome_enum] = modificador_modelo[key]
+					
+					print(parte.nome, " tem os modificadores: ")
+					print(parte.modificadore_parte)
 	
 	atualizar()
 

@@ -10,8 +10,10 @@ extends Resource
 
 @export var lista_partes: Array[Parte] = []
 
+@export var modificadore_parte: Dictionary[String, String]
 
-# Called when the node enters the scene tree for the first time.
+
+
 func _ready() -> void:
 	atualizar_caracteristicas()
 	
@@ -34,10 +36,14 @@ func atualizar_caracteristicas():
 			print("nome está em branco")
 			nome = caminho_modelo.split("/")[-1]
 			print("atribuindo nome: ", nome)
-	
+		
 	if nome != "" and tipo == "":
 		print("----")
 		var nome_alvo = nome.trim_suffix(".tscn")
 		tipo = removedor_de_numeros(nome_alvo)
 		print("o tipo da parte é: ", tipo)
+	
+	for parte in lista_partes:
+		if parte.caminho_modelo != "":
+			pass
 	

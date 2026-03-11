@@ -1,6 +1,7 @@
 class_name  encaixePeca
 extends Marker3D
 
+@export var caracteristicas: Array[String]
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

@@ -25,6 +25,12 @@ window/vsync/vsync_mode=0
 
 enabled=PackedStringArray("res://addons/EditorDeCriaturas/plugin.cfg")
 
+[file_customization]
+
+folder_colors={
+"res://restos_inuteis/": "gray"
+}
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

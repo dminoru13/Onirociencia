@@ -115,8 +115,8 @@ render_priority = 0
 shader = SubResource("Shader_bkqjh")
 shader_parameter/shadows_enabled = true
 shader_parameter/highlights_enabled = true
-shader_parameter/shadow_strength = 0.999999977648
-shader_parameter/highlight_strength = 0.999999977648
+shader_parameter/shadow_strength = 0.499999988824
+shader_parameter/highlight_strength = 0.499999988824
 shader_parameter/highlight_color = Color(0.48570347, 0.48570353, 0.48570347, 1)
 shader_parameter/shadow_color = Color(0.4390491, 0.43904912, 0.43904912, 1)
 
@@ -229,7 +229,7 @@ void light() {
 render_priority = 0
 next_pass = SubResource("ShaderMaterial_hyuyb")
 shader = SubResource("Shader_3es26")
-shader_parameter/albedo = Color(1, 0.7778129, 0.69086015, 1)
+shader_parameter/albedo = Color(0.96148986, 0.8273224, 0.7851289, 1)
 shader_parameter/clamp_diffuse_to_max = false
 shader_parameter/cuts = 2
 shader_parameter/wrap = 0.0
