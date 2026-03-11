@@ -197,6 +197,7 @@ theme_override_constants/separation = 3
 [connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/HBoxContainer2/CriarNovaPeca" to="." method="_on_criar_nova_peca_pressed"]
 [connection signal="mouse_entered" from="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/Palco" to="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/Palco" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/Palco" to="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/Palco" method="_on_mouse_exited"]
+[connection signal="arquivo_recebido" from="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/PainelLateral" to="." method="_on_painel_lateral_arquivo_recebido"]
 [connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/PainelLateral/MarginContainer/VBoxContainer/ConteinerButao/MarginContainer/atualizar" to="." method="_on_atualizar_pressed"]
 [connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/PainelLateral/MarginContainer/VBoxContainer/ConteinerButao/MarginContainer2/limpar" to="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/PainelLateral" method="_on_limpar_pressed"]
 [connection signal="peguei_um_arquivo" from="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/PainelLateral/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ExibidorDeArquivos" to="." method="_on_exibidor_de_arquivos_peguei_um_arquivo"]
