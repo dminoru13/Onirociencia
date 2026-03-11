@@ -1,8 +1,24 @@
 [gd_scene format=3 uid="uid://ctkt5iydfcnsr"]
 
 [ext_resource type="PackedScene" uid="uid://b7m10jgf184ea" path="res://restos_inuteis/Modelos/Partes Corpo/Perna.glb" id="1_8xxdn"]
+[ext_resource type="Material" uid="uid://d2oqb3djvwll2" path="res://Pecas/modelos3d/ShaderLais.tres" id="2_itpju"]
 
 [node name="Perna" unique_id=163234493 instance=ExtResource("1_8xxdn")]
 
-[node name="Armature_002" parent="." index="0" unique_id=1614521422]
+[node name="Armature_002" parent="." index="0" unique_id=2132036223]
 transform = Transform3D(-4.371139e-08, 0, 1.0000002, 0, 1.0000001, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="Cube" parent="Armature_002/Skeleton3D" parent_id_path=PackedInt32Array(1801898183) index="0" unique_id=401678506]
+surface_material_override/0 = ExtResource("2_itpju")
+
+[node name="Cube_001" parent="Armature_002/Skeleton3D" parent_id_path=PackedInt32Array(1801898183) index="1" unique_id=834301357]
+surface_material_override/0 = ExtResource("2_itpju")
+
+[node name="Cube_002" parent="Armature_002/Skeleton3D" parent_id_path=PackedInt32Array(1801898183) index="2" unique_id=1636546134]
+surface_material_override/0 = ExtResource("2_itpju")
+
+[node name="Sphere_002" parent="Armature_002/Skeleton3D" parent_id_path=PackedInt32Array(1801898183) index="3" unique_id=1365546901]
+surface_material_override/0 = ExtResource("2_itpju")
+
+[node name="Sphere_003" parent="Armature_002/Skeleton3D" parent_id_path=PackedInt32Array(1801898183) index="4" unique_id=278025786]
+surface_material_override/0 = ExtResource("2_itpju")

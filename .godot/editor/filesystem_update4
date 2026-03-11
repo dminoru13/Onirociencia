@@ -12,3 +12,4 @@ res://addons/EditorDeCriaturas/PainelLateral/modulos/ExibidorDeArquivo/ExibidorD
 res://addons/EditorDeCriaturas/PainelLateral/modulos/ModuloParte/modulo_parte.gd
 res://addons/EditorDeCriaturas/PainelLateral/painelLateral.gd
 res://Pecas/modelos3d/ShaderLais.tres
+res://Pecas/modelos3d/Humanoide/Partes/Perna/perna.tscn
