@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://djnj7ir56a7v5"]
+
+[ext_resource type="Script" uid="uid://ccopd5r0xtkn" path="res://addons/EditorDeCriaturas/PainelLateral/modulos/ModuloParte/modulo_parte.gd" id="1_2x5y5"]
+[ext_resource type="Script" uid="uid://7keq20npl01d" path="res://addons/EditorDeCriaturas/PainelLateral/modulos/ExibidorDeArquivo/ExibidorDeArquivos.gd" id="2_k78mr"]
+
+[node name="ModuloParte" type="FoldableContainer" unique_id=1335027980]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 24.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 15
+title = "NOME"
+title_alignment = 1
+script = ExtResource("1_2x5y5")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=394218532]
+layout_mode = 2
+
+[node name="ExibidordeArquivos" type="Control" parent="VBoxContainer" unique_id=518213996]
+custom_minimum_size = Vector2(0, 31)
+layout_mode = 2
+script = ExtResource("2_k78mr")
+metadata/_custom_type_script = "uid://7keq20npl01d"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=165555446]
+visible = false
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer" unique_id=1625954272]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.01
+
+[node name="FoldableContainer" type="FoldableContainer" parent="VBoxContainer/HBoxContainer" unique_id=2098339750]
+layout_mode = 2
+size_flags_horizontal = 3

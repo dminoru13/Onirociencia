@@ -2,68 +2,68 @@
 extends Control
 
 
-
-
-
-@export_tool_button("Atualizar")
-var botao_apertado = atualizar
-
-@export var painel_lateral: Control
+@export var painel_lateral: PainelLateral
 @export var sub_viewport: SubViewport
 @export var modelo_peca: ModeloPeca
 @export var label_torso: Label
 
 var novo_recurso: RecursoPeca = RecursoPeca.new()
 
-var zoom := 0.0:
-	set(value):
-		zoom = value
-		atualizar()
+
+#FUNÇÕES
+
+#funções meramente auxiliares
+func removedor_de_numeros(texto: String):
+	var regex = RegEx.new()
+	regex.compile("[0-9]")
+	var resultado = regex.sub(texto, "", true)
+	var separar = resultado.split("_")
+	var nome_final = separar[0]
+	return nome_final
 
 
+#Funções principais
 
-func limpar():
-	print("passanu pano")
-
-
-func _on_criar_nova_peca_pressed() -> void:
-	criar_nova_peca()
-func _on_atualizar_pressed() -> void:
-	atualizar()
-
-func apagar_peca():
-	print("resetando peca")
-	modelo_peca.recurso = RecursoPeca.new()
-
-
-func criar_nova_peca():
-	apagar_peca()
-	print("criando novo filho")
-	
-	print(modelo_peca.recurso)
-
+#atribui o novo recurso ao modelo
 func atualizar():
-	print("Caminho-torso: " , novo_recurso.torso_base.caminho_modelo)
+	painel_lateral.atualizar_painel(novo_recurso.torso_base.lista_partes)
 	modelo_peca.recurso = novo_recurso
 
 
+#arquivo vindo do torso
 func _on_exibidor_de_arquivos_peguei_um_arquivo(arquivo: String, endereco: String) -> void:
 	arquivo_recebido(arquivo, endereco)
-	
-	
-	
+
+
+#Ativa ao receber um arquivo de qualquer lugar
 func arquivo_recebido(arquivo: String, endereco: String):
 	print("arquivo: ", arquivo, "   endereco: ", endereco)
 	
 	if endereco == "torso":
+		print("")
+		print("gerando novo recurso")
 		novo_recurso.torso_base.caminho_modelo = arquivo
-		
+		print("novo torso atribuido")
+		print("Caminho-torso: " , novo_recurso.torso_base.caminho_modelo)
+		prencher_lista_partes(novo_recurso.torso_base)
 	
 	atualizar()
 
 
-
-
+#prenche a lista de partes do recurso
+func prencher_lista_partes(parte_alvo: Parte):
+	print("----")
+	print("prenchendo lista partes")
+	var modelo_cena: PackedScene = load(parte_alvo.caminho_modelo)
+	var modelo_alvo: Node3D = modelo_cena.instantiate()
+	print("lista partes: ")
+	for filho in modelo_alvo.get_children():
+		if filho is encaixePeca:
+			var nova_parte: Parte = Parte.new()
+			nova_parte.ancora = filho.position
+			nova_parte.nome = filho.name
+			parte_alvo.lista_partes.append(nova_parte)
+			print("tipo: ", nova_parte.tipo, " ancora: ", nova_parte.ancora)
 
 
 

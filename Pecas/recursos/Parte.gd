@@ -16,7 +16,16 @@ func _ready() -> void:
 	atualizar_caracteristicas()
 	
 
+func removedor_de_numeros(texto: String):
+	var regex = RegEx.new()
+	regex.compile("[0-9]")
+	var resultado = regex.sub(texto, "", true)
+	var separar = resultado.split("_")
+	var nome_final = separar[0]
+	return nome_final
+
 func atualizar_caracteristicas():
+	print("-----")
 	print("atualizando caracteristicas")
 	print("o caminho é: ", caminho_modelo)
 	if caminho_modelo != "":
@@ -26,11 +35,9 @@ func atualizar_caracteristicas():
 			nome = caminho_modelo.split("/")[-1]
 			print("atribuindo nome: ", nome)
 	
-	if nome != "":
+	if nome != "" and tipo == "":
+		print("----")
 		var nome_alvo = nome.trim_suffix(".tscn")
-		var regex = RegEx.new()
-		regex.compile("[0-9]")
-		var resultado = regex.sub(nome_alvo, "", true)
-		var separar = resultado.split("_")
-		var nome_final = separar[0]
-		tipo = nome_final
+		tipo = removedor_de_numeros(nome_alvo)
+		print("o tipo da parte é: ", tipo)
+	

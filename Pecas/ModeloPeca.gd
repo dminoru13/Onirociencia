@@ -11,7 +11,8 @@ extends Node3D
 
 func atualizar():
 	print("atualizando peca")
-
+	recurso.torso_base.atualizar_caracteristicas()
+	
 	for filho in get_children():
 		filho.queue_free()
 	

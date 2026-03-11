@@ -1,13 +1,13 @@
-res://addons/EditorDeCriaturas/PainelCentral/centro_de_exibicao.gd
 res://addons/EditorDeCriaturas/PainelCentral/CentroDeExibicao.tscn
 res://restos_inuteis/shader materials/flexible_toon.gdshader
 res://shaders/outlineRoubado.gdshader
-res://addons/EditorDeCriaturas/PainelLateral/painelLateral.gd
-res://addons/EditorDeCriaturas/modulos/ExibidorDeArquivo/ExibidorDeArquivos.gd
-res://addons/EditorDeCriaturas/modulos/ExibidorDeArquivo/CenaModelo/exibir_arquivo_modelo.gd
-res://addons/EditorDeCriaturas/modulos/ExibidorDeArquivo/CenaModelo/ModeloExibirArquivos.tscn
-res://Pecas/Parte.gd
-res://Pecas/RecursoPeca.gd
+res://addons/EditorDeCriaturas/PainelCentral/palco.gd
+res://Pecas/recursos/Parte.gd
 res://Pecas/ModeloPeca.gd
-res://addons/EditorDeCriaturas/PainelCentral/cena.gd
 res://Pecas/modelos3d/Humanoide/Partes/Torso/torso_base.tscn
+res://addons/EditorDeCriaturas/PainelCentral/centro_de_exibicao.gd
+res://addons/EditorDeCriaturas/modulos/Modulo Grupo/ModuloGrupo.tscn
+res://addons/EditorDeCriaturas/PainelLateral/modulos/ModuloParte/ModuloParte.tscn
+res://addons/EditorDeCriaturas/PainelLateral/modulos/ExibidorDeArquivo/ExibidorDeArquivos.gd
+res://addons/EditorDeCriaturas/PainelLateral/modulos/ModuloParte/modulo_parte.gd
+res://addons/EditorDeCriaturas/PainelLateral/painelLateral.gd

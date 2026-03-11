@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b8niqtf4udnhp"]
 
-[ext_resource type="Script" uid="uid://dcfprss05kpf3" path="res://addons/EditorDeCriaturas/modulos/ExibidorDeArquivo/CenaModelo/exibir_arquivo_modelo.gd" id="1_sr5q5"]
+[ext_resource type="Script" uid="uid://dcfprss05kpf3" path="res://addons/EditorDeCriaturas/PainelLateral/modulos/ExibidorDeArquivo/CenaModelo/exibir_arquivo_modelo.gd" id="1_sr5q5"]
 
 [node name="ModeloExibidorArquivos" type="Control" unique_id=34814498 node_paths=PackedStringArray("botao")]
 custom_minimum_size = Vector2(0, 31)

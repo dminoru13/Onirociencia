@@ -22,7 +22,7 @@ func _on_mouse_exited() -> void:
 func _input(event: InputEvent) -> void:
 	if mouse_dentro:
 		if event is InputEventMouseButton:
-			if event.button_index == MOUSE_BUTTON_MIDDLE:
+			if event.button_index == MOUSE_BUTTON_LEFT:
 				rotacionando = event.pressed
 		
 		if event is InputEventMouseMotion and rotacionando:

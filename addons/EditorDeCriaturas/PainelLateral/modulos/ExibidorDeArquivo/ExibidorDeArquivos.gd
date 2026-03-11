@@ -1,21 +1,17 @@
 @tool
+class_name ExibidordeArquivos
 extends Control
 
 var Modelo
+var label_caminho_arquivo: Label
+var MODELO_EXIBIR_ARQUIVOS: PackedScene
 
 const MINORUS_EXPLORER = preload("uid://dghhtqc7maa0c")
 
 @export var endereco: String = ""
-@onready var label_caminho_arquivo: Label
 @export_dir var caminho_para_pasta_inicial: String
 @export var lista_branca: Array[String]
 @export var lista_negra: Array[String]
-
-var MODELO_EXIBIR_ARQUIVOS: PackedScene
-
-
-@export_tool_button("adicionar modelo")
-var adicionar_apretado = abrir_explorador
 
 
 
