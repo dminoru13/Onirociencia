@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://5x7tvbdy4vcq"]
 
 [ext_resource type="Script" uid="uid://02xjn8sxyoht" path="res://addons/EditorDeCriaturas/PainelCentral/centro_de_exibicao.gd" id="1_0kln8"]
-[ext_resource type="Script" uid="uid://b8i3h0kxymgn5" path="res://Pecas/ModeloPeca.gd" id="2_jc2v8"]
+[ext_resource type="Script" uid="uid://b8i3h0kxymgn5" path="res://Pecas/modelos3d/ModeloPeca.gd" id="2_jc2v8"]
 [ext_resource type="Script" uid="uid://8jbdbelg0vfa" path="res://addons/EditorDeCriaturas/PainelCentral/palco.gd" id="2_vm6er"]
 [ext_resource type="Script" uid="uid://bsnwia827egm8" path="res://addons/EditorDeCriaturas/PainelLateral/script/painelLateral.gd" id="3_odn6q"]
 [ext_resource type="Script" uid="uid://7keq20npl01d" path="res://addons/EditorDeCriaturas/PainelLateral/modulos/ExibidorDeArquivo/ExibidorDeArquivos.gd" id="4_vm6er"]
