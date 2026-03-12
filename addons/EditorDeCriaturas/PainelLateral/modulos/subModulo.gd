@@ -5,6 +5,7 @@ extends MarginContainer
 @export var tipo: String
 @export var nome: String
 @export var endereco: String
+@export var valor: String
 @export var dicionario_cenas: Dictionary[String, PackedScene] = {
 	"bool": load("res://addons/EditorDeCriaturas/PainelLateral/modulos/modulo_booleano/ModuloBooleano.tscn")
 }
@@ -20,6 +21,7 @@ func criar_filho():
 	filho = dicionario_cenas[tipo].instantiate()
 	filho.nome = nome
 	filho.endereco = endereco
+	filho.valor = valor
 	add_child(filho)
 
 

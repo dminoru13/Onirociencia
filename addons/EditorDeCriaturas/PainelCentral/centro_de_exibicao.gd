@@ -65,10 +65,11 @@ func arquivo_recebido(arquivo: String, endereco: String):
 	atualizar()
 
 func atualizar_modificadores_partes(endereco: String, nome: String, valor):
-	print("o painel central recebeu:")
-	print("endereco: ", endereco)
-	print("nome: ", nome)
-	print("valor: ", valor)
+	for parte in novo_recurso.torso_base.lista_partes:
+		if parte.nome == endereco:
+			parte.modificadores_parte[nome] = str(valor)
+	
+	atualizar()
 
 #prenche a lista de partes do recurso
 func prencher_lista_partes(parte_alvo: Parte):

@@ -22,8 +22,8 @@ func atualizar_painel(recurso: RecursoPeca):
 		novo_modulo.atualizar()
 		novo_modulo.exibidor_de_arquivos.peguei_um_arquivo.connect(enviar_arquivo)
 		
-		for subm_modulo in novo_modulo.lista_sub_modulo:
-			subm_modulo.filho.connect("variavel_mudou", atualizar_modificadores)
+		for sub_modulo in novo_modulo.lista_sub_modulo:
+			sub_modulo.filho.connect("variavel_mudou", atualizar_modificadores)
 		
 
 func atualizar_modificadores(endereco: String, nome: String, valor):

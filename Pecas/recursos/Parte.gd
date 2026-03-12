@@ -16,7 +16,7 @@ extends Resource
 
 func _ready() -> void:
 	atualizar_caracteristicas()
-	
+
 
 func removedor_de_numeros(texto: String):
 	var regex = RegEx.new()
@@ -39,3 +39,7 @@ func atualizar_caracteristicas():
 		if parte.caminho_modelo != "":
 			pass
 	
+
+func odificadore_alterados():
+	print(nome)
+	print(modificadores_parte)

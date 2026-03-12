@@ -67,14 +67,16 @@ var lista_sub_modulo: Array[SubModulo]
 func aplicar_modificadores():
 
 	for modificador in parte_base.modificadores_parte:
+		var submodulo: SubModulo = SubModulo.new()
+		submodulo.nome = modificador
+		submodulo.endereco = endereco
+		submodulo.valor = parte_base.modificadores_parte[modificador]
 		
 		if modificador == "Espelhavel":
-			var submodulo: SubModulo = SubModulo.new()
-			submodulo.nome = modificador
 			submodulo.tipo = "bool"
-			submodulo.endereco = endereco
-			conteiner_modulos.add_child(submodulo)
-			lista_sub_modulo.append(submodulo)
+			
+		conteiner_modulos.add_child(submodulo)
+		lista_sub_modulo.append(submodulo)
 	
 
 

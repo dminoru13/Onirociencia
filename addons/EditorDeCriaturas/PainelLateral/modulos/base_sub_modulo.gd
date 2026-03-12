@@ -3,7 +3,7 @@ class_name base_sub_modulo
 
 @export var endereco: String
 @export var nome: String
-var valor
+@export var valor: String
 
 signal variavel_mudou(endereco: String, nome: String, dicionario_variaveis: Dictionary[String, String])
 

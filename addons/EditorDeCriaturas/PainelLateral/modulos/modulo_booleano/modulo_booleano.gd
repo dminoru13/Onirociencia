@@ -7,8 +7,8 @@ extends base_sub_modulo
 
 func _ready() -> void:
 	label_nome.text = nome
-	valor = false
+	check_box.button_pressed = (valor == "true")
 
 func _on_check_box_toggled(toggled_on: bool) -> void:
-	valor = toggled_on
+	valor = str(toggled_on)
 	passar_informacoes()

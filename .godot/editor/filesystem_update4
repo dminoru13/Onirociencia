@@ -24,3 +24,4 @@ res://addons/EditorDeCriaturas/PainelLateral/modulos/base_sub_modulo.gd
 res://addons/EditorDeCriaturas/PainelLateral/modulos/subModulo.gd
 res://addons/EditorDeCriaturas/PainelLateral/ModuloParte/modulo_parte.gd
 res://addons/EditorDeCriaturas/PainelLateral/script/painelLateral.gd
+res://Pecas/modelos3d/modelo_3d_peca.gd
