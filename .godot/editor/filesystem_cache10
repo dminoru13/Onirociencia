@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1773322259
+::res://::1773341222
 ::res://addons/::1772624348
 ::res://addons/EditorDeCriaturas/::1773233877
 editor_de_criaturas_script.gd::GDScript::4976777065224053049::1773154636::0::1::::<>EditorPlugin<><>0<>1<><>::
@@ -13,8 +13,8 @@ MinorusExplorer.tscn::PackedScene::7595305551152655764::1772753616::0::1::::<><>
 minorus_explorer.gd::GDScript::6073632866221083320::1773317312::0::1::::<>Control<><>0<>1<><>::
 ModuloArquivoGeral.tscn::PackedScene::8524745456407014554::1773057544::0::1::::<><><>0<>0<><>::uid://1t41sv4sh8eq::::res://addons/EditorDeCriaturas/exploradorDeArquivos/modulo_arquivo_geral.gd
 modulo_arquivo_geral.gd::GDScript::1865941314550922580::1773315843::0::1::::ModuloArquivo<>Button<><>0<>1<><>::
-::res://addons/EditorDeCriaturas/PainelCentral/::1773329631
-CentroDeExibicao.tscn::PackedScene::2155123976041766192::1773329733::0::1::::<><><>0<>0<><>::uid://02xjn8sxyoht::::res://addons/EditorDeCriaturas/PainelCentral/centro_de_exibicao.gd<>uid://b8i3h0kxymgn5::::res://Pecas/ModeloPeca.gd<>uid://8jbdbelg0vfa::::res://addons/EditorDeCriaturas/PainelCentral/palco.gd<>uid://bsnwia827egm8::::res://addons/EditorDeCriaturas/PainelLateral/script/painelLateral.gd<>uid://7keq20npl01d::::res://addons/EditorDeCriaturas/PainelLateral/modulos/ExibidorDeArquivo/ExibidorDeArquivos.gd
+::res://addons/EditorDeCriaturas/PainelCentral/::1773330882
+CentroDeExibicao.tscn::PackedScene::2155123976041766192::1773330882::0::1::::<><><>0<>0<><>::uid://02xjn8sxyoht::::res://addons/EditorDeCriaturas/PainelCentral/centro_de_exibicao.gd<>uid://b8i3h0kxymgn5::::res://Pecas/modelos3d/ModeloPeca.gd<>uid://8jbdbelg0vfa::::res://addons/EditorDeCriaturas/PainelCentral/palco.gd<>uid://bsnwia827egm8::::res://addons/EditorDeCriaturas/PainelLateral/script/painelLateral.gd<>uid://7keq20npl01d::::res://addons/EditorDeCriaturas/PainelLateral/modulos/ExibidorDeArquivo/ExibidorDeArquivos.gd
 centro_de_exibicao.gd::GDScript::1811872587920826985::1773329172::0::1::::<>Control<><>0<>1<><>::
 palco.gd::GDScript::2334877373427470342::1773230315::0::1::::<>SubViewportContainer<><>0<>1<><>::
 ::res://addons/EditorDeCriaturas/PainelLateral/::1773319278
@@ -40,9 +40,9 @@ mundo_3d.tscn::PackedScene::2552895872951070218::1773061205::0::1::::<><><>0<>0<
 teste.tscn::PackedScene::4495645279369497021::1773061205::0::1::::<><><>0<>0<><>::uid://dslkamr5btkq4::::res://restos_inuteis/materiais/modulares/OutLine.tres
 ::res://cenas/abientes/::1772110815
 nevoa.tres::Environment::5204137258716414823::1772110815::0::1::::<><><>0<>0<><>::
-::res://Pecas/::1773315632
-::res://Pecas/modelos3d/::1773329655
-ModeloPeca.gd::GDScript::4720881451744806832::1773315632::0::1::::ModeloPeca<>Node3D<><>0<>1<><>::
+::res://Pecas/::1773329733
+::res://Pecas/modelos3d/::1773330727
+ModeloPeca.gd::GDScript::4720881451744806832::1773330727::0::1::::ModeloPeca<>Node3D<><>0<>1<><>::
 ShaderLais.tres::ShaderMaterial::9084236851267259677::1773315369::0::1::::<><><>0<>0<><>::
 ::res://Pecas/modelos3d/Humanoide/::1772458286
 ::res://Pecas/modelos3d/Humanoide/Partes/::1772460116

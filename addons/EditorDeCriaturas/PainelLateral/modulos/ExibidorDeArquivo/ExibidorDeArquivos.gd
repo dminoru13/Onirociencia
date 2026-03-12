@@ -55,9 +55,10 @@ func pegar_arquivo(caminho: String, nome: String):
 	atualizar_caminho_arquivo(caminho + nome, nome)
 	peguei_um_arquivo.emit(caminho + nome, endereco)
 
-func atualizar_caminho_arquivo(caminho, nome):
+func atualizar_caminho_arquivo(caminho:String, nome):
 	caminho_arquivo = caminho
-	label_caminho_arquivo.text = nome
+	var caminho_diluido = caminho.split("/")[-1]
+	label_caminho_arquivo.text = caminho_diluido
 
 
 

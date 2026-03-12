@@ -61,7 +61,7 @@ func atualizar() -> void:
 		aplicar_modificadores()
 
 
-var lista_sub_modulo: Array[SubModulo]
+var lista_sub_modulo: Array[SubModulo] = []
 
 #Modificadores
 func aplicar_modificadores():

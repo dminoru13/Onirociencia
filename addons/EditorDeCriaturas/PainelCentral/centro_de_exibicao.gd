@@ -51,7 +51,7 @@ func arquivo_recebido(arquivo: String, endereco: String):
 		for parte in novo_recurso.torso_base.lista_partes:
 			if parte.nome == endereco:
 				parte.caminho_modelo = arquivo
-				
+				parte.modificadores_parte.clear()
 				var cena_modelo: PackedScene = load(parte.caminho_modelo)
 				var instancia_modelo: Node3D = cena_modelo.instantiate()
 				
@@ -60,6 +60,8 @@ func arquivo_recebido(arquivo: String, endereco: String):
 					for key in modificador_modelo:
 						var nome_enum: String = ModificadorExemplo.Opcoes.keys()[key]
 						parte.modificadores_parte[nome_enum] = modificador_modelo[key]
+				
+					
 					
 	
 	atualizar()
