@@ -32,7 +32,6 @@ func set_endereco():
 		exibidor_de_arquivos.endereco = endereco
 func set_caminho():
 	if exibidor_de_arquivos:
-		print(caminho_para_pasta_inicial)
 		exibidor_de_arquivos.caminho_para_pasta_inicial = caminho_para_pasta_inicial
 func set_branca():
 	if exibidor_de_arquivos:

@@ -10,7 +10,6 @@ extends Node3D
 
 
 func atualizar():
-	print("atualizando peca")
 	recurso.torso_base.atualizar_caracteristicas()
 	
 	for filho in get_children():
@@ -22,7 +21,6 @@ func atualizar():
 	var torso_atual: Node3D
 	
 	if caminho_modelo != "":
-		print("carregando torso")
 		novo_torso = load(recurso.torso_base.caminho_modelo)
 		var instancia: Node3D = novo_torso.instantiate()
 		instancia.name = "torso"
@@ -33,13 +31,8 @@ func atualizar():
 		print("o caminho está vazio")
 	
 	if lista_partes != []:
-		print("----")
-		print("iniciando criação dos memebros")
-		print("lista partes:")
-		print(lista_partes)
 		for parte in lista_partes:
 			if parte.caminho_modelo != "":
-				print("criando ", parte.nome)
 				
 				var cena_modelo: PackedScene = load(parte.caminho_modelo)
 				var modelo: Node3D = cena_modelo.instantiate()

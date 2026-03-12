@@ -17,7 +17,6 @@ var selecionado: bool = false
 
 
 func _ready() -> void:
-	#print("um modulo de arquivo nasceu")
 	
 	if label_nome:
 		if texto_label != label_nome.text:
@@ -29,31 +28,21 @@ func _ready() -> void:
 	
 	if texture_rect:
 		if e_uma_pasta:
-			#print("------")
-			#print("está merda é uma pasta")
 			aplicar_textura("res://UI/icones/folder (1).png")
 		
 		if texture_rect.texture == null:
-			#print("------")
-			#print("TENANDO ATRIBUIR TEXTURA")
 			if texto_arquivo.ends_with(".png"):
-				#print("é um png")
 				aplicar_textura(caminho_arquivo)
 			elif texto_arquivo.ends_with(".tscn"):
-				#print("é um tscn")
 				aplicar_textura("res://UI/icones/clapperboard.png")
 			elif texto_arquivo.ends_with(".gd"):
-				#print("é um gd")
 				aplicar_textura("res://UI/icones/file-cog.png")
 			elif texto_arquivo.ends_with(".import"):
-				#print("é um import")
 				aplicar_textura("res://UI/icones/import.png")
 			else:
-				#print("não sei que merda é essa")
 				aplicar_textura("res://UI/icones/file-question-mark.png")
 		else:
 			pass
-			#print("o texture rect não existe")
 
 
 signal apertou(nome, pasta)
@@ -71,7 +60,6 @@ func _on_pressed() -> void:
 		selecionado = true
 		
 	await  get_tree().create_timer(0.7).timeout
-	print("o tempo acabou")
 	selecionado = false
 
 

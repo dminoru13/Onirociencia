@@ -1,11 +1,12 @@
-res://Pecas/modelos3d/Humanoide/Partes/Perna/perna.tscn
+res://Pecas/modelos3d/Humanoide/Partes/Braco/braco.tscn
 res://Pecas/modelos3d/ShaderLais.tres
 res://restos_inuteis/shader materials/flexible_toon.gdshader
 res://shaders/outlineRoubado.gdshader
-res://addons/EditorDeCriaturas/Classes/encaixeParte.gd
-res://Pecas/modelos3d/Humanoide/Partes/Braco/braco.tscn
-res://Pecas/recursos/modelo.gd
-res://Pecas/recursos/Modificadores.gd
-res://Pecas/recursos/Parte.gd
-res://restos_inuteis/materiais/modulares/FlexibleToonMaterial.tres
 res://addons/EditorDeCriaturas/PainelCentral/centro_de_exibicao.gd
+res://Pecas/recursos/Parte.gd
+res://addons/EditorDeCriaturas/PainelCentral/CentroDeExibicao.tscn
+res://addons/EditorDeCriaturas/PainelLateral/painelLateral.gd
+res://Pecas/ModeloPeca.gd
+res://addons/EditorDeCriaturas/exploradorDeArquivos/minorus_explorer.gd
+res://addons/EditorDeCriaturas/exploradorDeArquivos/modulo_arquivo_geral.gd
+res://addons/EditorDeCriaturas/PainelLateral/modulos/ModuloParte/modulo_parte.gd

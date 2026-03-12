@@ -39,14 +39,9 @@ func _on_painel_lateral_arquivo_recebido(arquivo: String, endereco: String) -> v
 
 #Ativa ao receber um arquivo de qualquer lugar
 func arquivo_recebido(arquivo: String, endereco: String):
-	print("arquivo: ", arquivo, "   endereco: ", endereco)
 	
 	if endereco == "torso":
-		print("")
-		print("gerando novo recurso")
 		novo_recurso.torso_base.caminho_modelo = arquivo
-		print("novo torso atribuido")
-		print("Caminho-torso: " , novo_recurso.torso_base.caminho_modelo)
 		prencher_lista_partes(novo_recurso.torso_base)
 		
 		painel_lateral.atualizar_painel(novo_recurso.torso_base.lista_partes)
@@ -55,8 +50,6 @@ func arquivo_recebido(arquivo: String, endereco: String):
 		for parte in novo_recurso.torso_base.lista_partes:
 			if parte.nome == endereco:
 				parte.caminho_modelo = arquivo
-				print("Eu ", parte.nome, " recebi pelo correio um ", parte.caminho_modelo)
-				print("c=atribuindo modificadores")
 				
 				var cena_modelo: PackedScene = load(parte.caminho_modelo)
 				var instancia_modelo: Node3D = cena_modelo.instantiate()
@@ -67,8 +60,6 @@ func arquivo_recebido(arquivo: String, endereco: String):
 						var nome_enum: String = ModificadorExemplo.Opcoes.keys()[key]
 						parte.modificadore_parte[nome_enum] = modificador_modelo[key]
 					
-					print(parte.nome, " tem os modificadores: ")
-					print(parte.modificadore_parte)
 	
 	atualizar()
 
@@ -76,12 +67,9 @@ func arquivo_recebido(arquivo: String, endereco: String):
 
 #prenche a lista de partes do recurso
 func prencher_lista_partes(parte_alvo: Parte):
-	print("----")
-	print("prenchendo lista partes")
 	parte_alvo.lista_partes.clear()
 	var modelo_cena: PackedScene = load(parte_alvo.caminho_modelo)
 	var modelo_alvo: Node3D = modelo_cena.instantiate()
-	print("lista partes: ")
 	for filho in modelo_alvo.get_children():
 		if filho is encaixePeca:
 			var nova_parte: Parte = Parte.new()
@@ -89,7 +77,6 @@ func prencher_lista_partes(parte_alvo: Parte):
 			nova_parte.nome = filho.name
 			parte_alvo.lista_partes.append(nova_parte)
 			nova_parte.tipo = removedor_de_numeros(filho.name)
-			print("tipo: ", nova_parte.tipo, " ancora: ", nova_parte.ancora)
 
 
 

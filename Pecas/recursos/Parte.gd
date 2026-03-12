@@ -27,21 +27,13 @@ func removedor_de_numeros(texto: String):
 	return nome_final
 
 func atualizar_caracteristicas():
-	print("-----")
-	print("atualizando caracteristicas")
-	print("o caminho é: ", caminho_modelo)
 	if caminho_modelo != "":
-		print("caminho modelo existe")
 		if nome == "":
-			print("nome está em branco")
 			nome = caminho_modelo.split("/")[-1]
-			print("atribuindo nome: ", nome)
 		
 	if nome != "" and tipo == "":
-		print("----")
 		var nome_alvo = nome.trim_suffix(".tscn")
 		tipo = removedor_de_numeros(nome_alvo)
-		print("o tipo da parte é: ", tipo)
 	
 	for parte in lista_partes:
 		if parte.caminho_modelo != "":

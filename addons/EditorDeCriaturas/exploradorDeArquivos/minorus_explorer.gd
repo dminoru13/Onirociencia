@@ -30,15 +30,11 @@ var arquivos: Array
 func _process(delta: float) -> void:
 	tamanho_tela = size
 	if tamanho_tela != tamanho_anterior:
-		#print("o tamanho mudou")
-		#print(tamanho_anterior)
-		#print(tamanho_tela)
 		tamanho_anterior = tamanho_tela
 		atualizar_grade()
 
 func atualizar_grade():
 	grid_container.columns = floor((size.x+50) / tamanho_modulo )
-	#print(grid_container.columns)
 
 
 #PESQUISA DE ARQUIVOS
@@ -61,16 +57,11 @@ func atualizar():
 
 
 func pesquisar(pesquisa: String):
-	#print("")
-	#print("iniciando pesquisa")
 	var pasta = DirAccess.open(pesquisa)
 	if pasta:
 		pasta.list_dir_begin()
 		var nome_arquivo = pasta.get_next()
 		while nome_arquivo != "":
-			#print("")
-			#print("pesquisando")
-			#print(nome_arquivo)
 			arquivos.append(nome_arquivo)
 			
 			var e_uma_pasta := false
@@ -79,8 +70,6 @@ func pesquisar(pesquisa: String):
 			
 			criar_modulos(nome_arquivo, pesquisa + "/" + nome_arquivo, e_uma_pasta)
 			nome_arquivo = pasta.get_next()
-		#print("")
-		#print(arquivos)
 
 
 func criar_modulos(nome: String, caminho, e_uma_pasta):
