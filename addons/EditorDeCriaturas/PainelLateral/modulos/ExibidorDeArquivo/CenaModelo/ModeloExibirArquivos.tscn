@@ -33,7 +33,6 @@ size_flags_horizontal = 3
 [node name="label_caminho_arquivo" type="Label" parent="MarginContainer2/HBoxContainer/ScrollContainer" unique_id=278481489]
 layout_mode = 2
 size_flags_horizontal = 3
-horizontal_alignment = 1
 
 [node name="addModelo" type="Button" parent="MarginContainer2/HBoxContainer" unique_id=1936932461]
 layout_mode = 2

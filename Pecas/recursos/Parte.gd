@@ -10,7 +10,7 @@ extends Resource
 
 @export var lista_partes: Array[Parte] = []
 
-@export var modificadore_parte: Dictionary[String, String]
+@export var modificadores_parte: Dictionary[String, String]
 
 
 

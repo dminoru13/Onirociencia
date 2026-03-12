@@ -1,5 +1,5 @@
-res://Pecas/recursos/Modificadores.gd
 MarginContainer
+CheckBox
 HBoxContainer
 VBoxContainer
 FoldableContainer
@@ -12,4 +12,3 @@ Node3D
 Button
 MeshInstance3D
 Timer
-GridContainer

@@ -127,10 +127,10 @@ func filho_apertado(nome, pasta):
 	
 	else:
 		if barra_pesquisa.text != "res://":
-			arquivo_foi_selecionado.emit(barra_pesquisa.text +"/"+ nome, nome)
+			arquivo_foi_selecionado.emit(barra_pesquisa.text +"/", nome)
 		
 		else:
-			arquivo_foi_selecionado.emit("res://"+ nome, nome)
+			arquivo_foi_selecionado.emit("res://", nome)
 		
 		get_parent().queue_free()
 

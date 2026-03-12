@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://dj3m4dc8r5ixp"]
+
+[ext_resource type="Script" uid="uid://f3ku1arb43oa" path="res://addons/EditorDeCriaturas/PainelLateral/modulos/modulo_booleano/modulo_booleano.gd" id="1_jlodp"]
+
+[node name="ModuloBooleano" type="MarginContainer" unique_id=751958654 node_paths=PackedStringArray("check_box", "label_nome")]
+custom_minimum_size = Vector2(0, 31)
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 24.0
+grow_horizontal = 2
+script = ExtResource("1_jlodp")
+check_box = NodePath("HBoxContainer/CheckBox")
+label_nome = NodePath("HBoxContainer/MarginContainer/label_nome_modificador")
+endereco = null
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=17894050]
+layout_mode = 2
+color = Color(0, 0, 0, 0.36078432)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=89965293]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer" unique_id=844956870]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="label_nome_modificador" type="Label" parent="HBoxContainer/MarginContainer" unique_id=2113482850]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "aasd"
+
+[node name="CheckBox" type="CheckBox" parent="HBoxContainer" unique_id=1868478112]
+layout_mode = 2
+
+[connection signal="toggled" from="HBoxContainer/CheckBox" to="." method="_on_check_box_toggled"]

@@ -2,18 +2,19 @@
 class_name ExibidordeArquivos
 extends Control
 
+
+
+const MINORUS_EXPLORER = preload("uid://dghhtqc7maa0c")
 var Modelo
 var label_caminho_arquivo: Label
 var MODELO_EXIBIR_ARQUIVOS: PackedScene
-
-const MINORUS_EXPLORER = preload("uid://dghhtqc7maa0c")
-
 @export var endereco: String = ""
 @export_dir var caminho_para_pasta_inicial: String
 @export var lista_branca: Array[String]
 @export var lista_negra: Array[String]
 
-
+func atualizar_variaveis():
+	var pai = get_parent()
 
 
 
@@ -29,9 +30,7 @@ func _ready() -> void:
 
 	if caminho_arquivo == "" :
 		caminho_arquivo = "res://"
-	custom_minimum_size.y = 31
-	
-
+	custom_minimum_size.y = 31	
 
 
 func abrir_explorador():
@@ -53,10 +52,24 @@ func abrir_explorador():
 
 
 func pegar_arquivo(caminho: String, nome: String):
+	atualizar_caminho_arquivo(caminho + nome, nome)
+	peguei_um_arquivo.emit(caminho + nome, endereco)
+
+func atualizar_caminho_arquivo(caminho, nome):
 	caminho_arquivo = caminho
 	label_caminho_arquivo.text = nome
-	peguei_um_arquivo.emit(caminho, endereco)
-	
 
-func atualizar_variaveis():
-	var pai = get_parent()
+
+
+
+
+
+
+
+
+
+
+
+
+
+#
