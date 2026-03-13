@@ -19,16 +19,17 @@ func _ready() -> void:
 
 
 func criar_filho():
-	print("o tipo é ", modificador_base.tipo)
 	filho = dicionario_cenas[modificador_base.tipo].instantiate()
-	filho.nome = modificador_base.nome
 	filho.endereco = endereco
-	filho.valor = modificador_base.endereco
+	filho.modificador_base = modificador_base
 	add_child(filho)
+	
+	filho.botao_fechar.connect("pressed", desabilitar)
 
 
-
-
+func desabilitar():
+	filho.modificador_base.habilitado = false
+	filho.passar_informacoes()
 
 
 

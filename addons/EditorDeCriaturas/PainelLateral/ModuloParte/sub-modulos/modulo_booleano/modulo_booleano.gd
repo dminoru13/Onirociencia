@@ -6,13 +6,9 @@ extends base_sub_modulo
 
 
 func _ready() -> void:
-	label_nome.text = nome
-	check_box.button_pressed = (valor == "true")
+	label_nome.text = modificador_base.nome
+	check_box.button_pressed = (modificador_base.valor == "true")
 
 func _on_check_box_toggled(toggled_on: bool) -> void:
-	valor = str(toggled_on)
+	modificador_base.valor = str(toggled_on)
 	passar_informacoes()
-
-
-func _on_button_pressed() -> void:
-	pass # Replace with function body.

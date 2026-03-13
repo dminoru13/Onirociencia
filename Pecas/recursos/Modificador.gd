@@ -13,10 +13,10 @@ var dicionario_tipos: Dictionary[String,String] = {
 		descobrir_tipo()
 @export var valor: String
 var tipo: String
-var endereco: String
-var abilitado: bool = true
+var habilitado: bool = true
 
 
 func descobrir_tipo():
 	tipo = dicionario_tipos[nome]
+	print(habilitado)
 	print(tipo)

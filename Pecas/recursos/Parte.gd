@@ -12,6 +12,7 @@ extends Resource
 
 @export var modificadores_parte: Array[Modificador]
 
+var modificadores_desabilitados: Array[String]
 
 
 func _ready() -> void:

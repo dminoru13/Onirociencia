@@ -1,11 +1,12 @@
 extends Control
 class_name base_sub_modulo
 
-@export var endereco: String
-@export var nome: String
-@export var valor: String
+var endereco: String
+var modificador_base: Modificador
 
-signal variavel_mudou(endereco: String, nome: String, dicionario_variaveis: Dictionary[String, String])
+@export var botao_fechar: Button
+
+signal variavel_mudou(endereco: String, modificador: Modificador)
 
 func passar_informacoes():
-	variavel_mudou.emit(endereco, nome, valor)
+	variavel_mudou.emit(endereco, modificador_base)

@@ -23,8 +23,8 @@ func removedor_de_numeros(texto: String):
 	return nome_final
 func _on_painel_lateral_arquivo_recebido(arquivo: String, endereco: String) -> void:
 	arquivo_recebido(arquivo, endereco)
-func _on_painel_lateral_modificadores_alterados(endereco: String, nome: String, valor: Variant) -> void:
-	atualizar_modificadores_partes(endereco, nome, valor)
+func _on_painel_lateral_modificadores_alterados(endereco: String, modificador: Modificador) -> void:
+	atualizar_modificadores_partes(endereco, modificador)
 
 
 #Funções principais
@@ -43,6 +43,7 @@ func _on_exibidor_de_arquivos_peguei_um_arquivo(arquivo: String, endereco: Strin
 #Ativa ao receber um arquivo de qualquer lugar
 func arquivo_recebido(arquivo: String, endereco: String):
 	
+	
 	if endereco == "torso":
 		novo_recurso.torso_base.caminho_modelo = arquivo
 		prencher_lista_partes(novo_recurso.torso_base)
@@ -58,19 +59,12 @@ func arquivo_recebido(arquivo: String, endereco: String):
 				if instancia_modelo.has_node("AplicadorModificadores"):
 					var aplicador: Array[Modificador] = instancia_modelo.get_node("AplicadorModificadores").modificadores
 					for modificador in aplicador:
-						parte.modificadores_parte.append(modificador)
+						var mod_copia: Modificador = modificador.duplicate()
+						mod_copia.habilitado = true
+						parte.modificadores_parte.append(mod_copia)
 				
 					
 					
-	
-	atualizar()
-
-func atualizar_modificadores_partes(endereco: String, nome_modificador: String, valor):
-	for parte in novo_recurso.torso_base.lista_partes:
-		if parte.nome == endereco:
-			for modificador in parte.modificadores_parte:
-				if modificador.nome == nome_modificador:
-					modificador.valor = valor
 	
 	atualizar()
 
@@ -86,6 +80,29 @@ func prencher_lista_partes(parte_alvo: Parte):
 			nova_parte.nome = filho.name
 			parte_alvo.lista_partes.append(nova_parte)
 			nova_parte.tipo = removedor_de_numeros(filho.name)
+
+#MINORU FOCA NESSA PARTE AQUI!!!!!!!!!!!!
+func atualizar_modificadores_partes(endereco: String, modificadorRecebido: Modificador):
+	print("")
+	for parte in novo_recurso.torso_base.lista_partes:
+
+		if parte.nome == endereco:
+			for modificador in parte.modificadores_parte:
+				if modificador.nome == modificadorRecebido.nome:
+					modificador = modificadorRecebido
+				
+				if modificador.habilitado:
+					parte.modificadores_desabilitados.erase(modificador.nome)
+				
+				else:
+					parte.modificadores_desabilitados.append(modificador.nome)
+	
+	atualizar()
+
+
+
+
+
 
 
 

@@ -63,14 +63,19 @@ var lista_sub_modulo: Array[SubModulo] = []
 
 #Modificadores
 func aplicar_modificadores():
-
 	for modificador in parte_base.modificadores_parte:
-		var submodulo: SubModulo = SubModulo.new()
-		submodulo.endereco
-		submodulo.modificador_base = modificador
+		
+		if parte_base.modificadores_desabilitados.has(modificador.nome):
+			print("o modificador: ", modificador.nome, " tá desabilitado")
+		
+		else:
+			var submodulo: SubModulo = SubModulo.new()
+			submodulo.endereco = parte_base.nome
+			submodulo.modificador_base = modificador
+			conteiner_modulos.add_child(submodulo)
+			lista_sub_modulo.append(submodulo)
 			
-		conteiner_modulos.add_child(submodulo)
-		lista_sub_modulo.append(submodulo)
+			
 
 
 

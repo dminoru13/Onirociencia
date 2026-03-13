@@ -5,7 +5,7 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jlodp"]
 bg_color = Color(0.0885599, 0.08855992, 0.08855987, 1)
 
-[node name="ModuloBooleano" type="MarginContainer" unique_id=751958654 node_paths=PackedStringArray("check_box", "label_nome")]
+[node name="ModuloBooleano" type="MarginContainer" unique_id=751958654 node_paths=PackedStringArray("check_box", "label_nome", "botao_fechar")]
 custom_minimum_size = Vector2(0, 31)
 anchors_preset = 10
 anchor_right = 1.0
@@ -14,6 +14,7 @@ grow_horizontal = 2
 script = ExtResource("1_jlodp")
 check_box = NodePath("HBoxContainer/CheckBox")
 label_nome = NodePath("HBoxContainer/MarginContainer/label_nome_modificador")
+botao_fechar = NodePath("HBoxContainer/Button")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=17894050]
 layout_mode = 2

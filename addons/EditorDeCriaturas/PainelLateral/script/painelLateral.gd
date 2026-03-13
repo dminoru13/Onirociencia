@@ -26,8 +26,8 @@ func atualizar_painel(recurso: RecursoPeca):
 			sub_modulo.filho.connect("variavel_mudou", atualizar_modificadores)
 		
 
-func atualizar_modificadores(endereco: String, nome: String, valor):
-	modificadores_alterados.emit(endereco, nome, valor)
+func atualizar_modificadores(endereco: String, modificador: Modificador):
+	modificadores_alterados.emit(endereco, modificador)
 
 
 func enviar_arquivo(arquivo: String, endereco: String):
