@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b2hjvpl37fbmx"]
 
-[ext_resource type="PackedScene" uid="uid://c61iituh25yac" path="res://restos_inuteis/Modelos/Partes Corpo/CabecaBase.glb" id="1_vawpe"]
+[ext_resource type="PackedScene" uid="uid://c61iituh25yac" path="res://z_restos_inuteis/Modelos/Partes Corpo/CabecaBase.glb" id="1_vawpe"]
 [ext_resource type="Material" uid="uid://d2oqb3djvwll2" path="res://Pecas/modelos3d/ShaderLais.tres" id="2_vryg0"]
 
 [node name="CabecaBase" unique_id=1706979679 instance=ExtResource("1_vawpe")]

@@ -3,7 +3,7 @@ class_name PainelLateral
 extends Control
 
 @export var Conteiner_modulos: VBoxContainer
-const modulo_parte: PackedScene = preload("uid://djnj7ir56a7v5")
+const modulo_parte: PackedScene = preload("res://addons/EditorDeCriaturas/PainelLateral/ModuloParte/ModuloParte.tscn")
 
 signal arquivo_recebido(arquivo: String, endereco: String)
 signal modificadores_alterados(endereco: String, nome: String, valor)

@@ -8,7 +8,7 @@ extends Control
 @export var label_torso: Label
 
 var novo_recurso: RecursoPeca = RecursoPeca.new()
-var ModificadorExemplo: Modificadores = Modificadores.new()
+var ModificadorExemplo: AplicadorModificadores = AplicadorModificadores.new()
 
 
 #FUNÇÕES
@@ -55,21 +55,22 @@ func arquivo_recebido(arquivo: String, endereco: String):
 				var cena_modelo: PackedScene = load(parte.caminho_modelo)
 				var instancia_modelo: Node3D = cena_modelo.instantiate()
 				
-				if instancia_modelo.has_node("Modificadores"):
-					var modificador_modelo: Dictionary = instancia_modelo.get_node("Modificadores").modificadores
-					for key in modificador_modelo:
-						var nome_enum: String = ModificadorExemplo.Opcoes.keys()[key]
-						parte.modificadores_parte[nome_enum] = modificador_modelo[key]
+				if instancia_modelo.has_node("AplicadorModificadores"):
+					var aplicador: Array[Modificador] = instancia_modelo.get_node("AplicadorModificadores").modificadores
+					for modificador in aplicador:
+						parte.modificadores_parte.append(modificador)
 				
 					
 					
 	
 	atualizar()
 
-func atualizar_modificadores_partes(endereco: String, nome: String, valor):
+func atualizar_modificadores_partes(endereco: String, nome_modificador: String, valor):
 	for parte in novo_recurso.torso_base.lista_partes:
 		if parte.nome == endereco:
-			parte.modificadores_parte[nome] = str(valor)
+			for modificador in parte.modificadores_parte:
+				if modificador.nome == nome_modificador:
+					modificador.valor = valor
 	
 	atualizar()
 

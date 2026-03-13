@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://co3ijgj3gmslo"]
 
-[ext_resource type="PackedScene" uid="uid://dijdreg5wjid2" path="res://restos_inuteis/Modelos/Roupas/Vestido.glb" id="1_y4s0j"]
+[ext_resource type="PackedScene" uid="uid://dijdreg5wjid2" path="res://z_restos_inuteis/Modelos/Roupas/Vestido.glb" id="1_y4s0j"]
 [ext_resource type="Shader" uid="uid://qsn8nrtq4rkx" path="res://shaders/outlineRoubado.gdshader" id="2_y4s0j"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ilnln"]

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://byowoebi4m7id"]
 
-[ext_resource type="PackedScene" uid="uid://bwo0sowtkeair" path="res://restos_inuteis/Modelos/Partes Corpo/TorsoBase.glb" id="1_xk5hx"]
+[ext_resource type="PackedScene" uid="uid://bwo0sowtkeair" path="res://z_restos_inuteis/Modelos/Partes Corpo/TorsoBase.glb" id="1_xk5hx"]
 [ext_resource type="Script" uid="uid://ckyqc7b47dmkv" path="res://Pecas/modelos3d/Humanoide/Partes/Torso/torso_base.gd" id="2_ff4ac"]
 [ext_resource type="Script" uid="uid://u330yjakkxee" path="res://addons/EditorDeCriaturas/Classes/encaixeParte.gd" id="3_2rorp"]
 

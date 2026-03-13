@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ctkt5iydfcnsr"]
 
-[ext_resource type="PackedScene" uid="uid://b7m10jgf184ea" path="res://restos_inuteis/Modelos/Partes Corpo/Perna.glb" id="1_8xxdn"]
+[ext_resource type="PackedScene" uid="uid://b7m10jgf184ea" path="res://z_restos_inuteis/Modelos/Partes Corpo/Perna.glb" id="1_8xxdn"]
 [ext_resource type="Material" uid="uid://d2oqb3djvwll2" path="res://Pecas/modelos3d/ShaderLais.tres" id="2_itpju"]
 
 [node name="Perna" unique_id=163234493 instance=ExtResource("1_8xxdn")]

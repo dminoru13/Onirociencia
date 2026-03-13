@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cl0cgo50483wv"]
 
-[ext_resource type="PackedScene" uid="uid://crb12jxsoalfl" path="res://restos_inuteis/Modelos/Partes Corpo/Complementos Cabeca/Cabelo1.glb" id="1_jlat0"]
-[ext_resource type="Material" uid="uid://4hkbm1k3hrhn" path="res://restos_inuteis/materiais/rua.tres" id="2_m6vrj"]
+[ext_resource type="PackedScene" uid="uid://crb12jxsoalfl" path="res://z_restos_inuteis/Modelos/Partes Corpo/Complementos Cabeca/Cabelo1.glb" id="1_jlat0"]
+[ext_resource type="Material" uid="uid://4hkbm1k3hrhn" path="res://z_restos_inuteis/materiais/rua.tres" id="2_m6vrj"]
 
 [node name="Cabelo1" unique_id=1749337638 instance=ExtResource("1_jlat0")]
 

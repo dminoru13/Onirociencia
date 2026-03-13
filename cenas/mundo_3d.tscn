@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://bcmv27jv8yywo"]
 
-[ext_resource type="Material" uid="uid://4hkbm1k3hrhn" path="res://restos_inuteis/materiais/rua.tres" id="1_7rxdy"]
+[ext_resource type="Material" uid="uid://4hkbm1k3hrhn" path="res://z_restos_inuteis/materiais/rua.tres" id="1_7rxdy"]
 [ext_resource type="Shader" uid="uid://qsn8nrtq4rkx" path="res://shaders/outlineRoubado.gdshader" id="2_fgma6"]
-[ext_resource type="PackedScene" uid="uid://csjpmge1cnuh3" path="res://restos_inuteis/Modelos/Poste.tscn" id="3_doa3p"]
-[ext_resource type="Material" uid="uid://bb43ngplsfis2" path="res://restos_inuteis/materiais/modulares/FlexibleToonMaterial.tres" id="4_j5l54"]
-[ext_resource type="PackedScene" uid="uid://bfwla88hmbodl" path="res://restos_inuteis/Modelos/Objetos aleatorios/gato_achatado.tscn" id="5_l0xn7"]
+[ext_resource type="PackedScene" uid="uid://csjpmge1cnuh3" path="res://z_restos_inuteis/Modelos/Poste.tscn" id="3_doa3p"]
+[ext_resource type="Material" uid="uid://bb43ngplsfis2" path="res://z_restos_inuteis/materiais/modulares/FlexibleToonMaterial.tres" id="4_j5l54"]
+[ext_resource type="PackedScene" uid="uid://bfwla88hmbodl" path="res://z_restos_inuteis/Modelos/Objetos aleatorios/gato_achatado.tscn" id="5_l0xn7"]
 [ext_resource type="Environment" uid="uid://cge6m6v8oisa6" path="res://cenas/abientes/nevoa.tres" id="6_f2ht4"]
 [ext_resource type="PackedScene" path="res://Pecas/Peca.tscn" id="7_fgma6"]
-[ext_resource type="PackedScene" uid="uid://kwrca4eofyhd" path="res://restos_inuteis/Modelos/Objetos aleatorios/d20.tscn" id="8_doa3p"]
+[ext_resource type="PackedScene" uid="uid://kwrca4eofyhd" path="res://z_restos_inuteis/Modelos/Objetos aleatorios/d20.tscn" id="8_doa3p"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_1yycb"]
 size = Vector3(5.415, 1, 74.895)

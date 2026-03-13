@@ -1,9 +1,19 @@
-res://addons/EditorDeCriaturas/PainelLateral/ModuloParte/ModuloParte.tscn
+res://addons/EditorDeCriaturas/PainelLateral/modulos/modulo_booleano/ModuloBooleano.tscn
 res://restos_inuteis/shader materials/flexible_toon.gdshader
 res://shaders/outlineRoubado.gdshader
 res://Pecas/modelos3d/ShaderLais.tres
-res://restos_inuteis/materiais/modulares/FlexibleToonMaterial.tres
-res://addons/EditorDeCriaturas/PainelLateral/modulos/ExibidorDeArquivo/ExibidorDeArquivos.gd
-res://addons/EditorDeCriaturas/PainelLateral/ModuloParte/modulo_parte.gd
-res://addons/EditorDeCriaturas/PainelLateral/script/painelLateral.gd
+res://addons/EditorDeCriaturas/PainelLateral/ModuloParte/ModuloParte.tscn
+res://addons/EditorDeCriaturas/PainelCentral/CentroDeExibicao.tscn
+res://addons/EditorDeCriaturas/PainelLateral/modulos/modulo_booleano/modulo_booleano.gd
+res://addons/EditorDeCriaturas/PainelLateral/sub-modulos/modulo_booleano/ModuloBooleano.tscn
+res://addons/EditorDeCriaturas/PainelLateral/ModuloParte/sub-modulos/modulo_booleano/ModuloBooleano.tscn
+res://addons/EditorDeCriaturas/Classes/encaixeParte.gd
+res://Pecas/modelos3d/Humanoide/Partes/Braco/braco.tscn
+res://Pecas/recursos/AplicadorModificadores.gd
 res://addons/EditorDeCriaturas/PainelCentral/centro_de_exibicao.gd
+res://Pecas/recursos/Modificador.gd
+res://Pecas/recursos/Parte.gd
+res://addons/EditorDeCriaturas/PainelLateral/ModuloParte/modulo_parte.gd
+res://addons/EditorDeCriaturas/PainelLateral/ModuloParte/sub-modulos/subModulo.gd
+res://addons/EditorDeCriaturas/PainelLateral/script/painelLateral.gd
+res://Pecas/modelos3d/ModeloPeca.gd

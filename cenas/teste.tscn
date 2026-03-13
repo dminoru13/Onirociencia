@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b5byvd2acnlu8"]
 
-[ext_resource type="Material" uid="uid://dslkamr5btkq4" path="res://restos_inuteis/materiais/modulares/OutLine.tres" id="1_t87xa"]
+[ext_resource type="Material" uid="uid://dslkamr5btkq4" path="res://z_restos_inuteis/materiais/modulares/OutLine.tres" id="1_t87xa"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_cljiu"]
 

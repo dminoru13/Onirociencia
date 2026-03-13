@@ -5,11 +5,11 @@ extends FoldableContainer
 var parte_base: Parte
 @export var conteiner_modulos: VBoxContainer
 
-
+var mouse_dentro: bool = false
 
 
 #Conectar Exibidor de arquivos
-var exibidor_de_arquivos: ExibidordeArquivos
+@export var exibidor_de_arquivos: ExibidordeArquivos
 @export var endereco: String = "":
 	set(value):
 		endereco = value
@@ -41,8 +41,6 @@ func set_preta():
 	if exibidor_de_arquivos:
 		exibidor_de_arquivos.lista_negra = lista_negra
 func _ready() -> void:
-	exibidor_de_arquivos = $ConteinerModulos/ExibidordeArquivos
-	
 	set_endereco()
 	set_caminho()
 	set_branca()
@@ -68,19 +66,11 @@ func aplicar_modificadores():
 
 	for modificador in parte_base.modificadores_parte:
 		var submodulo: SubModulo = SubModulo.new()
-		submodulo.nome = modificador
-		submodulo.endereco = endereco
-		submodulo.valor = parte_base.modificadores_parte[modificador]
-		
-		if modificador == "Espelhavel":
-			submodulo.tipo = "bool"
+		submodulo.endereco
+		submodulo.modificador_base = modificador
 			
 		conteiner_modulos.add_child(submodulo)
 		lista_sub_modulo.append(submodulo)
-	
-
-
-
 
 
 

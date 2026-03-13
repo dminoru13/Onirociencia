@@ -40,18 +40,19 @@ func atualizar():
 				torso_atual.add_child(modelo)
 				modelo.position = parte.ancora
 				
-				if parte.modificadores_parte != {}:
+				if parte.modificadores_parte != []:
 					atualizar_modificadores(parte, modelo)
 				
 				
 				
 
 func atualizar_modificadores(parte_alvo: Parte, modelo: Node3D):
-	var modificadores: Dictionary[String, String] = parte_alvo.modificadores_parte
+	var modificadores: Array[Modificador] = parte_alvo.modificadores_parte
 	
-	if modificadores.has("Espelhavel"):
-		if modificadores["Espelhavel"] == "true":
-			modelo.rotate_z(deg_to_rad(180))
+	for modificador in modificadores:
+		if modificador.nome == "Espelhado":
+			if modificador.valor == "true":
+				modelo.rotate_z(deg_to_rad(180))
 
 
 
