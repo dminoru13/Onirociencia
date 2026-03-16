@@ -1,10 +1,7 @@
 [gd_scene format=3 uid="uid://5x7tvbdy4vcq"]
 
-[ext_resource type="Script" uid="uid://02xjn8sxyoht" path="res://addons/EditorDeCriaturas/PainelCentral/centro_de_exibicao.gd" id="1_0kln8"]
 [ext_resource type="Script" uid="uid://b8i3h0kxymgn5" path="res://Pecas/modelos3d/ModeloPeca.gd" id="2_jc2v8"]
 [ext_resource type="Script" uid="uid://8jbdbelg0vfa" path="res://addons/EditorDeCriaturas/PainelCentral/palco.gd" id="2_vm6er"]
-[ext_resource type="Script" uid="uid://bsnwia827egm8" path="res://addons/EditorDeCriaturas/PainelLateral/script/painelLateral.gd" id="3_odn6q"]
-[ext_resource type="Script" uid="uid://7keq20npl01d" path="res://addons/EditorDeCriaturas/PainelLateral/ModuloParte/sub-modulos/ExibidorDeArquivo/ExibidorDeArquivos.gd" id="4_vm6er"]
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_vm6er"]
 
@@ -19,7 +16,7 @@ environment = SubResource("Environment_e4kqa")
 fallback_environment = SubResource("Environment_ifm13")
 camera_attributes = SubResource("CameraAttributesPractical_vm6er")
 
-[node name="CentroDeExibicao" type="Control" unique_id=1037981315 node_paths=PackedStringArray("painel_lateral", "sub_viewport", "modelo_peca")]
+[node name="CentroDeExibicao" type="Control" unique_id=1037981315]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -28,10 +25,6 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-script = ExtResource("1_0kln8")
-painel_lateral = NodePath("ColorRect/MarginContainer/VBoxContainer/HBoxContainer/PainelDireito")
-sub_viewport = NodePath("ColorRect/MarginContainer/VBoxContainer/HBoxContainer/Palco/SubViewport")
-modelo_peca = NodePath("ColorRect/MarginContainer/VBoxContainer/HBoxContainer/Palco/SubViewport/Palco/Peca")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1836101923]
 layout_mode = 1
@@ -42,44 +35,38 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.14945355, 0.0044552484, 0.04391983, 1)
 
-[node name="MarginContainer" type="MarginContainer" parent="ColorRect" unique_id=712875678]
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect" unique_id=1284319978]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 10
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer" unique_id=1284319978]
-layout_mode = 2
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer" unique_id=1305868217]
+[node name="HBoxContainer2" type="HBoxContainer" parent="ColorRect/VBoxContainer" unique_id=1305868217]
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="CarregarPeca" type="Button" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1682367519]
+[node name="CarregarPeca" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer2" unique_id=1682367519]
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Carregar peca"
 
-[node name="CriarNovaPeca" type="Button" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1449372448]
+[node name="CriarNovaPeca" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer2" unique_id=1449372448]
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Criar nova peca"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer" unique_id=1813547079]
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/VBoxContainer" unique_id=1813547079]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="PainelEsquerdo" type="Control" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1912532953]
+[node name="PainelEsquerdo" type="Control" parent="ColorRect/VBoxContainer/HBoxContainer" unique_id=1912532953]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.5
 
-[node name="ColorRect" type="ColorRect" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/PainelEsquerdo" unique_id=1905087747]
+[node name="ColorRect" type="ColorRect" parent="ColorRect/VBoxContainer/HBoxContainer/PainelEsquerdo" unique_id=1905087747]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -88,7 +75,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.22745098)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/PainelEsquerdo" unique_id=1165106598]
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/VBoxContainer/HBoxContainer/PainelEsquerdo" unique_id=1165106598]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -96,17 +83,17 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/PainelEsquerdo/VBoxContainer" unique_id=1486795896]
+[node name="Label" type="Label" parent="ColorRect/VBoxContainer/HBoxContainer/PainelEsquerdo/VBoxContainer" unique_id=1486795896]
 layout_mode = 2
 theme_override_font_sizes/font_size = 26
 text = "Modificadores Gerais"
 horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/PainelEsquerdo/VBoxContainer" unique_id=709839527]
+[node name="Button" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer/PainelEsquerdo/VBoxContainer" unique_id=709839527]
 layout_mode = 2
 text = "Adicionar"
 
-[node name="Palco" type="SubViewportContainer" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer" unique_id=443421803 node_paths=PackedStringArray("centro_camera", "camera", "peca")]
+[node name="Palco" type="SubViewportContainer" parent="ColorRect/VBoxContainer/HBoxContainer" unique_id=443421803 node_paths=PackedStringArray("centro_camera", "camera", "peca")]
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 3
@@ -117,105 +104,70 @@ centro_camera = NodePath("SubViewport/Palco/centro_camera")
 camera = NodePath("SubViewport/Palco/centro_camera/Camera3D")
 peca = NodePath("SubViewport/Palco/Peca")
 
-[node name="SubViewport" type="SubViewport" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/Palco" unique_id=1482020492]
+[node name="SubViewport" type="SubViewport" parent="ColorRect/VBoxContainer/HBoxContainer/Palco" unique_id=1482020492]
 own_world_3d = true
 world_3d = SubResource("World3D_pm3ud")
 handle_input_locally = false
-size = Vector2i(2, 2)
+size = Vector2i(237, 243)
 render_target_update_mode = 4
 
-[node name="Palco" type="Node3D" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/Palco/SubViewport" unique_id=1990883137]
+[node name="Palco" type="Node3D" parent="ColorRect/VBoxContainer/HBoxContainer/Palco/SubViewport" unique_id=1990883137]
 
-[node name="centro_camera" type="Node3D" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/Palco/SubViewport/Palco" unique_id=1534857078]
+[node name="centro_camera" type="Node3D" parent="ColorRect/VBoxContainer/HBoxContainer/Palco/SubViewport/Palco" unique_id=1534857078]
 
-[node name="Camera3D" type="Camera3D" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/Palco/SubViewport/Palco/centro_camera" unique_id=519188275]
+[node name="Camera3D" type="Camera3D" parent="ColorRect/VBoxContainer/HBoxContainer/Palco/SubViewport/Palco/centro_camera" unique_id=519188275]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.1)
 projection = 1
 size = 10.0
 
-[node name="Peca" type="Node3D" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/Palco/SubViewport/Palco" unique_id=2105663618]
+[node name="Peca" type="Node3D" parent="ColorRect/VBoxContainer/HBoxContainer/Palco/SubViewport/Palco" unique_id=2105663618]
 script = ExtResource("2_jc2v8")
 metadata/_custom_type_script = "uid://b8i3h0kxymgn5"
 
-[node name="PainelDireito" type="Control" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer" unique_id=207552942 node_paths=PackedStringArray("Conteiner_modulos")]
+[node name="PainelPartes" type="Control" parent="ColorRect/VBoxContainer/HBoxContainer" unique_id=207552942]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.5
-script = ExtResource("3_odn6q")
-Conteiner_modulos = NodePath("MarginContainer/VBoxContainer/ScrollContainer/ConteinerModulos")
 
-[node name="MarginContainer" type="MarginContainer" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/PainelDireito" unique_id=1527397212]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="ColorRect" type="ColorRect" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/PainelDireito/MarginContainer" unique_id=1598691436]
-layout_mode = 2
+[node name="ColorRect" type="ColorRect" parent="ColorRect/VBoxContainer/HBoxContainer/PainelPartes" unique_id=1598691436]
+layout_mode = 0
+offset_right = 475.0
+offset_bottom = 973.0
 color = Color(0, 0, 0, 0.22745098)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/PainelDireito/MarginContainer" unique_id=1861119742]
-layout_mode = 2
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/VBoxContainer/HBoxContainer/PainelPartes" unique_id=1861119742]
+layout_mode = 0
+offset_right = 475.0
+offset_bottom = 973.0
 size_flags_vertical = 3
 
-[node name="ConteinerButao" type="HBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/PainelDireito/MarginContainer/VBoxContainer" unique_id=450236058]
+[node name="Label" type="Label" parent="ColorRect/VBoxContainer/HBoxContainer/PainelPartes/VBoxContainer" unique_id=1558515397]
 layout_mode = 2
-
-[node name="MarginContainer2" type="MarginContainer" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/PainelDireito/MarginContainer/VBoxContainer/ConteinerButao" unique_id=427717808]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="limpar" type="Button" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/PainelDireito/MarginContainer/VBoxContainer/ConteinerButao/MarginContainer2" unique_id=1144162495]
-custom_minimum_size = Vector2(36.125, 41.295)
-layout_mode = 2
-text = "LIMPAR"
-
-[node name="MarginContainer" type="MarginContainer" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/PainelDireito/MarginContainer/VBoxContainer" unique_id=1888426247]
-layout_mode = 2
-
-[node name="ColorRect" type="ColorRect" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/PainelDireito/MarginContainer/VBoxContainer/MarginContainer" unique_id=642762926]
-layout_mode = 2
-color = Color(0, 0, 0, 0.43529412)
-
-[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/PainelDireito/MarginContainer/VBoxContainer/MarginContainer" unique_id=900921453]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/PainelDireito/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer" unique_id=215759320]
-layout_mode = 2
-theme_override_font_sizes/font_size = 19
-text = "Torso Base"
+text = "Editor Especie"
 horizontal_alignment = 1
 
-[node name="ExibidorDeArquivos" type="Control" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/PainelDireito/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer" unique_id=639662485]
-custom_minimum_size = Vector2(0, 31)
+[node name="ConteinerSalvarCarregar" type="HBoxContainer" parent="ColorRect/VBoxContainer/HBoxContainer/PainelPartes/VBoxContainer" unique_id=89365184]
 layout_mode = 2
-script = ExtResource("4_vm6er")
-endereco = "torso"
-caminho_para_pasta_inicial = "res://Pecas/modelos3d/Humanoide/Partes/Torso"
-lista_branca = Array[String]([".tscn"])
 
-[node name="Label2" type="Label" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/PainelDireito/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer" unique_id=421048267]
-layout_mode = 2
-theme_override_font_sizes/font_size = 19
-text = "Partes"
-horizontal_alignment = 1
-
-[node name="ScrollContainer" type="ScrollContainer" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/PainelDireito/MarginContainer/VBoxContainer" unique_id=728630594]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="ConteinerModulos" type="VBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/PainelDireito/MarginContainer/VBoxContainer/ScrollContainer" unique_id=1986027882]
+[node name="BtnSalvar" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer/PainelPartes/VBoxContainer/ConteinerSalvarCarregar" unique_id=1993802666]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_constants/separation = 3
+text = "Salvar"
 
-[connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/HBoxContainer2/CriarNovaPeca" to="." method="_on_criar_nova_peca_pressed"]
-[connection signal="mouse_entered" from="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/Palco" to="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/Palco" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/Palco" to="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/Palco" method="_on_mouse_exited"]
-[connection signal="arquivo_recebido" from="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/PainelDireito" to="." method="_on_painel_lateral_arquivo_recebido"]
-[connection signal="modificadores_alterados" from="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/PainelDireito" to="." method="_on_painel_lateral_modificadores_alterados"]
-[connection signal="pressed" from="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/PainelDireito/MarginContainer/VBoxContainer/ConteinerButao/MarginContainer2/limpar" to="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/PainelDireito" method="_on_limpar_pressed"]
-[connection signal="peguei_um_arquivo" from="ColorRect/MarginContainer/VBoxContainer/HBoxContainer/PainelDireito/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ExibidorDeArquivos" to="." method="_on_exibidor_de_arquivos_peguei_um_arquivo"]
+[node name="BtnCarregar" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer/PainelPartes/VBoxContainer/ConteinerSalvarCarregar" unique_id=1784007928]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Carregar"
+
+[node name="BtnRoletar" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer/PainelPartes/VBoxContainer" unique_id=2072252227]
+layout_mode = 2
+text = "Roletar"
+
+[node name="txtNome" type="TextEdit" parent="ColorRect/VBoxContainer/HBoxContainer/PainelPartes/VBoxContainer" unique_id=2083193886]
+custom_minimum_size = Vector2(0, 39.94)
+layout_mode = 2
+placeholder_text = "Nome Especie"
+
+[connection signal="pressed" from="ColorRect/VBoxContainer/HBoxContainer2/CriarNovaPeca" to="." method="_on_criar_nova_peca_pressed"]
+[connection signal="mouse_entered" from="ColorRect/VBoxContainer/HBoxContainer/Palco" to="ColorRect/VBoxContainer/HBoxContainer/Palco" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="ColorRect/VBoxContainer/HBoxContainer/Palco" to="ColorRect/VBoxContainer/HBoxContainer/Palco" method="_on_mouse_exited"]

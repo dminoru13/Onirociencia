@@ -1,0 +1,4 @@
+res://addons/EditorDeCriaturas/PainelCentral/CentroDeExibicao.tscn
+res://z_restos_inuteis/shader materials/flexible_toon.gdshader
+res://shaders/outlineRoubado.gdshader
+res://Pecas/modelos3d/ShaderLais.tres
