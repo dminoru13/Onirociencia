@@ -39,6 +39,8 @@ func _ready() -> void:
 				aplicar_textura("res://UI/icones/file-cog.png")
 			elif texto_arquivo.ends_with(".import"):
 				aplicar_textura("res://UI/icones/import.png")
+			elif texto_arquivo.ends_with(".tres"):
+				aplicar_textura("res://UI/icones/circle-dot.png")
 			else:
 				aplicar_textura("res://UI/icones/file-question-mark.png")
 		else:

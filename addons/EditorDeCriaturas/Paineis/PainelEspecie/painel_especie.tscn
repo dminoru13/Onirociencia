@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://dopf3e28dl8sf"]
+
+[ext_resource type="Script" uid="uid://cxp2716dyr5h8" path="res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/EscolhedorArquivo/EscolhedorArquivo.gd" id="1_2tabm"]
+[ext_resource type="Script" uid="uid://dwv8sa75i2irf" path="res://addons/EditorDeCriaturas/Paineis/PainelEspecie/painel_especie.gd" id="1_o7lbl"]
+
+[node name="PainelEspecie" type="MarginContainer" unique_id=1971215968 node_paths=PackedStringArray("escolhedor_de_arquivo", "lbl_nome")]
+offset_right = 151.0
+offset_bottom = 171.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+script = ExtResource("1_o7lbl")
+escolhedor_de_arquivo = NodePath("VBoxContainer/ConteinerSalvarCarregar/EscolhedorArquivo")
+lbl_nome = NodePath("VBoxContainer/MarginContainer/lblNome")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1324044402]
+layout_mode = 2
+color = Color(0, 0, 0, 0.22745098)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1799247438]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=1417287800]
+layout_mode = 2
+text = "Editor Especie"
+horizontal_alignment = 1
+
+[node name="ConteinerSalvarCarregar" type="HBoxContainer" parent="VBoxContainer" unique_id=841446978]
+layout_mode = 2
+
+[node name="BtnSalvar" type="Button" parent="VBoxContainer/ConteinerSalvarCarregar" unique_id=2084066926]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Salvar"
+
+[node name="EscolhedorArquivo" type="Button" parent="VBoxContainer/ConteinerSalvarCarregar" unique_id=941043583]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Carregar"
+script = ExtResource("1_2tabm")
+texto_fixo = true
+caminho_pasta = "res://Pecas/pre-prontos/especies"
+final_arquivo = ".tres"
+metadata/_custom_type_script = "uid://cxp2716dyr5h8"
+
+[node name="BtnRoletar" type="Button" parent="VBoxContainer" unique_id=1048867239]
+layout_mode = 2
+text = "Roletar"
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=133273426]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/MarginContainer" unique_id=1233423757]
+layout_mode = 2
+color = Color(0, 0, 0, 0.29411766)
+
+[node name="lblNome" type="Label" parent="VBoxContainer/MarginContainer" unique_id=1050054737]
+layout_mode = 2
+text = "NOME"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="VBoxContainer" unique_id=1516964531]
+layout_mode = 2
+text = "Modelo:"
+horizontal_alignment = 1
+
+[node name="EscolhedorModelo" type="Button" parent="VBoxContainer" unique_id=499140440]
+layout_mode = 2
+text = "(Selecionar modelo)"
+script = ExtResource("1_2tabm")
+caminho_pasta = "res://Pecas/modelos3d/Humanoide"
+final_arquivo = ".tscn"
+metadata/_custom_type_script = "uid://cxp2716dyr5h8"
+
+[connection signal="pressed" from="VBoxContainer/ConteinerSalvarCarregar/BtnSalvar" to="." method="_on_btn_salvar_pressed"]
+[connection signal="arquivoPego" from="VBoxContainer/ConteinerSalvarCarregar/EscolhedorArquivo" to="." method="_on_escolhedor_arquivo_arquivo_pego"]
+[connection signal="arquivoPego" from="VBoxContainer/EscolhedorModelo" to="." method="_on_escolhedor_modelo_arquivo_pego"]

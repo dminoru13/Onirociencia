@@ -3,7 +3,7 @@
 class_name  ModeloPeca
 extends Node3D
 
-@export var recurso: RecursoPeca:
+var recurso:
 	set(value):
 		recurso = value
 		atualizar()
@@ -52,7 +52,7 @@ func atualizar():
 				
 				
 
-func atualizar_modificadores(parte_alvo: Parte, modelo: Node3D):
+func atualizar_modificadores(parte_alvo, modelo: Node3D):
 	var modificadores: Array[Modificador] = parte_alvo.modificadores_parte
 	for modificador in modificadores:
 		

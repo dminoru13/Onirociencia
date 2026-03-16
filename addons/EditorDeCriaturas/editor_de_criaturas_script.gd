@@ -1,7 +1,7 @@
 @tool
 extends EditorPlugin
 
-const Centro = preload("res://addons/EditorDeCriaturas/PainelCentral/CentroDeExibicao.tscn")
+const Centro = preload("res://addons/EditorDeCriaturas/CentroDeExibicao.tscn")
 var instancia_centro
 
 

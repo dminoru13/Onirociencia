@@ -1,11 +1,11 @@
-Button
-TextEdit
-HBoxContainer
-Label
-MarginContainer
-Control
 ColorRect
+MarginContainer
+Label
+TextEdit
+Button
 VBoxContainer
+HBoxContainer
+Control
 CheckBox
 FoldableContainer
 DirectionalLight3D

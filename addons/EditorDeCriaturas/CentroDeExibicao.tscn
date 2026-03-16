@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://5x7tvbdy4vcq"]
+
+[ext_resource type="PackedScene" uid="uid://dj7kfttuollph" path="res://addons/EditorDeCriaturas/Paineis/Palco/Palco.tscn" id="1_778q6"]
+[ext_resource type="PackedScene" uid="uid://dopf3e28dl8sf" path="res://addons/EditorDeCriaturas/Paineis/PainelEspecie/painel_especie.tscn" id="2_r87ck"]
+
+[node name="CentroDeExibicao" type="Control" unique_id=1037981315]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1836101923]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.14945355, 0.0044552484, 0.04391983, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1284319978]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer" unique_id=1305868217]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="CarregarPeca" type="Button" parent="VBoxContainer/HBoxContainer2" unique_id=1682367519]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Carregar peca"
+
+[node name="CriarNovaPeca" type="Button" parent="VBoxContainer/HBoxContainer2" unique_id=1449372448]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Criar nova peca"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1813547079]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PainelEsquerdo" type="Control" parent="VBoxContainer/HBoxContainer" unique_id=1912532953]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+
+[node name="Palco" parent="VBoxContainer/HBoxContainer" unique_id=1539365231 instance=ExtResource("1_778q6")]
+layout_mode = 2
+
+[node name="PainelEspecie" parent="VBoxContainer/HBoxContainer" unique_id=1482383499 instance=ExtResource("2_r87ck")]
+layout_mode = 2
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer2/CriarNovaPeca" to="." method="_on_criar_nova_peca_pressed"]

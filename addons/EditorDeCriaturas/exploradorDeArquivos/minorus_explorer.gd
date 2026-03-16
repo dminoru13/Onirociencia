@@ -1,5 +1,6 @@
 @tool
 extends Control
+class_name MinorusExplorer
 
 @onready var grid_container: GridContainer = $VBoxContainer/MarginContainer2/ScrollContainer/GridContainer
 @onready var scroll_container: ScrollContainer = $VBoxContainer/MarginContainer2/ScrollContainer
@@ -8,6 +9,9 @@ extends Control
 
 var tamanho_tela = size
 var tamanho_anterior
+
+var janela: Window
+var posicao: Vector2
 
 var tamanho_modulo := 160.0
 @export var caminho_para_pasta: String = "":
@@ -41,12 +45,13 @@ func atualizar_grade():
 
 func _ready() -> void:
 	barra_pesquisa.text = caminho_para_pasta
+	
+	if barra_pesquisa.text == "":
+		barra_pesquisa.text = "res://"
 	atualizar()
-
 
 func _on_pesquisar_pressed() -> void:
 	atualizar()
-
 
 func atualizar():
 	arquivos.clear()
@@ -54,7 +59,6 @@ func atualizar():
 		filhos.queue_free()
 	
 	pesquisar(barra_pesquisa.text)
-
 
 func pesquisar(pesquisa: String):
 	var pasta = DirAccess.open(pesquisa)
@@ -70,7 +74,6 @@ func pesquisar(pesquisa: String):
 			
 			criar_modulos(nome_arquivo, pesquisa + "/" + nome_arquivo, e_uma_pasta)
 			nome_arquivo = pasta.get_next()
-
 
 func criar_modulos(nome: String, caminho, e_uma_pasta):
 	
@@ -93,7 +96,6 @@ func criar_modulos(nome: String, caminho, e_uma_pasta):
 		
 		cena_modulo.apertou.connect(filho_apertado)
 
-
 func _on_botao_voltar_pressed() -> void:
 	var partes: Array = barra_pesquisa.text.split("/", false)
 	partes.pop_back()
@@ -115,14 +117,9 @@ func _on_botao_voltar_pressed() -> void:
 signal arquivo_foi_selecionado(caminho, nome)
 
 func filho_apertado(nome, pasta):
-
+	
 	if pasta:
-		if barra_pesquisa.text != "res://":
-			barra_pesquisa.text = barra_pesquisa.text + "/" + nome
-
-		else:
-			barra_pesquisa.text = "res://" + nome
-		
+		barra_pesquisa.text = barra_pesquisa.text + "/" + nome
 		atualizar()
 	
 	else:
@@ -135,6 +132,39 @@ func filho_apertado(nome, pasta):
 		get_parent().queue_free()
 
 
+# criar novo arquivo
 
 
-	
+func _exit_tree() -> void:
+	if janela:
+		janela.queue_free()
+
+func _input(event: InputEvent) -> void:
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
+			if janela:
+				janela.queue_free()
+			janela = Window.new()
+			
+			janela.set_flag(Window.FLAG_BORDERLESS, true)
+			
+			var cena: PackedScene = load("res://addons/EditorDeCriaturas/ExploradorDeArquivos/painel_criar.tscn")
+			var instancia: PainelCriar = cena.instantiate()
+			instancia.caminho = barra_pesquisa.text
+			instancia.connect("arquivoCriado", atualizar)
+			janela.add_child(instancia)
+			
+			var mouse_pos = get_viewport().get_mouse_position()
+			
+			EditorInterface.popup_dialog(janela, Rect2(mouse_pos + posicao, Vector2(300,300)))
+			
+			
+			
+			janela.close_requested.connect(func():
+				janela.queue_free())
+		
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+			if janela:
+				janela.queue_free()
+
+#

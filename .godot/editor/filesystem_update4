@@ -1,4 +1,12 @@
-res://addons/EditorDeCriaturas/PainelCentral/CentroDeExibicao.tscn
+res://addons/EditorDeCriaturas/ExploradorDeArquivos/painel_criar.tscn
 res://z_restos_inuteis/shader materials/flexible_toon.gdshader
 res://shaders/outlineRoubado.gdshader
-res://Pecas/modelos3d/ShaderLais.tres
+res://addons/EditorDeCriaturas/ExploradorDeArquivos/minorus_explorer.gd
+res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/EscolhedorArquivo/EscolhedorArquivo.gd
+res://addons/EditorDeCriaturas/ExploradorDeArquivos/modulo_arquivo_geral.gd
+res://addons/EditorDeCriaturas/ExploradorDeArquivos/painel_criar.gd
+res://addons/EditorDeCriaturas/Paineis/PainelEspecie/painel_especie.gd
+res://addons/EditorDeCriaturas/Paineis/PainelEspecie/painel_especie.tscn
+res://Pecas/pre-prontos/especies/hipoteticos.tres
+res://Pecas/recursos/especie.gd
+res://Pecas/pre-prontos/especies/hipoteticus.tres

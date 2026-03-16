@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Especie" format=3 uid="uid://mr5lonkusqp3"]
+
+[ext_resource type="Script" uid="uid://do6iqewf1aere" path="res://Pecas/recursos/encaixe.gd" id="1_d3f7k"]
+[ext_resource type="Script" uid="uid://bu41ecskgy6i2" path="res://Pecas/recursos/modificador.gd" id="2_vgh7o"]
+[ext_resource type="Script" uid="uid://b2yxvua0xc0d0" path="res://Pecas/recursos/especie.gd" id="3_51v21"]
+
+[resource]
+script = ExtResource("3_51v21")
+nome = "hipoteticus"

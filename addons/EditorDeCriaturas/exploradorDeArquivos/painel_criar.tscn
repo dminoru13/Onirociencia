@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://dtgpa5xegtllj"]
+
+[ext_resource type="Script" uid="uid://d0atl3tkq6is" path="res://addons/EditorDeCriaturas/ExploradorDeArquivos/painel_criar.gd" id="1_ehsay"]
+
+[node name="PainelCriar" type="MarginContainer" unique_id=1442325627 node_paths=PackedStringArray("nomeador")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ehsay")
+nomeador = NodePath("MarginContainer/VBoxContainer/Nomeador")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1227292890]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=909130349]
+layout_mode = 2
+theme_override_constants/margin_left = 1
+theme_override_constants/margin_top = 1
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 1
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer" unique_id=103318651]
+layout_mode = 2
+color = Color(0.10340481, 0.13592416, 0.1474795, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1606645068]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer" unique_id=1408043609]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/VBoxContainer/MarginContainer" unique_id=1280095244]
+layout_mode = 2
+color = Color(1, 1, 1, 0.05490196)
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer" unique_id=989829781]
+layout_mode = 2
+text = "CRIAR NOVO..."
+
+[node name="Nomeador" type="TextEdit" parent="MarginContainer/VBoxContainer" unique_id=1794321132]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+placeholder_text = "Nome do arquivo..."
+
+[node name="BtnEspecie" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1929129011]
+layout_mode = 2
+text = "ESPECIE"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/BtnEspecie" to="." method="_on_btn_especie_pressed"]
