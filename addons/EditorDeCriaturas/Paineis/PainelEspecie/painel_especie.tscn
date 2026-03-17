@@ -3,14 +3,15 @@
 [ext_resource type="Script" uid="uid://cxp2716dyr5h8" path="res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/EscolhedorArquivo/EscolhedorArquivo.gd" id="1_2tabm"]
 [ext_resource type="Script" uid="uid://dwv8sa75i2irf" path="res://addons/EditorDeCriaturas/Paineis/PainelEspecie/painel_especie.gd" id="1_o7lbl"]
 
-[node name="PainelEspecie" type="MarginContainer" unique_id=1971215968 node_paths=PackedStringArray("escolhedor_de_arquivo", "lbl_nome")]
+[node name="PainelEspecie" type="MarginContainer" unique_id=1971215968 node_paths=PackedStringArray("escolhedor_de_arquivo", "lbl_nome", "lista_controls")]
 offset_right = 151.0
 offset_bottom = 171.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.5
 script = ExtResource("1_o7lbl")
-escolhedor_de_arquivo = NodePath("VBoxContainer/ConteinerSalvarCarregar/EscolhedorArquivo")
+escolhedor_de_arquivo = NodePath("VBoxContainer/ConteinerSalvarCarregar/Carregar")
 lbl_nome = NodePath("VBoxContainer/MarginContainer/lblNome")
+lista_controls = [NodePath("VBoxContainer/ConteinerSalvarCarregar/BtnSalvar"), NodePath("VBoxContainer/BtnRoletar"), NodePath("VBoxContainer/EscolhedorModelo")]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1324044402]
 layout_mode = 2
@@ -33,7 +34,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 text = "Salvar"
 
-[node name="EscolhedorArquivo" type="Button" parent="VBoxContainer/ConteinerSalvarCarregar" unique_id=941043583]
+[node name="Carregar" type="Button" parent="VBoxContainer/ConteinerSalvarCarregar" unique_id=941043583]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Carregar"
@@ -73,5 +74,6 @@ final_arquivo = ".tscn"
 metadata/_custom_type_script = "uid://cxp2716dyr5h8"
 
 [connection signal="pressed" from="VBoxContainer/ConteinerSalvarCarregar/BtnSalvar" to="." method="_on_btn_salvar_pressed"]
-[connection signal="arquivoPego" from="VBoxContainer/ConteinerSalvarCarregar/EscolhedorArquivo" to="." method="_on_escolhedor_arquivo_arquivo_pego"]
+[connection signal="arquivoPego" from="VBoxContainer/ConteinerSalvarCarregar/Carregar" to="." method="_on_escolhedor_arquivo_arquivo_pego"]
+[connection signal="pressed" from="VBoxContainer/BtnRoletar" to="." method="_on_btn_roletar_pressed"]
 [connection signal="arquivoPego" from="VBoxContainer/EscolhedorModelo" to="." method="_on_escolhedor_modelo_arquivo_pego"]

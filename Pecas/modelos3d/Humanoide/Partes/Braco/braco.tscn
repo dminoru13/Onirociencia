@@ -2,22 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://bld6b81t6ojgn" path="res://z_restos_inuteis/Modelos/Partes Corpo/Braco.glb" id="1_l27mx"]
 [ext_resource type="Material" uid="uid://d2oqb3djvwll2" path="res://Pecas/modelos3d/ShaderLais.tres" id="2_3n8i1"]
-[ext_resource type="Script" uid="uid://dkcb7hi1kqfp0" path="res://Pecas/recursos/AplicadorModificadores.gd" id="2_wr7g1"]
-[ext_resource type="Script" uid="uid://dqgu24rlnqp5f" path="res://Pecas/recursos/Modificador.gd" id="3_pnuou"]
-
-[sub_resource type="Resource" id="Resource_be11l"]
-script = ExtResource("3_pnuou")
-nome = "Espelhado"
-valor = "true"
-metadata/_custom_type_script = "uid://dqgu24rlnqp5f"
 
 [node name="Braco" unique_id=1249758066 instance=ExtResource("1_l27mx")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
-
-[node name="AplicadorModificadores" type="Node" parent="." index="0" unique_id=1449531775]
-script = ExtResource("2_wr7g1")
-modificadores = Array[ExtResource("3_pnuou")]([SubResource("Resource_be11l")])
-metadata/_custom_type_script = "uid://dkcb7hi1kqfp0"
 
 [node name="AnteAnteBraco" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(1902794615) index="0" unique_id=696450662]
 surface_material_override/0 = ExtResource("2_3n8i1")

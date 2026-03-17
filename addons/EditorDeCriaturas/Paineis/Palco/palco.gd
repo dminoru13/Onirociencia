@@ -1,9 +1,10 @@
 @tool
+class_name Palco
 extends SubViewportContainer
 
 @export var centro_camera: Node3D
 @export var camera: Camera3D
-@export var peca: Node3D
+@export var peca: ModeloParte
 
 var rotacionando := false
 var sensibilidade := 0.01

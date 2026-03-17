@@ -1,72 +1,20 @@
 @tool
-
-class_name  ModeloPeca
+class_name  ModeloParte
 extends Node3D
 
-var recurso:
+var parte_base: Parte:
 	set(value):
-		recurso = value
-		atualizar()
+		parte_base = value
+		carregar_modelo()
 
-var lista_dos_moodificadores_banidos: Array[String]
-
-func atualizar():
-	recurso.torso_base.atualizar_caracteristicas()
+func carregar_modelo():
+	for crianca in get_children():
+		crianca.queue_free()
 	
-	for filho in get_children():
-		filho.queue_free()
-	
-	var caminho_modelo = recurso.torso_base.caminho_modelo
-	var lista_partes = recurso.torso_base.lista_partes
-	var novo_torso: PackedScene
-	var torso_atual: Node3D
-	
-	
-	
-	if caminho_modelo != "":
-		novo_torso = load(recurso.torso_base.caminho_modelo)
-		var instancia: Node3D = novo_torso.instantiate()
-		instancia.name = "torso"
-		torso_atual = instancia
-		add_child(instancia)
-		
-	else:
-		print("o caminho está vazio")
-	
-	if lista_partes != []:
-		for parte in lista_partes:
-			
-			lista_dos_moodificadores_banidos = parte.modificadores_desabilitados
-			
-			if parte.caminho_modelo != "":
-				
-				var cena_modelo: PackedScene = load(parte.caminho_modelo)
-				var modelo: Node3D = cena_modelo.instantiate()
-				
-				torso_atual.add_child(modelo)
-				modelo.position = parte.ancora
-				
-				if parte.modificadores_parte != []:
-					atualizar_modificadores(parte, modelo)
-				
-				
-				
-
-func atualizar_modificadores(parte_alvo, modelo: Node3D):
-	var modificadores: Array[Modificador] = parte_alvo.modificadores_parte
-	for modificador in modificadores:
-		
-		if lista_dos_moodificadores_banidos.has(modificador.nome):
-			pass
-		
-		else:
-			if modificador.nome == "Espelhado":
-				if modificador.valor == "true":
-					modelo.rotate_z(deg_to_rad(180))
-
-
-
-
+	var modelo_carregado: PackedScene = load(parte_base.modelo.caminho_modelo)
+	var instancia: Node3D = modelo_carregado.instantiate()
+	instancia.position = parte_base.modelo.posicao
+	add_child(instancia)
 
 
 

@@ -56,7 +56,8 @@ size_flags_stretch_ratio = 0.5
 [node name="Palco" parent="VBoxContainer/HBoxContainer" unique_id=1539365231 instance=ExtResource("1_778q6")]
 layout_mode = 2
 
-[node name="PainelEspecie" parent="VBoxContainer/HBoxContainer" unique_id=1482383499 instance=ExtResource("2_r87ck")]
+[node name="PainelEspecie" parent="VBoxContainer/HBoxContainer" unique_id=1482383499 node_paths=PackedStringArray("palco") instance=ExtResource("2_r87ck")]
 layout_mode = 2
+palco = NodePath("../Palco")
 
 [connection signal="pressed" from="VBoxContainer/HBoxContainer2/CriarNovaPeca" to="." method="_on_criar_nova_peca_pressed"]

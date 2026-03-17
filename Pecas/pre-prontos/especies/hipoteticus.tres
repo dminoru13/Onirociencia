@@ -3,7 +3,13 @@
 [ext_resource type="Script" uid="uid://do6iqewf1aere" path="res://Pecas/recursos/encaixe.gd" id="1_d3f7k"]
 [ext_resource type="Script" uid="uid://bu41ecskgy6i2" path="res://Pecas/recursos/modificador.gd" id="2_vgh7o"]
 [ext_resource type="Script" uid="uid://b2yxvua0xc0d0" path="res://Pecas/recursos/especie.gd" id="3_51v21"]
+[ext_resource type="Script" uid="uid://cebdafi7ing5w" path="res://Pecas/recursos/modelo.gd" id="3_vgh7o"]
+
+[sub_resource type="Resource" id="Resource_vgh7o"]
+script = ExtResource("3_vgh7o")
+caminho_modelo = "res://Pecas/modelos3d/Humanoide/Partes/Torso/torso_base.tscn"
 
 [resource]
 script = ExtResource("3_51v21")
 nome = "hipoteticus"
+modelo = SubResource("Resource_vgh7o")
