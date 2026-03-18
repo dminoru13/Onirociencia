@@ -2,50 +2,102 @@
 
 [ext_resource type="Script" uid="uid://d0atl3tkq6is" path="res://addons/EditorDeCriaturas/ExploradorDeArquivos/painel_criar.gd" id="1_ehsay"]
 
-[node name="PainelCriar" type="MarginContainer" unique_id=1442325627 node_paths=PackedStringArray("nomeador")]
+[node name="PainelCriar" type="MarginContainer" unique_id=1442325627 node_paths=PackedStringArray("nomeador", "conteiner_botoes", "opcoes", "configuracoes", "conteiner_modulos")]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ehsay")
-nomeador = NodePath("MarginContainer/VBoxContainer/Nomeador")
+nomeador = NodePath("conteiner/configuracoes/PainelConfig/Nomeador")
+conteiner_botoes = NodePath("conteiner/opcoes/ConteinerBotoes")
+opcoes = NodePath("conteiner/opcoes")
+configuracoes = NodePath("conteiner/configuracoes")
+conteiner_modulos = NodePath("conteiner/configuracoes/PainelConfig/ConteinerModulos")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1227292890]
 layout_mode = 2
+color = Color(0.2231029, 0.2231029, 0.22310287, 1)
 
-[node name="MarginContainer" type="MarginContainer" parent="." unique_id=909130349]
+[node name="conteiner" type="MarginContainer" parent="." unique_id=909130349]
 layout_mode = 2
 theme_override_constants/margin_left = 1
 theme_override_constants/margin_top = 1
 theme_override_constants/margin_right = 1
 theme_override_constants/margin_bottom = 1
 
-[node name="ColorRect" type="ColorRect" parent="MarginContainer" unique_id=103318651]
+[node name="ColorRect" type="ColorRect" parent="conteiner" unique_id=103318651]
 layout_mode = 2
 color = Color(0.10340481, 0.13592416, 0.1474795, 1)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1606645068]
+[node name="opcoes" type="MarginContainer" parent="conteiner" unique_id=1648445245]
+visible = false
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer" unique_id=1408043609]
+[node name="ConteinerBotoes" type="VBoxContainer" parent="conteiner/opcoes" unique_id=1606645068]
 layout_mode = 2
 
-[node name="ColorRect" type="ColorRect" parent="MarginContainer/VBoxContainer/MarginContainer" unique_id=1280095244]
+[node name="MarginContainer" type="MarginContainer" parent="conteiner/opcoes/ConteinerBotoes" unique_id=1408043609]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="conteiner/opcoes/ConteinerBotoes/MarginContainer" unique_id=1280095244]
 layout_mode = 2
 color = Color(1, 1, 1, 0.05490196)
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer" unique_id=989829781]
+[node name="Label" type="Label" parent="conteiner/opcoes/ConteinerBotoes/MarginContainer" unique_id=989829781]
 layout_mode = 2
 text = "CRIAR NOVO..."
 
-[node name="Nomeador" type="TextEdit" parent="MarginContainer/VBoxContainer" unique_id=1794321132]
-custom_minimum_size = Vector2(0, 40)
-layout_mode = 2
-placeholder_text = "Nome do arquivo..."
-
-[node name="BtnEspecie" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1929129011]
+[node name="BtnEspecie" type="Button" parent="conteiner/opcoes/ConteinerBotoes" unique_id=1929129011]
 layout_mode = 2
 text = "ESPECIE"
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/BtnEspecie" to="." method="_on_btn_especie_pressed"]
+[node name="BtnModificador" type="Button" parent="conteiner/opcoes/ConteinerBotoes" unique_id=693842914]
+layout_mode = 2
+text = "MODIFICADOR"
+
+[node name="configuracoes" type="MarginContainer" parent="conteiner" unique_id=1174415512]
+layout_mode = 2
+theme_override_constants/margin_left = 1
+theme_override_constants/margin_top = 1
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 1
+
+[node name="PainelConfig" type="VBoxContainer" parent="conteiner/configuracoes" unique_id=1818896063]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="conteiner/configuracoes/PainelConfig" unique_id=1409559475]
+custom_minimum_size = Vector2(0, 41.14)
+layout_mode = 2
+
+[node name="BtnVoltar" type="Button" parent="conteiner/configuracoes/PainelConfig/Control" unique_id=374725119]
+layout_mode = 0
+offset_right = 55.0
+offset_bottom = 40.0
+text = "Voltar"
+
+[node name="Nomeador" type="TextEdit" parent="conteiner/configuracoes/PainelConfig" unique_id=1690828286]
+custom_minimum_size = Vector2(0, 39.045)
+layout_mode = 2
+placeholder_text = "Nome do arquivo..."
+
+[node name="ConteinerModulos" type="VBoxContainer" parent="conteiner/configuracoes/PainelConfig" unique_id=859338554]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Control2" type="Control" parent="conteiner/configuracoes/PainelConfig" unique_id=539366104]
+layout_mode = 2
+
+[node name="BtnCriar" type="Button" parent="conteiner/configuracoes/PainelConfig/Control2" unique_id=1696711711]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -31.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "CRIAR"
+
+[connection signal="pressed" from="conteiner/configuracoes/PainelConfig/Control/BtnVoltar" to="." method="_on_btn_voltar_pressed"]
+[connection signal="pressed" from="conteiner/configuracoes/PainelConfig/Control2/BtnCriar" to="." method="_on_btn_criar_pressed"]

@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Modificador" format=3 uid="uid://rgs04wrpkv7h"]
+
+[ext_resource type="Script" uid="uid://bu41ecskgy6i2" path="res://Pecas/recursos/modificador.gd" id="1_8cyjt"]
+
+[resource]
+script = ExtResource("1_8cyjt")
+nome = "espelhado"
+tipo = "bool"
