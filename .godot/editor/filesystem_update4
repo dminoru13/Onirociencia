@@ -14,3 +14,5 @@ res://classes gerais/ArrayMelhor.gd
 res://Pecas/recursos/modelo.gd
 res://Pecas/recursos/parte.gd
 res://Pecas/recursos/especie.gd
+res://addons/EditorDeCriaturas/Paineis/PainelEspecie/painel_especie.gd
+res://Pecas/pre-prontos/especies/braco.tres

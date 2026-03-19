@@ -52,16 +52,8 @@ func carregar(arquivo: String):
 	especie_base = load(arquivo)
 	
 	if modelo:
-		print("alvo: ", escolhedor_modelo.alvo)
-		print("caminho modelo: ",modelo.caminho_modelo.split("/")[-1])
+		pass
 		escolhedor_modelo.alvo = modelo.caminho_modelo.split("/")[-1]
-	
-	print("")
-	print("carregando: ", especie_base.nome)
-	print("Modelo: ", especie_base.modelo.caminho_modelo)
-	print("modificadores:")
-	for filho: Modificador in especie_base.modelo.lista_modificador.dados:
-		print(filho.nome)
 	
 	
 

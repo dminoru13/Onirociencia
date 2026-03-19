@@ -20,7 +20,7 @@ script = ExtResource("2_tqh6y")
 
 [sub_resource type="Resource" id="Resource_3ysc4"]
 script = ExtResource("3_37xyv")
-caminho_modelo = "res://Pecas/modelos3d/Humanoide/Partes/Braco/braco.tscn"
+caminho_modelo = "res://Pecas/modelos3d/Humanoide/Partes/Cabeca/cabeca.tscn"
 lista_modificador = SubResource("Resource_217my")
 lista_modificador_universal = SubResource("Resource_37xyv")
 

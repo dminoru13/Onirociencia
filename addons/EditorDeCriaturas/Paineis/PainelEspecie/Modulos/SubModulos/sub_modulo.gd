@@ -2,11 +2,20 @@
 class_name SubModulo
 extends MarginContainer
 
+@export var lbl_nome: Label
+@export var check_habilitado: CheckBox
+
+
+
 var lista_modificadores: ArrayMelhor
 var modificador_base: Modificador
 
 func _ready() -> void:
 	modificador_base.changed.connect(atualiza)
+	lbl_nome.text = modificador_base.nome
+	print("")
+	print(modificador_base.nome, " ", modificador_base.habilitado)
+	check_habilitado.button_pressed = modificador_base.habilitado
 
 
 
@@ -17,6 +26,4 @@ func _on_button_pressed() -> void:
 	lista_modificadores.erase(modificador_base)
 
 func atualiza():
-	print("")
-	print("atualizando submodulo")
-	print(modificador_base.habilitado)
+	pass

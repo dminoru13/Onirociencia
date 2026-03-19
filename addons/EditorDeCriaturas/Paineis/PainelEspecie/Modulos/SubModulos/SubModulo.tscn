@@ -2,11 +2,13 @@
 
 [ext_resource type="Script" uid="uid://2lrtnom0xyis" path="res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/SubModulos/sub_modulo.gd" id="1_7542q"]
 
-[node name="SubModulo" type="MarginContainer" unique_id=1229511645]
+[node name="SubModulo" type="MarginContainer" unique_id=1229511645 node_paths=PackedStringArray("lbl_nome", "check_habilitado")]
 anchors_preset = 10
 anchor_right = 1.0
 grow_horizontal = 2
 script = ExtResource("1_7542q")
+lbl_nome = NodePath("MarginContainer/HBoxContainer/lblNome")
+check_habilitado = NodePath("MarginContainer/HBoxContainer/checkHabilitado")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=269974649]
 layout_mode = 2
@@ -20,17 +22,17 @@ theme_override_constants/margin_right = 4
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=877095732]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/HBoxContainer" unique_id=2101108198]
+[node name="lblNome" type="Label" parent="MarginContainer/HBoxContainer" unique_id=2101108198]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "NOME"
 
-[node name="CheckBox" type="CheckBox" parent="MarginContainer/HBoxContainer" unique_id=1347867988]
+[node name="checkHabilitado" type="CheckBox" parent="MarginContainer/HBoxContainer" unique_id=1347867988]
 layout_mode = 2
 
-[node name="Button" type="Button" parent="MarginContainer/HBoxContainer" unique_id=1476200539]
+[node name="btnMatar" type="Button" parent="MarginContainer/HBoxContainer" unique_id=1476200539]
 layout_mode = 2
 text = "X"
 
-[connection signal="toggled" from="MarginContainer/HBoxContainer/CheckBox" to="." method="_on_check_box_toggled"]
-[connection signal="pressed" from="MarginContainer/HBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="toggled" from="MarginContainer/HBoxContainer/checkHabilitado" to="." method="_on_check_box_toggled"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/btnMatar" to="." method="_on_button_pressed"]
