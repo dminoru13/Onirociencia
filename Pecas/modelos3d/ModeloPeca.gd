@@ -17,7 +17,14 @@ func carregar_modelo():
 	add_child(instancia)
 
 
-
+func atualizar_modificadores():
+	var lista_modificadores: ArrayMelhor = parte_base.modelo.lista_modificador
+	
+	for modificador: Modificador in lista_modificadores.dados:
+		if modificador.habilitado == true:
+			if modificador.nome == "espelhado":
+				print("tão espelhando o ", parte_base.nome)
+		
 
 
 

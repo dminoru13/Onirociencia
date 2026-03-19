@@ -1,18 +1,26 @@
 [gd_resource type="Resource" script_class="Especie" format=3 uid="uid://bqtbyvcjwc77f"]
 
 [ext_resource type="Script" uid="uid://do6iqewf1aere" path="res://Pecas/recursos/encaixe.gd" id="1_tqh6y"]
+[ext_resource type="Script" uid="uid://bu41ecskgy6i2" path="res://Pecas/recursos/modificador.gd" id="2_217my"]
 [ext_resource type="Script" uid="uid://kdlmo3r41tbr" path="res://classes gerais/ArrayMelhor.gd" id="2_tqh6y"]
 [ext_resource type="Script" uid="uid://cebdafi7ing5w" path="res://Pecas/recursos/modelo.gd" id="3_37xyv"]
 [ext_resource type="Script" uid="uid://b2yxvua0xc0d0" path="res://Pecas/recursos/especie.gd" id="4_ty2nb"]
 
+[sub_resource type="Resource" id="Resource_ty2nb"]
+script = ExtResource("2_217my")
+nome = "espelhado"
+tipo = "bool"
+
 [sub_resource type="Resource" id="Resource_217my"]
 script = ExtResource("2_tqh6y")
+dados = [SubResource("Resource_ty2nb")]
 
 [sub_resource type="Resource" id="Resource_37xyv"]
 script = ExtResource("2_tqh6y")
 
 [sub_resource type="Resource" id="Resource_3ysc4"]
 script = ExtResource("3_37xyv")
+caminho_modelo = "res://Pecas/modelos3d/Humanoide/Partes/Braco/braco.tscn"
 lista_modificador = SubResource("Resource_217my")
 lista_modificador_universal = SubResource("Resource_37xyv")
 

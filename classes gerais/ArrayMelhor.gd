@@ -1,17 +1,18 @@
+@tool
 class_name ArrayMelhor
-extends  Resource
+extends Reactive
 
-var dados: Array = []
-signal arrayAlterada
+@export var dados: Array
 
 func append(valor):
+	print("eu to appendando: ", valor)
 	dados.append(valor)
-	arrayAlterada.emit()
+	reactive_changed.emit(self)
 
 func erase(valor):
 	dados.erase(valor)
-	arrayAlterada.emit()
+	reactive_changed.emit(self)
 
 func clear():
 	dados.clear()
-	arrayAlterada.emit()
+	reactive_changed.emit(self)

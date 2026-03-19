@@ -7,9 +7,14 @@ extends Button
 @export_dir var caminho_pasta: String
 @export var final_arquivo: String
 
+
 var caminho_arquivo: String
 var nome_arquivo: String
-var alvo: String
+var alvo: String:
+	set(value):
+		alvo = value
+		if texto_fixo == false:
+			text = value
 
 signal arquivoPego(arquivo: String)
 
@@ -17,9 +22,7 @@ var janela: Window
 
 func _ready() -> void:
 	pressed.connect(apertado)
-	
-	if texto_fixo == false:
-		text = "(Selecionar modelo)"
+
 
 func apertado() -> void:
 	if janela:
@@ -46,8 +49,6 @@ func apertado() -> void:
 	
 	janela.close_requested.connect(func():
 		janela.queue_free())
-
-
 
 
 func atualizar(caminho: String, nome: String):

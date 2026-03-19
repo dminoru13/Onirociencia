@@ -1,6 +1,6 @@
 @tool
 class_name Modelo
-extends Resource
+extends Reactive
 
 @export var caminho_modelo: String
 @export var posicao: Vector3 = Vector3(0,0,0)
@@ -9,8 +9,4 @@ extends Resource
 @export var lista_modificador_universal: ArrayMelhor = ArrayMelhor.new()
 
 func _init() -> void:
-	lista_modificador.arrayAlterada.connect(alterouse)
-
-
-func alterouse():
-	print("alterou aqui")
+	super._init()

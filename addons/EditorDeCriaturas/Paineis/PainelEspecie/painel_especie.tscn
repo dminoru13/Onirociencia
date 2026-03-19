@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://dwv8sa75i2irf" path="res://addons/EditorDeCriaturas/Paineis/PainelEspecie/painel_especie.gd" id="1_o7lbl"]
 [ext_resource type="PackedScene" uid="uid://bxdhxdxk26j3h" path="res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/ConteinerModificadores/ConteinerModificadores.tscn" id="3_m4667"]
 
-[node name="PainelEspecie" type="MarginContainer" unique_id=1971215968 node_paths=PackedStringArray("escolhedor_de_arquivo", "lbl_nome", "lista_controls")]
+[node name="PainelEspecie" type="MarginContainer" unique_id=1971215968 node_paths=PackedStringArray("escolhedor_de_arquivo", "lbl_nome", "lista_controls", "conteiner_modificadores", "escolhedor_modelo")]
 offset_right = 151.0
 offset_bottom = 171.0
 size_flags_horizontal = 3
@@ -13,6 +13,8 @@ script = ExtResource("1_o7lbl")
 escolhedor_de_arquivo = NodePath("VBoxContainer/ConteinerSalvarCarregar/Carregar")
 lbl_nome = NodePath("VBoxContainer/MarginContainer/lblNome")
 lista_controls = [NodePath("VBoxContainer/ConteinerSalvarCarregar/BtnSalvar"), NodePath("VBoxContainer/BtnRoletar"), NodePath("VBoxContainer/EscolhedorModelo")]
+conteiner_modificadores = NodePath("VBoxContainer/ConteinerModificadores")
+escolhedor_modelo = NodePath("VBoxContainer/EscolhedorModelo")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1324044402]
 layout_mode = 2

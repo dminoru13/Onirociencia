@@ -7,6 +7,7 @@ extends MarginContainer
 @export var lista_controls: Array[Control]
 @export var palco: Palco
 @export var conteiner_modificadores: Conteiner_modificador
+@export var escolhedor_modelo: EscolhedorArquivo
 
 
 var especie_base: Especie:
@@ -32,6 +33,7 @@ func _on_btn_roletar_pressed() -> void:
 func _ready() -> void:
 	for c in lista_controls:
 		c.disabled = true
+	
 
 func atualizar():
 	lbl_nome.text = especie_base.nome
@@ -43,17 +45,38 @@ func atualizar():
 	
 	if modelo.caminho_modelo != "":
 		especie_para_peca()
-	
+		
 	conteiner_modificadores.lista_modificadores = especie_base.modelo.lista_modificador
-
+	
 func carregar(arquivo: String):
 	especie_base = load(arquivo)
+	
+	if modelo:
+		print("alvo: ", escolhedor_modelo.alvo)
+		print("caminho modelo: ",modelo.caminho_modelo.split("/")[-1])
+		escolhedor_modelo.alvo = modelo.caminho_modelo.split("/")[-1]
+	
+	print("")
+	print("carregando: ", especie_base.nome)
+	print("Modelo: ", especie_base.modelo.caminho_modelo)
+	print("modificadores:")
+	for filho: Modificador in especie_base.modelo.lista_modificador.dados:
+		print(filho.nome)
+	
+	
 
 func atribuir_modelo(arquivo: String):
 	modelo.caminho_modelo = arquivo
 
 func salvar():
 	ResourceSaver.save(especie_base, especie_base.resource_path)
+	
+	print("")
+	print("salvando: ", especie_base.nome)
+	print("Modelo: ", especie_base.modelo.caminho_modelo)
+	print("modificadores:")
+	for filho: Modificador in especie_base.modelo.lista_modificador.dados:
+		print(filho.nome)
 
 func especie_para_peca():
 	if especie_base:
