@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://bxdhxdxk26j3h"]
+
+[ext_resource type="Script" uid="uid://cxp2716dyr5h8" path="res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/EscolhedorArquivo/EscolhedorArquivo.gd" id="1_lyrcy"]
+[ext_resource type="Script" uid="uid://chlo6c1bewvof" path="res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/ConteinerModificadores/conteiner_modificadores.gd" id="1_tr7yn"]
+[ext_resource type="Script" uid="uid://kdlmo3r41tbr" path="res://classes gerais/ArrayMelhor.gd" id="2_v8bla"]
+
+[sub_resource type="Resource" id="Resource_vhewj"]
+script = ExtResource("2_v8bla")
+
+[node name="ConteinerModificadores" type="FoldableContainer" unique_id=891861737]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tr7yn")
+lista_modificadores = SubResource("Resource_vhewj")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1528304170]
+layout_mode = 2
+
+[node name="ConteinerModulos" type="VBoxContainer" parent="VBoxContainer" unique_id=1778448308]
+layout_mode = 2
+
+[node name="NovoModificador" type="Button" parent="VBoxContainer" unique_id=2040915220]
+layout_mode = 2
+text = "(Selecionar modelo)"
+script = ExtResource("1_lyrcy")
+metadata/_custom_type_script = "uid://cxp2716dyr5h8"
