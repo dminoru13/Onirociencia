@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cxp2716dyr5h8" path="res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/EscolhedorArquivo/EscolhedorArquivo.gd" id="1_2tabm"]
 [ext_resource type="Script" uid="uid://dwv8sa75i2irf" path="res://addons/EditorDeCriaturas/Paineis/PainelEspecie/painel_especie.gd" id="1_o7lbl"]
+[ext_resource type="PackedScene" uid="uid://bxdhxdxk26j3h" path="res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/ConteinerModificadores/ConteinerModificadores.tscn" id="3_m4667"]
 
 [node name="PainelEspecie" type="MarginContainer" unique_id=1971215968 node_paths=PackedStringArray("escolhedor_de_arquivo", "lbl_nome", "lista_controls")]
 offset_right = 151.0
@@ -32,6 +33,7 @@ layout_mode = 2
 [node name="BtnSalvar" type="Button" parent="VBoxContainer/ConteinerSalvarCarregar" unique_id=2084066926]
 layout_mode = 2
 size_flags_horizontal = 3
+disabled = true
 text = "Salvar"
 
 [node name="Carregar" type="Button" parent="VBoxContainer/ConteinerSalvarCarregar" unique_id=941043583]
@@ -46,6 +48,7 @@ metadata/_custom_type_script = "uid://cxp2716dyr5h8"
 
 [node name="BtnRoletar" type="Button" parent="VBoxContainer" unique_id=1048867239]
 layout_mode = 2
+disabled = true
 text = "Roletar"
 
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=133273426]
@@ -67,11 +70,15 @@ horizontal_alignment = 1
 
 [node name="EscolhedorModelo" type="Button" parent="VBoxContainer" unique_id=499140440]
 layout_mode = 2
+disabled = true
 text = "(Selecionar modelo)"
 script = ExtResource("1_2tabm")
 caminho_pasta = "res://Pecas/modelos3d/Humanoide"
 final_arquivo = ".tscn"
 metadata/_custom_type_script = "uid://cxp2716dyr5h8"
+
+[node name="ConteinerModificadores" parent="VBoxContainer" unique_id=891861737 instance=ExtResource("3_m4667")]
+layout_mode = 2
 
 [connection signal="pressed" from="VBoxContainer/ConteinerSalvarCarregar/BtnSalvar" to="." method="_on_btn_salvar_pressed"]
 [connection signal="arquivoPego" from="VBoxContainer/ConteinerSalvarCarregar/Carregar" to="." method="_on_escolhedor_arquivo_arquivo_pego"]

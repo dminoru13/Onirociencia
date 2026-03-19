@@ -4,8 +4,10 @@ extends MarginContainer
 
 @export var escolhedor_de_arquivo: EscolhedorArquivo
 @export var lbl_nome: Label
-@export var lista_controls: Array[Button]
+@export var lista_controls: Array[Control]
 @export var palco: Palco
+@export var conteiner_modificadores: Conteiner_modificador
+
 
 var especie_base: Especie:
 	set(value):
@@ -41,6 +43,8 @@ func atualizar():
 	
 	if modelo.caminho_modelo != "":
 		especie_para_peca()
+	
+	conteiner_modificadores.lista_modificadores = especie_base.modelo.lista_modificador
 
 func carregar(arquivo: String):
 	especie_base = load(arquivo)

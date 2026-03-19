@@ -5,5 +5,12 @@ extends Resource
 @export var caminho_modelo: String
 @export var posicao: Vector3 = Vector3(0,0,0)
 @export var key_shape: float
-@export var lista_modificador: Array[Modificador]
-@export var lista_modificador_universal: Array[Modificador]
+@export var lista_modificador: ArrayMelhor = ArrayMelhor.new()
+@export var lista_modificador_universal: ArrayMelhor = ArrayMelhor.new()
+
+func _init() -> void:
+	lista_modificador.arrayAlterada.connect(alterouse)
+
+
+func alterouse():
+	print("alterou aqui")

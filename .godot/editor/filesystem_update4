@@ -3,3 +3,7 @@ res://shaders/outlineRoubado.gdshader
 res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/ConteinerModificadores/ConteinerModificadores.tscn
 res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/ConteinerModificadores/conteiner_modificadores.gd
 res://classes gerais/ArrayMelhor.gd
+res://Pecas/recursos/modelo.gd
+res://addons/EditorDeCriaturas/Paineis/PainelEspecie/painel_especie.tscn
+res://addons/EditorDeCriaturas/Paineis/PainelEspecie/painel_especie.gd
+res://Pecas/pre-prontos/especies/Redex.tres
