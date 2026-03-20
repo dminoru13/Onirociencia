@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bxdhxdxk26j3h" path="res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/ConteinerModificadores/ConteinerModificadores.tscn" id="3_m4667"]
 [ext_resource type="Script" uid="uid://5my6pc2xj1nn" path="res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/ConteinerEncaixes/container_encaixe.gd" id="4_1nnv7"]
 
-[node name="PainelEspecie" type="MarginContainer" unique_id=1971215968 node_paths=PackedStringArray("escolhedor_de_arquivo", "lbl_nome", "lista_controls", "conteiner_modificadores", "escolhedor_modelo")]
+[node name="PainelEspecie" type="MarginContainer" unique_id=1971215968 node_paths=PackedStringArray("escolhedor_de_arquivo", "lbl_nome", "lista_controls", "conteiner_modificadores", "escolhedor_modelo", "conteiner_roupas", "conteiner_partes")]
 offset_right = 151.0
 offset_bottom = 171.0
 size_flags_horizontal = 3
@@ -16,6 +16,8 @@ lbl_nome = NodePath("VBoxContainer/Info/MarginContainer/lblNome")
 lista_controls = [NodePath("VBoxContainer/Info/ConteinerSalvarCarregar/BtnSalvar"), NodePath("VBoxContainer/Info/BtnRoletar"), NodePath("VBoxContainer/EscolhedorModelo")]
 conteiner_modificadores = NodePath("VBoxContainer/ConteinerModificadores")
 escolhedor_modelo = NodePath("VBoxContainer/EscolhedorModelo")
+conteiner_roupas = NodePath("VBoxContainer/ConteinerRoupas")
+conteiner_partes = NodePath("VBoxContainer/ConteinerPartes")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1324044402]
 layout_mode = 2
@@ -85,9 +87,21 @@ metadata/_custom_type_script = "uid://cxp2716dyr5h8"
 
 [node name="ConteinerModificadores" parent="VBoxContainer" unique_id=891861737 instance=ExtResource("3_m4667")]
 layout_mode = 2
+folded = true
 
-[node name="ConteinerEncaixe" type="FoldableContainer" parent="VBoxContainer" unique_id=1424046867]
+[node name="ConteinerRoupas" type="FoldableContainer" parent="VBoxContainer" unique_id=1960800091]
 layout_mode = 2
+folded = true
+title = "ROUPAS"
+title_alignment = 1
+script = ExtResource("4_1nnv7")
+metadata/_custom_type_script = "uid://5my6pc2xj1nn"
+
+[node name="ConteinerPartes" type="FoldableContainer" parent="VBoxContainer" unique_id=1424046867]
+layout_mode = 2
+folded = true
+title = "PARTES"
+title_alignment = 1
 script = ExtResource("4_1nnv7")
 metadata/_custom_type_script = "uid://5my6pc2xj1nn"
 

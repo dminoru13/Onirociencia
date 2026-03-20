@@ -31,7 +31,7 @@ func configurar(botao: Button):
 		filho.queue_free()
 	
 	if botao_atual == "MODIFICADOR":
-		var modificador_referencia = Modificador.new()
+		var modificador_referencia = Modificador.new("modificador_referencia")
 		var btn_opcao = OptionButton.new()
 		
 		for tipo in modificador_referencia.dicionario_tipos.keys():
@@ -58,13 +58,13 @@ func _on_btn_criar_pressed() -> void:
 
 
 func criar_especie() -> void:
-	var nova_especie = Especie.new()
+	var nova_especie = Especie.new(nomeador.text)
 	nova_especie.nome = nomeador.text
 	ResourceSaver.save(nova_especie,caminho + "/" + nova_especie.nome +  ".tres")
 	arquivoCriado.emit()
 
 func criar_modificador():
-	var novo_modificador = Modificador.new()
+	var novo_modificador = Modificador.new(nomeador.text)
 	novo_modificador.nome = nomeador.text
 	novo_modificador.tipo = novo_modificador.dicionario_tipos.keys()[valor_relevante]
 	ResourceSaver.save(novo_modificador,caminho + "/" + novo_modificador.nome +  ".tres")

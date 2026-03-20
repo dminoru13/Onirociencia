@@ -6,8 +6,11 @@ extends MarginContainer
 @export var lbl_nome: Label
 @export var lista_controls: Array[Control]
 @export var palco: Palco
-@export var conteiner_modificadores: Conteiner_modificador
+@export var conteiner_modificadores: ConteinerModificador
 @export var escolhedor_modelo: EscolhedorArquivo
+@export var conteiner_roupas: ConteinerEncaixe
+@export var conteiner_partes: ConteinerEncaixe
+
 
 
 var especie_base: Especie:
@@ -36,19 +39,28 @@ func _ready() -> void:
 	
 
 func atualizar():
-	lbl_nome.text = especie_base.nome
+	print("atualizando")
 	
+	#UI
+	lbl_nome.text = especie_base.nome
 	for c in lista_controls:
 		c.disabled = false
 	
+	#back end
 	modelo = especie_base.modelo
+	
+	especie_base.gerar_encaixes()
+	
+	for encaixe: EncaixeRecurso in especie_base.encaixes_parte.dados:
+		print("(PAINEL ESPECIS) encaixe encontrad0: ", encaixe.nome)
 	
 	especie_para_peca()
 		
-	conteiner_modificadores.lista_modificadores = especie_base.modelo.lista_modificador
+	conteiner_modificadores.lista_modificadores = modelo.lista_modificador
 	
 func carregar(arquivo: String):
 	especie_base = load(arquivo)
+	especie_base.modelo.reactive_changed.connect(testar)
 	if modelo:
 		escolhedor_modelo.alvo = modelo.caminho_modelo.split("/")[-1]
 
@@ -77,7 +89,8 @@ func especie_para_peca():
 
 
 
-
+func testar(valor = null):
+	print("teste teste")
 
 
 

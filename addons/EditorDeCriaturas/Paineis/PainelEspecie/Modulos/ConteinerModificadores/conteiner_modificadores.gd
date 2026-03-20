@@ -9,7 +9,8 @@ var lista_modificadores: ArrayMelhor:
 	set(value):
 		lista_modificadores = value
 		novo_modificador.disabled = false
-		lista_modificadores.reactive_changed.connect(atualizar)
+		if not lista_modificadores.reactive_changed.is_connected(atualizar):
+			lista_modificadores.reactive_changed.connect(atualizar)
 		atualizar()
 
 
