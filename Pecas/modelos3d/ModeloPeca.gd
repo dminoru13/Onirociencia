@@ -13,10 +13,13 @@ func carregar_modelo():
 	for crianca in get_children():
 		crianca.queue_free()
 	
-	var modelo_carregado: PackedScene = load(parte_base.modelo.caminho_modelo)
-	instancia = modelo_carregado.instantiate()
-	instancia.position = parte_base.modelo.posicao
-	add_child(instancia)
+	var caminho_modelo: String = parte_base.modelo.caminho_modelo
+	
+	if caminho_modelo != "":
+		var modelo_carregado: PackedScene = load(caminho_modelo)
+		instancia = modelo_carregado.instantiate()
+		instancia.position = parte_base.modelo.posicao
+		add_child(instancia)
 	
 	atualizar_modificadores()
 

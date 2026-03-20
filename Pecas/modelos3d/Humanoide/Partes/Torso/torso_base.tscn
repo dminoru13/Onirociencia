@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://byowoebi4m7id"]
 
 [ext_resource type="PackedScene" uid="uid://bwo0sowtkeair" path="res://z_restos_inuteis/Modelos/Partes Corpo/TorsoBase.glb" id="1_xk5hx"]
+[ext_resource type="Script" uid="uid://bdw2xl7tkug7f" path="res://Pecas/classes auxiliares/node_encaixe.gd" id="2_ytw42"]
 
 [sub_resource type="Shader" id="Shader_iv177"]
 code = "shader_type spatial;
@@ -252,17 +253,27 @@ shader_parameter/border_width = 0.01
 [node name="Torso" parent="." index="0" unique_id=1148894676]
 surface_material_override/0 = SubResource("ShaderMaterial_x1est")
 
-[node name="Cabeca" type="Marker3D" parent="." index="1" unique_id=1860942150]
+[node name="Cabeca" type="Marker3D" parent="." index="1" unique_id=1736107428]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.42966357, 0)
+script = ExtResource("2_ytw42")
+metadata/_custom_type_script = "uid://bdw2xl7tkug7f"
 
-[node name="Braco" type="Marker3D" parent="." index="2" unique_id=711353953]
+[node name="Braco" type="Marker3D" parent="." index="2" unique_id=1610296269]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26012874, 0.29420143, 0)
+script = ExtResource("2_ytw42")
+metadata/_custom_type_script = "uid://bdw2xl7tkug7f"
 
-[node name="Braco2" type="Marker3D" parent="." index="3" unique_id=1513410653]
+[node name="Braco2" type="Marker3D" parent="." index="3" unique_id=1133232396]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.26961735, 0.29420143, 0)
+script = ExtResource("2_ytw42")
+metadata/_custom_type_script = "uid://bdw2xl7tkug7f"
 
-[node name="Perna" type="Marker3D" parent="." index="4" unique_id=18799239]
+[node name="Perna" type="Marker3D" parent="." index="4" unique_id=1241204481]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.18304956, -0.5478928, 0)
+script = ExtResource("2_ytw42")
+metadata/_custom_type_script = "uid://bdw2xl7tkug7f"
 
-[node name="Perna2" type="Marker3D" parent="." index="5" unique_id=285076736]
+[node name="Perna2" type="Marker3D" parent="." index="5" unique_id=108072417]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.18203619, -0.5478928, 0)
+script = ExtResource("2_ytw42")
+metadata/_custom_type_script = "uid://bdw2xl7tkug7f"

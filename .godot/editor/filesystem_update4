@@ -1,18 +1,16 @@
-res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/ConteinerModificadores/ConteinerModificadores.tscn
+res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/ConteinerEncaixes/ContainerEncaixe.tscn
 res://z_restos_inuteis/shader materials/flexible_toon.gdshader
 res://shaders/outlineRoubado.gdshader
-res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/SubModulos/SubModulo.tscn
-res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/SubModulos/sub_modulo.gd
-res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/ConteinerModificadores/conteiner_modificadores.gd
-res://Pecas/recursos/modificador.gd
-res://Pecas/pre-prontos/especies/Redex.tres
-res://Pecas/modelos3d/ShaderLais.tres
-res://addons/EditorDeCriaturas/CentroDeExibicao.tscn
-res://Pecas/modelos3d/ModeloPeca.gd
-res://classes gerais/reactive.gd
-res://classes gerais/ArrayMelhor.gd
-res://Pecas/recursos/modelo.gd
 res://Pecas/recursos/parte.gd
+res://Pecas/pre-prontos/especies/vazio.tres
 res://Pecas/recursos/especie.gd
-res://addons/EditorDeCriaturas/Paineis/PainelEspecie/painel_especie.gd
+res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/ConteinerEncaixes/container_encaixe.gd
+res://Pecas/recursos/encaixe.gd
+res://Pecas/modelos3d/ShaderLais.tres
+res://Pecas/classes auxiliares/node_encaixe.gd
+res://Pecas/modelos3d/Humanoide/Partes/Torso/torso_base.tscn
+res://Pecas/recursos/recurso_encaixe.gd
 res://Pecas/pre-prontos/especies/braco.tres
+res://Pecas/pre-prontos/especies/torso.tres
+res://addons/EditorDeCriaturas/Paineis/PainelEspecie/painel_especie.tscn
+res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/ConteinerModificadores/conteiner_modificadores.gd

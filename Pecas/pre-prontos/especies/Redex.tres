@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Especie" format=3 uid="uid://bqtbyvcjwc77f"]
 
-[ext_resource type="Script" uid="uid://do6iqewf1aere" path="res://Pecas/recursos/encaixe.gd" id="1_tqh6y"]
+[ext_resource type="Script" uid="uid://do6iqewf1aere" path="res://Pecas/recursos/recurso_encaixe.gd" id="1_tqh6y"]
 [ext_resource type="Script" uid="uid://bu41ecskgy6i2" path="res://Pecas/recursos/modificador.gd" id="2_217my"]
 [ext_resource type="Script" uid="uid://kdlmo3r41tbr" path="res://classes gerais/ArrayMelhor.gd" id="2_tqh6y"]
 [ext_resource type="Script" uid="uid://cebdafi7ing5w" path="res://Pecas/recursos/modelo.gd" id="3_37xyv"]

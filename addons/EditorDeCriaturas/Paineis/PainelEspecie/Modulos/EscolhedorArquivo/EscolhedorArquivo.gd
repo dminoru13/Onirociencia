@@ -6,7 +6,7 @@ extends Button
 @export var texto_fixo: bool
 @export_dir var caminho_pasta: String
 @export var final_arquivo: String
-
+var placeholder: String
 
 var caminho_arquivo: String
 var nome_arquivo: String
@@ -14,13 +14,17 @@ var alvo: String:
 	set(value):
 		alvo = value
 		if texto_fixo == false:
-			text = value
+			if alvo == "":
+				text = placeholder
+			else:
+				text = value
 
 signal arquivoPego(arquivo: String)
 
 var janela: Window
 
 func _ready() -> void:
+	placeholder = text
 	pressed.connect(apertado)
 
 

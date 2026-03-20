@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cxp2716dyr5h8" path="res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/EscolhedorArquivo/EscolhedorArquivo.gd" id="1_2tabm"]
 [ext_resource type="Script" uid="uid://dwv8sa75i2irf" path="res://addons/EditorDeCriaturas/Paineis/PainelEspecie/painel_especie.gd" id="1_o7lbl"]
 [ext_resource type="PackedScene" uid="uid://bxdhxdxk26j3h" path="res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/ConteinerModificadores/ConteinerModificadores.tscn" id="3_m4667"]
+[ext_resource type="Script" uid="uid://5my6pc2xj1nn" path="res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/ConteinerEncaixes/container_encaixe.gd" id="4_1nnv7"]
 
 [node name="PainelEspecie" type="MarginContainer" unique_id=1971215968 node_paths=PackedStringArray("escolhedor_de_arquivo", "lbl_nome", "lista_controls", "conteiner_modificadores", "escolhedor_modelo")]
 offset_right = 151.0
@@ -10,9 +11,9 @@ offset_bottom = 171.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.5
 script = ExtResource("1_o7lbl")
-escolhedor_de_arquivo = NodePath("VBoxContainer/ConteinerSalvarCarregar/Carregar")
-lbl_nome = NodePath("VBoxContainer/MarginContainer/lblNome")
-lista_controls = [NodePath("VBoxContainer/ConteinerSalvarCarregar/BtnSalvar"), NodePath("VBoxContainer/BtnRoletar"), NodePath("VBoxContainer/EscolhedorModelo")]
+escolhedor_de_arquivo = NodePath("VBoxContainer/Info/ConteinerSalvarCarregar/Carregar")
+lbl_nome = NodePath("VBoxContainer/Info/MarginContainer/lblNome")
+lista_controls = [NodePath("VBoxContainer/Info/ConteinerSalvarCarregar/BtnSalvar"), NodePath("VBoxContainer/Info/BtnRoletar"), NodePath("VBoxContainer/EscolhedorModelo")]
 conteiner_modificadores = NodePath("VBoxContainer/ConteinerModificadores")
 escolhedor_modelo = NodePath("VBoxContainer/EscolhedorModelo")
 
@@ -24,21 +25,24 @@ color = Color(0, 0, 0, 0.22745098)
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Label" type="Label" parent="VBoxContainer" unique_id=1417287800]
+[node name="Info" type="VBoxContainer" parent="VBoxContainer" unique_id=1302745732]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/Info" unique_id=1417287800]
 layout_mode = 2
 text = "Editor Especie"
 horizontal_alignment = 1
 
-[node name="ConteinerSalvarCarregar" type="HBoxContainer" parent="VBoxContainer" unique_id=841446978]
+[node name="ConteinerSalvarCarregar" type="HBoxContainer" parent="VBoxContainer/Info" unique_id=841446978]
 layout_mode = 2
 
-[node name="BtnSalvar" type="Button" parent="VBoxContainer/ConteinerSalvarCarregar" unique_id=2084066926]
+[node name="BtnSalvar" type="Button" parent="VBoxContainer/Info/ConteinerSalvarCarregar" unique_id=2084066926]
 layout_mode = 2
 size_flags_horizontal = 3
 disabled = true
 text = "Salvar"
 
-[node name="Carregar" type="Button" parent="VBoxContainer/ConteinerSalvarCarregar" unique_id=941043583]
+[node name="Carregar" type="Button" parent="VBoxContainer/Info/ConteinerSalvarCarregar" unique_id=941043583]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Carregar"
@@ -48,24 +52,24 @@ caminho_pasta = "res://Pecas/pre-prontos/especies"
 final_arquivo = ".tres"
 metadata/_custom_type_script = "uid://cxp2716dyr5h8"
 
-[node name="BtnRoletar" type="Button" parent="VBoxContainer" unique_id=1048867239]
+[node name="BtnRoletar" type="Button" parent="VBoxContainer/Info" unique_id=1048867239]
 layout_mode = 2
 disabled = true
 text = "Roletar"
 
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=133273426]
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Info" unique_id=133273426]
 layout_mode = 2
 
-[node name="ColorRect" type="ColorRect" parent="VBoxContainer/MarginContainer" unique_id=1233423757]
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/Info/MarginContainer" unique_id=1233423757]
 layout_mode = 2
 color = Color(0, 0, 0, 0.29411766)
 
-[node name="lblNome" type="Label" parent="VBoxContainer/MarginContainer" unique_id=1050054737]
+[node name="lblNome" type="Label" parent="VBoxContainer/Info/MarginContainer" unique_id=1050054737]
 layout_mode = 2
 text = "NOME"
 horizontal_alignment = 1
 
-[node name="Label2" type="Label" parent="VBoxContainer" unique_id=1516964531]
+[node name="LblModelo" type="Label" parent="VBoxContainer" unique_id=1516964531]
 layout_mode = 2
 text = "Modelo:"
 horizontal_alignment = 1
@@ -82,7 +86,12 @@ metadata/_custom_type_script = "uid://cxp2716dyr5h8"
 [node name="ConteinerModificadores" parent="VBoxContainer" unique_id=891861737 instance=ExtResource("3_m4667")]
 layout_mode = 2
 
-[connection signal="pressed" from="VBoxContainer/ConteinerSalvarCarregar/BtnSalvar" to="." method="_on_btn_salvar_pressed"]
-[connection signal="arquivoPego" from="VBoxContainer/ConteinerSalvarCarregar/Carregar" to="." method="_on_escolhedor_arquivo_arquivo_pego"]
-[connection signal="pressed" from="VBoxContainer/BtnRoletar" to="." method="_on_btn_roletar_pressed"]
+[node name="ConteinerEncaixe" type="FoldableContainer" parent="VBoxContainer" unique_id=1424046867]
+layout_mode = 2
+script = ExtResource("4_1nnv7")
+metadata/_custom_type_script = "uid://5my6pc2xj1nn"
+
+[connection signal="pressed" from="VBoxContainer/Info/ConteinerSalvarCarregar/BtnSalvar" to="." method="_on_btn_salvar_pressed"]
+[connection signal="arquivoPego" from="VBoxContainer/Info/ConteinerSalvarCarregar/Carregar" to="." method="_on_escolhedor_arquivo_arquivo_pego"]
+[connection signal="pressed" from="VBoxContainer/Info/BtnRoletar" to="." method="_on_btn_roletar_pressed"]
 [connection signal="arquivoPego" from="VBoxContainer/EscolhedorModelo" to="." method="_on_escolhedor_modelo_arquivo_pego"]

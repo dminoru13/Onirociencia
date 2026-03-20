@@ -43,18 +43,15 @@ func atualizar():
 	
 	modelo = especie_base.modelo
 	
-	if modelo.caminho_modelo != "":
-		especie_para_peca()
+	especie_para_peca()
 		
 	conteiner_modificadores.lista_modificadores = especie_base.modelo.lista_modificador
 	
 func carregar(arquivo: String):
 	especie_base = load(arquivo)
-	
 	if modelo:
-		pass
 		escolhedor_modelo.alvo = modelo.caminho_modelo.split("/")[-1]
-	
+
 	
 
 func atribuir_modelo(arquivo: String):

@@ -1,9 +1,11 @@
 [gd_resource type="Resource" script_class="Especie" format=3 uid="uid://c2w3a310j4vyx"]
 
-[ext_resource type="Script" uid="uid://do6iqewf1aere" path="res://Pecas/recursos/encaixe.gd" id="1_0htu0"]
 [ext_resource type="Script" uid="uid://kdlmo3r41tbr" path="res://classes gerais/ArrayMelhor.gd" id="2_n8it3"]
 [ext_resource type="Script" uid="uid://cebdafi7ing5w" path="res://Pecas/recursos/modelo.gd" id="3_c50gf"]
 [ext_resource type="Script" uid="uid://b2yxvua0xc0d0" path="res://Pecas/recursos/especie.gd" id="4_5qpfr"]
+
+[sub_resource type="Resource" id="Resource_ogd6g"]
+script = ExtResource("2_n8it3")
 
 [sub_resource type="Resource" id="Resource_784ht"]
 script = ExtResource("2_n8it3")
@@ -21,3 +23,4 @@ lista_modificador_universal = SubResource("Resource_er7vo")
 script = ExtResource("4_5qpfr")
 nome = "braco"
 modelo = SubResource("Resource_fbexk")
+lista_encaixes = SubResource("Resource_ogd6g")

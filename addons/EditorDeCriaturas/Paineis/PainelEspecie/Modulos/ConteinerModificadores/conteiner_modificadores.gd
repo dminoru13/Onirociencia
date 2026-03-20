@@ -1,5 +1,5 @@
 @tool
-class_name Conteiner_modificador
+class_name ConteinerModificador
 extends FoldableContainer
 
 @export var novo_modificador: EscolhedorArquivo
