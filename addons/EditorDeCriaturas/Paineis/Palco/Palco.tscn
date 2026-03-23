@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dj7kfttuollph"]
 
 [ext_resource type="Script" uid="uid://8jbdbelg0vfa" path="res://addons/EditorDeCriaturas/Paineis/Palco/palco.gd" id="1_0yewo"]
-[ext_resource type="Script" uid="uid://b8i3h0kxymgn5" path="res://Pecas/modelos3d/ModeloPeca.gd" id="2_7fel7"]
+[ext_resource type="Script" uid="uid://b8i3h0kxymgn5" path="res://Pecas/modelos3d/ModeloParte.gd" id="2_7fel7"]
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_vm6er"]
 

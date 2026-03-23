@@ -1,11 +1,46 @@
 [gd_resource type="Resource" script_class="Especie" format=3 uid="uid://b44esut8l2ugv"]
 
 [ext_resource type="Script" uid="uid://kdlmo3r41tbr" path="res://classes gerais/ArrayMelhor.gd" id="1_mj4j3"]
+[ext_resource type="Script" uid="uid://bu41ecskgy6i2" path="res://Pecas/recursos/modificador.gd" id="2_66o2e"]
+[ext_resource type="Resource" uid="uid://cr3gsx1x43u03" path="res://Pecas/pre-prontos/especies/mininoru.tres" id="2_gk6a5"]
 [ext_resource type="Script" uid="uid://cebdafi7ing5w" path="res://Pecas/recursos/modelo.gd" id="2_i3r5h"]
 [ext_resource type="Script" uid="uid://b2yxvua0xc0d0" path="res://Pecas/recursos/especie.gd" id="3_66o2e"]
+[ext_resource type="Script" uid="uid://do6iqewf1aere" path="res://Pecas/recursos/recurso_encaixe.gd" id="3_gk6a5"]
+
+[sub_resource type="Resource" id="Resource_ox1eh"]
+script = ExtResource("3_gk6a5")
+tipo = "PARTE"
+nome = "Cabeca"
+posicao = Vector3(0, 0.42966357, 0)
+lista_especie = Array[ExtResource("3_66o2e")]([ExtResource("2_gk6a5")])
+
+[sub_resource type="Resource" id="Resource_nmc0g"]
+script = ExtResource("3_gk6a5")
+tipo = "PARTE"
+nome = "Braco"
+posicao = Vector3(0.26012874, 0.29420143, 0)
+
+[sub_resource type="Resource" id="Resource_cv6iy"]
+script = ExtResource("3_gk6a5")
+tipo = "PARTE"
+nome = "Braco2"
+posicao = Vector3(-0.26961735, 0.29420143, 0)
+
+[sub_resource type="Resource" id="Resource_q0uyf"]
+script = ExtResource("3_gk6a5")
+tipo = "PARTE"
+nome = "Perna"
+posicao = Vector3(0.18304956, -0.5478928, 0)
+
+[sub_resource type="Resource" id="Resource_abb6y"]
+script = ExtResource("3_gk6a5")
+tipo = "PARTE"
+nome = "Perna2"
+posicao = Vector3(-0.18203619, -0.5478928, 0)
 
 [sub_resource type="Resource" id="Resource_mj4j3"]
 script = ExtResource("1_mj4j3")
+dados = [SubResource("Resource_ox1eh"), SubResource("Resource_nmc0g"), SubResource("Resource_cv6iy"), SubResource("Resource_q0uyf"), SubResource("Resource_abb6y")]
 
 [sub_resource type="Resource" id="Resource_i3r5h"]
 script = ExtResource("1_mj4j3")

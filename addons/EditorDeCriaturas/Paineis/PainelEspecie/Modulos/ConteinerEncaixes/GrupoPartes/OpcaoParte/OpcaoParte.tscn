@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bm54kct4uu86c"]
+
+[ext_resource type="Script" uid="uid://cxp2716dyr5h8" path="res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/EscolhedorArquivo/EscolhedorArquivo.gd" id="1_gjrm0"]
+[ext_resource type="Script" uid="uid://c5hq1s66151vc" path="res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/ConteinerEncaixes/GrupoPartes/OpcaoParte/opcao_parte.gd" id="1_t4roh"]
+[ext_resource type="PackedScene" uid="uid://cvd5abdt5d8xi" path="res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/BtnSuicidio/btn_suicidio.tscn" id="2_t4roh"]
+
+[node name="OpcaoParte" type="HBoxContainer" unique_id=1387928784 node_paths=PackedStringArray("escolhedor")]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 31.0
+grow_horizontal = 2
+script = ExtResource("1_t4roh")
+escolhedor = NodePath("EscolhedorArquivo")
+
+[node name="EscolhedorArquivo" type="Button" parent="." unique_id=1030755308]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "nova parte..."
+script = ExtResource("1_gjrm0")
+caminho_pasta = "res://Pecas/pre-prontos/especies"
+final_arquivo = ".tres"
+metadata/_custom_type_script = "uid://cxp2716dyr5h8"
+
+[node name="BtnSuicidio" parent="." unique_id=1452866503 node_paths=PackedStringArray("alvo") instance=ExtResource("2_t4roh")]
+layout_mode = 2
+alvo = NodePath("..")
+
+[connection signal="arquivoPego" from="EscolhedorArquivo" to="." method="_on_escolhedor_arquivo_arquivo_pego"]

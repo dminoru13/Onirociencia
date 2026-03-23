@@ -17,7 +17,7 @@ var owner : Reactive:
 signal reactive_changed(reactive)
 
 func _init(nome = null, initial_owner: Reactive = null) -> void:
-	if nome:
+	if nome is String:
 		nome_reactive = nome
 	owner = initial_owner
 	print("(REACTIVE) eu ", nome_reactive, " nasci")

@@ -7,32 +7,35 @@ anchors_preset = 10
 anchor_right = 1.0
 grow_horizontal = 2
 script = ExtResource("1_7542q")
-lbl_nome = NodePath("MarginContainer/HBoxContainer/lblNome")
-check_habilitado = NodePath("MarginContainer/HBoxContainer/checkHabilitado")
+lbl_nome = NodePath("VBoxContainer/MarginContainer/HBoxContainer/lblNome")
+check_habilitado = NodePath("VBoxContainer/MarginContainer/HBoxContainer/checkHabilitado")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=269974649]
 layout_mode = 2
 color = Color(0.20871013, 0.20871016, 0.20871013, 1)
 
-[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1579404060]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=239762706]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=1579404060]
 layout_mode = 2
 theme_override_constants/margin_left = 4
 theme_override_constants/margin_right = 4
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=877095732]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/MarginContainer" unique_id=877095732]
 layout_mode = 2
 
-[node name="lblNome" type="Label" parent="MarginContainer/HBoxContainer" unique_id=2101108198]
+[node name="lblNome" type="Label" parent="VBoxContainer/MarginContainer/HBoxContainer" unique_id=2101108198]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "NOME"
 
-[node name="checkHabilitado" type="CheckBox" parent="MarginContainer/HBoxContainer" unique_id=1347867988]
+[node name="checkHabilitado" type="CheckBox" parent="VBoxContainer/MarginContainer/HBoxContainer" unique_id=1347867988]
 layout_mode = 2
 
-[node name="btnMatar" type="Button" parent="MarginContainer/HBoxContainer" unique_id=1476200539]
+[node name="btnMatar" type="Button" parent="VBoxContainer/MarginContainer/HBoxContainer" unique_id=1476200539]
 layout_mode = 2
 text = "X"
 
-[connection signal="toggled" from="MarginContainer/HBoxContainer/checkHabilitado" to="." method="_on_check_box_toggled"]
-[connection signal="pressed" from="MarginContainer/HBoxContainer/btnMatar" to="." method="_on_button_pressed"]
+[connection signal="toggled" from="VBoxContainer/MarginContainer/HBoxContainer/checkHabilitado" to="." method="_on_check_box_toggled"]
+[connection signal="pressed" from="VBoxContainer/MarginContainer/HBoxContainer/btnMatar" to="." method="_on_button_pressed"]

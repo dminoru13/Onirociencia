@@ -14,6 +14,10 @@ config/name="Onirociencia"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Global="*uid://d4du5ruf7bue"
+
 [display]
 
 window/size/viewport_width=1908

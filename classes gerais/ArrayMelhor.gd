@@ -5,7 +5,7 @@ extends Reactive
 @export var dados: Array
 
 func append(valor):
-	print("eu to appendando: ", valor)
+	#print("(ARRAY MELHOR) eu to appendando: ", valor)
 	dados.append(valor)
 	reactive_changed.emit(self)
 

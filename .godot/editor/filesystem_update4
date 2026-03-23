@@ -1,16 +1,28 @@
 res://addons/EditorDeCriaturas/Paineis/PainelEspecie/painel_especie.tscn
 res://z_restos_inuteis/shader materials/flexible_toon.gdshader
 res://shaders/outlineRoubado.gdshader
-res://addons/EditorDeCriaturas/Paineis/PainelEspecie/painel_especie.gd
-res://Pecas/modelos3d/ShaderLais.tres
-res://Pecas/recursos/especie.gd
-res://Pecas/pre-prontos/especies/braco.tres
-res://Pecas/pre-prontos/especies/Redex.tres
-res://Pecas/recursos/modelo.gd
 res://Pecas/pre-prontos/especies/torso.tres
-res://Pecas/pre-prontos/especies/vazio.tres
+res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/GrupoPartes/GrupoPartes.tscn
+res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/SubModulos/SubModulo.tscn
+res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/BtnSuicidio/btn_suicidio.gd
+res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/BtnSuicidio/btn_suicidio.tscn
+res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/GrupoPartes/OpcaoParte/OpcaoParte.tscn
+res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/GrupoPartes/OpcaoParte/opcao_parte.gd
+res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/GrupoPartes/grupo_partes.gd
+res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/GrupoPartes/ModuloGrupoPartes.tscn
+res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/ConteinerEncaixes/ContainerEncaixe.tscn
+res://addons/EditorDeCriaturas/Paineis/PainelEspecie/painel_especie.gd
+res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/ConteinerEncaixes/container_encaixe.gd
+res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/ConteinerEncaixes/GrupoPartes/grupo_partes.gd
+res://classes gerais/ArrayMelhor.gd
+res://Pecas/recursos/especie.gd
+res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/ConteinerEncaixes/GrupoPartes/ModuloGrupoPartes.tscn
 res://classes gerais/reactive.gd
-res://addons/EditorDeCriaturas/ExploradorDeArquivos/painel_criar.gd
-res://Pecas/pre-prontos/especies/minoru.tres
-res://Pecas/pre-prontos/especies/mininoru.tres
-res://Pecas/modelos3d/Humanoide/Partes/Torso/torso_base.tscn
+res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/ConteinerEncaixes/GrupoPartes/OpcaoParte/OpcaoParte.tscn
+res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/ConteinerEncaixes/GrupoPartes/OpcaoParte/opcao_parte.gd
+res://Pecas/recursos/recurso_encaixe.gd
+res://Pecas/modelos3d/ModeloPeca.gd
+res://classes gerais/aleatorio.gd
+res://classes gerais/global.gd
+res://Pecas/modelos3d/ModeloParte.gd
+res://Pecas/recursos/parte.gd
