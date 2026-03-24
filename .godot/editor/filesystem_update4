@@ -14,3 +14,7 @@ res://Pecas/pre-prontos/especies/braco.tres
 res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/ConteinerEncaixes/GrupoPartes/OpcaoParte/OpcaoParte.tscn
 res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/ConteinerEncaixes/GrupoPartes/OpcaoParte/opcao_parte.gd
 res://Pecas/pre-prontos/especies/teste.tres
+res://Pecas/modelos3d/ModeloParte.gd
+res://Pecas/recursos/parte.gd
+res://Pecas/modelos3d/Humanoide/Partes/Torso/torso_base.tscn
+res://z_restos_inuteis/materiais/modulares/FlexibleToonMaterial.tres

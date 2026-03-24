@@ -11,7 +11,9 @@ func _on_escolhedor_arquivo_arquivo_pego(arquivo: String) -> void:
 		print("(OPCAO PARTE) apagando especie anterior")
 		encaixe.lista_especie.erase(especie_anterior)
 	
-	var especie = load(arquivo)
+	var original: Especie = load(arquivo)
+	var especie: Especie = original.duplicate_deep()
+	especie.modelo.posicao = encaixe.posicao
 	encaixe.lista_especie.append(especie)
 	print("(OPCAO PARTE) especie adicionada as opcoes")
 	especie_anterior = especie

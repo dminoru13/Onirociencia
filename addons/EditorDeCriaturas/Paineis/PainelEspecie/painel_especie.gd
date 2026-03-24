@@ -92,7 +92,7 @@ func printar_especie_base():
 	print("(PAINEL ESPECIE) RECURSO ENCAIXE: ", especie_base.encaixes_parte)
 	print("(PAINEL ESPECIE) ENCAIXES:")
 	for encaixe: EncaixeRecurso in especie_base.encaixes_parte.dados:
-		print(encaixe.nome)
+		print(encaixe.nome, " ", encaixe.posicao)
 		for especie in encaixe.lista_especie:
 			print(" -", especie.nome)
 
@@ -106,6 +106,7 @@ func especie_para_parte(especie_alvo: Especie):
 		var nova_parte: Parte = Parte.new()
 		nova_parte.nome = especie_alvo.nome
 		nova_parte.modelo = especie_alvo.modelo
+		
 		
 		if especie_alvo.encaixes_parte.dados:
 			for encaixe: EncaixeRecurso in especie_alvo.encaixes_parte.dados:

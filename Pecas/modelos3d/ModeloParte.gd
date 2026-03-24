@@ -21,12 +21,13 @@ func carregar_modelo():
 		instancia.position = parte_base.modelo.posicao
 		add_child(instancia)
 	
-	if parte_base.lista_parte != []:
-		for parte in parte_base.lista_parte:
-			var modelo_filho = ModeloParte.new()
-			modelo_filho.parte_base = parte
-			modelo_filho.position = parte.posicao
-			add_child(modelo_filho)
+		if parte_base.lista_parte != []:
+			for parte in parte_base.lista_parte:
+				var modelo_filho = ModeloParte.new()
+				modelo_filho.parte_base = parte
+				print("parte: ",parte.nome, " ", parte.modelo.posicao)
+				print("modelo filho: ",modelo_filho.parte_base.nome, " ", modelo_filho.position)
+				instancia.add_child(modelo_filho)
 	
 	atualizar_modificadores()
 
