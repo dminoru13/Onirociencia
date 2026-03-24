@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1774301800
+::res://::1774314762
 ::res://addons/::1772624348
 ::res://addons/EditorDeCriaturas/::1773960758
 CentroDeExibicao.tscn::PackedScene::2155123976041766192::1773960758::0::1::::<><><>0<>0<><>::uid://dj7kfttuollph::::res://addons/EditorDeCriaturas/Paineis/Palco/Palco.tscn<>uid://dopf3e28dl8sf::::res://addons/EditorDeCriaturas/Paineis/PainelEspecie/painel_especie.tscn
@@ -13,8 +13,8 @@ modulo_arquivo_geral.gd::GDScript::1865941314550922580::1773689358::0::1::::Modu
 painel_criar.gd::GDScript::262210526738461214::1774022166::0::1::::PainelCriar<>MarginContainer<><>0<>1<><>::
 painel_criar.tscn::PackedScene::8506148713039299555::1773849707::0::1::::<><><>0<>0<><>::uid://d0atl3tkq6is::::res://addons/EditorDeCriaturas/ExploradorDeArquivos/painel_criar.gd
 ::res://addons/EditorDeCriaturas/Paineis/::1773669266
-::res://addons/EditorDeCriaturas/Paineis/PainelEspecie/::1774301388
-painel_especie.gd::GDScript::8748804399811418111::1774302692::0::1::::PainelEspecie<>MarginContainer<><>0<>1<><>::
+::res://addons/EditorDeCriaturas/Paineis/PainelEspecie/::1774303380
+painel_especie.gd::GDScript::8748804399811418111::1774303380::0::1::::PainelEspecie<>MarginContainer<><>0<>1<><>::
 painel_especie.tscn::PackedScene::8173225368822791509::1774299611::0::1::::<><><>0<>0<><>::uid://cxp2716dyr5h8::::res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/EscolhedorArquivo/EscolhedorArquivo.gd<>uid://dwv8sa75i2irf::::res://addons/EditorDeCriaturas/Paineis/PainelEspecie/painel_especie.gd<>uid://bxdhxdxk26j3h::::res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/ConteinerModificadores/ConteinerModificadores.tscn<>uid://5my6pc2xj1nn::::res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/ConteinerEncaixes/container_encaixe.gd<>uid://10gjjn7wrhti::::res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/ConteinerEncaixes/ContainerEncaixe.tscn
 ::res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/::1774297777
 ::res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/BtnSuicidio/::1774299183
@@ -26,8 +26,8 @@ container_encaixe.gd::GDScript::2131951201824873159::1774299075::0::1::::Contein
 ::res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/ConteinerEncaixes/GrupoPartes/::1774300833
 grupo_partes.gd::GDScript::1907209923699761831::1774300833::0::1::::ModuloGrupoPartes<>FoldableContainer<><>0<>1<><>::
 ModuloGrupoPartes.tscn::PackedScene::272596546544294656::1774300031::0::1::::<><><>0<>0<><>::uid://2f4p66tu0mcl::::res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/ConteinerEncaixes/GrupoPartes/grupo_partes.gd
-::res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/ConteinerEncaixes/GrupoPartes/OpcaoParte/::1774302436
-OpcaoParte.tscn::PackedScene::3292396926443722852::1774302717::0::1::::<><><>0<>0<><>::uid://cxp2716dyr5h8::::res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/EscolhedorArquivo/EscolhedorArquivo.gd<>uid://c5hq1s66151vc::::res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/ConteinerEncaixes/GrupoPartes/OpcaoParte/opcao_parte.gd<>uid://cvd5abdt5d8xi::::res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/BtnSuicidio/btn_suicidio.tscn
+::res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/ConteinerEncaixes/GrupoPartes/OpcaoParte/::1774303380
+OpcaoParte.tscn::PackedScene::3292396926443722852::1774303380::0::1::::<><><>0<>0<><>::uid://cxp2716dyr5h8::::res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/EscolhedorArquivo/EscolhedorArquivo.gd<>uid://c5hq1s66151vc::::res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/ConteinerEncaixes/GrupoPartes/OpcaoParte/opcao_parte.gd<>uid://cvd5abdt5d8xi::::res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/BtnSuicidio/btn_suicidio.tscn
 opcao_parte.gd::GDScript::6893976218085075044::1774300789::0::1::::OpcaoParte<>HBoxContainer<><>0<>1<><>::
 ::res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/ConteinerModificadores/::1774020164
 ConteinerModificadores.tscn::PackedScene::4007423506431420171::1773959791::0::1::::<><><>0<>0<><>::uid://cxp2716dyr5h8::::res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/EscolhedorArquivo/EscolhedorArquivo.gd<>uid://chlo6c1bewvof::::res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/ConteinerModificadores/conteiner_modificadores.gd
@@ -37,9 +37,9 @@ EscolhedorArquivo.gd::GDScript::6419848355246616879::1774010585::0::1::::Escolhe
 ::res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/SubModulos/::1774296426
 SubModulo.tscn::PackedScene::1356805175746009377::1774296426::0::1::::<><><>0<>0<><>::uid://2lrtnom0xyis::::res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/SubModulos/sub_modulo.gd
 sub_modulo.gd::GDScript::1918873757493134026::1773961592::0::1::::SubModulo<>MarginContainer<><>0<>1<><>::
-::res://addons/EditorDeCriaturas/Paineis/Palco/::1773757748
+::res://addons/EditorDeCriaturas/Paineis/Palco/::1774302882
 palco.gd::GDScript::2334877373427470342::1773755902::0::1::::Palco<>SubViewportContainer<><>0<>1<><>::
-Palco.tscn::PackedScene::7857638859071495977::1773757748::0::1::::<><><>0<>0<><>::uid://8jbdbelg0vfa::::res://addons/EditorDeCriaturas/Paineis/Palco/palco.gd<>uid://b8i3h0kxymgn5::::res://Pecas/modelos3d/ModeloPeca.gd
+Palco.tscn::PackedScene::7857638859071495977::1774302882::0::1::::<><><>0<>0<><>::uid://8jbdbelg0vfa::::res://addons/EditorDeCriaturas/Paineis/Palco/palco.gd<>uid://b8i3h0kxymgn5::::res://Pecas/modelos3d/ModeloParte.gd
 ::res://cenas/::1773405173
 main.tscn::PackedScene::1078382496155826077::1772755461::0::1::::<><><>0<>0<><>::uid://bcmv27jv8yywo::::res://cenas/mundo_3d.tscn<>uid://ds2n6ainu0ky::::res://UI/FPS.gd
 mundo_3d.tscn::PackedScene::2552895872951070218::1773405173::0::1::::<><><>0<>0<><>::uid://4hkbm1k3hrhn::::res://z_restos_inuteis/materiais/rua.tres<>uid://qsn8nrtq4rkx::::res://shaders/outlineRoubado.gdshader<>uid://csjpmge1cnuh3::::res://z_restos_inuteis/Modelos/Poste.tscn<>uid://bb43ngplsfis2::::res://z_restos_inuteis/materiais/modulares/FlexibleToonMaterial.tres<>uid://bfwla88hmbodl::::res://z_restos_inuteis/Modelos/Objetos aleatorios/gato_achatado.tscn<>uid://cge6m6v8oisa6::::res://cenas/abientes/nevoa.tres<>res://Pecas/Peca.tscn<>uid://kwrca4eofyhd::::res://z_restos_inuteis/Modelos/Objetos aleatorios/d20.tscn
@@ -53,8 +53,8 @@ reactive.gd::GDScript::6949179173826680437::1774300940::0::1::::Reactive<>Resour
 ::res://Pecas/::1774011798
 ::res://Pecas/classes auxiliares/::1774013931
 node_encaixe.gd::GDScript::2644084585329043837::1774013931::0::1::::EncaixeNode<>Marker3D<><>0<>1<><>::
-::res://Pecas/modelos3d/::1774301306
-ModeloPeca.gd::GDScript::4720881451744806832::1774301306::0::1::::ModeloParte<>Node3D<><>0<>1<><>::
+::res://Pecas/modelos3d/::1774303052
+ModeloParte.gd::GDScript::4720881451744806832::1774303052::0::1::::ModeloParte<>Node3D<><>0<>1<><>::
 ShaderLais.tres::ShaderMaterial::9084236851267259677::1774276254::0::1::::<><><>0<>0<><>::
 ::res://Pecas/modelos3d/Humanoide/::1772458286
 ::res://Pecas/modelos3d/Humanoide/Partes/::1772460116
@@ -74,18 +74,18 @@ torso_base.tscn::PackedScene::4101215206559196931::1774276591::0::1::::<><><>0<>
 camiseta.tscn::PackedScene::3643943486256284171::1773405173::0::1::::<><><>0<>0<><>::uid://cs7g1yom3gnm1::::res://z_restos_inuteis/Modelos/Roupas/Camiseta.glb<>uid://bb43ngplsfis2::::res://z_restos_inuteis/materiais/modulares/FlexibleToonMaterial.tres
 vestido.tscn::PackedScene::5813789893843648332::1773405173::0::1::::<><><>0<>0<><>::uid://dijdreg5wjid2::::res://z_restos_inuteis/Modelos/Roupas/Vestido.glb<>uid://qsn8nrtq4rkx::::res://shaders/outlineRoubado.gdshader
 ::res://Pecas/pre-prontos/::1773848595
-::res://Pecas/pre-prontos/especies/::1774300940
+::res://Pecas/pre-prontos/especies/::1774303699
 mininoru.tres::Resource/Especie::6024251981880174414::1774022832::0::1::::<><><>0<>0<><>::uid://kdlmo3r41tbr::::res://classes gerais/ArrayMelhor.gd<>uid://cebdafi7ing5w::::res://Pecas/recursos/modelo.gd<>uid://bu41ecskgy6i2::::res://Pecas/recursos/modificador.gd<>uid://b2yxvua0xc0d0::::res://Pecas/recursos/especie.gd
-torso.tres::Resource/Especie::4482040197658567705::1774300940::0::1::::<><><>0<>0<><>::uid://kdlmo3r41tbr::::res://classes gerais/ArrayMelhor.gd<>uid://cebdafi7ing5w::::res://Pecas/recursos/modelo.gd<>uid://b2yxvua0xc0d0::::res://Pecas/recursos/especie.gd<>uid://do6iqewf1aere::::res://Pecas/recursos/recurso_encaixe.gd
+torso.tres::Resource/Especie::4482040197658567705::1774303699::0::1::::<><><>0<>0<><>::uid://kdlmo3r41tbr::::res://classes gerais/ArrayMelhor.gd<>uid://bu41ecskgy6i2::::res://Pecas/recursos/modificador.gd<>uid://cr3gsx1x43u03::::res://Pecas/pre-prontos/especies/mininoru.tres<>uid://cebdafi7ing5w::::res://Pecas/recursos/modelo.gd<>uid://b2yxvua0xc0d0::::res://Pecas/recursos/especie.gd<>uid://do6iqewf1aere::::res://Pecas/recursos/recurso_encaixe.gd
 ::res://Pecas/pre-prontos/Modificadores/::1773849663
 espelhado.tres::Resource/Modificador::1206735717044044923::1773849663::0::1::::<><><>0<>0<><>::uid://bu41ecskgy6i2::::res://Pecas/recursos/modificador.gd
 ::res://Pecas/pre-prontos/partes/::1773674905
 ::res://Pecas/pre-prontos/pecas/::1773674899
-::res://Pecas/recursos/::1774301074
+::res://Pecas/recursos/::1774303015
 especie.gd::GDScript::4332499572156773379::1774298505::0::1::::Especie<>Reactive<><>0<>1<><>::
 modelo.gd::GDScript::5055843547111020050::1774276376::0::1::::Modelo<>Reactive<><>0<>1<><>::
 modificador.gd::GDScript::3851650429625561351::1773958942::0::1::::Modificador<>Reactive<><>0<>1<><>::
-parte.gd::GDScript::4870596056260424060::1774011423::0::1::::Parte<>Resource<><>0<>1<><>::
+parte.gd::GDScript::4870596056260424060::1774303015::0::1::::Parte<>Resource<><>0<>1<><>::
 recurso_encaixe.gd::GDScript::8206416125373244438::1774301074::0::1::::EncaixeRecurso<>Resource<><>0<>1<><>::
 ::res://shaders/::1774295835
 outlineRoubado.gdshader::Shader::1161029259837460919::1774295835::0::1::::<><><>0<>0<><>::

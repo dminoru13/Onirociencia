@@ -28,7 +28,7 @@ func _on_escolhedor_modelo_arquivo_pego(arquivo: String) -> void:
 func _on_btn_salvar_pressed() -> void:
 	salvar()
 func _on_btn_roletar_pressed() -> void:
-	especie_para_parte()
+	enviar_modelo()
 
 
 
@@ -57,7 +57,7 @@ func atualizar():
 	conteiner_encaixes.lista_encaixes = especie_base.encaixes_parte
 	
 	
-	especie_para_parte()
+	enviar_modelo()
 		
 	conteiner_modificadores.lista_modificadores = modelo.lista_modificador
 	
@@ -82,19 +82,23 @@ func salvar():
 	for filho: Modificador in especie_base.modelo.lista_modificador.dados:
 		print(filho.nome)
 
-func especie_para_parte():
-	if especie_base:
+func enviar_modelo():
+	palco.peca.parte_base = especie_para_parte(especie_base)
+
+func especie_para_parte(especie_alvo: Especie):
+	if especie_alvo:
 		var nova_parte: Parte = Parte.new()
-		nova_parte.nome = especie_base.nome
-		nova_parte.modelo = especie_base.modelo
+		nova_parte.nome = especie_alvo.nome
+		nova_parte.modelo = especie_alvo.modelo
 		
-		if especie_base.encaixes_parte.dados:
-			for encaixe: EncaixeRecurso in especie_base.encaixes_parte.dados:
-				var escolhido = randi_range(0, encaixe.lista_especie.size())
+		if especie_alvo.encaixes_parte.dados:
+			for encaixe: EncaixeRecurso in especie_alvo.encaixes_parte.dados:
+				var escolhido = randi_range(0, encaixe.lista_especie.size()-1)
 				if encaixe.lista_especie:
-					nova_parte.lista_parte.append(encaixe.lista_especie[escolhido])
+					nova_parte.lista_parte.append(especie_para_parte(encaixe.lista_especie[escolhido]))
 		
-		palco.peca.parte_base = nova_parte
+		return(nova_parte)
+		
 
 
 
