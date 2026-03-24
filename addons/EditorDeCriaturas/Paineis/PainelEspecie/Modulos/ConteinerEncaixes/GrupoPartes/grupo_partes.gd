@@ -4,9 +4,12 @@ extends FoldableContainer
 
 @export var encaixe_alvo: EncaixeRecurso
 @export var ConteinerOpcoes: VBoxContainer
+@export var conteiner_modificadores: ConteinerModificador
+
 
 func _ready() -> void:
 	carregar_opcoes()
+	conteiner_modificadores.lista_modificadores = encaixe_alvo.lista_modificador
 
 func carregar_opcoes():
 	for especie in encaixe_alvo.lista_especie:

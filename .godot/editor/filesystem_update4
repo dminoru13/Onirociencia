@@ -18,3 +18,5 @@ res://Pecas/modelos3d/ModeloParte.gd
 res://Pecas/recursos/parte.gd
 res://Pecas/modelos3d/Humanoide/Partes/Torso/torso_base.tscn
 res://z_restos_inuteis/materiais/modulares/FlexibleToonMaterial.tres
+res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/ConteinerModificadores/conteiner_modificadores.gd
+res://Pecas/recursos/recurso_encaixe.gd

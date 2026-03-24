@@ -1,18 +1,20 @@
 [gd_scene format=3 uid="uid://d5bvi3t4hhdw"]
 
 [ext_resource type="Script" uid="uid://2f4p66tu0mcl" path="res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/ConteinerEncaixes/GrupoPartes/grupo_partes.gd" id="1_db4ie"]
+[ext_resource type="PackedScene" uid="uid://bxdhxdxk26j3h" path="res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/ConteinerModificadores/ConteinerModificadores.tscn" id="2_2n84d"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rcdg0"]
 bg_color = Color(0, 0, 0, 0.19215687)
 
-[node name="ModuloGrupoPartes" type="FoldableContainer" unique_id=16461153 node_paths=PackedStringArray("ConteinerOpcoes")]
+[node name="ModuloGrupoPartes" type="FoldableContainer" unique_id=16461153 node_paths=PackedStringArray("ConteinerOpcoes", "conteiner_modificadores")]
 anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 32.0
 grow_horizontal = 2
 folded = true
 script = ExtResource("1_db4ie")
-ConteinerOpcoes = NodePath("VBoxContainer/ScrollContainer/ConteinerOpcoes")
+ConteinerOpcoes = NodePath("VBoxContainer/especies/VBoxContainer/ScrollContainer/ConteinerOpcoes")
+conteiner_modificadores = NodePath("VBoxContainer/especies/VBoxContainer/ConteinerModificadores")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1627273776]
 visible = false
@@ -23,18 +25,30 @@ color = Color(0.12156863, 0.043137256, 0.0627451, 1)
 visible = false
 layout_mode = 2
 
-[node name="BtnAdd" type="Button" parent="VBoxContainer" unique_id=582869705]
+[node name="especies" type="FoldableContainer" parent="VBoxContainer" unique_id=540964816]
+layout_mode = 2
+folded = true
+title = "especies"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/especies" unique_id=879902544]
+visible = false
+layout_mode = 2
+
+[node name="BtnAdd" type="Button" parent="VBoxContainer/especies/VBoxContainer" unique_id=582869705]
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_rcdg0")
 text = "+"
 
-[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer" unique_id=180855785]
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/especies/VBoxContainer" unique_id=180855785]
 custom_minimum_size = Vector2(0, 136.345)
 layout_mode = 2
 
-[node name="ConteinerOpcoes" type="VBoxContainer" parent="VBoxContainer/ScrollContainer" unique_id=1948371113]
+[node name="ConteinerOpcoes" type="VBoxContainer" parent="VBoxContainer/especies/VBoxContainer/ScrollContainer" unique_id=1948371113]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[connection signal="pressed" from="VBoxContainer/BtnAdd" to="." method="_on_btn_add_pressed"]
+[node name="ConteinerModificadores" parent="VBoxContainer/especies/VBoxContainer" unique_id=891861737 instance=ExtResource("2_2n84d")]
+layout_mode = 2
+
+[connection signal="pressed" from="VBoxContainer/especies/VBoxContainer/BtnAdd" to="." method="_on_btn_add_pressed"]

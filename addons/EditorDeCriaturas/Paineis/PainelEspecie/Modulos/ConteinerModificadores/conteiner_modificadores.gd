@@ -3,6 +3,8 @@ class_name ConteinerModificador
 extends FoldableContainer
 
 @export var novo_modificador: EscolhedorArquivo
+@export var conteiner_modulos: VBoxContainer
+
 
 
 var lista_modificadores: ArrayMelhor:
@@ -12,9 +14,6 @@ var lista_modificadores: ArrayMelhor:
 		if not lista_modificadores.reactive_changed.is_connected(atualizar):
 			lista_modificadores.reactive_changed.connect(atualizar)
 		atualizar()
-
-
-@export var conteiner_modulos: VBoxContainer
 
 
 

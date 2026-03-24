@@ -20,5 +20,6 @@ func _on_escolhedor_arquivo_arquivo_pego(arquivo: String) -> void:
 
 
 func _on_btn_suicidio_pressed() -> void:
-	print("(OPCAO PECA) eliminando: ", especie_anterior.nome)
-	encaixe.lista_especie.erase(especie_anterior)
+	if especie_anterior:
+		print("(OPCAO PECA) eliminando: ", especie_anterior.nome)
+		encaixe.lista_especie.erase(especie_anterior)
