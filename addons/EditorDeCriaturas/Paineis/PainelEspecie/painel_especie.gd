@@ -50,7 +50,6 @@ func atualizar():
 	#back end
 	modelo = especie_base.modelo
 	
-	especie_base.gerar_encaixes()
 	
 	
 	#CRIAR OS ENCAIXES AQUI
@@ -60,30 +59,47 @@ func atualizar():
 	enviar_modelo()
 		
 	conteiner_modificadores.lista_modificadores = modelo.lista_modificador
-	
+
+
 func carregar(arquivo: String):
 	especie_base = load(arquivo)
 	especie_base.modelo.reactive_changed.connect(atualizar)
 	if modelo:
 		escolhedor_modelo.alvo = modelo.caminho_modelo.split("/")[-1]
-
 	
+	printar_especie_base()
+
 
 func atribuir_modelo(arquivo: String):
-	modelo.caminho_modelo = arquivo
+	if modelo.caminho_modelo != arquivo:
+		modelo.caminho_modelo = arquivo
+		especie_base.gerar_encaixes()
+
 
 func salvar():
 	ResourceSaver.save(especie_base, especie_base.resource_path)
-	
+	printar_especie_base()
+
+
+func printar_especie_base():
 	print("")
-	print("salvando: ", especie_base.nome)
-	print("Modelo: ", especie_base.modelo.caminho_modelo)
-	print("modificadores:")
+	print("(PAINEL ESPECIE) salvando: ", especie_base.nome)
+	print("(PAINEL ESPECIE) Modelo: ", especie_base.modelo.caminho_modelo)
+	print("(PAINEL ESPECIE) modificadores:")
 	for filho: Modificador in especie_base.modelo.lista_modificador.dados:
 		print(filho.nome)
+	
+	print("(PAINEL ESPECIE) RECURSO ENCAIXE: ", especie_base.encaixes_parte)
+	print("(PAINEL ESPECIE) ENCAIXES:")
+	for encaixe: EncaixeRecurso in especie_base.encaixes_parte.dados:
+		print(encaixe.nome)
+		for especie in encaixe.lista_especie:
+			print(" -", especie.nome)
+
 
 func enviar_modelo():
 	palco.peca.parte_base = especie_para_parte(especie_base)
+
 
 func especie_para_parte(especie_alvo: Especie):
 	if especie_alvo:
@@ -98,7 +114,7 @@ func especie_para_parte(especie_alvo: Especie):
 					nova_parte.lista_parte.append(especie_para_parte(encaixe.lista_especie[escolhido]))
 		
 		return(nova_parte)
-		
+
 
 
 

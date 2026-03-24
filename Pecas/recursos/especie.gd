@@ -9,7 +9,7 @@ extends Reactive
 
 
 func gerar_encaixes():
-	#print("(ESPECIE) gerando encaixes")
+	print("(ESPECIE) gerando encaixes")
 	encaixes_parte.clear()
 	encaixes_roupa.clear()
 	var caminho_modelo: String = modelo.caminho_modelo 
