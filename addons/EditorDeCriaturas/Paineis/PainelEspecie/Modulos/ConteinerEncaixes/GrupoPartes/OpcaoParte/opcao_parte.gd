@@ -14,6 +14,7 @@ func _on_escolhedor_arquivo_arquivo_pego(arquivo: String) -> void:
 	var original: Especie = load(arquivo)
 	var especie: Especie = original.duplicate_deep()
 	especie.modelo.posicao = encaixe.posicao
+	especie.modelo.lista_modificador = encaixe.lista_modificador
 	encaixe.lista_especie.append(especie)
 	print("(OPCAO PARTE) especie adicionada as opcoes")
 	especie_anterior = especie

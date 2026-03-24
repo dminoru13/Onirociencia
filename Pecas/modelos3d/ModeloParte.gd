@@ -25,15 +25,12 @@ func carregar_modelo():
 			for parte in parte_base.lista_parte:
 				var modelo_filho = ModeloParte.new()
 				modelo_filho.parte_base = parte
-				print("parte: ",parte.nome, " ", parte.modelo.posicao)
-				print("modelo filho: ",modelo_filho.parte_base.nome, " ", modelo_filho.position)
 				instancia.add_child(modelo_filho)
 	
 	atualizar_modificadores()
 
 
 func atualizar_modificadores():
-	print("(MODELO PECA) a peca foi alterada")
 	var lista_modificadores: ArrayMelhor = parte_base.modelo.lista_modificador
 	
 	for modificador: Modificador in lista_modificadores.dados:

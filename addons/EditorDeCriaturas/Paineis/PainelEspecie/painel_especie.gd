@@ -67,7 +67,7 @@ func carregar(arquivo: String):
 	if modelo:
 		escolhedor_modelo.alvo = modelo.caminho_modelo.split("/")[-1]
 	
-	printar_especie_base()
+	#printar_especie_base()
 
 
 func atribuir_modelo(arquivo: String):
@@ -92,9 +92,15 @@ func printar_especie_base():
 	print("(PAINEL ESPECIE) RECURSO ENCAIXE: ", especie_base.encaixes_parte)
 	print("(PAINEL ESPECIE) ENCAIXES:")
 	for encaixe: EncaixeRecurso in especie_base.encaixes_parte.dados:
+		print("")
 		print(encaixe.nome, " ", encaixe.posicao)
+		print(" especies possiveis:")
 		for especie in encaixe.lista_especie:
-			print(" -", especie.nome)
+			print("  -", especie.nome)
+		print(" modificadores:")
+		for modificador: Modificador in encaixe.lista_modificador.dados:
+			print("  -", modificador.nome, " ", modificador.habilitado)
+
 
 
 func enviar_modelo():
@@ -112,7 +118,9 @@ func especie_para_parte(especie_alvo: Especie):
 			for encaixe: EncaixeRecurso in especie_alvo.encaixes_parte.dados:
 				var escolhido = randi_range(0, encaixe.lista_especie.size()-1)
 				if encaixe.lista_especie:
-					nova_parte.lista_parte.append(especie_para_parte(encaixe.lista_especie[escolhido]))
+					var nova_parte_filha: Parte = especie_para_parte(encaixe.lista_especie[escolhido])
+					nova_parte_filha.modelo.lista_modificador = encaixe.lista_modificador
+					nova_parte.lista_parte.append(nova_parte_filha)
 		
 		return(nova_parte)
 

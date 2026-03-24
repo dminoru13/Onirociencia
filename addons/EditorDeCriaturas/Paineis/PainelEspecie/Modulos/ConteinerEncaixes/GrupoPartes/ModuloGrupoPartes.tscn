@@ -14,7 +14,7 @@ grow_horizontal = 2
 folded = true
 script = ExtResource("1_db4ie")
 ConteinerOpcoes = NodePath("VBoxContainer/especies/VBoxContainer/ScrollContainer/ConteinerOpcoes")
-conteiner_modificadores = NodePath("VBoxContainer/especies/VBoxContainer/ConteinerModificadores")
+conteiner_modificadores = NodePath("VBoxContainer/ConteinerModificadores")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1627273776]
 visible = false
@@ -48,7 +48,10 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="ConteinerModificadores" parent="VBoxContainer/especies/VBoxContainer" unique_id=891861737 instance=ExtResource("2_2n84d")]
+[node name="ConteinerModificadores" parent="VBoxContainer" unique_id=891861737 instance=ExtResource("2_2n84d")]
 layout_mode = 2
+folded = true
+title = "modificadores"
+title_alignment = 0
 
 [connection signal="pressed" from="VBoxContainer/especies/VBoxContainer/BtnAdd" to="." method="_on_btn_add_pressed"]

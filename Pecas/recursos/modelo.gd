@@ -5,10 +5,11 @@ extends Reactive
 @export var caminho_modelo: String:
 	set(v):
 		caminho_modelo = v
-		print("(MODELO) ", nome_reactive, " mudou o caminho")
+		#print("(MODELO) ", nome_reactive, " mudou o caminho")
 		if owner:
 			if owner.nome_reactive is String:
-				print("(MODELO) o meu dono é: ", owner.nome_reactive)
+				pass
+				#print("(MODELO) o meu dono é: ", owner.nome_reactive)
 		reactive_changed.emit()
 @export var posicao: Vector3 = Vector3(0,0,0)
 @export var key_shape: float
