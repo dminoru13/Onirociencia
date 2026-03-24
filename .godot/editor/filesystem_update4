@@ -7,3 +7,5 @@ res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/ConteinerEncaixes/G
 res://addons/EditorDeCriaturas/Paineis/PainelEspecie/painel_especie.gd
 res://Pecas/modelos3d/ModeloParte.gd
 res://Pecas/recursos/modelo.gd
+res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/ConteinerEncaixes/GrupoPartes/OpcaoParte/OpcaoParte.tscn
+res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/SubModulos/sub_modulo.gd

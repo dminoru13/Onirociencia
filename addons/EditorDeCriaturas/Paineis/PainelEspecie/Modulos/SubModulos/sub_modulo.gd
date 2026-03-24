@@ -13,8 +13,6 @@ var modificador_base: Modificador
 func _ready() -> void:
 	modificador_base.changed.connect(atualiza)
 	lbl_nome.text = modificador_base.nome
-	print("")
-	print(modificador_base.nome, " ", modificador_base.habilitado)
 	check_habilitado.button_pressed = modificador_base.habilitado
 
 
