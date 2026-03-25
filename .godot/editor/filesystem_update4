@@ -6,3 +6,5 @@ res://Pecas/modelos3d/ShaderLais.tres
 res://addons/EditorDeCriaturas/Paineis/PainelRoupas/PainelRoupas.tscn
 res://Pecas/recursos/recurso_roupa.gd
 res://Pecas/recursos/modelo.gd
+res://addons/EditorDeCriaturas/Paineis/PainelEspecie/painel_especie.gd
+res://Pecas/recursos/especie.gd
