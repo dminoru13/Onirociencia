@@ -1,15 +1,15 @@
-res://Pecas/classes auxiliares/node_encaixe.gd
+res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/EscolhedorArquivo/EscolhedorArquivo.gd
+Label
+LineEdit
+TextEdit
+ColorRect
+MarginContainer
+TabContainer
+SplitContainer
+HSplitContainer
 VBoxContainer
 FoldableContainer
 ScrollContainer
 Button
 HBoxContainer
-MarginContainer
-ColorRect
 Marker3D
-CheckBox
-Label
-OptionButton
-Control
-TextEdit
-DirectionalLight3D

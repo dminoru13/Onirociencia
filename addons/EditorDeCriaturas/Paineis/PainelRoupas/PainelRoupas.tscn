@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://udhlom3pvlod"]
+
+[ext_resource type="Script" uid="uid://cxp2716dyr5h8" path="res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/EscolhedorArquivo/EscolhedorArquivo.gd" id="1_qvi1v"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qvi1v"]
+bg_color = Color(0.01773239, 0.017732395, 0.017732374, 1)
+
+[node name="PainelRoupas" type="MarginContainer" unique_id=311788941]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=809015199]
+layout_mode = 2
+color = Color(0.103743516, 0.10374353, 0.103743516, 1)
+
+[node name="Info" type="VBoxContainer" parent="." unique_id=1971151632]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Info" unique_id=1614253059]
+layout_mode = 2
+text = "Painel Roups"
+horizontal_alignment = 1
+
+[node name="ConteinerSalvarCarregar" type="HBoxContainer" parent="Info" unique_id=1934922704]
+layout_mode = 2
+
+[node name="BtnSalvar" type="Button" parent="Info/ConteinerSalvarCarregar" unique_id=1448319244]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+text = "Salvar"
+
+[node name="Carregar" type="Button" parent="Info/ConteinerSalvarCarregar" unique_id=668578581]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Carregar"
+script = ExtResource("1_qvi1v")
+texto_fixo = true
+caminho_pasta = "res://Pecas/pre-prontos/especies"
+final_arquivo = ".tres"
+metadata/_custom_type_script = "uid://cxp2716dyr5h8"
+
+[node name="ConteinerCriarLimpar" type="HBoxContainer" parent="Info" unique_id=111414330]
+layout_mode = 2
+
+[node name="BtnLimpar" type="Button" parent="Info/ConteinerCriarLimpar" unique_id=2125580075]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+text = "Limpar
+"
+script = ExtResource("1_qvi1v")
+texto_fixo = true
+caminho_pasta = "res://Pecas/pre-prontos/especies"
+final_arquivo = ".tres"
+metadata/_custom_type_script = "uid://cxp2716dyr5h8"
+
+[node name="BtnCriar" type="Button" parent="Info/ConteinerCriarLimpar" unique_id=1591863054]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Criar
+"
+
+[node name="MarginContainer" type="MarginContainer" parent="Info" unique_id=1599363791]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="Info/MarginContainer" unique_id=1609006472]
+layout_mode = 2
+color = Color(0, 0, 0, 0.29411766)
+
+[node name="lblNome" type="LineEdit" parent="Info/MarginContainer" unique_id=112318476]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_qvi1v")
+placeholder_text = "NOME..."
+emoji_menu_enabled = false
+
+[node name="Label2" type="Label" parent="Info" unique_id=96399830]
+layout_mode = 2
+text = "MODELO:"
+horizontal_alignment = 1
+
+[node name="EscolhedorArquivo" type="Button" parent="Info" unique_id=1881793514]
+layout_mode = 2
+text = "escolher..."
+script = ExtResource("1_qvi1v")
+metadata/_custom_type_script = "uid://cxp2716dyr5h8"

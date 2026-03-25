@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dj7kfttuollph" path="res://addons/EditorDeCriaturas/Paineis/Palco/Palco.tscn" id="1_778q6"]
 [ext_resource type="PackedScene" uid="uid://dopf3e28dl8sf" path="res://addons/EditorDeCriaturas/Paineis/PainelEspecie/painel_especie.tscn" id="2_r87ck"]
+[ext_resource type="PackedScene" uid="uid://udhlom3pvlod" path="res://addons/EditorDeCriaturas/Paineis/PainelRoupas/PainelRoupas.tscn" id="3_r87ck"]
 
 [node name="CentroDeExibicao" type="Control" unique_id=1037981315]
 layout_mode = 3
@@ -44,20 +45,36 @@ layout_mode = 2
 size_flags_horizontal = 4
 text = "Criar nova peca"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1813547079]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="PainelEsquerdo" type="Control" parent="VBoxContainer/HBoxContainer" unique_id=1912532953]
+[node name="SplitContainer" type="SplitContainer" parent="VBoxContainer" unique_id=629526398]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_stretch_ratio = 0.5
+size_flags_vertical = 3
+split_offsets = PackedInt32Array(-406, -9)
+split_offset = -406
 
-[node name="Palco" parent="VBoxContainer/HBoxContainer" unique_id=1539365231 instance=ExtResource("1_778q6")]
+[node name="PainelEsquerdo" type="Control" parent="VBoxContainer/SplitContainer" unique_id=1912532953]
+custom_minimum_size = Vector2(92.57, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.05
+
+[node name="Palco" parent="VBoxContainer/SplitContainer" unique_id=1539365231 instance=ExtResource("1_778q6")]
 layout_mode = 2
 
-[node name="PainelEspecie" parent="VBoxContainer/HBoxContainer" unique_id=1482383499 node_paths=PackedStringArray("palco") instance=ExtResource("2_r87ck")]
+[node name="TabContainer" type="TabContainer" parent="VBoxContainer/SplitContainer" unique_id=200850946]
 layout_mode = 2
-palco = NodePath("../Palco")
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.55
+current_tab = 0
+
+[node name="PainelEspecie" parent="VBoxContainer/SplitContainer/TabContainer" unique_id=1482383499 node_paths=PackedStringArray("palco") instance=ExtResource("2_r87ck")]
+layout_mode = 2
+palco = NodePath("../../Palco")
+metadata/_tab_index = 0
+
+[node name="PainelRoupas" parent="VBoxContainer/SplitContainer/TabContainer" unique_id=311788941 instance=ExtResource("3_r87ck")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
 
 [connection signal="pressed" from="VBoxContainer/HBoxContainer2/CriarNovaPeca" to="." method="_on_criar_nova_peca_pressed"]
