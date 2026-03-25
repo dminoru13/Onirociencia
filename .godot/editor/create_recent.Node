@@ -1,9 +1,8 @@
-res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/EscolhedorArquivo/EscolhedorArquivo.gd
+MarginContainer
 Label
 LineEdit
 TextEdit
 ColorRect
-MarginContainer
 TabContainer
 SplitContainer
 HSplitContainer

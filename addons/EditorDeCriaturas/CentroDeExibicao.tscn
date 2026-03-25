@@ -23,58 +23,44 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.14945355, 0.0044552484, 0.04391983, 1)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1284319978]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=2089953671]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_bottom = 30
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer" unique_id=1305868217]
-layout_mode = 2
-size_flags_horizontal = 4
-
-[node name="CarregarPeca" type="Button" parent="VBoxContainer/HBoxContainer2" unique_id=1682367519]
-layout_mode = 2
-size_flags_horizontal = 4
-text = "Carregar peca"
-
-[node name="CriarNovaPeca" type="Button" parent="VBoxContainer/HBoxContainer2" unique_id=1449372448]
-layout_mode = 2
-size_flags_horizontal = 4
-text = "Criar nova peca"
-
-[node name="SplitContainer" type="SplitContainer" parent="VBoxContainer" unique_id=629526398]
+[node name="SplitContainer" type="SplitContainer" parent="MarginContainer" unique_id=629526398]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 split_offsets = PackedInt32Array(-406, -9)
 split_offset = -406
 
-[node name="PainelEsquerdo" type="Control" parent="VBoxContainer/SplitContainer" unique_id=1912532953]
+[node name="PainelEsquerdo" type="Control" parent="MarginContainer/SplitContainer" unique_id=1912532953]
 custom_minimum_size = Vector2(92.57, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 1.05
 
-[node name="Palco" parent="VBoxContainer/SplitContainer" unique_id=1539365231 instance=ExtResource("1_778q6")]
+[node name="Palco" parent="MarginContainer/SplitContainer" unique_id=1539365231 instance=ExtResource("1_778q6")]
 layout_mode = 2
 
-[node name="TabContainer" type="TabContainer" parent="VBoxContainer/SplitContainer" unique_id=200850946]
+[node name="TabContainer" type="TabContainer" parent="MarginContainer/SplitContainer" unique_id=200850946]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.55
 current_tab = 0
 
-[node name="PainelEspecie" parent="VBoxContainer/SplitContainer/TabContainer" unique_id=1482383499 node_paths=PackedStringArray("palco") instance=ExtResource("2_r87ck")]
+[node name="PainelEspecie" parent="MarginContainer/SplitContainer/TabContainer" unique_id=1482383499 node_paths=PackedStringArray("palco") instance=ExtResource("2_r87ck")]
 layout_mode = 2
 palco = NodePath("../../Palco")
 metadata/_tab_index = 0
 
-[node name="PainelRoupas" parent="VBoxContainer/SplitContainer/TabContainer" unique_id=311788941 instance=ExtResource("3_r87ck")]
+[node name="PainelRoupas" parent="MarginContainer/SplitContainer/TabContainer" unique_id=311788941 instance=ExtResource("3_r87ck")]
 visible = false
 layout_mode = 2
 metadata/_tab_index = 1
-
-[connection signal="pressed" from="VBoxContainer/HBoxContainer2/CriarNovaPeca" to="." method="_on_criar_nova_peca_pressed"]
