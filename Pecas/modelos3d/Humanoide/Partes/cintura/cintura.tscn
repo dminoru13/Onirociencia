@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bemlpqxfj0sgx"]
+
+[ext_resource type="PackedScene" uid="uid://dm41gtjfplcms" path="res://z_restos_inuteis/Modelos/Partes Corpo/Cintura.glb" id="1_v4t8h"]
+[ext_resource type="Script" uid="uid://bdw2xl7tkug7f" path="res://Pecas/classes auxiliares/node_encaixe.gd" id="2_jp3aw"]
+
+[node name="Cintura" unique_id=335394171 instance=ExtResource("1_v4t8h")]
+
+[node name="pernaD" type="Marker3D" parent="." index="1" unique_id=656222280]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.22967955, -0.21061233, 0.023405157)
+script = ExtResource("2_jp3aw")
+metadata/_custom_type_script = "uid://bdw2xl7tkug7f"
+
+[node name="pernaE" type="Marker3D" parent="." index="2" unique_id=259279513]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22293049, -0.21227276, 0.02541878)
+script = ExtResource("2_jp3aw")
+metadata/_custom_type_script = "uid://bdw2xl7tkug7f"

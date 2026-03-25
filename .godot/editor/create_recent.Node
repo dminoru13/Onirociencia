@@ -1,3 +1,4 @@
+res://Pecas/classes auxiliares/node_encaixe.gd
 VBoxContainer
 FoldableContainer
 ScrollContainer

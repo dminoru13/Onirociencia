@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dyfcub5qpw6xw"
-path="res://.godot/imported/TorsoBase.glb-aa0af004cf2c3b739ebbb65341bb8ee0.scn"
+uid="uid://dm41gtjfplcms"
+path="res://.godot/imported/Cintura.glb-d7427c05c70d2bb020c98b2557b61ec0.scn"
 
 [deps]
 
-source_file="res://z_restos_inuteis/Modelos/Partes Corpo/TorsoBase.glb"
-dest_files=["res://.godot/imported/TorsoBase.glb-aa0af004cf2c3b739ebbb65341bb8ee0.scn"]
+source_file="res://z_restos_inuteis/Modelos/Partes Corpo/Cintura.glb"
+dest_files=["res://.godot/imported/Cintura.glb-d7427c05c70d2bb020c98b2557b61ec0.scn"]
 
 [params]
 

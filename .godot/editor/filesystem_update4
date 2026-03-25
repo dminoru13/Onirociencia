@@ -1,11 +1,8 @@
-res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/ConteinerEncaixes/GrupoPartes/ModuloGrupoPartes.tscn
+res://Pecas/modelos3d/Humanoide/Partes/Torso/torso_base.tscn
 res://z_restos_inuteis/shader materials/flexible_toon.gdshader
 res://shaders/outlineRoubado.gdshader
 res://Pecas/pre-prontos/especies/torso.tres
+res://Pecas/modelos3d/Humanoide/Partes/cintura/cintura.tscn
+res://Pecas/pre-prontos/especies/cintura.tres
 res://Pecas/modelos3d/ShaderLais.tres
-res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/ConteinerEncaixes/GrupoPartes/OpcaoParte/opcao_parte.gd
-res://addons/EditorDeCriaturas/Paineis/PainelEspecie/painel_especie.gd
-res://Pecas/modelos3d/ModeloParte.gd
-res://Pecas/recursos/modelo.gd
-res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/ConteinerEncaixes/GrupoPartes/OpcaoParte/OpcaoParte.tscn
-res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/SubModulos/sub_modulo.gd
+res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/ConteinerEncaixes/GrupoPartes/ModuloGrupoPartes.tscn
