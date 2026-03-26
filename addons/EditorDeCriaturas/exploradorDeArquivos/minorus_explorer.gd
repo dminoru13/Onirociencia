@@ -4,8 +4,9 @@ class_name MinorusExplorer
 
 @onready var grid_container: GridContainer = $VBoxContainer/MarginContainer2/ScrollContainer/GridContainer
 @onready var scroll_container: ScrollContainer = $VBoxContainer/MarginContainer2/ScrollContainer
-@onready var barra_pesquisa: TextEdit = get_node("VBoxContainer/MarginContainer/HBoxContainer/barraPesquisa")
+@onready var barra_pesquisa: LineEdit = $VBoxContainer/MarginContainer/HBoxContainer/barraPesquisa
 @export var modulo_arquivo := preload("res://addons/EditorDeCriaturas/exploradorDeArquivos/ModuloArquivoGeral.tscn")
+@export var btn_escolher: Button
 
 var tamanho_tela = size
 var tamanho_anterior
@@ -22,6 +23,7 @@ var tamanho_modulo := 160.0
 
 @export var lista_negra: Array[String]
 @export var lista_branca: Array[String]
+@export var escolher_pasta: bool
 
 var modulo_selecionado: String
 var arquivos: Array
@@ -48,10 +50,24 @@ func _ready() -> void:
 	
 	if barra_pesquisa.text == "":
 		barra_pesquisa.text = "res://"
+	
+	if escolher_pasta:
+		btn_escolher.visible = true
+	else:
+		btn_escolher.visible = false
+
+	
 	atualizar()
 
-func _on_pesquisar_pressed() -> void:
+
+
+func _on_barra_pesquisa_text_submitted(new_text: String) -> void:
 	atualizar()
+
+func _on_btn_escolher_pressed() -> void:
+	arquivo_foi_selecionado.emit(barra_pesquisa.text, "")
+	get_parent().queue_free()
+
 
 func atualizar():
 	arquivos.clear()

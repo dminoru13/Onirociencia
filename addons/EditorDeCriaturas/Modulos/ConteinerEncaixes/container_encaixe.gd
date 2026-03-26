@@ -20,7 +20,7 @@ func atualizar():
 	for encaixe: EncaixeRecurso in lista_encaixes.dados:
 		#print("(ConteinerEncaixe) encaixe encontrad0: ", encaixe.nome)
 		
-		var cena: PackedScene = load("res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/ConteinerEncaixes/GrupoPartes/ModuloGrupoPartes.tscn")
+		var cena: PackedScene = load("res://addons/EditorDeCriaturas/Modulos/ConteinerEncaixes/GrupoPartes/ModuloGrupoPartes.tscn")
 		var instancia: ModuloGrupoPartes = cena.instantiate()
 		instancia.encaixe_alvo = encaixe
 		instancia.title = encaixe.nome

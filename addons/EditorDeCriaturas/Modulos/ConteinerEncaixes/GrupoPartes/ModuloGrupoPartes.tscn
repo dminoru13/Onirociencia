@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d5bvi3t4hhdw"]
 
-[ext_resource type="Script" uid="uid://2f4p66tu0mcl" path="res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/ConteinerEncaixes/GrupoPartes/grupo_partes.gd" id="1_db4ie"]
-[ext_resource type="PackedScene" uid="uid://bxdhxdxk26j3h" path="res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/ConteinerModificadores/ConteinerModificadores.tscn" id="2_2n84d"]
+[ext_resource type="Script" uid="uid://2f4p66tu0mcl" path="res://addons/EditorDeCriaturas/Modulos/ConteinerEncaixes/GrupoPartes/grupo_partes.gd" id="1_db4ie"]
+[ext_resource type="PackedScene" uid="uid://bxdhxdxk26j3h" path="res://addons/EditorDeCriaturas/Modulos/ConteinerModificadores/ConteinerModificadores.tscn" id="2_2n84d"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rcdg0"]
 bg_color = Color(0, 0, 0, 0.19215687)

@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dcw4tj5tsivko"]
+
+[ext_resource type="Script" uid="uid://cyv6aamiwmucb" path="res://addons/EditorDeCriaturas/Modulos/SeletorTipos/seletor_tipos.gd" id="1_bckvb"]
+
+[node name="SeletorTipos" type="OptionButton" unique_id=1885583837]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 31.0
+grow_horizontal = 2
+alignment = 1
+selected = 0
+item_count = 5
+popup/item_0/text = "cabeca"
+popup/item_0/id = 0
+popup/item_1/text = "torso"
+popup/item_1/id = 1
+popup/item_2/text = "braco"
+popup/item_2/id = 2
+popup/item_3/text = "cintura"
+popup/item_3/id = 3
+popup/item_4/text = "perna"
+popup/item_4/id = 4
+script = ExtResource("1_bckvb")

@@ -23,7 +23,7 @@ func atualizar(valor = null):
 		filho.queue_free()
 	
 	for modificador: Modificador in lista_modificadores.dados:
-		var cena: PackedScene = load("res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/SubModulos/SubModulo.tscn")
+		var cena: PackedScene = load("res://addons/EditorDeCriaturas/Modulos/SubModulos/SubModulo.tscn")
 		var instancia: SubModulo = cena.instantiate()
 		instancia.lista_modificadores = lista_modificadores
 		instancia.modificador_base = modificador

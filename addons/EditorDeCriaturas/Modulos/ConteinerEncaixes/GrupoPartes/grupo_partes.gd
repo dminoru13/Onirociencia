@@ -13,7 +13,7 @@ func _ready() -> void:
 
 func carregar_opcoes():
 	for especie in encaixe_alvo.lista_especie:
-		var cena: PackedScene = load("res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/ConteinerEncaixes/GrupoPartes/OpcaoParte/OpcaoParte.tscn")
+		var cena: PackedScene = load("res://addons/EditorDeCriaturas/Modulos/ConteinerEncaixes/GrupoPartes/OpcaoParte/OpcaoParte.tscn")
 		var instancia: OpcaoParte = cena.instantiate()
 		instancia.encaixe = encaixe_alvo
 		instancia.escolhedor.alvo = especie.modelo.caminho_modelo.split("/")[-1]
@@ -21,7 +21,7 @@ func carregar_opcoes():
 		ConteinerOpcoes.add_child(instancia)
 
 func _on_btn_add_pressed() -> void:
-	var cena: PackedScene = load("res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/ConteinerEncaixes/GrupoPartes/OpcaoParte/OpcaoParte.tscn")
+	var cena: PackedScene = load("res://addons/EditorDeCriaturas/Modulos/ConteinerEncaixes/GrupoPartes/OpcaoParte/OpcaoParte.tscn")
 	var instancia: OpcaoParte = cena.instantiate()
 	instancia.encaixe = encaixe_alvo
 	ConteinerOpcoes.add_child(instancia)

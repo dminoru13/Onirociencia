@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bxdhxdxk26j3h"]
 
-[ext_resource type="Script" uid="uid://cxp2716dyr5h8" path="res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/EscolhedorArquivo/EscolhedorArquivo.gd" id="1_lyrcy"]
-[ext_resource type="Script" uid="uid://chlo6c1bewvof" path="res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/ConteinerModificadores/conteiner_modificadores.gd" id="1_tr7yn"]
+[ext_resource type="Script" uid="uid://cxp2716dyr5h8" path="res://addons/EditorDeCriaturas/Modulos/EscolhedorArquivo/EscolhedorArquivo.gd" id="1_lyrcy"]
+[ext_resource type="Script" uid="uid://chlo6c1bewvof" path="res://addons/EditorDeCriaturas/Modulos/ConteinerModificadores/conteiner_modificadores.gd" id="1_tr7yn"]
 
 [node name="ConteinerModificadores" type="FoldableContainer" unique_id=891861737 node_paths=PackedStringArray("novo_modificador", "conteiner_modulos")]
 anchors_preset = 15

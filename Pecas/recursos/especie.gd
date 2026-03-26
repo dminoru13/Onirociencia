@@ -6,6 +6,7 @@ extends Reactive
 @export var encaixes_parte: ArrayMelhor = ArrayMelhor.new("encaixes_parte", self)
 @export var encaixes_roupa: ArrayMelhor = ArrayMelhor.new("encaixe_roupas", self)
 @export var modelo: Modelo = Modelo.new("modelo", self)
+@export var tipo: String = "sem tipo atribuido"
 
 
 func gerar_encaixes():

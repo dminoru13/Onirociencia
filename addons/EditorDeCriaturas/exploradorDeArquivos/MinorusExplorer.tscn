@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dghhtqc7maa0c"]
 
-[ext_resource type="Script" uid="uid://cssd3050el6s7" path="res://addons/EditorDeCriaturas/exploradorDeArquivos/minorus_explorer.gd" id="1_emaou"]
+[ext_resource type="Script" uid="uid://cssd3050el6s7" path="res://addons/EditorDeCriaturas/ExploradorDeArquivos/minorus_explorer.gd" id="1_emaou"]
 [ext_resource type="Texture2D" uid="uid://cxh54gluxtbp0" path="res://UI/icones/uma_boa-seta.png" id="3_qaw0h"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m38ky"]
@@ -16,7 +16,7 @@ bg_color = Color(0.47843137, 0.14509805, 0.14509805, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qaw0h"]
 bg_color = Color(0.38068774, 0.1062775, 0, 1)
 
-[node name="MinorusExplorer" type="Control" unique_id=618743614]
+[node name="MinorusExplorer" type="Control" unique_id=618743614 node_paths=PackedStringArray("btn_escolher")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -24,6 +24,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_emaou")
+btn_escolher = NodePath("VBoxContainer/MarginContainer/HBoxContainer/BtnEscolher")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1671470963]
 layout_mode = 1
@@ -83,17 +84,19 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_m38ky")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_u1d48")
 icon = ExtResource("3_qaw0h")
 
-[node name="barraPesquisa" type="TextEdit" parent="VBoxContainer/MarginContainer/HBoxContainer" unique_id=1930505021]
+[node name="barraPesquisa" type="LineEdit" parent="VBoxContainer/MarginContainer/HBoxContainer" unique_id=1335678208]
 layout_mode = 2
 size_flags_horizontal = 3
+text = "res://"
 placeholder_text = "COLOQUE O CAIMNHO AQUI"
 
-[node name="pesquisar" type="Button" parent="VBoxContainer/MarginContainer/HBoxContainer" unique_id=2133310926]
+[node name="BtnEscolher" type="Button" parent="VBoxContainer/MarginContainer/HBoxContainer" unique_id=2133310926]
+visible = false
 layout_mode = 2
 theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxFlat_emaou")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_qaw0h")
-text = "PESQUISAR"
+text = "Escolher caminho"
 
 [node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer" unique_id=2101038701]
 layout_mode = 2
@@ -117,15 +120,15 @@ theme_override_constants/v_separation = 10
 columns = 12
 
 [connection signal="pressed" from="VBoxContainer/MarginContainer/HBoxContainer/botao_voltar" to="." method="_on_botao_voltar_pressed"]
-[connection signal="pressed" from="VBoxContainer/MarginContainer/HBoxContainer/pesquisar" to="." method="_on_pesquisar_pressed"]
+[connection signal="text_submitted" from="VBoxContainer/MarginContainer/HBoxContainer/barraPesquisa" to="." method="_on_barra_pesquisa_text_submitted"]
+[connection signal="pressed" from="VBoxContainer/MarginContainer/HBoxContainer/BtnEscolher" to="." method="_on_btn_escolher_pressed"]
 [connection signal="pressed" from="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/ModuloArquivoGeral" to="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/ModuloArquivoGeral" method="_on_pressed"]
-[connection signal="pressed" from="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@19591" to="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@19591" method="_on_pressed"]
-[connection signal="pressed" from="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@19594" to="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@19594" method="_on_pressed"]
-[connection signal="pressed" from="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@19597" to="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@19597" method="_on_pressed"]
-[connection signal="pressed" from="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@19600" to="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@19600" method="_on_pressed"]
-[connection signal="pressed" from="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@19603" to="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@19603" method="_on_pressed"]
-[connection signal="pressed" from="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@19606" to="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@19606" method="_on_pressed"]
-[connection signal="pressed" from="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@19609" to="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@19609" method="_on_pressed"]
-[connection signal="pressed" from="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@19612" to="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@19612" method="_on_pressed"]
-[connection signal="pressed" from="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@19615" to="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@19615" method="_on_pressed"]
-[connection signal="pressed" from="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@19618" to="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@19618" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@148315" to="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@148315" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@148318" to="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@148318" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@148321" to="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@148321" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@148324" to="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@148324" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@148327" to="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@148327" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@148330" to="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@148330" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@148333" to="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@148333" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@148336" to="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@148336" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@148339" to="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer/@Button@148339" method="_on_pressed"]

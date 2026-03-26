@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://dopf3e28dl8sf"]
 
-[ext_resource type="Script" uid="uid://cxp2716dyr5h8" path="res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/EscolhedorArquivo/EscolhedorArquivo.gd" id="1_2tabm"]
+[ext_resource type="Script" uid="uid://cxp2716dyr5h8" path="res://addons/EditorDeCriaturas/Modulos/EscolhedorArquivo/EscolhedorArquivo.gd" id="1_2tabm"]
 [ext_resource type="Script" uid="uid://dwv8sa75i2irf" path="res://addons/EditorDeCriaturas/Paineis/PainelEspecie/painel_especie.gd" id="1_o7lbl"]
-[ext_resource type="PackedScene" uid="uid://bxdhxdxk26j3h" path="res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/ConteinerModificadores/ConteinerModificadores.tscn" id="3_m4667"]
-[ext_resource type="Script" uid="uid://5my6pc2xj1nn" path="res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/ConteinerEncaixes/container_encaixe.gd" id="4_1nnv7"]
-[ext_resource type="PackedScene" uid="uid://10gjjn7wrhti" path="res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/ConteinerEncaixes/ContainerEncaixe.tscn" id="5_mwxu8"]
+[ext_resource type="PackedScene" uid="uid://dcw4tj5tsivko" path="res://addons/EditorDeCriaturas/Modulos/SeletorTipos/SeletorTipos.tscn" id="3_4pske"]
+[ext_resource type="PackedScene" uid="uid://bxdhxdxk26j3h" path="res://addons/EditorDeCriaturas/Modulos/ConteinerModificadores/ConteinerModificadores.tscn" id="3_m4667"]
+[ext_resource type="Script" uid="uid://5my6pc2xj1nn" path="res://addons/EditorDeCriaturas/Modulos/ConteinerEncaixes/container_encaixe.gd" id="4_1nnv7"]
+[ext_resource type="PackedScene" uid="uid://10gjjn7wrhti" path="res://addons/EditorDeCriaturas/Modulos/ConteinerEncaixes/ContainerEncaixe.tscn" id="5_mwxu8"]
 
 [node name="PainelEspecie" type="MarginContainer" unique_id=1971215968 node_paths=PackedStringArray("escolhedor_de_arquivo", "lbl_nome", "lista_controls", "conteiner_modificadores", "escolhedor_modelo", "conteiner_roupas", "conteiner_encaixes")]
 anchors_preset = 9
@@ -16,7 +17,7 @@ size_flags_stretch_ratio = 0.5
 script = ExtResource("1_o7lbl")
 escolhedor_de_arquivo = NodePath("VBoxContainer/Info/ConteinerSalvarCarregar/Carregar")
 lbl_nome = NodePath("VBoxContainer/Info/MarginContainer/lblNome")
-lista_controls = [NodePath("VBoxContainer/Info/ConteinerSalvarCarregar/BtnSalvar"), NodePath("VBoxContainer/Info/BtnRoletar"), NodePath("VBoxContainer/ScrollContainer/VBoxContainer/EscolhedorModelo")]
+lista_controls = [NodePath("VBoxContainer/Info/ConteinerSalvarCarregar/BtnSalvar"), NodePath("VBoxContainer/Info/BtnRoletar"), NodePath("VBoxContainer/ScrollContainer/VBoxContainer/EscolhedorModelo"), NodePath("VBoxContainer/ScrollContainer/VBoxContainer/SeletorDeTipos")]
 conteiner_modificadores = NodePath("VBoxContainer/ScrollContainer/VBoxContainer/ConteinerModificadores")
 escolhedor_modelo = NodePath("VBoxContainer/ScrollContainer/VBoxContainer/EscolhedorModelo")
 conteiner_roupas = NodePath("VBoxContainer/ScrollContainer/VBoxContainer/ConteinerRoupas")
@@ -55,6 +56,7 @@ script = ExtResource("1_2tabm")
 texto_fixo = true
 caminho_pasta = "res://Pecas/pre-prontos/especies"
 final_arquivo = ".tres"
+escolher_pasta = null
 metadata/_custom_type_script = "uid://cxp2716dyr5h8"
 
 [node name="BtnRoletar" type="Button" parent="VBoxContainer/Info" unique_id=1048867239]
@@ -84,9 +86,18 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
+[node name="LblModelo2" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer" unique_id=103567309]
+layout_mode = 2
+text = "TIPO:"
+horizontal_alignment = 1
+
+[node name="SeletorDeTipos" parent="VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1885583837 instance=ExtResource("3_4pske")]
+layout_mode = 2
+disabled = true
+
 [node name="LblModelo" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1516964531]
 layout_mode = 2
-text = "Modelo:"
+text = "MODELO:"
 horizontal_alignment = 1
 
 [node name="EscolhedorModelo" type="Button" parent="VBoxContainer/ScrollContainer/VBoxContainer" unique_id=499140440]
@@ -96,6 +107,7 @@ text = "(Selecionar modelo)"
 script = ExtResource("1_2tabm")
 caminho_pasta = "res://Pecas/modelos3d/Humanoide"
 final_arquivo = ".tscn"
+escolher_pasta = null
 metadata/_custom_type_script = "uid://cxp2716dyr5h8"
 
 [node name="ConteinerModificadores" parent="VBoxContainer/ScrollContainer/VBoxContainer" unique_id=891861737 instance=ExtResource("3_m4667")]

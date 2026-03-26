@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cvd5abdt5d8xi"]
 
-[ext_resource type="Script" uid="uid://bjus55e36x268" path="res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/BtnSuicidio/btn_suicidio.gd" id="1_3h10i"]
+[ext_resource type="Script" uid="uid://bjus55e36x268" path="res://addons/EditorDeCriaturas/Modulos/BtnSuicidio/btn_suicidio.gd" id="1_3h10i"]
 
 [node name="BtnSuicidio" type="Button" unique_id=1452866503]
 text = " X "

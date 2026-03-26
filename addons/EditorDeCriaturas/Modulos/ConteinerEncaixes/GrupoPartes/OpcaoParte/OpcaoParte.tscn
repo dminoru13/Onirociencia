@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bm54kct4uu86c"]
 
-[ext_resource type="Script" uid="uid://cxp2716dyr5h8" path="res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/EscolhedorArquivo/EscolhedorArquivo.gd" id="1_gjrm0"]
-[ext_resource type="Script" uid="uid://c5hq1s66151vc" path="res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/ConteinerEncaixes/GrupoPartes/OpcaoParte/opcao_parte.gd" id="1_t4roh"]
-[ext_resource type="PackedScene" uid="uid://cvd5abdt5d8xi" path="res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/BtnSuicidio/btn_suicidio.tscn" id="2_t4roh"]
+[ext_resource type="Script" uid="uid://cxp2716dyr5h8" path="res://addons/EditorDeCriaturas/Modulos/EscolhedorArquivo/EscolhedorArquivo.gd" id="1_gjrm0"]
+[ext_resource type="Script" uid="uid://c5hq1s66151vc" path="res://addons/EditorDeCriaturas/Modulos/ConteinerEncaixes/GrupoPartes/OpcaoParte/opcao_parte.gd" id="1_t4roh"]
+[ext_resource type="PackedScene" uid="uid://cvd5abdt5d8xi" path="res://addons/EditorDeCriaturas/Modulos/BtnSuicidio/btn_suicidio.tscn" id="2_t4roh"]
 
 [node name="OpcaoParte" type="HBoxContainer" unique_id=1387928784 node_paths=PackedStringArray("escolhedor")]
 anchors_preset = 10

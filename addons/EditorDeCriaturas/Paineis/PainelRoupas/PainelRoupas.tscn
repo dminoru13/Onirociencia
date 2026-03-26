@@ -1,89 +1,129 @@
 [gd_scene format=3 uid="uid://udhlom3pvlod"]
 
-[ext_resource type="Script" uid="uid://cxp2716dyr5h8" path="res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/EscolhedorArquivo/EscolhedorArquivo.gd" id="1_qvi1v"]
+[ext_resource type="Script" uid="uid://dkhbv1o4jw5uf" path="res://addons/EditorDeCriaturas/Paineis/PainelRoupas/painel_roupas.gd" id="1_ctyur"]
+[ext_resource type="Script" uid="uid://cxp2716dyr5h8" path="res://addons/EditorDeCriaturas/Modulos/EscolhedorArquivo/EscolhedorArquivo.gd" id="1_qvi1v"]
+[ext_resource type="PackedScene" uid="uid://b4dxm283xy8sw" path="res://addons/EditorDeCriaturas/Modulos/moduloTipoArquivo/moduloTipoArquivo.tscn" id="2_vkqhj"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qvi1v"]
 bg_color = Color(0.01773239, 0.017732395, 0.017732374, 1)
 
-[node name="PainelRoupas" type="MarginContainer" unique_id=311788941]
+[node name="PainelRoupas" type="MarginContainer" unique_id=311788941 node_paths=PackedStringArray("lbl_nome", "btn_criar", "base", "lista_botoes", "conteiner_tipo_modelo")]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ctyur")
+lbl_nome = NodePath("VBoxContainer/Info/copnteinerNome/lblNome")
+btn_criar = NodePath("VBoxContainer/Info/ConteinerCriarLimpar/BtnCriar")
+base = NodePath("VBoxContainer/base")
+lista_botoes = [NodePath("VBoxContainer/Info/ConteinerSalvarCarregar/BtnSalvar"), NodePath("VBoxContainer/Info/ConteinerCriarLimpar/BtnLimpar")]
+conteiner_tipo_modelo = NodePath("VBoxContainer/base/ScrollContainer/ConteinerTipoModelo")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=809015199]
 layout_mode = 2
 color = Color(0.103743516, 0.10374353, 0.103743516, 1)
 
-[node name="Info" type="VBoxContainer" parent="." unique_id=1971151632]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=777203033]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Info" unique_id=1614253059]
+[node name="Info" type="VBoxContainer" parent="VBoxContainer" unique_id=1971151632]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/Info" unique_id=1614253059]
 layout_mode = 2
 text = "Painel Roups"
 horizontal_alignment = 1
 
-[node name="ConteinerSalvarCarregar" type="HBoxContainer" parent="Info" unique_id=1934922704]
+[node name="ConteinerSalvarCarregar" type="HBoxContainer" parent="VBoxContainer/Info" unique_id=1934922704]
 layout_mode = 2
 
-[node name="BtnSalvar" type="Button" parent="Info/ConteinerSalvarCarregar" unique_id=1448319244]
+[node name="BtnSalvar" type="Button" parent="VBoxContainer/Info/ConteinerSalvarCarregar" unique_id=1448319244]
 layout_mode = 2
 size_flags_horizontal = 3
 disabled = true
 text = "Salvar"
 
-[node name="Carregar" type="Button" parent="Info/ConteinerSalvarCarregar" unique_id=668578581]
+[node name="Carregar" type="Button" parent="VBoxContainer/Info/ConteinerSalvarCarregar" unique_id=668578581]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Carregar"
 script = ExtResource("1_qvi1v")
 texto_fixo = true
-caminho_pasta = "res://Pecas/pre-prontos/especies"
+caminho_pasta = "res://Pecas/pre-prontos/roupas"
 final_arquivo = ".tres"
 metadata/_custom_type_script = "uid://cxp2716dyr5h8"
 
-[node name="ConteinerCriarLimpar" type="HBoxContainer" parent="Info" unique_id=111414330]
+[node name="ConteinerCriarLimpar" type="HBoxContainer" parent="VBoxContainer/Info" unique_id=111414330]
 layout_mode = 2
 
-[node name="BtnLimpar" type="Button" parent="Info/ConteinerCriarLimpar" unique_id=2125580075]
+[node name="BtnLimpar" type="Button" parent="VBoxContainer/Info/ConteinerCriarLimpar" unique_id=767017663]
 layout_mode = 2
 size_flags_horizontal = 3
 disabled = true
 text = "Limpar
 "
-script = ExtResource("1_qvi1v")
-texto_fixo = true
-caminho_pasta = "res://Pecas/pre-prontos/especies"
-final_arquivo = ".tres"
-metadata/_custom_type_script = "uid://cxp2716dyr5h8"
 
-[node name="BtnCriar" type="Button" parent="Info/ConteinerCriarLimpar" unique_id=1591863054]
+[node name="BtnCriar" type="Button" parent="VBoxContainer/Info/ConteinerCriarLimpar" unique_id=1719419810]
 layout_mode = 2
 size_flags_horizontal = 3
+disabled = true
 text = "Criar
 "
+script = ExtResource("1_qvi1v")
+texto_fixo = true
+caminho_pasta = "res://Pecas/pre-prontos/roupas"
+final_arquivo = "."
+escolher_pasta = true
+metadata/_custom_type_script = "uid://cxp2716dyr5h8"
 
-[node name="MarginContainer" type="MarginContainer" parent="Info" unique_id=1599363791]
+[node name="copnteinerNome" type="MarginContainer" parent="VBoxContainer/Info" unique_id=1599363791]
 layout_mode = 2
 
-[node name="ColorRect" type="ColorRect" parent="Info/MarginContainer" unique_id=1609006472]
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/Info/copnteinerNome" unique_id=1609006472]
 layout_mode = 2
 color = Color(0, 0, 0, 0.29411766)
 
-[node name="lblNome" type="LineEdit" parent="Info/MarginContainer" unique_id=112318476]
+[node name="lblNome" type="LineEdit" parent="VBoxContainer/Info/copnteinerNome" unique_id=112318476]
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_qvi1v")
 placeholder_text = "NOME..."
 emoji_menu_enabled = false
 
-[node name="Label2" type="Label" parent="Info" unique_id=96399830]
+[node name="base" type="VBoxContainer" parent="VBoxContainer" unique_id=1311205718]
 layout_mode = 2
-text = "MODELO:"
+size_flags_vertical = 3
+
+[node name="Label2" type="Label" parent="VBoxContainer/base" unique_id=312617655]
+layout_mode = 2
+text = "Tipo/modelo base"
 horizontal_alignment = 1
 
-[node name="EscolhedorArquivo" type="Button" parent="Info" unique_id=1881793514]
+[node name="ModuloTipoArquivo" parent="VBoxContainer/base" unique_id=1267270524 instance=ExtResource("2_vkqhj")]
 layout_mode = 2
-text = "escolher..."
-script = ExtResource("1_qvi1v")
-metadata/_custom_type_script = "uid://cxp2716dyr5h8"
+
+[node name="Label" type="Label" parent="VBoxContainer/base" unique_id=1674603642]
+layout_mode = 2
+text = "modelo herdados:"
+horizontal_alignment = 1
+
+[node name="add" type="Button" parent="VBoxContainer/base" unique_id=1443331213]
+layout_mode = 2
+text = " + "
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/base" unique_id=900480155]
+custom_minimum_size = Vector2(0, 262.875)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ConteinerTipoModelo" type="VBoxContainer" parent="VBoxContainer/base/ScrollContainer" unique_id=1810131420]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[connection signal="pressed" from="VBoxContainer/Info/ConteinerSalvarCarregar/BtnSalvar" to="." method="_on_btn_salvar_pressed"]
+[connection signal="arquivoPego" from="VBoxContainer/Info/ConteinerSalvarCarregar/Carregar" to="." method="_on_carregar_arquivo_pego"]
+[connection signal="pressed" from="VBoxContainer/Info/ConteinerCriarLimpar/BtnLimpar" to="." method="_on_btn_limpar_pressed"]
+[connection signal="arquivoPego" from="VBoxContainer/Info/ConteinerCriarLimpar/BtnCriar" to="." method="_on_btn_criar_arquivo_pego"]
+[connection signal="text_changed" from="VBoxContainer/Info/copnteinerNome/lblNome" to="." method="_on_lbl_nome_text_changed"]
+[connection signal="pressed" from="VBoxContainer/base/add" to="." method="_on_add_pressed"]

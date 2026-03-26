@@ -6,6 +6,7 @@ extends Button
 @export var texto_fixo: bool
 @export_dir var caminho_pasta: String
 @export var final_arquivo: String
+@export var escolher_pasta: bool
 var placeholder: String
 
 var caminho_arquivo: String
@@ -38,7 +39,7 @@ func apertado() -> void:
 	var explorador: MinorusExplorer = cena_explorador.instantiate()
 	
 	explorador.posicao = pos_janela
-	
+	explorador.escolher_pasta = escolher_pasta
 	janela.add_child(explorador)
 	
 	EditorInterface.popup_dialog(janela, Rect2(pos_janela, Vector2(900,600)))
@@ -61,6 +62,7 @@ func atualizar(caminho: String, nome: String):
 	alvo = caminho + nome
 	
 	arquivoPego.emit(alvo)
+
 	
 	if texto_fixo == false:
 		text = nome

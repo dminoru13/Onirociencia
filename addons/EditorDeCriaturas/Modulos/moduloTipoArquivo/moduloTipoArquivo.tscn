@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://b4dxm283xy8sw"]
+
+[ext_resource type="PackedScene" uid="uid://dcw4tj5tsivko" path="res://addons/EditorDeCriaturas/Modulos/SeletorTipos/SeletorTipos.tscn" id="1_6ywvt"]
+[ext_resource type="Script" uid="uid://befi33jckwe0v" path="res://addons/EditorDeCriaturas/Modulos/moduloTipoArquivo/modulo_tipo_arquivo.gd" id="1_vx1l8"]
+[ext_resource type="Script" uid="uid://cxp2716dyr5h8" path="res://addons/EditorDeCriaturas/Modulos/EscolhedorArquivo/EscolhedorArquivo.gd" id="2_y05ey"]
+[ext_resource type="PackedScene" uid="uid://cvd5abdt5d8xi" path="res://addons/EditorDeCriaturas/Modulos/BtnSuicidio/btn_suicidio.tscn" id="3_y05ey"]
+
+[node name="ModuloTipoArquivo" type="HBoxContainer" unique_id=1267270524]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 31.0
+grow_horizontal = 2
+script = ExtResource("1_vx1l8")
+
+[node name="SeletorTipos" parent="." unique_id=1885583837 instance=ExtResource("1_6ywvt")]
+layout_mode = 2
+
+[node name="EscolhedorArquivo" type="Button" parent="." unique_id=1354872308]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "escolha modelo..."
+script = ExtResource("2_y05ey")
+caminho_pasta = "res:///Pecas/modelos3d/Humanoide/Roupas"
+final_arquivo = ".tscn"
+metadata/_custom_type_script = "uid://cxp2716dyr5h8"
+
+[node name="BtnSuicidio" parent="." unique_id=1452866503 node_paths=PackedStringArray("alvo") instance=ExtResource("3_y05ey")]
+layout_mode = 2
+alvo = NodePath("..")

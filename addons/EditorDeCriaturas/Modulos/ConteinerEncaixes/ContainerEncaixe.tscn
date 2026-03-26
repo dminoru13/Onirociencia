@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://10gjjn7wrhti"]
 
-[ext_resource type="Script" uid="uid://5my6pc2xj1nn" path="res://addons/EditorDeCriaturas/Paineis/PainelEspecie/Modulos/ConteinerEncaixes/container_encaixe.gd" id="1_6k64j"]
+[ext_resource type="Script" uid="uid://5my6pc2xj1nn" path="res://addons/EditorDeCriaturas/Modulos/ConteinerEncaixes/container_encaixe.gd" id="1_6k64j"]
 
 [node name="ContainerEncaixe" type="FoldableContainer" unique_id=1871671266 node_paths=PackedStringArray("conteiner_grupos")]
 anchors_preset = 10

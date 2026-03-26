@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Roupa" format=3 uid="uid://bl7qbxy1m6rl1"]
+
+[ext_resource type="Script" uid="uid://cebdafi7ing5w" path="res://Pecas/recursos/modelo.gd" id="1_8kx41"]
+[ext_resource type="Script" uid="uid://ddwtfk1fisqij" path="res://Pecas/recursos/roupa.gd" id="2_7qu1k"]
+
+[resource]
+script = ExtResource("2_7qu1k")
+nome = "camiseta"

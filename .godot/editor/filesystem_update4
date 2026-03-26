@@ -1,10 +1,7 @@
-res://addons/EditorDeCriaturas/CentroDeExibicao.tscn
+res://addons/EditorDeCriaturas/Paineis/PainelRoupas/PainelRoupas.tscn
 res://z_restos_inuteis/shader materials/flexible_toon.gdshader
 res://shaders/outlineRoubado.gdshader
-res://Pecas/pre-prontos/especies/torso.tres
-res://Pecas/modelos3d/ShaderLais.tres
-res://addons/EditorDeCriaturas/Paineis/PainelRoupas/PainelRoupas.tscn
-res://Pecas/recursos/recurso_roupa.gd
-res://Pecas/recursos/modelo.gd
-res://addons/EditorDeCriaturas/Paineis/PainelEspecie/painel_especie.gd
-res://Pecas/recursos/especie.gd
+res://addons/EditorDeCriaturas/Paineis/PainelRoupas/painel_roupas.gd
+res://addons/EditorDeCriaturas/Modulos/SeletorTipos/seletor_tipos.gd
+res://addons/EditorDeCriaturas/Modulos/moduloTipoArquivo/moduloTipoArquivo.tscn
+res://addons/EditorDeCriaturas/Modulos/moduloTipoArquivo/modulo_tipo_arquivo.gd
