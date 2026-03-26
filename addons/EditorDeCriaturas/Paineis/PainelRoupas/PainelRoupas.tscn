@@ -2,12 +2,12 @@
 
 [ext_resource type="Script" uid="uid://dkhbv1o4jw5uf" path="res://addons/EditorDeCriaturas/Paineis/PainelRoupas/painel_roupas.gd" id="1_ctyur"]
 [ext_resource type="Script" uid="uid://cxp2716dyr5h8" path="res://addons/EditorDeCriaturas/Modulos/EscolhedorArquivo/EscolhedorArquivo.gd" id="1_qvi1v"]
-[ext_resource type="PackedScene" uid="uid://b4dxm283xy8sw" path="res://addons/EditorDeCriaturas/Modulos/moduloTipoArquivo/moduloTipoArquivo.tscn" id="2_vkqhj"]
+[ext_resource type="Script" uid="uid://cyv6aamiwmucb" path="res://addons/EditorDeCriaturas/Modulos/SeletorTipos/seletor_tipos.gd" id="3_ctyur"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qvi1v"]
 bg_color = Color(0.01773239, 0.017732395, 0.017732374, 1)
 
-[node name="PainelRoupas" type="MarginContainer" unique_id=311788941 node_paths=PackedStringArray("lbl_nome", "btn_criar", "base", "lista_botoes", "conteiner_tipo_modelo")]
+[node name="PainelRoupas" type="MarginContainer" unique_id=311788941 node_paths=PackedStringArray("lbl_nome", "btn_criar", "base", "lista_botoes", "conteiner_tipo_modelo", "seletor_tipos")]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -19,6 +19,7 @@ btn_criar = NodePath("VBoxContainer/Info/ConteinerCriarLimpar/BtnCriar")
 base = NodePath("VBoxContainer/base")
 lista_botoes = [NodePath("VBoxContainer/Info/ConteinerSalvarCarregar/BtnSalvar"), NodePath("VBoxContainer/Info/ConteinerCriarLimpar/BtnLimpar")]
 conteiner_tipo_modelo = NodePath("VBoxContainer/base/ScrollContainer/ConteinerTipoModelo")
+seletor_tipos = NodePath("VBoxContainer/base/HBoxContainer/SeletorTipos")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=809015199]
 layout_mode = 2
@@ -94,13 +95,31 @@ emoji_menu_enabled = false
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Label2" type="Label" parent="VBoxContainer/base" unique_id=312617655]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/base" unique_id=1686131732]
 layout_mode = 2
-text = "Tipo/modelo base"
+
+[node name="Label2" type="Label" parent="VBoxContainer/base/HBoxContainer" unique_id=312617655]
+layout_mode = 2
+text = "Tipo:"
 horizontal_alignment = 1
 
-[node name="ModuloTipoArquivo" parent="VBoxContainer/base" unique_id=1267270524 instance=ExtResource("2_vkqhj")]
+[node name="SeletorTipos" type="OptionButton" parent="VBoxContainer/base/HBoxContainer" unique_id=658533926]
 layout_mode = 2
+size_flags_horizontal = 3
+selected = 0
+item_count = 5
+popup/item_0/text = "cabeca"
+popup/item_0/id = 0
+popup/item_1/text = "torso"
+popup/item_1/id = 1
+popup/item_2/text = "braco"
+popup/item_2/id = 2
+popup/item_3/text = "cintura"
+popup/item_3/id = 3
+popup/item_4/text = "perna"
+popup/item_4/id = 4
+script = ExtResource("3_ctyur")
+metadata/_custom_type_script = "uid://cyv6aamiwmucb"
 
 [node name="Label" type="Label" parent="VBoxContainer/base" unique_id=1674603642]
 layout_mode = 2

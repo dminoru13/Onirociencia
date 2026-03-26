@@ -5,15 +5,17 @@
 [ext_resource type="Script" uid="uid://cxp2716dyr5h8" path="res://addons/EditorDeCriaturas/Modulos/EscolhedorArquivo/EscolhedorArquivo.gd" id="2_y05ey"]
 [ext_resource type="PackedScene" uid="uid://cvd5abdt5d8xi" path="res://addons/EditorDeCriaturas/Modulos/BtnSuicidio/btn_suicidio.tscn" id="3_y05ey"]
 
-[node name="ModuloTipoArquivo" type="HBoxContainer" unique_id=1267270524]
+[node name="ModuloTipoArquivo" type="HBoxContainer" unique_id=1267270524 node_paths=PackedStringArray("seletor_tipos")]
 anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 31.0
 grow_horizontal = 2
 script = ExtResource("1_vx1l8")
+seletor_tipos = NodePath("SeletorTipos")
 
 [node name="SeletorTipos" parent="." unique_id=1885583837 instance=ExtResource("1_6ywvt")]
 layout_mode = 2
+selected = -1
 
 [node name="EscolhedorArquivo" type="Button" parent="." unique_id=1354872308]
 layout_mode = 2
@@ -27,3 +29,7 @@ metadata/_custom_type_script = "uid://cxp2716dyr5h8"
 [node name="BtnSuicidio" parent="." unique_id=1452866503 node_paths=PackedStringArray("alvo") instance=ExtResource("3_y05ey")]
 layout_mode = 2
 alvo = NodePath("..")
+
+[connection signal="item_selected" from="SeletorTipos" to="." method="_on_seletor_tipos_item_selected"]
+[connection signal="pressed" from="SeletorTipos" to="." method="_on_seletor_tipos_pressed"]
+[connection signal="arquivoPego" from="EscolhedorArquivo" to="." method="_on_escolhedor_arquivo_arquivo_pego"]

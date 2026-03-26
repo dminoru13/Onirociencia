@@ -2,6 +2,9 @@ res://addons/EditorDeCriaturas/Paineis/PainelRoupas/PainelRoupas.tscn
 res://z_restos_inuteis/shader materials/flexible_toon.gdshader
 res://shaders/outlineRoubado.gdshader
 res://addons/EditorDeCriaturas/Paineis/PainelRoupas/painel_roupas.gd
-res://addons/EditorDeCriaturas/Modulos/SeletorTipos/seletor_tipos.gd
-res://addons/EditorDeCriaturas/Modulos/moduloTipoArquivo/moduloTipoArquivo.tscn
 res://addons/EditorDeCriaturas/Modulos/moduloTipoArquivo/modulo_tipo_arquivo.gd
+res://addons/EditorDeCriaturas/Modulos/moduloTipoArquivo/moduloTipoArquivo.tscn
+res://Pecas/recursos/roupa.gd
+res://Pecas/pre-prontos/roupas/camiseta.tres
+res://Pecas/pre-prontos/roupas/a.tres
+res://Pecas/pre-prontos/roupas/vestido.tres

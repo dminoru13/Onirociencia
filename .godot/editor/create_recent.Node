@@ -1,3 +1,4 @@
+HBoxContainer
 MarginContainer
 ColorRect
 Control
@@ -7,7 +8,6 @@ FileDialog
 Button
 VBoxContainer
 Label
-HBoxContainer
 OptionButton
 TextEdit
 TabContainer

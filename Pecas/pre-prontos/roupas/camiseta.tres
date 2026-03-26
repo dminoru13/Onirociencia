@@ -6,3 +6,4 @@
 [resource]
 script = ExtResource("2_7qu1k")
 nome = "camiseta"
+tipo = "perna"

@@ -7,14 +7,17 @@ extends MarginContainer
 @export var base: VBoxContainer
 @export var lista_botoes: Array[Button]
 @export var conteiner_tipo_modelo: VBoxContainer
+@export var seletor_tipos: SeletorTipos
+
 
 
 var caminho_pasta: String = ""
 
+
 var roupa_alvo: Roupa:
 	set(v):
 		roupa_alvo = v
-		atualizar()
+		iniciar()
 
 func _ready() -> void:
 	base.visible = false
@@ -36,12 +39,20 @@ func _on_carregar_arquivo_pego(arquivo: String) -> void:
 func _on_btn_limpar_pressed() -> void:
 	roupa_alvo = null
 func _on_btn_salvar_pressed() -> void:
+	atualizar()
 	if caminho_pasta != "":
 		ResourceSaver.save(roupa_alvo, caminho_pasta + "/" + lbl_nome.text +  ".tres")
 	else:
 		ResourceSaver.save(roupa_alvo, roupa_alvo.resource_path)
+func _on_add_pressed() -> void:
+	var cena: PackedScene = load("res://addons/EditorDeCriaturas/Modulos/moduloTipoArquivo/moduloTipoArquivo.tscn")
+	var instancia: ModuloTipoArquivo = cena.instantiate()
+	conteiner_tipo_modelo.add_child(instancia)
 
-func atualizar():
+
+func iniciar():
+	for filho in conteiner_tipo_modelo.get_children():
+		filho.queue_free()
 	
 	if roupa_alvo == null:
 		lbl_nome.text = ""
@@ -59,14 +70,30 @@ func atualizar():
 		for botao in lista_botoes:
 			botao.disabled = false
 		btn_criar.disabled = true
+		seletor_tipos.select(Global.lita_tipos_partes.find(roupa_alvo.tipo))
+		
+		for iten in roupa_alvo.dicionario_modelos:
+			var cena: PackedScene = load("res://addons/EditorDeCriaturas/Modulos/moduloTipoArquivo/moduloTipoArquivo.tscn")
+			var instancia: ModuloTipoArquivo = cena.instantiate()
 
+			instancia.tipo = iten
+			instancia.modelo = roupa_alvo.dicionario_modelos[iten]
+			conteiner_tipo_modelo.add_child(instancia)
 
-func _on_add_pressed() -> void:
-	var cena: PackedScene = load("res://addons/EditorDeCriaturas/Modulos/moduloTipoArquivo/moduloTipoArquivo.tscn")
-	var instancia: ModuloTipoArquivo = cena.instantiate()
-	instancia.roupa_base = roupa_alvo
+func atualizar():
+	roupa_alvo.tipo = Global.lita_tipos_partes[seletor_tipos.selected]
 	
-	conteiner_tipo_modelo.add_child(instancia)
+	roupa_alvo.dicionario_modelos.clear()
+	
+	for filho: ModuloTipoArquivo in conteiner_tipo_modelo.get_children():
+		roupa_alvo.dicionario_modelos[filho.tipo] = filho.modelo
+	
+	print(roupa_alvo.dicionario_modelos)
+
+
+
+
+
 
 
 
