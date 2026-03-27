@@ -4,27 +4,28 @@
 [ext_resource type="Script" uid="uid://cebdafi7ing5w" path="res://Pecas/recursos/modelo.gd" id="2_0htu0"]
 [ext_resource type="Script" uid="uid://b2yxvua0xc0d0" path="res://Pecas/recursos/especie.gd" id="3_n8it3"]
 
+[sub_resource type="Resource" id="Resource_ogd6g"]
+script = ExtResource("1_ogd6g")
+
+[sub_resource type="Resource" id="Resource_0htu0"]
+script = ExtResource("1_ogd6g")
+
+[sub_resource type="Resource" id="Resource_n8it3"]
+script = ExtResource("1_ogd6g")
+
 [sub_resource type="Resource" id="Resource_c50gf"]
 script = ExtResource("1_ogd6g")
 
 [sub_resource type="Resource" id="Resource_5qpfr"]
-script = ExtResource("1_ogd6g")
-
-[sub_resource type="Resource" id="Resource_784ht"]
-script = ExtResource("1_ogd6g")
-
-[sub_resource type="Resource" id="Resource_er7vo"]
-script = ExtResource("1_ogd6g")
-
-[sub_resource type="Resource" id="Resource_fbexk"]
 script = ExtResource("2_0htu0")
 caminho_modelo = "res://Pecas/modelos3d/Humanoide/Partes/Braco/braco.tscn"
-lista_modificador = SubResource("Resource_784ht")
-lista_modificador_universal = SubResource("Resource_er7vo")
+lista_modificador = SubResource("Resource_n8it3")
+lista_modificador_universal = SubResource("Resource_c50gf")
 
 [resource]
 script = ExtResource("3_n8it3")
 nome = "braco"
-encaixes_parte = SubResource("Resource_c50gf")
-encaixes_roupa = SubResource("Resource_5qpfr")
-modelo = SubResource("Resource_fbexk")
+encaixes_parte = SubResource("Resource_ogd6g")
+encaixes_roupa = SubResource("Resource_0htu0")
+modelo = SubResource("Resource_5qpfr")
+tipo = "braco"

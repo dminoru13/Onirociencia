@@ -7,7 +7,7 @@
 [ext_resource type="Script" uid="uid://5my6pc2xj1nn" path="res://addons/EditorDeCriaturas/Modulos/ConteinerEncaixes/container_encaixe.gd" id="4_1nnv7"]
 [ext_resource type="PackedScene" uid="uid://10gjjn7wrhti" path="res://addons/EditorDeCriaturas/Modulos/ConteinerEncaixes/ContainerEncaixe.tscn" id="5_mwxu8"]
 
-[node name="PainelEspecie" type="MarginContainer" unique_id=1971215968 node_paths=PackedStringArray("escolhedor_de_arquivo", "lbl_nome", "lista_controls", "conteiner_modificadores", "escolhedor_modelo", "conteiner_roupas", "conteiner_encaixes")]
+[node name="PainelEspecie" type="MarginContainer" unique_id=1971215968 node_paths=PackedStringArray("escolhedor_de_arquivo", "lbl_nome", "lista_controls", "conteiner_modificadores", "escolhedor_modelo", "conteiner_roupas", "conteiner_encaixes", "seletor_de_tipos")]
 anchors_preset = 9
 anchor_bottom = 1.0
 offset_right = 136.0
@@ -22,6 +22,7 @@ conteiner_modificadores = NodePath("VBoxContainer/ScrollContainer/VBoxContainer/
 escolhedor_modelo = NodePath("VBoxContainer/ScrollContainer/VBoxContainer/EscolhedorModelo")
 conteiner_roupas = NodePath("VBoxContainer/ScrollContainer/VBoxContainer/ConteinerRoupas")
 conteiner_encaixes = NodePath("VBoxContainer/ScrollContainer/VBoxContainer/ContainerEncaixe")
+seletor_de_tipos = NodePath("VBoxContainer/ScrollContainer/VBoxContainer/SeletorDeTipos")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1324044402]
 layout_mode = 2
@@ -126,4 +127,5 @@ layout_mode = 2
 [connection signal="pressed" from="VBoxContainer/Info/ConteinerSalvarCarregar/BtnSalvar" to="." method="_on_btn_salvar_pressed"]
 [connection signal="arquivoPego" from="VBoxContainer/Info/ConteinerSalvarCarregar/Carregar" to="." method="_on_escolhedor_arquivo_arquivo_pego"]
 [connection signal="pressed" from="VBoxContainer/Info/BtnRoletar" to="." method="_on_btn_roletar_pressed"]
+[connection signal="item_selected" from="VBoxContainer/ScrollContainer/VBoxContainer/SeletorDeTipos" to="." method="_on_seletor_de_tipos_item_selected"]
 [connection signal="arquivoPego" from="VBoxContainer/ScrollContainer/VBoxContainer/EscolhedorModelo" to="." method="_on_escolhedor_modelo_arquivo_pego"]

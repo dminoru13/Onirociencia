@@ -92,6 +92,7 @@ placeholder_text = "NOME..."
 emoji_menu_enabled = false
 
 [node name="base" type="VBoxContainer" parent="VBoxContainer" unique_id=1311205718]
+visible = false
 layout_mode = 2
 size_flags_vertical = 3
 

@@ -37,7 +37,18 @@ func _on_btn_roletar_pressed() -> void:
 func _ready() -> void:
 	for c in lista_controls:
 		c.disabled = true
-	
+
+#basico
+
+func carregar(arquivo: String):
+	especie_base = load(arquivo)
+	especie_base.modelo.reactive_changed.connect(atualizar)
+	if modelo:
+		escolhedor_modelo.alvo = modelo.caminho_modelo.split("/")[-1]
+
+func salvar():
+	ResourceSaver.save(especie_base, especie_base.resource_path)
+	printar_especie_base()
 
 func atualizar():
 	print("")
@@ -58,27 +69,22 @@ func atualizar():
 	conteiner_encaixes.lista_encaixes = especie_base.encaixes_parte
 	conteiner_modificadores.lista_modificadores = modelo.lista_modificador
 	
+	seletor_de_tipos.select(Global.lita_tipos_partes.find(especie_base.tipo))
 
 
-func carregar(arquivo: String):
-	especie_base = load(arquivo)
-	especie_base.modelo.reactive_changed.connect(atualizar)
-	if modelo:
-		escolhedor_modelo.alvo = modelo.caminho_modelo.split("/")[-1]
-	
-
-
+#atribuir informações
 
 func atribuir_modelo(arquivo: String):
 	if modelo.caminho_modelo != arquivo:
 		modelo.caminho_modelo = arquivo
 		especie_base.gerar_encaixes()
 
+func _on_seletor_de_tipos_item_selected(index: int) -> void:
+	especie_base.tipo = Global.lita_tipos_partes[index]
+	print("(PAINEL ESPCIE) tipo da especie base: ", especie_base.tipo)
 
-func salvar():
-	ResourceSaver.save(especie_base, especie_base.resource_path)
-	printar_especie_base()
 
+#auxiliar
 
 func printar_especie_base():
 	print("")
@@ -101,10 +107,10 @@ func printar_especie_base():
 			print("  -", modificador.nome, " ", modificador.habilitado)
 
 
+#finalizando
 
 func enviar_modelo():
 	palco.peca.parte_base = especie_para_parte(especie_base)
-	
 
 
 func especie_para_parte(especie_alvo: Especie):
@@ -112,6 +118,7 @@ func especie_para_parte(especie_alvo: Especie):
 		var nova_parte: Parte = Parte.new()
 		nova_parte.nome = especie_alvo.nome
 		nova_parte.modelo = especie_alvo.modelo
+		nova_parte.tipo = especie_alvo.tipo
 		
 		
 		if especie_alvo.encaixes_parte.dados:

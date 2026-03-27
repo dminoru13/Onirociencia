@@ -8,8 +8,6 @@ var parte_base: Parte:
 		carregar_modelo()
 		parte_atribuida.emit(value)
 		parte_base.connect("novas_roupas", atualizar_roupas)
-		
-
 var instancia: Node3D
 
 signal parte_atribuida(parte: Parte)
@@ -44,7 +42,8 @@ func atualizar_modificadores():
 				instancia.scale.z = -1
 
 func atualizar_roupas():
-	pass
+	#DNIEL, RESOLVE ISSO AQUI
+	print("(MODELO PARTE) nome: ", parte_base.nome, "     tipo: ",parte_base.tipo)
 
 
 

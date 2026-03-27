@@ -6,96 +6,99 @@
 [ext_resource type="Script" uid="uid://b2yxvua0xc0d0" path="res://Pecas/recursos/especie.gd" id="3_7xxxp"]
 [ext_resource type="Script" uid="uid://do6iqewf1aere" path="res://Pecas/recursos/recurso_encaixe.gd" id="4_7miq2"]
 
-[sub_resource type="Resource" id="Resource_if2tb"]
-script = ExtResource("1_c1k4n")
-
-[sub_resource type="Resource" id="Resource_up4l3"]
-script = ExtResource("1_c1k4n")
-
-[sub_resource type="Resource" id="Resource_7xxxp"]
-script = ExtResource("1_c1k4n")
-
-[sub_resource type="Resource" id="Resource_sah1v"]
-script = ExtResource("1_c1k4n")
-
-[sub_resource type="Resource" id="Resource_8r4s0"]
-script = ExtResource("2_vsxtx")
-caminho_modelo = "res://Pecas/modelos3d/Humanoide/Partes/Perna/perna.tscn"
-posicao = Vector3(-0.22967955, -0.21061233, 0.023405157)
-lista_modificador = SubResource("Resource_7xxxp")
-lista_modificador_universal = SubResource("Resource_sah1v")
-
-[sub_resource type="Resource" id="Resource_47rg4"]
-script = ExtResource("3_7xxxp")
-nome = "perna"
-encaixes_parte = SubResource("Resource_if2tb")
-encaixes_roupa = SubResource("Resource_up4l3")
-modelo = SubResource("Resource_8r4s0")
-
-[sub_resource type="Resource" id="Resource_vub8h"]
-script = ExtResource("4_7miq2")
-tipo = "PARTE"
-nome = "pernaD"
-posicao = Vector3(-0.22967955, -0.21061233, 0.023405157)
-lista_especie = Array[ExtResource("3_7xxxp")]([SubResource("Resource_47rg4")])
-lista_modificador = SubResource("Resource_7xxxp")
-
-[sub_resource type="Resource" id="Resource_qqcdo"]
-script = ExtResource("1_c1k4n")
-
-[sub_resource type="Resource" id="Resource_ays01"]
-script = ExtResource("1_c1k4n")
-
 [sub_resource type="Resource" id="Resource_gltgl"]
 script = ExtResource("1_c1k4n")
 
-[sub_resource type="Resource" id="Resource_7ncrs"]
-script = ExtResource("1_c1k4n")
-
-[sub_resource type="Resource" id="Resource_c12q5"]
-script = ExtResource("2_vsxtx")
-caminho_modelo = "res://Pecas/modelos3d/Humanoide/Partes/Perna/perna.tscn"
-posicao = Vector3(0.22293049, -0.21227276, 0.02541878)
-lista_modificador = SubResource("Resource_gltgl")
-lista_modificador_universal = SubResource("Resource_7ncrs")
-
-[sub_resource type="Resource" id="Resource_bpmhi"]
-script = ExtResource("3_7xxxp")
-nome = "perna"
-encaixes_parte = SubResource("Resource_qqcdo")
-encaixes_roupa = SubResource("Resource_ays01")
-modelo = SubResource("Resource_c12q5")
-
 [sub_resource type="Resource" id="Resource_r316o"]
-script = ExtResource("4_7miq2")
-tipo = "PARTE"
-nome = "pernaE"
-posicao = Vector3(0.22293049, -0.21227276, 0.02541878)
-lista_especie = Array[ExtResource("3_7xxxp")]([SubResource("Resource_bpmhi")])
-lista_modificador = SubResource("Resource_gltgl")
-
-[sub_resource type="Resource" id="Resource_1kvhd"]
-script = ExtResource("1_c1k4n")
-dados = [SubResource("Resource_vub8h"), SubResource("Resource_r316o")]
-
-[sub_resource type="Resource" id="Resource_7miq2"]
 script = ExtResource("1_c1k4n")
 
 [sub_resource type="Resource" id="Resource_7cx1g"]
 script = ExtResource("1_c1k4n")
 
+[sub_resource type="Resource" id="Resource_if2tb"]
+script = ExtResource("1_c1k4n")
+
+[sub_resource type="Resource" id="Resource_up4l3"]
+script = ExtResource("2_vsxtx")
+caminho_modelo = "res://Pecas/modelos3d/Humanoide/Partes/Perna/perna.tscn"
+posicao = Vector3(-0.22967955, -0.21061233, 0.023405157)
+lista_modificador = SubResource("Resource_7cx1g")
+lista_modificador_universal = SubResource("Resource_if2tb")
+
+[sub_resource type="Resource" id="Resource_sah1v"]
+script = ExtResource("3_7xxxp")
+nome = "perna"
+encaixes_parte = SubResource("Resource_gltgl")
+encaixes_roupa = SubResource("Resource_r316o")
+modelo = SubResource("Resource_up4l3")
+tipo = "perna"
+
 [sub_resource type="Resource" id="Resource_bmh30"]
+script = ExtResource("4_7miq2")
+tipo = "PARTE"
+nome = "pernaD"
+posicao = Vector3(-0.22967955, -0.21061233, 0.023405157)
+lista_especie = Array[ExtResource("3_7xxxp")]([SubResource("Resource_sah1v")])
+lista_modificador = SubResource("Resource_7cx1g")
+
+[sub_resource type="Resource" id="Resource_8r4s0"]
+script = ExtResource("1_c1k4n")
+
+[sub_resource type="Resource" id="Resource_47rg4"]
 script = ExtResource("1_c1k4n")
 
 [sub_resource type="Resource" id="Resource_y1tnv"]
+script = ExtResource("1_c1k4n")
+
+[sub_resource type="Resource" id="Resource_qqcdo"]
+script = ExtResource("1_c1k4n")
+
+[sub_resource type="Resource" id="Resource_ays01"]
+script = ExtResource("2_vsxtx")
+caminho_modelo = "res://Pecas/modelos3d/Humanoide/Partes/Perna/perna.tscn"
+posicao = Vector3(0.22293049, -0.21227276, 0.02541878)
+lista_modificador = SubResource("Resource_y1tnv")
+lista_modificador_universal = SubResource("Resource_qqcdo")
+
+[sub_resource type="Resource" id="Resource_7ncrs"]
+script = ExtResource("3_7xxxp")
+nome = "perna"
+encaixes_parte = SubResource("Resource_8r4s0")
+encaixes_roupa = SubResource("Resource_47rg4")
+modelo = SubResource("Resource_ays01")
+tipo = "perna"
+
+[sub_resource type="Resource" id="Resource_vub8h"]
+script = ExtResource("4_7miq2")
+tipo = "PARTE"
+nome = "pernaE"
+posicao = Vector3(0.22293049, -0.21227276, 0.02541878)
+lista_especie = Array[ExtResource("3_7xxxp")]([SubResource("Resource_7ncrs")])
+lista_modificador = SubResource("Resource_y1tnv")
+
+[sub_resource type="Resource" id="Resource_c1k4n"]
+script = ExtResource("1_c1k4n")
+dados = [SubResource("Resource_bmh30"), SubResource("Resource_vub8h")]
+
+[sub_resource type="Resource" id="Resource_vsxtx"]
+script = ExtResource("1_c1k4n")
+
+[sub_resource type="Resource" id="Resource_7xxxp"]
+script = ExtResource("1_c1k4n")
+
+[sub_resource type="Resource" id="Resource_1kvhd"]
+script = ExtResource("1_c1k4n")
+
+[sub_resource type="Resource" id="Resource_7miq2"]
 script = ExtResource("2_vsxtx")
 caminho_modelo = "res://Pecas/modelos3d/Humanoide/Partes/cintura/cintura.tscn"
-lista_modificador = SubResource("Resource_7cx1g")
-lista_modificador_universal = SubResource("Resource_bmh30")
+lista_modificador = SubResource("Resource_7xxxp")
+lista_modificador_universal = SubResource("Resource_1kvhd")
 
 [resource]
 script = ExtResource("3_7xxxp")
 nome = "cintura"
-encaixes_parte = SubResource("Resource_1kvhd")
-encaixes_roupa = SubResource("Resource_7miq2")
-modelo = SubResource("Resource_y1tnv")
+encaixes_parte = SubResource("Resource_c1k4n")
+encaixes_roupa = SubResource("Resource_vsxtx")
+modelo = SubResource("Resource_7miq2")
+tipo = "cintura"

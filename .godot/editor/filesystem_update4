@@ -27,3 +27,7 @@ res://Pecas/pre-prontos/roupas/capacete.tres
 res://Pecas/pre-prontos/roupas/calca.tres
 res://Pecas/pre-prontos/especies/braco.tres
 res://addons/EditorDeCriaturas/Modulos/ConteinerEncaixes/container_encaixe.gd
+res://addons/EditorDeCriaturas/Paineis/PainelRoupas/PainelRoupas.tscn
+res://Pecas/pre-prontos/especies/cabeca.tres
+res://Pecas/pre-prontos/especies/cintura.tres
+res://Pecas/pre-prontos/especies/perna.tres
