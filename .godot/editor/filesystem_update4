@@ -31,3 +31,7 @@ res://addons/EditorDeCriaturas/Paineis/PainelRoupas/PainelRoupas.tscn
 res://Pecas/pre-prontos/especies/cabeca.tres
 res://Pecas/pre-prontos/especies/cintura.tres
 res://Pecas/pre-prontos/especies/perna.tres
+res://z_restos_inuteis/materiais/modulares/FlexibleToonMaterial.tres
+res://Pecas/classes auxiliares/ModeloRoupa.gd
+res://Pecas/modelos3d/Humanoide/Roupas/camiseta.tscn
+res://Pecas/modelos3d/Humanoide/Roupas/vestido.tscn

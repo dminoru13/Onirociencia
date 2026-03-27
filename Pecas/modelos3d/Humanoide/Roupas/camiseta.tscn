@@ -1,9 +1,44 @@
-[gd_scene format=3 uid="uid://br6fhmwmgl8nv"]
+[gd_scene format=4 uid="uid://br6fhmwmgl8nv"]
 
-[ext_resource type="PackedScene" uid="uid://cs7g1yom3gnm1" path="res://z_restos_inuteis/Modelos/Roupas/Camiseta.glb" id="1_s1hae"]
+[ext_resource type="Script" uid="uid://p4hvwtk77gif" path="res://Pecas/classes auxiliares/ModeloRoupa.gd" id="1_qeued"]
 [ext_resource type="Material" uid="uid://bb43ngplsfis2" path="res://z_restos_inuteis/materiais/modulares/FlexibleToonMaterial.tres" id="2_jqvik"]
 
-[node name="Camiseta" unique_id=1510652193 instance=ExtResource("1_s1hae")]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jau4r"]
 
-[node name="Camiseta 1" parent="." index="0" unique_id=1757134348]
+[sub_resource type="ArrayMesh" id="ArrayMesh_j6plq"]
+_surfaces = [{
+"aabb": AABB(-0.3499701, -0.48913842, -0.1997769, 0.6999402, 0.9154763, 0.44402075),
+"format": 34359742465,
+"index_count": 180,
+"index_data": PackedByteArray("AAABAAIAAQADAAIABAAAAAIAAgADAAQABAADAAUABAAFAAYAAwAGAAUABAAGAAcABwAAAAQABgADAAgABwAGAAkABgAIAAkABwAJAAoACgAAAAcACgAJAAsACQAIAAsACgALAAwADAAAAAoADAALAA0ACwAIAA0ADAANAA4AAAAMAA4ADgANAA8ADQAIAA8ADgAPABAAEAAPABEAEgAOABAAAAAOABIAEAARABMAEgAQABMADwAUABEAEwARABQADwAIABQAEwAUABIAFAAIABUAFgAUABUAEgAUABcAFgAXABQAEgAXABgAGQAWABUAGQASABgAGQAVABoAGQAaABIAGgAVAAgAAAASABoAGgAIAAAAGwAWABkAGwAZABgAHAAXABYAGwAcABYAAAAIABwAAAAcABsAAAAbAAEAGwAYAAEAHAAdABcACAAdABwAGAAXAB0AGAAdAAEACAADAB0AAQAdAAMA"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 30,
+"vertex_data": PackedByteArray("pviyvueK974QG3o+NuOPvsOv2T5K5y++xAyQvvZI2j5KPEM+WlwFvlFk1z5Dwxc+XDkJvjE22T5IGFU+XDkJvlFk1z5Dwxc+ZDPNveX5sj63FRw+ZDPNvcXLtD68alk+gT+dvlpw+r4BDU8+QPWmvPGDmz6K3h4+QPWmvNFVnT6PM1w+WHsUParKmj6I9B4+WHsUPYqcnD6NSVw+XiKQPYzwpz4MZR0+XiKQPWzCqT4Qulo+gFP5PRPJwT7AUxo+gFP5PfOawz7FqFc+EgANPlFk1z5Dwxc+xAyQPvZI2j5KPEM+EgANPjE22T5IGFU+3AgVPlFk1z5Dwxc+gT+dPlpw+r4BDU8+gT+dPlpw+r6JzyG+3AgVPlFk1z4Dggm+NuOPPsOv2T5K5y++SC+zPpEe+L5Rkky+pviyPueK974QG3o+SC+zvpEe+L5Rkky+gT+dvlpw+r6JzyG+WlwFvlFk1z4Dggm+")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ut3ra"]
+resource_name = "Camiseta_Cube_006"
+_surfaces = [{
+"aabb": AABB(-0.3499701, -0.48913842, -0.1997769, 0.6999402, 0.9154763, 0.44402075),
+"attribute_data": PackedByteArray("AADAPgAAgD8AACA/AABAPwAAID8AAIA/AADAPgAAQD8AAMA+AABAPwAAID8AAAA/AAAgPwAAQD8AAMA+AAAAPwAAwD4AAAA/AAAgPwAAgD4AACA/AAAAPwAAwD4AAIA+AADAPgAAAAAAACA/AACAPgAAwD4AAIA+EQgdPzjAQD4AACA/7KRJPgd7GT8QDCU+mawXP0j2Ej4Nxhc/4KrqPTT/Gj8oBZY9AAAgP/BPYT0AACA/AAAAAAAAwD4AAIA/AAAgPwAAQD8AAMA+AABAPwAAID8AAIA/AADAPgAAQD8AACA/AAAAPwAAwD4AAAA/AAAgPwAAQD8AAMA+AAAAPwAAID8AAIA+AADAPgAAgD4AACA/AAAAPwAAID8AAIA+AADAPgAAAAAAAMA+AACAPhEIHT84wEA+AAAgP+ykST4Hexk/EAwlPpmsFz9I9hI+DcYXP+Cq6j00/xo/KAWWPQAAID8AAAAAAAAgP/BPYT0AAMA+AACAPwAAwD4AAEA/AADAPgAAQD8AAMA+AACAPwAAID8AAEA/AAAgPwAAgD8AACA/AACAPwAAID8AAEA/AADAPgAAQD8AAMA+AAAAPwAAwD4AAAA/AADAPgAAQD8AACA/AAAAPwAAID8AAEA/AAAgPwAAQD8AACA/AAAAPwAAwD4AAAA/AADAPgAAgD4AAMA+AACAPgAAwD4AAAA/AAAgPwAAgD4AACA/AAAAPwAAID8AAAA/AAAgPwAAgD4AAMA+AACAPgAAwD4AAAAAAADAPgAAAAAAAMA+AACAPgAAID8AAAAAAAAgPwAAAAAAACA/8E9hPQAAID/wT2E9AAAgP+ykST4AACA/AACAPgAAID8AAIA+AAAgP+ykST4AACA/8E9hPTT/Gj8oBZY9NP8aPygFlj0AACA/8E9hPTT/Gj8oBZY9DcYXP+Cq6j0Nxhc/4KrqPTT/Gj8oBZY9DcYXP+Cq6j2ZrBc/SPYSPpmsFz9I9hI+DcYXP+Cq6j2ZrBc/SPYSPgd7GT8QDCU+B3sZPxAMJT6ZrBc/SPYSPgd7GT8QDCU+EQgdPzjAQD4RCB0/OMBAPgd7GT8QDCU+EQgdPzjAQD4AACA/7KRJPgAAID/spEk+EQgdPzjAQD4="),
+"format": 34359742487,
+"index_count": 180,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADQAPABAADQARAA8ADAARAA0ADAASABEAEgAMABMAEwAMABQAFAAMABUAFQAMABYAFwAYABkAFwAaABgAGwAcAB0AGwAeABwAHwAgACEAHwAiACAAIwAkACUAJgAjACcAJgAkACMAKAAkACYAKQAkACgAKgAkACkAKwAkACoAKwAsACQALAArAC0ALgAvADAALgAxAC8AMgAzADQAMgA1ADMANgA3ADgANgA5ADcAOgA7ADwAOgA9ADsAPgA/AEAAPgBBAD8AQgBDAEQAQgBFAEMARgBHAEgARgBJAEcASgBLAEwATABLAE0ATgBPAFAATgBRAE8AUgBTAFQAUgBVAFMAVgBXAFgAVgBZAFcAWgBbAFwAWgBdAFsAXgBfAGAAXgBhAF8AYgBjAGQAYgBlAGMAZgBnAGgAZgBpAGcA"),
+"material": SubResource("StandardMaterial3D_jau4r"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 106,
+"vertex_data": PackedByteArray("pviyvueK974QG3o+NuOPvsOv2T5K5y++xAyQvvZI2j5KPEM+SC+zvpEe+L5Rkky+SC+zvpEe+L5Rkky+NuOPPsOv2T5K5y++NuOPvsOv2T5K5y++SC+zPpEe+L5Rkky+SC+zPpEe+L5Rkky+xAyQPvZI2j5KPEM+NuOPPsOv2T5K5y++pviyPueK974QG3o+pviyvueK974QG3o+xAyQPvZI2j5KPEM+pviyPueK974QG3o+gFP5PfOawz7FqFc+EgANPjE22T5IGFU+XiKQPWzCqT4Qulo+WHsUPYqcnD6NSVw+QPWmvNFVnT6PM1w+ZDPNvcXLtD68alk+XDkJvjE22T5IGFU+xAyQvvZI2j5KPEM+gT+dvlpw+r4BDU8+WlwFvlFk1z4Dggm+gT+dvlpw+r6JzyG+WlwFvlFk1z5Dwxc+gT+dvlpw+r6JzyG+3AgVPlFk1z4Dggm+gT+dPlpw+r6JzyG+WlwFvlFk1z4Dggm+gT+dPlpw+r6JzyG+3AgVPlFk1z5Dwxc+gT+dPlpw+r4BDU8+3AgVPlFk1z4Dggm+3AgVPlFk1z5Dwxc+gT+dvlpw+r4BDU8+gT+dPlpw+r4BDU8+gFP5PRPJwT7AUxo+EgANPlFk1z5Dwxc+XiKQPYzwpz4MZR0+WHsUParKmj6I9B4+QPWmvPGDmz6K3h4+ZDPNveX5sj63FRw+WlwFvlFk1z5Dwxc+XDkJvlFk1z5Dwxc+pviyvueK974QG3o+gT+dvlpw+r6JzyG+SC+zvpEe+L5Rkky+gT+dvlpw+r4BDU8+NuOPvsOv2T5K5y++WlwFvlFk1z5Dwxc+xAyQvvZI2j5KPEM+WlwFvlFk1z4Dggm+SC+zvpEe+L5Rkky+gT+dPlpw+r6JzyG+SC+zPpEe+L5Rkky+gT+dvlpw+r6JzyG+NuOPPsOv2T5K5y++WlwFvlFk1z4Dggm+NuOPvsOv2T5K5y++3AgVPlFk1z4Dggm+SC+zPpEe+L5Rkky+gT+dPlpw+r4BDU8+pviyPueK974QG3o+gT+dPlpw+r6JzyG+xAyQPvZI2j5KPEM+3AgVPlFk1z4Dggm+NuOPPsOv2T5K5y++3AgVPlFk1z5Dwxc+pviyPueK974QG3o+gT+dvlpw+r4BDU8+pviyvueK974QG3o+gT+dPlpw+r4BDU8+xAyQvvZI2j5KPEM+WlwFvlFk1z5Dwxc+XDkJvjE22T5IGFU+XDkJvlFk1z5Dwxc+EgANPjE22T5IGFU+3AgVPlFk1z5Dwxc+xAyQPvZI2j5KPEM+EgANPlFk1z5Dwxc+XDkJvjE22T5IGFU+ZDPNveX5sj63FRw+ZDPNvcXLtD68alk+XDkJvlFk1z5Dwxc+ZDPNvcXLtD68alk+QPWmvPGDmz6K3h4+QPWmvNFVnT6PM1w+ZDPNveX5sj63FRw+QPWmvNFVnT6PM1w+WHsUParKmj6I9B4+WHsUPYqcnD6NSVw+QPWmvPGDmz6K3h4+WHsUPYqcnD6NSVw+XiKQPYzwpz4MZR0+XiKQPWzCqT4Qulo+WHsUParKmj6I9B4+XiKQPWzCqT4Qulo+gFP5PRPJwT7AUxo+gFP5PfOawz7FqFc+XiKQPYzwpz4MZR0+gFP5PfOawz7FqFc+EgANPlFk1z5Dwxc+EgANPjE22T5IGFU+gFP5PRPJwT7AUxo++Qj8iOaIBPv5CPyIioyk+/kI/Ignj737+Qj8iLmI2vkr/P//Un3J/Cv8//+YgU/9K/z//8OI1Pkr/P//O3fU+QX3/IgNc6j7Bff8iBF3N/sF9/yIRXfa+QX3/IjXcL37/3+YhZx4D///f5iFwnD0+v9/mIU3crf7/3+YhdVT1ev/f5iFW2iP9v9/mIUrhyz//3+Yhb2WCPf/f5iFrpIn+f9/mIX3kA36/3+YhamOQfv/f5iFx423+yrrKmuplNkKKusqaz6YFQoq6yprYpSPCyrrKmvmmewJ/3+9fBx0awf/f7185Ib8BP9/vXwcbdQK/3+9fGOUkAtOE7Bs22hQCU4TsGzKbPAJThOwbHlnMAlOE7BsG23UCtT4AACOlicI1PgAAGtskgbU+AAAe2cwCdT4AACxqtES1PgAAAWl0A/U+AAAypQ3B9T4AADQkaMF1PgAACOPOQTU+AAAdVKr69T4AAB1Uqvr1PgAAHVSq+tbcs8N////P1tyzw3///8/W3LPDf///z9bcs8N////P12E2vv///+/XYTa+////79dhNr7////v12E2vv///+/h4wAAP///7+HjAAA////v4eMAAD///+/h4wAAP///7//f1Py////P/9/U/L///8//39T8v///z//f1Py////P6ONzw3///8/o43PDf///z+jjc8N////P6ONzw3///8/LXtl+////78te2X7////vy17Zfv///+/LXtl+////7//fywP////P/9/LA////8//38sD////z//fywP////P3CJbv3///+/cIlu/f///79wiW79////v3CJbv3///+/LnaF/f///78udoX9////vy52hf3///+/LnaF/f///7+e18Wq////v57Xxar///+/ntfFqv///7+e18Wq////v7ux6NL///+/u7Ho0v///7+7sejS////v7ux6NL///+/9YkJ/f///7/1iQn9////v/WJCf3///+/9YkJ/f///7+LRrrK////v4tGusr///+/i0a6yv///7+LRrrK////v5E+R8L///+/kT5Hwv///7+RPkfC////v5E+R8L///+/dyKCpP///793IoKk////v3cigqT///+/dyKCpP///78=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_j6plq")
+
+[node name="Camiseta" type="Node3D" unique_id=1965485804]
+script = ExtResource("1_qeued")
+metadata/_custom_type_script = "uid://p4hvwtk77gif"
+
+[node name="Camiseta 1" type="MeshInstance3D" parent="." unique_id=1992269992]
+mesh = SubResource("ArrayMesh_ut3ra")
 surface_material_override/0 = ExtResource("2_jqvik")

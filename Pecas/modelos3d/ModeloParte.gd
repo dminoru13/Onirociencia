@@ -42,8 +42,18 @@ func atualizar_modificadores():
 				instancia.scale.z = -1
 
 func atualizar_roupas():
-	#DNIEL, RESOLVE ISSO AQUI
-	print("(MODELO PARTE) nome: ", parte_base.nome, "     tipo: ",parte_base.tipo)
+	print("(ModeloParte) atualizando roupas")
+	
+	for filho in get_children():
+		if filho is ModeloRoupa:
+			filho.queue_free()
+	
+	for roupa: Roupa in parte_base.roupas.values():
+		if roupa:
+			if roupa.dicionario_modelos.has(parte_base.tipo):
+				var cena: PackedScene = load(roupa.dicionario_modelos[parte_base.tipo].caminho_modelo)
+				var instancia_roupa: Node3D = cena.instantiate()
+				add_child(instancia_roupa)
 
 
 
