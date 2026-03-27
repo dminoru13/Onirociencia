@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://bphf3glnex83i"]
+
+[ext_resource type="Script" uid="uid://c62ldqv0osiox" path="res://addons/EditorDeCriaturas/Modulos/AtribuidorRoupas/AtribuidoRoupas.gd" id="1_q77qt"]
+[ext_resource type="Script" uid="uid://cxp2716dyr5h8" path="res://addons/EditorDeCriaturas/Modulos/EscolhedorArquivo/EscolhedorArquivo.gd" id="2_x86vd"]
+
+[node name="AtribuidorRoupas" type="MarginContainer" unique_id=620031144 node_paths=PackedStringArray("escolhedor_cabeca", "escolhedor_torso", "escolhedor_pernas", "conteiner_opcoes")]
+offset_right = 191.0
+offset_bottom = 31.0
+script = ExtResource("1_q77qt")
+escolhedor_cabeca = NodePath("VBoxContainer2/ConteinerOpcoes/ModuloCabeca/EscolhedorArquivo")
+escolhedor_torso = NodePath("VBoxContainer2/ConteinerOpcoes/ModuloTorso/EscolhedorArquivo")
+escolhedor_pernas = NodePath("VBoxContainer2/ConteinerOpcoes/ModuloPernas/EscolhedorArquivo")
+conteiner_opcoes = NodePath("VBoxContainer2/ConteinerOpcoes")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=142469052]
+layout_mode = 2
+color = Color(0, 0, 0.08627451, 1)
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=401455716]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer2" unique_id=795948641]
+layout_mode = 2
+
+[node name="enviar" type="Button" parent="VBoxContainer2/HBoxContainer" unique_id=1647714493]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Enviar
+"
+
+[node name="limpar" type="Button" parent="VBoxContainer2/HBoxContainer" unique_id=1374289946]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Limpar"
+
+[node name="ConteinerOpcoes" type="VBoxContainer" parent="VBoxContainer2" unique_id=1112789167]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="ModuloCabeca" type="HBoxContainer" parent="VBoxContainer2/ConteinerOpcoes" unique_id=1533370032]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer2/ConteinerOpcoes/ModuloCabeca" unique_id=431240632]
+layout_mode = 2
+text = "Cabeca"
+
+[node name="EscolhedorArquivo" type="Button" parent="VBoxContainer2/ConteinerOpcoes/ModuloCabeca" unique_id=666619111]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "selecione roupa"
+script = ExtResource("2_x86vd")
+caminho_pasta = "res://Pecas/pre-prontos/roupas"
+final_arquivo = ".tres"
+metadata/_custom_type_script = "uid://cxp2716dyr5h8"
+
+[node name="ModuloTorso" type="HBoxContainer" parent="VBoxContainer2/ConteinerOpcoes" unique_id=466510371]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer2/ConteinerOpcoes/ModuloTorso" unique_id=1862721859]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Torso"
+
+[node name="EscolhedorArquivo" type="Button" parent="VBoxContainer2/ConteinerOpcoes/ModuloTorso" unique_id=2093443269]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "selecione roupa"
+script = ExtResource("2_x86vd")
+caminho_pasta = "res://Pecas/pre-prontos/roupas"
+final_arquivo = "tres"
+metadata/_custom_type_script = "uid://cxp2716dyr5h8"
+
+[node name="ModuloPernas" type="HBoxContainer" parent="VBoxContainer2/ConteinerOpcoes" unique_id=734911091]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer2/ConteinerOpcoes/ModuloPernas" unique_id=1711147982]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Pernas"
+
+[node name="EscolhedorArquivo" type="Button" parent="VBoxContainer2/ConteinerOpcoes/ModuloPernas" unique_id=130363360]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "selecione roupa"
+script = ExtResource("2_x86vd")
+caminho_pasta = "res://Pecas/pre-prontos/roupas"
+final_arquivo = "tres"
+metadata/_custom_type_script = "uid://cxp2716dyr5h8"
+
+[connection signal="pressed" from="VBoxContainer2/HBoxContainer/enviar" to="." method="_on_enviar_pressed"]
+[connection signal="pressed" from="VBoxContainer2/HBoxContainer/limpar" to="." method="_on_limpar_pressed"]
+[connection signal="arquivoPego" from="VBoxContainer2/ConteinerOpcoes/ModuloCabeca/EscolhedorArquivo" to="." method="_on_escolhedor_arquivo_arquivo_pego"]
+[connection signal="arquivoPego" from="VBoxContainer2/ConteinerOpcoes/ModuloTorso/EscolhedorArquivo" to="." method="_on_escolhedor_arquivo_arquivo_pego"]
+[connection signal="arquivoPego" from="VBoxContainer2/ConteinerOpcoes/ModuloPernas/EscolhedorArquivo" to="." method="_on_escolhedor_arquivo_arquivo_pego"]

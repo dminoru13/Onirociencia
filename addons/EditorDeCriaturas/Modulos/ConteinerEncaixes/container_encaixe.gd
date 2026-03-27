@@ -17,6 +17,10 @@ func atualizar():
 	if lista_encaixes.dados != []:
 		#print("(CONTEINER ENCAIXES) criando encaixes")
 		pass
+	
+	for filho in conteiner_grupos.get_children():
+		filho.queue_free()
+	
 	for encaixe: EncaixeRecurso in lista_encaixes.dados:
 		#print("(ConteinerEncaixe) encaixe encontrad0: ", encaixe.nome)
 		

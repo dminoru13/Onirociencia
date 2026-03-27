@@ -56,7 +56,6 @@ script = ExtResource("1_2tabm")
 texto_fixo = true
 caminho_pasta = "res://Pecas/pre-prontos/especies"
 final_arquivo = ".tres"
-escolher_pasta = null
 metadata/_custom_type_script = "uid://cxp2716dyr5h8"
 
 [node name="BtnRoletar" type="Button" parent="VBoxContainer/Info" unique_id=1048867239]
@@ -107,7 +106,6 @@ text = "(Selecionar modelo)"
 script = ExtResource("1_2tabm")
 caminho_pasta = "res://Pecas/modelos3d/Humanoide"
 final_arquivo = ".tscn"
-escolher_pasta = null
 metadata/_custom_type_script = "uid://cxp2716dyr5h8"
 
 [node name="ConteinerModificadores" parent="VBoxContainer/ScrollContainer/VBoxContainer" unique_id=891861737 instance=ExtResource("3_m4667")]

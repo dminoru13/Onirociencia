@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Roupa" format=3 uid="uid://hort6bjxuwgj"]
+
+[ext_resource type="Script" uid="uid://cebdafi7ing5w" path="res://Pecas/recursos/modelo.gd" id="1_fhthb"]
+[ext_resource type="Script" uid="uid://kdlmo3r41tbr" path="res://classes gerais/ArrayMelhor.gd" id="2_2v250"]
+[ext_resource type="Script" uid="uid://ddwtfk1fisqij" path="res://Pecas/recursos/roupa.gd" id="3_hnkyo"]
+
+[sub_resource type="Resource" id="Resource_1xe44"]
+script = ExtResource("2_2v250")
+
+[sub_resource type="Resource" id="Resource_ndrfe"]
+script = ExtResource("2_2v250")
+
+[sub_resource type="Resource" id="Resource_7n054"]
+script = ExtResource("1_fhthb")
+lista_modificador = SubResource("Resource_1xe44")
+lista_modificador_universal = SubResource("Resource_ndrfe")
+
+[resource]
+script = ExtResource("3_hnkyo")
+nome = "capacete"
+tipo = "cabeca"
+dicionario_modelos = Dictionary[String, ExtResource("1_fhthb")]({
+"cabeca": SubResource("Resource_7n054")
+})

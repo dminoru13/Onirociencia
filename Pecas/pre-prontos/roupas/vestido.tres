@@ -4,17 +4,6 @@
 [ext_resource type="Script" uid="uid://kdlmo3r41tbr" path="res://classes gerais/ArrayMelhor.gd" id="2_3n5fx"]
 [ext_resource type="Script" uid="uid://ddwtfk1fisqij" path="res://Pecas/recursos/roupa.gd" id="2_ksdkl"]
 
-[sub_resource type="Resource" id="Resource_udqkn"]
-script = ExtResource("2_3n5fx")
-
-[sub_resource type="Resource" id="Resource_0kor8"]
-script = ExtResource("2_3n5fx")
-
-[sub_resource type="Resource" id="Resource_vhqr4"]
-script = ExtResource("1_yy7sm")
-lista_modificador = SubResource("Resource_udqkn")
-lista_modificador_universal = SubResource("Resource_0kor8")
-
 [sub_resource type="Resource" id="Resource_ksdkl"]
 script = ExtResource("2_3n5fx")
 
@@ -27,11 +16,22 @@ caminho_modelo = "res:///Pecas/modelos3d/Humanoide/Roupas/vestido.tscn"
 lista_modificador = SubResource("Resource_ksdkl")
 lista_modificador_universal = SubResource("Resource_3n5fx")
 
+[sub_resource type="Resource" id="Resource_udqkn"]
+script = ExtResource("2_3n5fx")
+
+[sub_resource type="Resource" id="Resource_0kor8"]
+script = ExtResource("2_3n5fx")
+
+[sub_resource type="Resource" id="Resource_vhqr4"]
+script = ExtResource("1_yy7sm")
+lista_modificador = SubResource("Resource_udqkn")
+lista_modificador_universal = SubResource("Resource_0kor8")
+
 [resource]
 script = ExtResource("2_ksdkl")
 nome = "vestido"
 tipo = "torso"
 dicionario_modelos = Dictionary[String, ExtResource("1_yy7sm")]({
 "cintura": SubResource("Resource_vhqr4"),
-"perna": SubResource("Resource_r0v17")
+"torso": SubResource("Resource_r0v17")
 })

@@ -2,8 +2,24 @@
 
 [ext_resource type="Script" uid="uid://cebdafi7ing5w" path="res://Pecas/recursos/modelo.gd" id="1_8kx41"]
 [ext_resource type="Script" uid="uid://ddwtfk1fisqij" path="res://Pecas/recursos/roupa.gd" id="2_7qu1k"]
+[ext_resource type="Script" uid="uid://kdlmo3r41tbr" path="res://classes gerais/ArrayMelhor.gd" id="2_wgid1"]
+
+[sub_resource type="Resource" id="Resource_fwcb8"]
+script = ExtResource("2_wgid1")
+
+[sub_resource type="Resource" id="Resource_4dsb5"]
+script = ExtResource("2_wgid1")
+
+[sub_resource type="Resource" id="Resource_6t8p8"]
+script = ExtResource("1_8kx41")
+caminho_modelo = "res:///Pecas/modelos3d/Humanoide/Roupas/camiseta.tscn"
+lista_modificador = SubResource("Resource_fwcb8")
+lista_modificador_universal = SubResource("Resource_4dsb5")
 
 [resource]
 script = ExtResource("2_7qu1k")
 nome = "camiseta"
-tipo = "perna"
+tipo = "torso"
+dicionario_modelos = Dictionary[String, ExtResource("1_8kx41")]({
+"torso": SubResource("Resource_6t8p8")
+})

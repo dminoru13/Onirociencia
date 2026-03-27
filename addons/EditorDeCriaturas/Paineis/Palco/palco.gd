@@ -38,3 +38,9 @@ func _input(event: InputEvent) -> void:
 				MOUSE_BUTTON_WHEEL_DOWN:
 					camera.size = camera.size * 1.1
 	
+
+signal  parte_atribuida(parte: Parte)
+
+
+func _on_peca_parte_atribuida(parte: Parte) -> void:
+	parte_atribuida.emit(parte)

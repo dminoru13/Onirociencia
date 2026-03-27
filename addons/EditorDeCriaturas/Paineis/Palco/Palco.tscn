@@ -48,3 +48,4 @@ metadata/_custom_type_script = "uid://b8i3h0kxymgn5"
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="parte_atribuida" from="SubViewport/Palco/Peca" to="." method="_on_peca_parte_atribuida"]

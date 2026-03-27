@@ -6,8 +6,14 @@ var parte_base: Parte:
 	set(value):
 		parte_base = value
 		carregar_modelo()
+		parte_atribuida.emit(value)
+		parte_base.connect("novas_roupas", atualizar_roupas)
+		
 
 var instancia: Node3D
+
+signal parte_atribuida(parte: Parte)
+
 
 func carregar_modelo():
 	for crianca in get_children():
@@ -29,7 +35,6 @@ func carregar_modelo():
 	
 	atualizar_modificadores()
 
-
 func atualizar_modificadores():
 	var lista_modificadores: ArrayMelhor = parte_base.modelo.lista_modificador
 	
@@ -37,8 +42,9 @@ func atualizar_modificadores():
 		if modificador.habilitado == true:
 			if modificador.nome == "espelhado":
 				instancia.scale.z = -1
-		
 
+func atualizar_roupas():
+	pass
 
 
 

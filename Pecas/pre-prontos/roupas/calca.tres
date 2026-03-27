@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Roupa" format=3 uid="uid://dgllhnk4jll6"]
+
+[ext_resource type="Script" uid="uid://cebdafi7ing5w" path="res://Pecas/recursos/modelo.gd" id="1_bpupa"]
+[ext_resource type="Script" uid="uid://kdlmo3r41tbr" path="res://classes gerais/ArrayMelhor.gd" id="2_yilkv"]
+[ext_resource type="Script" uid="uid://ddwtfk1fisqij" path="res://Pecas/recursos/roupa.gd" id="3_k3s7c"]
+
+[sub_resource type="Resource" id="Resource_hiiho"]
+script = ExtResource("2_yilkv")
+
+[sub_resource type="Resource" id="Resource_syt7b"]
+script = ExtResource("2_yilkv")
+
+[sub_resource type="Resource" id="Resource_b41f5"]
+script = ExtResource("1_bpupa")
+lista_modificador = SubResource("Resource_hiiho")
+lista_modificador_universal = SubResource("Resource_syt7b")
+
+[resource]
+script = ExtResource("3_k3s7c")
+nome = "calca"
+tipo = "perna"
+dicionario_modelos = Dictionary[String, ExtResource("1_bpupa")]({
+"perna": SubResource("Resource_b41f5")
+})

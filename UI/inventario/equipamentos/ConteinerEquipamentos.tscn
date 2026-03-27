@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://3u2663ag0bv7"]
+
+[ext_resource type="Script" uid="uid://dtyd8o44d2ic3" path="res://UI/inventario/equipamentos/conteiner_equipamentos.gd" id="1_20e01"]
+[ext_resource type="PackedScene" uid="uid://ccohie7nmy2gs" path="res://UI/inventario/equipamentos/ModuloEquipamento.tscn" id="1_35dr7"]
+[ext_resource type="Texture2D" uid="uid://dpyplwm4eykui" path="res://sprites/icone_cabeca.png" id="2_85nq1"]
+[ext_resource type="Texture2D" uid="uid://cndodvd5tc6c2" path="res://sprites/icone_pernas.png" id="3_20e01"]
+
+[node name="ConteinerEquipamento" type="MarginContainer" unique_id=217548204 node_paths=PackedStringArray("conteiner_modulos")]
+offset_right = 32.0
+offset_bottom = 32.0
+script = ExtResource("1_20e01")
+conteiner_modulos = NodePath("conteinerModulos")
+cor1 = Color(0.54451746, 0.28710383, 0.38810346, 1)
+
+[node name="conteinerModulos" type="VBoxContainer" parent="." unique_id=1040625294]
+layout_mode = 2
+
+[node name="ModuloEquipamento" parent="conteinerModulos" unique_id=852766525 instance=ExtResource("1_35dr7")]
+layout_mode = 2
+size_flags_vertical = 3
+cor1 = Color(0.63680923, 0.4457814, 5.7756904e-07, 1)
+cor2 = Color(0, 0, 0.06666667, 1)
+sprite = ExtResource("2_85nq1")
+
+[node name="ModuloEquipamento2" parent="conteinerModulos" unique_id=2115014218 instance=ExtResource("1_35dr7")]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ModuloEquipamento3" parent="conteinerModulos" unique_id=2072736236 instance=ExtResource("1_35dr7")]
+layout_mode = 2
+size_flags_vertical = 3
+sprite = ExtResource("3_20e01")

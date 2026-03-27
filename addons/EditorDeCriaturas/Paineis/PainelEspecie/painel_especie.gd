@@ -10,6 +10,7 @@ extends MarginContainer
 @export var escolhedor_modelo: EscolhedorArquivo
 @export var conteiner_roupas: ConteinerEncaixe
 @export var conteiner_encaixes: ConteinerEncaixe
+@export var seletor_de_tipos: SeletorTipos
 
 
 
@@ -42,23 +43,21 @@ func atualizar():
 	print("")
 	print("(PAINEL ESPECIE) atualizando")
 	
+	
+	
+	#back end
+	modelo = especie_base.modelo
+	enviar_modelo()
+	
+	
 	#UI
 	lbl_nome.text = especie_base.nome
 	for c in lista_controls:
 		c.disabled = false
 	
-	#back end
-	modelo = especie_base.modelo
-	
-	
-	
-	#CRIAR OS ENCAIXES AQUI
 	conteiner_encaixes.lista_encaixes = especie_base.encaixes_parte
-	
-	
-	enviar_modelo()
-		
 	conteiner_modificadores.lista_modificadores = modelo.lista_modificador
+	
 
 
 func carregar(arquivo: String):
@@ -67,7 +66,7 @@ func carregar(arquivo: String):
 	if modelo:
 		escolhedor_modelo.alvo = modelo.caminho_modelo.split("/")[-1]
 	
-	#printar_especie_base()
+
 
 
 func atribuir_modelo(arquivo: String):
@@ -105,6 +104,7 @@ func printar_especie_base():
 
 func enviar_modelo():
 	palco.peca.parte_base = especie_para_parte(especie_base)
+	
 
 
 func especie_para_parte(especie_alvo: Especie):

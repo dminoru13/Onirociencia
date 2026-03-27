@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://ccohie7nmy2gs"]
+
+[ext_resource type="Script" uid="uid://duqeum4oe80q" path="res://UI/inventario/equipamentos/modulo_equipamento.gd" id="1_pi5j7"]
+[ext_resource type="Texture2D" uid="uid://b2iin6des3k5q" path="res://sprites/icone_torso.png" id="2_xicln"]
+
+[sub_resource type="Theme" id="Theme_bgva7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eehxr"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_color = Color(0.27911678, 0.3984897, 0.47494698, 1)
+corner_detail = 1
+
+[node name="ModuloEquipamento" type="Panel" unique_id=852766525 node_paths=PackedStringArray("texture_rect")]
+custom_minimum_size = Vector2(32, 32)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_bgva7")
+theme_override_styles/panel = SubResource("StyleBoxFlat_eehxr")
+script = ExtResource("1_pi5j7")
+texture_rect = NodePath("TextureRect")
+cor1 = Color(0.5993645, 0.33605132, 0.2129147, 1)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1202475419]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_xicln")
+expand_mode = 2
+stretch_mode = 4

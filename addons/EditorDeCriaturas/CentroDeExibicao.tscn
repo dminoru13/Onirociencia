@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://5x7tvbdy4vcq"]
 
 [ext_resource type="PackedScene" uid="uid://dj7kfttuollph" path="res://addons/EditorDeCriaturas/Paineis/Palco/Palco.tscn" id="1_778q6"]
+[ext_resource type="PackedScene" uid="uid://bphf3glnex83i" path="res://addons/EditorDeCriaturas/Modulos/AtribuidorRoupas/AtribuidorRoupas.tscn" id="1_qd73q"]
 [ext_resource type="PackedScene" uid="uid://dopf3e28dl8sf" path="res://addons/EditorDeCriaturas/Paineis/PainelEspecie/painel_especie.tscn" id="2_r87ck"]
 [ext_resource type="PackedScene" uid="uid://udhlom3pvlod" path="res://addons/EditorDeCriaturas/Paineis/PainelRoupas/PainelRoupas.tscn" id="3_r87ck"]
 
@@ -44,7 +45,10 @@ split_offset = -406
 custom_minimum_size = Vector2(92.57, 0)
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_stretch_ratio = 1.05
+size_flags_stretch_ratio = 1.35
+
+[node name="AtribuidorRoupas" parent="MarginContainer/SplitContainer/PainelEsquerdo" unique_id=620031144 instance=ExtResource("1_qd73q")]
+layout_mode = 0
 
 [node name="Palco" parent="MarginContainer/SplitContainer" unique_id=1539365231 instance=ExtResource("1_778q6")]
 layout_mode = 2
@@ -64,3 +68,5 @@ metadata/_tab_index = 0
 visible = false
 layout_mode = 2
 metadata/_tab_index = 1
+
+[connection signal="parte_atribuida" from="MarginContainer/SplitContainer/Palco" to="MarginContainer/SplitContainer/PainelEsquerdo/AtribuidorRoupas" method="_on_palco_parte_atribuida"]
